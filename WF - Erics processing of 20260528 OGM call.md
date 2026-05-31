@@ -1,0 +1,62 @@
+Eric's processing of OGM call from 2026-05-28 (Voice notes recorded while listening to the call during a walk, manually transcribed to Workflowy)
+
+- for today's CSG call, what would a DKR of Jerry's OGM call look like, contain, and how would it be used in the future?
+- my answer: it would make the artifacts granularly addressible
+- for example, integrate chat messages into video transcript by timestamp
+- the sharing I did about unlisting my youtube video about Hormuz
+  - what fears does this indicate?
+    - alarmist message can prompt people to actions that may not be appropriate and I would feel responsible
+    - AI overemphazes the alarmist content
+  - what might I feel comfortable sharing publicly?
+    - How I am applying principles of Stoicism to processing the news that comes my way
+    - How I use AI but take time to process the results in my own frame of reference, given my knowledge of how AI works under the hood
+    - Simple preparations that I am taking that I feel are reasonable for my life and circumstances
+    - My personal procedures for increasing my intentional consumption of content and avoiding content driven b y algorithmic feeds
+- how would I create a topic map from the content of the call (automated? curated?)
+- I want to ask Sam's opinion about the call and where he wants to go with it 
+- AI takes a very literal view of call artifacts (ex: tasks for followup) - I want a human centric view
+- example is where I posted chat messages while other people were speaking - how can you follow my threads of thought and relate them to topics being discussed?
+- my comment about having multiple audiences for my Youtube channel - could be a topic for further discussion - how to manage content by audience outside of algorithmic engagement models
+- Pete's projects are IFP, SWAMP and BigTop?
+- I may want to share the NotebookLM of my logs from 2024 with Pete, and/or a transcript of it for him to process
+  - I shared the audio file with Jerry in response to his call for externalizers
+    - I commented that people probably should summarize or curate their work before sharing
+    - My approach is to curate what I want to share in Github: [https://github.com/UDerangell/EricsGarage](https://github.com/UDerangell/EricsGarage)
+  - In EricsGarage github, document how I use python to convert audio from notebookLM to text, and produce readable text files from VTT files - DONE - this is in the README.md file.
+- Freya is Pete's agent (any connection to Freya Holmer?)
+- Look up Cluetrain Manifesto - #Library #UDlibrary 
+- I think I can document my methodology for being intentional about information consumption
+- I can talk to Sam and Jack about what Frode Hegland is doing with augmented reality - maybe we critically evaluate the effort?
+- Frode is working with the garage door open (on Youtube) and I am peeking in periodically to see what he is doing
+  - [https://www.youtube.com/@FrodeHegland/videos](https://www.youtube.com/@FrodeHegland/videos)
+- For Sam I can mention Frode's recent video of Engelbart's 1962 paper in AR using Apple Vision Pro and how it is very long and the topics break up into hundreds of rectangles spread out across the room.  I posted link to CSG facebook messenger.
+- Ask ChatGPT what the Tyler Durden reference is
+  - Wikipedia: fictional character who serves as both the [protagonist](https://en.wikipedia.org/wiki/Protagonist) and main [antagonist](https://en.wikipedia.org/wiki/Antagonist) of the 1996 [Chuck Palahniuk](https://en.wikipedia.org/wiki/Chuck_Palahniuk) novel *[Fight Club](https://en.wikipedia.org/wiki/Fight_Club_(novel))*, the 1999 film adaptation *[Fight Club](https://en.wikipedia.org/wiki/Fight_Club)*, and the comic book sequels *[Fight Club 2](https://en.wikipedia.org/wiki/Fight_Club_2)* and *[Fight Club 3](https://en.wikipedia.org/wiki/Fight_Club_3)*.
+  - In general, I hate references that require cultural knowledge, even though they create a sense of bonding among the people who know them.  An example is the Gorton's Fisherman image used as an image of what God may look like.  This reference is lost to people who never saw those commercials.  Another one is the horse head in the bed reference from The Godfather, which some young people have not seen.  So what is the appropriate accessibility layer for translating references?
+- look up Pete's OGM wiki (it may be in an email)
+- Jerry's comments on his latest substack post about Hormuz - that's important for me to reread and understand - his self-critique of his video content after it was published.
+- should I add the video that I unlisted back to the 4OGMandGCC playlist?  This is a challenge for me!
+- levels of sharing: a 12 step meeting requires trust that the shared principle of anonymity will be upheld by all present, a zoom meeting now has issues such as AI notetakers grabbing full content and not just recorded content
+- Jerry said that civilization needs a shared persistent memory that is not a canonical reference
+- what's good about listening to this audio as I walk is my ability to listen to what I didn't hear the first time around (when my brain got distracted)
+- so I can blog about my response to realizing that Hormuz effects (diesel constraints) are still possible, but I am taking a practical approach to securing my own needs in a way that makes sense to me without overpreparing
+- and that my concerns are my neighbors and local community.  Getting my bicycle ready was a positive action step for me for coping with the information.
+- I like Pete's idea of having our AI agents talk to each other to suggest ways we may want to connect.  My approach is to curate source files for him to run through an AI agent.  Later he can teach me how to run the agent and keep it updated.
+- Github repo of markdown files - agent can periodically poll for updates, new commits
+- select bullets from Workflowy, export to markdown, store in Github
+- yesterday I played with Guido (1990s ear training CAI) using the PCE emulator on a windows 7 laptop
+- I can contact Bill and Mike sharing that PCE image if I want to take the project further
+  - Can they create a physical floppy from the Kryoflux image?
+  - Can the put together a PC or PS2 with an MPU-401 card so we can test the MIDI output of the program?
+- look at the VTT files downloaded from Jerry's OGM to see if they can be processed in a way that preserves speaker information and timestamps.  The VTTs that I download from Youtube are not as robust as the ones produced from Zoom - they are segmented based on closed caption displays.
+- I want to convert my notebooklm audio files to text so I can put them in the Github 
+- The TXT files can be referenced in markdown files
+- The audio files in my extras directory are the ones I want to convert to text with the Whisper model.
+- Follow up on Sam's comments from the call
+- Topic of fear - are there irrational fears, related to what prompted me to unlist the Youtube video
+- Something interesting - I posted "Definition of Done" in the chat and people commented on it - I didn't expect people to comment, but it created a branch in the discussion and may have resulted in people not listening - that's why I have become more selective about what I post in chats, and I don't like the chat becoming a threaded discussion that seems to demand urgency - related to Doug Carmichael's rule of no chat during the meeting
+- I think it's important to share the experience I had posting to Freya Holmer's Discord - how people immediately reacted that I was off topic without even looking at my content - but I was just trying to find a community that might be interested in my ideas.  I see that as an issue young people have - their brains are wired for immediacy.
+- and my experience posting to Wikipedia and having it challenged - that it was a stub article
+- and then I needed to use the HANGON tag to explain why it shouldn't be removed - that there was not much available information about the topic on the web (at that time)
+- so my resistance to creating a substack account - I don't want to be bothered with all the reputation stuff - I don't want to engage in that economy based on how much other people like your stuff
+- it seems like I want to mention stoicism in Sam's CSG call today
