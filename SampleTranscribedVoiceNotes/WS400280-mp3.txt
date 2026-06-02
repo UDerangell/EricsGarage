@@ -1,0 +1,1 @@
+ I'm recursively turning the notebook LM back to text and it's eating its own table, tail. So synthesis of the AI.

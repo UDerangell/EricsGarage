@@ -1,0 +1,1 @@
+ So around 16 minutes it talks about an example of vector embeddings and cosine similarity.

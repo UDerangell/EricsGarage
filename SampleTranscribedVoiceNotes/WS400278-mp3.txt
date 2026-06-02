@@ -1,0 +1,1 @@
+ So block quotes is what they suggest using for the audio callouts. So they say write a script to tell the LLM extract all standard bullet and index them, treat all block quotes purely as external context. So this happens around 12 minutes into the audio.

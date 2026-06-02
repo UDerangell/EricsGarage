@@ -1,0 +1,1 @@
+ So if the AI can get the duration of a thought, it can filter out noise from signal. Like if your, the example it gives is if you're talking about AI for 20 minutes but then you talk for grocery shopping for 30 seconds, it should be able to know if you have the time metadata, probably a separate file or embedded time stamps. But you got to really think about that structuring.

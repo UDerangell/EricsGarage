@@ -1,0 +1,1 @@
+ It's interesting how notebook at LEM processed the GitHub repo. It only was able to like look at file names and really implying a lot and loosening from the readme. But it would probably need the text files from the repository to be put in explicitly as sources. So I can do more experiments like that.

@@ -1,0 +1,1 @@
+ So notebook LM is using retrieval augmented generation. And it's using analogies, really trying to push the analogy aspect of it.

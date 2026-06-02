@@ -1,0 +1,1 @@
+ So the objective is to manage the context window using Markdown and to have the attention mechanism work properly by taking the VTT files and clustering the words next to each other. So it has more attention.
