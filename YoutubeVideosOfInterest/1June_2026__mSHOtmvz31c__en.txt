@@ -1,0 +1,2206 @@
+Kind: captions
+Language: en
+Okay, let's start. Yeah. So, Peter, what
+have you been doing headset wise
+recently?
+&gt;&gt; Uh, not too much. Mostly I've been
+focusing on underlying data and logic
+models
+and not worrying about the actual
+visualization.
+&gt;&gt; Yeah, I think that's if I say it
+correctly is quite aligned with the way
+Mark is looking at it. He's not
+according to some text messages that
+excited about writing in XR. But then
+again, I don't think we were looking at
+writing. We're looking at thinking.
+And that becomes a different thing. And
+I absolutely love your background. It's
+so relevant to this.
+&gt;&gt; Yeah. I wish I could visit that library
+in person one day.
+&gt;&gt; Is it a real library? Oh, it is, isn't
+it?
+&gt;&gt; Yeah.
+&gt;&gt; Where is it?
+&gt;&gt; Dublin.
+&gt;&gt; Oh. Oh, is that why it's getting bigger
+and bigger? It's Dublin and Dublin.
+Sorry, that's the worst dad joke ever.
+Well, you should come to Europe someday
+for sure. It's not that far away from uh
+from here obviously.
+But what feelings do you have about what
+might become more useful in the headset
+other than kind of multiple monitor
+setup in addition to that? I mean,
+&gt;&gt; well, I still want to try for the
+Benedicting cyerspace idea of having a
+really abstract data space where you get
+to control the dimensions and how
+data objects are arranged dimensions and
+then unfolding the dimensions to expose
+inner levels for highdimensional
+entities.
+I'm going to send you a link to
+something.
+Um,
+I I think you are just like me, partly
+inspired by this.
+&gt;&gt; Ah, yes.
+&gt;&gt; Yeah.
+It's It's kind of um kind of wild, kind
+of cool.
+But how tell me more about how you're
+thinking about this because
+uh one thing that became very clear to
+me uh over the last few years when we
+were talking about um non-ucuk uklidian
+spaces and all kinds of things like
+that.
+Um
+we still have two eyes or one eye you
+know it it doesn't go inside our brain.
+This is very obvious for those who get
+it. For me, it was news when we started
+experimenting with it. When you're
+talking about these um special spaces,
+Peter, how do you envision that they
+will appear and how should we interact
+with them? Have your thoughts on that
+yet?
+&gt;&gt; Um
+I view the spaces as being cubes with
+the back wall, the side wall, and a
+floor wall. uh the other faces
+being clear and points arranged within
+that space. Um
+selecting a point there and then
+unfolding it which means having another
+cube that represents
+the point in the first cube
+exposing three new dimensions. And
+actually you can get a little bit more
+because you can also color code the
+points or you could slightly modify the
+shape of the points.
+But you so you are still looking at
+walls.
+&gt;&gt; Yeah.
+&gt;&gt; Are you do you primarily consider when
+you're thinking about this kind of
+sitting down or standing up and not
+walking and being in a fully rendered
+environment or are you thinking about
+AR, you know, seeing things in your
+physical environment?
+I tend not to think about AR simply
+because I have too many bookcases around
+me and there's not enough space in the
+compact space that I'm working in the
+real world to be arranging stuff in AR.
+So
+I'm thinking more sit down in the
+absence of an omniirectional treadmill.
+If we had some sort of an omniirectional
+treadmill mechanism so that I could walk
+without actually walking more than a
+couple feet horizontally,
+then I'd be interested in other
+arrangements. But given the fact that
+currently we have a headset for our
+head, but we don't have something for
+the lower half of our body to
+accommodate moving around, uh, I see
+that as being the primary constraint at
+the moment.
+Yeah, I think this is a very important
+discussion because um you know Deie
+wanted to be in an environment where
+she's sitting on a um a chair that
+swivels a swivel chair
+so that you could be able to have
+information on all sides and we also
+&gt;&gt; Yes, that definitely works for me.
+&gt;&gt; Yeah. And we also looked at um
+sculpting things in front of you. I I
+like those approaches and I'm very glad
+we went through them. The reason I'm
+currently focused on AR is twofold. Uh,
+one of them is the the brain uses
+spatial information when we physically
+move through space. You know, the memory
+palace that you talked about, of course,
+and also um
+we
+we can then
+if we're only in a virtual environment,
+we we don't get to do that. We don't get
+to I don't know. There was two reasons.
+Hang on. I have them in my slides.
+It was like a point to make today.
+Goodness gracious me.
+Anyway, um yeah, we um Okay, I'll I'll
+do I'll do a slideshow for you guys.
+This there's not a lot of slides.
+Um but so we can do that.
+Uh, Peter D, are you there?
+&gt;&gt; I'm here. I'm just I'm on my computer
+and my phone.
+&gt;&gt; No, that's cool. It's just um if you see
+it, then I'll just go through a few
+slides.
+&gt;&gt; Um, can you
+highlight what you put in the chat
+first, please?
+&gt;&gt; Oh, I just was trying to capture some of
+what you just talked about, the swivel
+chair point of view versus the
+walkaround point of view.
+which are very different things from u
+you know you want to have a cockpit like
+you're an airliner cockpit and you have
+controls all over the walls and you kind
+of reach up and touch things and you can
+scroll around but there is the kind of
+avatar 3D world avatar where you kind of
+move around but you're you're stationary
+but you can kind of scroll around in the
+world. Um,
+now Peter, you were talking about those
+walkarounds things. You know, Disney has
+them. They're highly expensive and
+they're they're interesting things. I
+mean, that military certain has them uh
+working in different places for training
+police. Like they have like a poor man's
+version where you're sort of standing on
+the inside of an upside down umbrella
+wearing socks and the sides of the
+umbrella are super slippery and you can
+basically walk sort of sliding yourself
+provided there's some sort of a physical
+harness to keep you from completely
+falling over and hurting yourself.
+&gt;&gt; Yeah, there used to be one um you had
+like a bar around you and you kind of
+grabbed onto the bar. It was like
+walking on a walking, you know, walk fit
+kind of thing, but you had a 360
+degree of motion, but you had to have
+the bar to keep hanging on, otherwise
+you'd fall over and trip. And and
+particularly if you're carrying like a a
+a weapon or something else, you you're
+trying to balance yourself.
+It was uh interesting to see those
+things. It's
+uh for home use, I don't think it's
+going to be very practical.
+So, I think having a swivel chair point
+of view for an interface is really
+important, but having the one that you
+can walk around is much cooler. Like,
+um, Frod, you've you've kind of
+demonstrated to great effect how great
+that is to walk around things. Um, but I
+think you're going to have to have an
+intermediate where you can scroll
+somehow, you know, recognize some
+motions
+to walk around without actually
+physically moving your body around the
+space. Well, the one thing I really did
+like was the jump navigation, and I
+created a couple 3D spaces like that. I
+made a replica of the 2001 monolith at
+scale and I was using the jump
+navigation to move around and look at
+that from different angles. And the nice
+thing is I didn't have any sim sickness
+issues with the jump navigation where
+I'd be using the controller with the
+joystick on the controller to point to
+the destination jump point and then
+instantaneously transition to that
+location. And that worked fine. So even
+just sitting but using that mode of
+navigation, you could have a larger
+virtual space that you're poking around
+in.
+&gt;&gt; Yeah, I mean it it is what what we're
+talking about here are real constraints
+and real concerns. Um hi Tom. Um
+&gt;&gt; sorry I'm late.
+&gt;&gt; No, no, no, no, no problem at all. But
+we're going to
+&gt;&gt; really It really did have to be the jump
+navigation cuz when I tried the smooth
+scroll navigation, I was ready to toss
+my cookies.
+So having your point of view,
+slid smoothly
+without any of this feedback to your
+inner ear is just nightmarish. But I
+guess because we grew up watching
+cutscenes in 2D movies for our whole
+lives, our brains are wired for the idea
+of having the surroundings
+instantaneously cut from one to another.
+So that doesn't cause any
+disorientation,
+but just slide a couple feet and the
+queasiness instantaneously sets in.
+Yeah. Um, so Tom, that's kind of a
+summary of the issues at hand. Depending
+on how much space you have in your
+physical office, you may want AR or VR.
+Um, what I'm going to be talking about
+now is primarily AR, but not really. I'm
+not going to do anything in the headset
+today unless something pertinent comes
+up. Um, there are some things to
+discuss, but um, it is really important
+what Peter is saying that if you have if
+you don't have a huge office and you
+want a huge space, jump navigation and
+things like this are important. So I do
+think it's crucial to have Yeah,
+exactly. Also now smooth navigation
+depends on the person but also the
+direction I found that if I'm going
+forward only as in the world goes like
+this it's okay but once I start turning
+it's quite nauseous. So some systems
+I've tried stupid little shoot them ups
+if you instantly turn to the side so
+it's a jump but only 90° or 45 and then
+you go forward it's very awkward looking
+but that reduces because we're you know
+the perception of speed is different
+this way than this way. So the these are
+important issues but okay so we are core
+team today I'm going to do
+um share video try not to you uh please
+tell me that you can see my screen
+&gt;&gt; yep
+&gt;&gt; hang on you guys are hidden I don't want
+that
+so okay if you're hidden you're hidden
+but as always please speak interrupt me
+I can't see other things it's really
+brief
+and it has to start with an animation
+obviously ly. Um, so the topic for the
+month is figure and ground, which is
+just my arty way of saying document and
+workspace. We've talked about this for
+the last few years, but I think it's
+really a good time to go through it
+again. And tomorrow's my birthday, so I
+get to decide whatever I want. Right.
+Cool.
+&gt;&gt; Happy birthday.
+&gt;&gt; Thank you.
+&gt;&gt; Happy early birthday.
+&gt;&gt; Thank you. Thank you. So, this one we
+all know. Is it a vase or two people?
+So this is kind of the beginning of one
+psychology
+perspective on this stuff. It was
+actually no, let's go back. Actually, it
+was actually someone's PhD thesis in the
+1920s. I forgot to put his credits down.
+The point of the story is that the
+ground or the figure as in foreground or
+background,
+the background is always active and it
+can change what is interesting for you,
+the foreground or the background. In art
+theory, it was rammed down my throat
+very much and it was only at more
+advanced levels where the nuance was
+more accepted rather than you are
+drawing the figure, leave the ground
+alone, that kind of stuff.
+So what we're talking about is
+documented workspace but also documented
+walk space. That's why I'm commenting on
+what we had in the initial discussion
+here and that could be virtual or
+physical walk.
+So here's the thing. There's a lot of
+text on screen here. The small sans
+serap is actually my prompt to help AI
+help me a little bit with this. But so
+the point is that
+when we are writing something or
+authoring something, we have a lot of
+context, a lot of references, a lot of
+notes, a lot of ideas. We basically have
+a huge amount of stuff, some of which
+will go into the document. Right?
+So now we really need to look at how all
+of that stuff
+should be interacted with what it should
+be and what is useful
+because if you look at um the history of
+our information stuff it's not going to
+be a long history but um we're looking
+at um thinking experience and authoring
+here. So the very beginning of writing
+what with Kuneaform before Kuneaform
+properly was these little balls of clay
+that inside them had the things that
+were written on the outside. So let's
+say three barley corn um batches or
+something that would be the little hard
+balls of clay inside the big one. And it
+was only after a while that they
+realized they don't actually need this
+stuff inside. It's enough to have it on
+the surface. So, in a sense, the
+overview
+became the thing itself. It didn't need
+to have what it referred to.
+Also, this little tag at the bottom here
+comes from um Egypt where you had um
+Paper scrolls and you had little slips
+hanging up like that. They look very
+similar to when you go to a clothing
+shop and you look at um where something
+was made. that goes back at least 3,000
+years before Christ. They're a bit later
+than the ruler.
+Do any of you know uh Warberg?
+Anyone know this guy?
+Are you all still here?
+&gt;&gt; Yes, we're all shaking our heads now.
+&gt;&gt; Okay. Now, this was interesting. This
+was um a Claude suggestion. Uh so this
+guy was mapping out information
+and he put it up on his walls. Here's a
+reconstruction later. Um just everything
+very similar to as you guys know the
+tapestry of Bob Stein. It's a way of
+thinking in space and he had the notion
+of the law of good neighbor
+which is very related to what Mark
+Anderson talks about with spatial
+hypertext. There's a reason why it's
+there and not somewhere else.
+And this is uh Robert Caro,
+a much more modern example. Basically
+having articles that you're writing on
+the wall. This is quite close to the
+kind of thing we're fantasizing about,
+isn't it? But virtually.
+It is two-dimensional,
+but very cool.
+And then the world went digital. And I
+call that the great crunch because
+instead of having huge walls, we had
+relatively small rectangles obviously.
+So the knowledge space shrunk and the
+interactions expanded.
+And that goes back to LAU. If you tell
+me, I'll listen. If you show me, I will
+see. But if you let me experience, I
+will learn. We all here greatly care
+about interactivity because it allows
+you to experience to do.
+There's another great quote though. The
+screen gave us an ocean to hold and a
+port hole to see it through and called
+the port hole interaction. That was
+actually something Claude came up with.
+I think we're at a funny p place in time
+now where we're not just concerned about
+AI ghost writing, but they're actually
+worth quoting at times.
+So preaching to the choir, digital
+world, we got hyperard, hypertext, all
+these super interactive things that all
+rely on knotting things together because
+it couldn't all fit in a huge space,
+comments, questions, aides, anecdotes.
+Okay,
+so here we have um Bob Stein's tapestry.
+Let's see if it plays properly.
+It's very simple, which is of course the
+genius. You have videos, pictures, text
+on a huge surface that you can very,
+very easily focus and go in and out of.
+So, it's a very useful thinking space
+that is open and lives on the web. So,
+this is I would say to Bob, this is the
+flat trying to escape into a bigger
+world.
+So now of course the world is going
+spatial
+and I call that the great unfurling. I
+think it was actually Brandle who used
+the term in our community.
+And so here's the thing though, one of
+the challenges. There's so much more
+information available to us now than
+before. Partly because we can find so
+much stuff in the web and also AI. We
+can't just stick it up on the walls. We
+run out of useful space. AI will give us
+beautifully written, useful, thoroughly
+researched stuff within limits.
+If we were to put it all on the walls,
+um we wouldn't it would be wallpaper
+after a while.
+So, as an aside, um I had a birthday
+party on Saturday and it was at 3 till 3
+and then 3:00 in the morning. I had a
+very heated discussion with one of my
+oldest closest friends late at night and
+it was on a topic we're obviously both
+passionate about and after a while we
+tried to make it a more of a meta
+discussion but the thing is I related
+that to a friend who was a lawyer today
+which is why putting it in here looks a
+little tougher. I know you're a lawyer
+too, Peter, of course.
+And um we were talking about how in this
+heated discussion between friends, if we
+were in a magical space,
+let's say once said, "But this thing
+happened at this point in history, we
+can literally put it up on the wall over
+here on the side on a timeline." Because
+very often, at least in my experience,
+when you have a heated negotiation with
+someone, we keep repeating stuff and
+coming back to it. So instead of having
+to do a whole paragraph of speech again
+can say but there and if we have
+scaffolds in the space like here's a
+timeline here let's talk let's say we're
+talking about values here they can be
+over there this that and the other um so
+XR may be a very good u negotiation
+space so that was a bit of an aside but
+then the thing is when we are writing
+isn't authorship also a negotiation
+between what is required in the final
+product and what is available.
+Does those two thoughts hang together
+well for you?
+Negotiating with another person or in
+your own head, negotiating between the
+material you have, the ideas you have,
+and what should be produced, right?
+&gt;&gt; I would add negotiating with an AI.
+&gt;&gt; Yeah, that's fine. But that's um that
+would be
+&gt;&gt; it's akin to be it's akin to negotiating
+with another person but it's another
+person that you don't have to buy a beer
+for.
+&gt;&gt; Yeah. No, absolutely. I don't have any
+problem with that. Negotiating with an
+AI or person in this context I think is
+pretty much the same. No, it's not
+actually because if you put it up if you
+put something on the wall, the AI
+doesn't have access to it. But Dave
+Millard said that is exactly what the AI
+should have. So yeah, Tom, you win.
+So then in closing the questions for
+today and for all
+&gt;&gt; and as a kind of a theme for June, how
+should we deal with our workspace and
+how should we deal with what we create
+and how should they relate, right? We
+basically in a way have access to
+everything right now informationally
+speaking. So how should we place it and
+how should we play with it?
+That that was the presentation bit and
+the the way I just want to summarize it
+and and frame it for you guys. Hang on,
+I'm just getting you back so we can see
+you. Is
+as you've seen many times an author, we
+have a traditional column of text
+interaction wise. We can't easily get
+rid of it. Maybe we shouldn't. And then
+we have all these bits in space, these
+knowledge objects, right? Uh I keep
+trying to figure out how they relate.
+often they don't.
+It's very artificial. I built something
+to impress you guys. I put all kinds of
+things up, but it doesn't help me think.
+So, what I'm trying to build, and I
+think whether it's an author or
+somewhere else, I think as a general
+concept is really important. What I'm
+trying to understand now is I'm writing
+a thing. I'm creating a thing that has
+to be thought out that I can share with
+you guys or someone else, but it has an
+entire world worth of stuff around it.
+So I need to have my workspace
+and I need to be able to interact with
+that in a fluid manner where I have
+overviews because it can't all fit and
+then I need to have the work product
+and I need to have them separate but
+also relate to each other. That's the
+design problem. Thank you for listening.
+&gt;&gt; I think something you need to bear in
+mind is constraint is every bit as
+important as reach here. Um,
+one of the things that I've introduced
+into my classes lately, uh, and
+something that my students have never
+really learned to do, and frankly a lot
+of people haven't, if they're not
+designers, is iteration. And the idea
+that you just don't get access to the
+whole library
+immediately. And that's not to be mean.
+It's not to say, well, you don't rate
+access to this, you're not good enough,
+or whatever. It's that if you give
+everybody too much information at once,
+the fact that it's too much information
+can also overwhelm and limit their
+perception of that information. You
+know, if you if you you're you're given
+a you know, if you're two inches away
+from a pointalist painting, it's too
+much information. It's a bunch of dots,
+right? But the ability to step back and
+see that for itself and then work your
+way into how did he construct or how did
+she construct this portion of the
+painting with these combination of dots.
+You know, zooming in and out is
+incredibly important. So, um I would be
+cautious about giving uh uh uh people,
+you know, uh Douglas Adams's infinite uh
+perspective vortex.
+there's only one person who's ever
+survived that. Um, but yeah, I mean,
+zooming that, you know, figuring out a
+stepping stone to, okay, I've got this.
+I need to make the next step into the
+next level of information and so on and
+so forth. Not as a a barrier, but as a
+okay, I understand this part of the
+book. Now I can go to the next chapter.
+Now I can go to and it's the same
+analogy.
+How would you do that?
+&gt;&gt; By the way, thank you for that link.
+Uh that is really really cool.
+&gt;&gt; Yeah, it's a great book. It's really
+interesting and it's it's a collage in a
+book is what it is.
+&gt;&gt; Yeah. I mean
+yes I mean you see the problem for me is
+and some have pointed out that um some
+of these discussions might be too much
+about my particular product author um
+both you know why should people
+contribute to helping me make a
+commercial product and also
+um the constraints of that you know I'm
+building it in vision OS so I completely
+understand that I am quite um
+for that reason we just ask that
+remember us when you're Elon Musk.
+That's all.
+&gt;&gt; Yeah, that won't happen. Um but so so
+when Tom when you say something like
+this, it's very out of what I'm doing
+and I'm very very grateful for it.
+Um
+can you talk because I can't implement
+that now which is wonderful. It's the
+whole point of having this discussion.
+Can you tell me more about how that
+should be actually someone should do
+that?
+Well, it's about layers of the onion if
+you think of it that way. Uh or we
+talked about it in the context of this
+of the Sloan work in terms of rooms,
+right? So, you don't want to see all of
+the information at once. You need to
+constrain that within a a human
+capability of perceiving it, right? It's
+you don't want all these stars in the
+universe. They look cool and in the
+abstract they're really cool, but you
+don't understand them. you don't
+understand all of the what's going on
+behind them, where why they're
+distributed the way that they are,
+what's actually going on there, that
+they're all very different and so on and
+so forth. Same thing is true with
+information. So, you know, I think that
+a series of interconnected rooms of
+information, a series of interconnected
+bubbles that you're operating in to
+where you can pull in and
+connect bubbles of information as you
+see they're necessary, but you know, or
+maybe it gives you suggestions. Maybe it
+says, "Okay, Peter's got this really
+great bubble on coding. pick your Peter
+and you should pull that in and think
+about it in the context of language in
+terms of the way you're trying to use
+language because coding is language. So
+how does code what does coding tell us
+about language? And so then now I've
+fused two bubbles together and I'm
+working within that space and they may
+be two different sets of information but
+I'm I'm still in that space to where I
+have that familiar
+and I'm not being pushed out into the
+you know infinite infinite perspective
+vortex. Right.
+&gt;&gt; Yeah. Um
+I I understand that but so
+we are normally here primarily dealing
+with text as the visual
+&gt;&gt; right
+&gt;&gt; I would like to do further but when you
+do these two bubbles together in my mind
+I'm looking computer graphic stuff
+you know nice little animations but when
+you when you visually do that in what
+way can it become visually more useful
+Maybe you've already done that if if you
+have an image or just reflect. I don't
+know.
+&gt;&gt; Well, I mean, when you talk about your
+clusters, right, when you look at where
+you're the system you have right now,
+right, which you're looking at, say
+you're looking at Doug Engelbart's uh
+augmenting human intellect and you've
+got all the different, you know, you
+what you showed us last week or the week
+before, I can't remember when it was. uh
+you know that would be a room, but then
+you would have maybe a a map that shows
+uh connecting rooms that you might want
+to explore
+after you've mastered the ideas in this.
+If you feel comfortable with in this
+room, well, okay, now it's time to get
+uncomfortable again. I mean that's that
+is what learning is is pushing yourself
+from oh I already know everything to
+okay I can't possibly know everything so
+you know I I'm going to be uncomfortable
+in the knowledge that I don't know
+everything so I want to go into a space
+where I'm uncomfortable and start
+learning what that is and then
+incorporating that with where I'm
+comfortable and that's how you learn and
+grow as a as a human being in general.
+One of the biggest trouble I have, one
+of the biggest challenges I have with my
+students is they're not used to being
+uncomfortable. They've been put into
+comfortable rooms, given all the
+answers, and told to just repeat them
+back. That's a comforting thing. The
+second I start telling them, okay, you
+got to think for yourself, that's
+uncomfortable. That's, you know, and so
+can you mimic that in a way that is
+feeling fairly safe to the user to be
+willing to step into that? Because one
+of the cool things about digital
+simulation is that you can do unsafe
+things safely. You can fly a plane and
+crash it without actually killing
+anybody or yourself in Microsoft, you
+know, whatever. So you can do the same
+sort of thing conceptually and mentally.
+You can fly a information plane and jump
+into something that might seem on on the
+on the face of it as being stupid or
+irrelevant or something like that that
+you wouldn't normally do with a human
+and say, "Oh, well, let's look at this
+over here, you know, um as a way of
+exploring new territory and then saying,
+oh, you know what? this does actually
+relate to what I'm working on, what I'm
+doing, and I need to somehow fold this
+back into what that is. And I do this
+all the time, but I'm
+good at it. I've had a lot of practice.
+I may have a natural talent for it, but
+I still feel limited because I forget
+things and I'm like, "Oh, wow." You
+know, and then then something will The
+cool thing about AI is sometimes it'll
+pull up something I'm like, "You know
+what? I had forgotten all about that
+book. I need to go back and look at it,
+you know, and that's where the human
+failing comes in. I mean, especially as
+we get a little older and have
+birthdays, uh, we we remember less and
+we remember the So, yeah.
+&gt;&gt; So, Tom,
+&gt;&gt; can we help with that?
+&gt;&gt; The knowledge navigator you've been
+working on,
+&gt;&gt; the visualization results, are they from
+the system or are they from um kind of
+mock-ups to to help you design it?
+Currently,
+&gt;&gt; no. So the idea is that the system that
+the LLM is generating the connections.
+It's meant to give you the unexpected.
+So um for instance, if I put in two
+completely different texts, for
+instance, uh maybe Shakespeare and Doug
+Engelbart and I put them together and I
+say, "Okay, show me all the connections
+between Shakespeare and Doug Engelbart."
+It might be giving me a a new way of
+explaining Doug Engelbart to somebody
+who only stands understands Shakespeare
+for instance. I mean we use metaphor all
+the time. Uh and that to me is is making
+unusual connections, right? Making
+connections because we work ourselves
+into boxes. I only understand
+Shakespeare. I don't need to understand
+anything else because, you know, that's
+what I study. This is Shakespeare and
+Shakespeare is great and I love
+Shakespeare and I'm always gonna love
+Shakespeare. So, I'm gonna stay in the
+safe space that is Shakespeare that I
+have spent a lot of time making a safe
+space,
+but is that do I have something now that
+that uh is going to push me into a space
+where I think about Shakespeare in a
+very different way as a consequence of
+stepping outside the room and looking
+back at it, right? Uh through another
+set of lenses. That to me is where real
+innovation and growth happens both on an
+individual level but also on an
+organizational level because we we
+develop blinders. And so anything I can
+do to strip away those blinders in a way
+that I can control
+and modulate is is going to be a
+powerful tool. And I think you could do
+that visually as well. I mean in terms
+of a 3D space um if you think about you
+know
+&gt;&gt; but but the question is
+&gt;&gt; how because um
+you know our groups keep shrinking and
+growing and now we're in one of our
+smaller sizes and and what I hear from
+from some people is quite a bit of
+shouldn't be like this shouldn't be like
+that uh it shouldn't be um it shouldn't
+relate to what we already have and so
+on. And then when I say well what you
+suggest then it becomes very difficult
+and that's totally fair enough right but
+&gt;&gt; well again the metaphor we were using
+last semester where we had rooms and so
+again if you think of that visualization
+that you were showing of Doug Angelbart
+as being a room and all those things are
+stuck on the wall around you but then
+you recognize that that's only one room
+or maybe you can fold another room into
+it and and reision and reshuffle the
+deck
+that could create some incredibly
+important and uh and again layers of an
+onion.
+Give me some suggestions of five rooms
+that I should look at that are related.
+That's where the AI comes in, you know.
+Oh, well then you need to look at um at
+&gt;&gt; Oh, I I agree with that fully. But I
+mean other than having that come up as
+five columns of text, how do you think
+and also I'm asking the Peters of
+course, how do you think it should
+visually be represented? How should it
+look? I think that that's the rubber
+meets the road question.
+&gt;&gt; Do do you remember the old maze or
+they're still around, but you remember
+the old maze games like Doom or or or
+Castle Wolfenstein? You're running
+around in the maze and you're see
+&gt;&gt; yeah you're seeing the you're seeing the
+maze in front of you, but you also have
+a map up in the corner that tells you
+where you are in the maze of what you've
+seen, right? Maybe that's the metaphor
+you need to use. So the maze part, the
+live part, the castle wolf and I mean
+the part where you're people are jumping
+out and you're shooting them um is the
+room you're in, right? But you also then
+have a map to show, okay, these are
+related pieces of the constellation of
+ideas around yours. And maybe you pick
+favorites. You say, "Okay, well, Frodo
+and I are looking at the same similar
+things, but in different ways." So,
+occasionally going into Frodo's room and
+see what he's working on with your
+permission, of course. Um,
+tells me more about what I'm working on,
+right? So, having that map and saying,
+"Okay, these are the rooms you've been
+to recently. Uh these are some suggested
+rooms maybe that other people are
+working on so that you look at it as a
+constellation of of planets and you're
+on your own planet and you've got all
+these other planets but you can jump
+from one planet to another or you can
+pull their
+&gt;&gt; but once you've landed once you're in a
+virtual room
+&gt;&gt; how
+Peter was I think this also goes to what
+you're saying so first of all I really
+think the idea of having many
+workspaces. By the way, what should we
+call it? Workspace? Thinking space? We
+got to have a name for this, right?
+&gt;&gt; Don't call it workspace.
+&gt;&gt; Oh, why do you have a strong reaction to
+that?
+&gt;&gt; It's it's got so many ne negative con
+connotations because of Microsoft, I
+would say.
+&gt;&gt; Ah, okay. I'm not a Microsoft guy, so I
+haven't noticed that.
+&gt;&gt; Yeah. If if you think of a term because
+right now I'm using an even worse term,
+but okay.
+&gt;&gt; So, you've landed in Pet in one of
+Peter's spaces.
+&gt;&gt; Yeah.
+&gt;&gt; And Peter has in this work he's been
+working on um he's planning a trip to
+Europe and he wants to go to the library
+that's behind him. So he's not only got
+like a linear itinerary and a map and
+all that stuff. There's specific
+conceptual ideas about this. How would
+you want to
+how would you want to experience that?
+What what do you want to see?
+You know, postits on a wall. And by the
+way, I'm not saying that's bad at all,
+but do you want to see something
+floating in space? What kind of fantasy
+do we have here?
+&gt;&gt; I would want to I would want whatever
+we're seeing to show a certain amount of
+recency. So, what has Peter worked on
+recently as opposed to what's been
+sitting there for a year that he hasn't
+really looked at? And for different
+reasons, I may want to look at one or
+the other. But that's an important piece
+of information that he may not need, but
+that I as a visitor might need to see,
+you know, where's his brain right now,
+right?
+&gt;&gt; Yeah. Okay.
+&gt;&gt; So, someone else's room may behave
+differently than yours.
+&gt;&gt; No, fine. I I I understand. But the
+thing is it's still a question of um
+&gt;&gt; well I'd want to be able to scrub across
+time. Uh maybe multiple granularity
+sliders too. Uh one could be years,
+another one could be months. Uh maybe
+one track could be just semantic with
+just names of projects I've been working
+on so that I could click on one of them
+and bring everything back to the point
+in time that I last had that open.
+Uh, so are you talking about lists then?
+Columns of lists?
+&gt;&gt; No, I'm talking like
+maybe imagine three tracks of spatial
+sliders and I could grab one and move it
+back and forth and that would control
+the temporal index for the space that
+I'm looking at and automatically
+reconfigure everything to how it was at
+the point of time corresponding to the
+current temporal setting.
+The other thing is it would be nice to
+be able to manipulate someone else's
+space without actually manipulating it.
+So like going into your office, right?
+And I can sit take your ideas and and
+and move them around in a different way,
+but they don't actually affect what you
+say, but I can send it to you and say,
+"Hey, have you looked at it this way or
+have you looked at it that way?" And
+that way you can have that, you know, it
+would be one way. So, I could go through
+all your books without messing up your
+bookshelf, right?
+&gt;&gt; Yes, I I agree with all of those things,
+but I'm just being a bit of a bully here
+to trying to really drill down on what
+it would look like.
+&gt;&gt; Well, we want to be able to reify all of
+that and represent as, you know, maybe a
+little green tennis ball. And the green
+tennis ball could be how
+Tom reconfigured my space. So if I grab
+the green tennis ball, suddenly that
+would swap out my current viewspec for
+the viewspec that he bundled up as the
+green tennis ball.
+&gt;&gt; Right? So as we were talking about this,
+this is happening in the background.
+This is art and architecture in two
+bubbles merging,
+you know. So I'm wondering about this
+level of Yeah. By the way, this thing
+was supposed to be a cool shape, but uh
+I don't know what's going on here.
+output audio has sensitive what
+two bubbles of concepts art and art
+represented as text me uh
+I I'll play this again because obviously
+uh you guys very well know
+one second
+you know you very well know that the
+kind of hard thing we have and it's not
+super visual, right? But it's a
+beginning. But the reason I I bring it
+up now is um it's real. You know, these
+these cards, they have a bit of margin.
+They have a background. It takes space.
+And we I'm absolutely happy to use color
+and shape and all the things we've been
+discussing. But if we can have a
+concrete example. So Tom, you're walking
+into Peter's room. It's a current room.
+Uh, Peter, maybe you tell us now
+something you're currently working on so
+that we have a specific thing. I don't
+have to speak step away from the camera,
+but I can still hear hear you. Um, why
+don't you talk through what Yeah. what
+you're working on, then we'll figure out
+how to display it. Okay.
+&gt;&gt; Okay. I'm
+working on
+an editor idea
+where I want every character in the
+editor to have a globally unique
+identifier that would be preserved even
+if that character gets dragged somewhere
+else. Um so as far as data structures
+underlying it,
+every graphim cluster uh which is the
+set of one or more bytes corresponding
+to
+a combination of unic code points that
+when merged produced a single glyph. So
+you have combining marks in unic code uh
+which sort of might be you know put this
+on top of the previous mark and you
+combine that little sequence and that's
+a graphim cluster. Um examples would be
+emoji or multibbyte glyphs from
+alternate language panes. Um so each
+graphim cluster should have associated
+with it a nano ID and that would
+represent this particular occurrence of
+say the letter A. So if I had two A's,
+they'd have different nano IDs. Um also
+mapped to that would be a C ID
+corresponding to the actual graphim
+cluster. So the two A's would share the
+same C ID. The C ID would be mapped to
+the graphim cluster itself. So that we
+dduplicate the graphim cluster storage
+and have each symbol in the editor
+represented with its ID plus the
+underlying C ID representing the graphim
+cluster that actually gets drawn on the
+screen. Then we'd have all of
+the nano ids arranged in a single
+immutable but growing list.
+Then we can use a bit set to represent a
+selection of those nano IDs
+that lets us produce
+multiple selections that are
+discontiguous.
+Um then if we copy something
+we'd be getting the indices into a
+separate document array. Um those
+indices would give us the nano ids which
+we could then map to the underlying
+graphium cluster. Then we could produce
+a new nano ID for it in wherever it is
+that we're pasting the thing in. But
+basically, I want to be able to create
+the data trail that lets me know that
+this letter A that's now in the second
+paragraph of the memo had originally
+been copied from a completely different
+document that was authored by fraud
+three months before. So I want to be
+able to trace the whole lineage
+and capture all of that information. So
+you need some multiple layers of
+indirection
+and of course once you're working with
+the bit sets then it's very easy to
+apply set operations to them to do
+really interesting things. So I'm
+working on the underlying infrastructure
+for making that happen. Granted, it's
+horribly demanding in terms of memory,
+but on a modern Mac, I can afford to
+throw all that extra memory to be able
+to track all these layers of indirection
+and really know the provenence of any
+symbol that's appearing at any location.
+So, that's what I've been working on
+codewise lately.
+&gt;&gt; So, how would that then be represented
+in addition to a few flat screens? How
+might how might you want Tom to come in
+and view that? How would you like to
+considering the
+um I forgot the different kind of
+environments you've been talking about?
+Um
+maybe there'd be a different al cove for
+each conceptual level.
+So everything related to the
+dduplicating data storage would be in
+one little al cove. Then everything
+related to the nano ID tracking could be
+in a different al cove. Um high level
+control might be another spot.
+Uh
+so you're talking about a room like the
+one behind you.
+&gt;&gt; Yeah. Sort of like bays in a room.
+&gt;&gt; Tom, what what do you think of that way
+of looking at it? or maybe levels. If
+you imagine that I was on a vertical
+lift that could be going up and down, so
+I'm sitting
+flat and everything could be sliding up
+or down depending upon what level it was
+at.
+So you could either think that I'm going
+up or that all of the bays are being
+slid down.
+Yeah, I mean I like that horizontally,
+but the content that I'm looking at is
+scrolling up or down vertically
+&gt;&gt; on like a room by room trunk basis.
+I mean there have been a number of
+fantastical libraries described in
+fantasy literature from the one in Harry
+Potter to
+uh to um the the um
+one in um crap so long I read it. It's
+great book too. Um the wise man's fear
+uh which is a
+what's his name? Anyway, they they spend
+a lot of time in libraries that are
+designed for wizards or whatever, but
+they're unconstrained by the realities
+of physics in the way that um a real
+library would be, or more importantly,
+they're unconstrained by the realities
+of budget in the way a real library
+would be. So, if you conceptualize that
+in a way, you know, I'm looking at the
+library that's behind Peter right now.
+Uh, but if you conceptualize that as a
+way of of um
+of building,
+having the freedom to build, and I like
+the idea of al coes uh elevators is
+interesting, too. Where was it that had
+that elevator? Oh, was in the
+foundation, the recent foundation series
+where they did it vertically. Um
+but um yeah, I mean having some sort of
+ephemeral
+physical space to complement the virtual
+space, you know, it gives people
+something that they can uh
+mentally latch on to. I've been in an
+alche of books before, you know, and so
+I know what what that what that feels
+like, right? Um,
+or
+&gt;&gt; I I should note I should note that I
+haven't tried a vertical scroll in the
+headset yet, so I don't know whether I'd
+find that cool or nauseating.
+&gt;&gt; Yeah,
+&gt;&gt; until I have a whole room of books going
+up and down vertically. I don't know if
+it would work.
+&gt;&gt; Or I'm thinking about the the last scene
+in Interstellar
+&gt;&gt; with the where he's in the tesseract
+essentially and he's got books. That
+that would probably MAKE ME SICK.
+BUT YEAH, think look to fiction uh look
+to uh because fiction is constrained
+only by the imagination
+but yet it still needs to maintain a
+certain level of reality otherwise the
+reader is not going to buy it. So you
+know there has to be something for that
+reader to latch on to. So we're creating
+a fictional world here um that only
+exists within the context of your
+virtual space. So
+&gt;&gt; I found
+&gt;&gt; something to think about.
+&gt;&gt; I found something very useful uh talking
+I'll show you the actually no I'll show
+you now.
+So share
+still generating a few but if we look so
+this is the first just two images doing
+this right that's cool
+&gt;&gt; and then we have art and architecture
+becoming art uh art you know these kind
+of bubbles that we talked about where
+the problem is that they I mean they're
+amazingly rendered right look at that
+&gt;&gt; but uh
+&gt;&gt; it's not useful yet
+&gt;&gt; so Well, the other thing about it is
+that the library itself is nothing but
+set dressing.
+&gt;&gt; Yeah. No, of course. In this case, the
+library here is purely it might as well
+be a porest. Exactly.
+&gt;&gt; Right.
+&gt;&gt; So, here we have another one where on
+top there you have these cards meeting
+and folding on top of each other.
+Different way of doing it here. And then
+finally,
+they become a book, right?
+That's really fascinating because
+um
+what what is a book in virtual space
+irrelevant, right? But it's also a
+useful way of um I've taken these
+concepts and put them in a not saying it
+should be visualized as book, but this
+new cube because cube fits writing a
+title and a description and maybe have a
+colored icons on it
+might be a useful kind of a folder,
+right? for
+&gt;&gt; well what I would say is looking at your
+video I would run it in reverse. In
+other words, I would have the cards
+flying out of the book
+to be rearranged into a different
+because I mean books are just containers
+for ideas. So you know if you want to
+unpack that book and have the cards
+flying out of it to where you can
+manipulate it so that you know that you
+can open any book and it'll
+automatically give you this forest of of
+cards that you can then explore and say,
+"Oh, look at this. I didn't even know
+this idea was in there. Right.
+Tell me where that is. And that's what I
+do with Notebook LM already. I mean, in
+a sense that I'm I'm having to manually
+pull up the cards. But when I have, you
+know, when I ask a query and it says
+here are the five things that, you know,
+you need to that that that if you're
+doing systems theory or something like
+that, it'll give you a card that
+connects you back to the original book
+or article where that came from, so you
+can work your way backwards, too. But
+essentially what I'm doing is I've got a
+stack of books and I'm asking it to pull
+out what I need from them to answer a
+specific question. Right? So think of
+that in a visual sense.
+Just writing that as a promise.
+Yeah, I completely agree. It it needs to
+be reversible.
+And one thing I briefly had a discussion
+with Mark Anderson earlier today was the
+difference between an internal file
+format and a shared file formats. You
+know what are the I mean notionally
+everything should be in the published
+file that the author wants to include
+but the reader may need different ways
+of reading it that the author hadn't
+necessarily focused on.
+you know, an example like this. Um,
+so what we're talking about is a a
+virtual
+thing, book folder, whatever the heck it
+is, that technically kind of lives
+inside another proper folder, so to
+speak, or document.
+Because the whole idea of being able to
+unfold it is, of course, core to origami
+text and everything else we talked about
+in in that sense.
+have something else to share with you.
+So, look at the central one there
+on top.
+It's kind of cool, right? So, you have
+all these ideas. You choose to put them
+together and it gave it a title.
+I think that's kind of
+Isn't that cool how it's just giving us
+um tidbits to play with?
+Well, it's like an accordion process in
+the sense that you want to explode the
+book, but then you want to then part of
+the process of writing is you explode
+the ideas and then you p put them back
+together into your own construction
+and that becomes a new maybe it becomes
+another book, maybe it becomes an
+article, maybe it becomes a
+visualization. But that's essentially
+what you're doing. you're recording it
+out, making a mess. Like you whenever
+you rearrange, reorganize your room, you
+make a mess first because you pull
+everything out and you then figure out,
+okay, this needs to go here and this I
+can get rid of this and this needs to go
+so on and so forth. But you have to make
+the mess before you can make the neat.
+Same thing's true with information. You
+have to make an information mess before
+you can make the neat. And that's what
+I'm trying to do with the knowledge
+navigator is I'm trying to create an
+information mess that forces you then to
+put it back together again into your
+version of the need.
+&gt;&gt; Yes.
+&gt;&gt; Orderly.
+&gt;&gt; Yeah. Absolutely. Um
+&gt;&gt; it's the anti-German application. It's
+disorder. The disorder application. They
+must have disorder.
+I guess that's Italian, right?
+&gt;&gt; That tell when you're talking about
+Okay, so let's say you have taken Doug's
+62 paper to take the big one
+&gt;&gt; and you taken something of Shakespeare
+and you've asked an AI to Yeah. What
+would you ask the AI to do it in the
+style of another analyze their ideas?
+What kind of prompt would it be?
+Um, well, I think you try several. For
+one thing, I would not I would not I I
+I'm I'm always resistant to saying,
+"Well, what's the right prompt here?"
+And I'm like, "Well, that depends a lot
+on where you are in the conversation."
+But um
+just imagining some possibilities would
+be uh
+is is uh is is uh Angelbart a tragedy or
+a comedy or um what elements of tragedy
+or comedy are included in you know on
+the in the Shakespearean vein are
+included in are critical too and and
+what can we learn about
+the those concepts that were adopted
+by you know subsequently to Doug and
+those that weren't right so which ones
+would be more relevant in terms of
+looking at it from the perspective of
+Shakespeare is it the tragedy stuff that
+got adopted or is it the comedy stuff
+that got adopted
+um
+&gt;&gt; you know is it more entertainment yeah
+&gt;&gt; so far you're giving me
+A or B as in yes or no kind of um
+comments.
+&gt;&gt; Well, yeah,
+&gt;&gt; but but of course it's even more
+interesting if we get a more complicated
+kind of answer, right? And I don't I
+don't have a prompt for it either. So,
+&gt;&gt; well, I don't think it it would anything
+in Englebart would necessarily fit very
+neatly into either one of those
+categories, but maybe there are elements
+of this or of that. It's like a sighting
+scale, more common, more tragedy, you
+know, more history, whatever. Uh, and
+then you then compare that to what
+subsequently happened as a way of
+analyzing how technology and processes
+get adopted or not, right? Um and uh
+because and you know uh the one thing it
+that augmenting human intellect is is
+it's a profound challenge and it's a
+challenge that a lot of people refuse to
+pick up because they didn't see the
+point to it. Uh and but it's also you
+know every challenge is an opportunity.
+Uh those people who did pick it up got
+some tremendous opportunity at it. Uh
+but
+how do you determine which parts of that
+is which and where that challenge where
+people are going to react because
+Shakespeare brings the human into it? So
+are people going to react more to the
+wow this is hard and I want to climb
+that mountain or wow this is easy and I
+I want to just sit on my TV and watch
+someone climb that mountain. uh you know
+and those kinds of questions I think
+would be thrown into a certain amount of
+relief by com you know fusing the two
+together and that's just my first take
+at it but yeah something like that I
+don't know
+yeah I'm just the thing is
+um Peter Wasil you and Mark are very
+data structure coming out of guys rights
+I'm a very visual guy for me text is
+always visual. Braille also in a sense
+is tactile visual.
+So I need to know as a designer even
+conceptually what does it look like
+then? And what Tom is talking about now
+is very worthwhile. But I'm wondering
+in many here's the thing. It's quite
+clear that in most cases you don't need
+VR, AR, XR. It's just not necessary. Of
+course not. That's really important and
+also in many ways pen and paper is
+better than digital when you're thinking
+of course right so the issue partly is
+when you are in a headset or have
+magical thing whatever it is you're on a
+specialized environment
+how do we represent
+what we call the knowledge objects
+we have to decide on something right now
+they're the most basic they're just
+index cards that can be bigger and
+smaller that's it
+&gt;&gt; mhm Mhm.
+&gt;&gt; Once you have
+decided on a relationship, like you've
+done something like you just talked
+about, Tom,
+&gt;&gt; the things should probably change
+appearance, right?
+&gt;&gt; So,
+I like the idea of having a workspace
+and please help me with a better name
+where you have your products over here
+right now. It doesn't matter. You have
+all these things that we haven't
+defined. But when you've decided on
+clustering, you can put them together
+into a bunch of index cards, a book, an
+envelope, a globe, whatever. Some it has
+to be something
+uh that then has a new appearance
+reflecting
+the synthesis rather than just this plus
+that, right?
+Does that make sense?
+&gt;&gt; Mhm.
+Anybody have any thoughts on how they
+would like to see it?
+This is where we need Mark Anderson.
+I want to see in his bubble.
+My programmer has just asked me a
+question so I apologize.
+&gt;&gt; No worries.
+&gt;&gt; Uh yeah, Mark Mark's perspective would
+be useful. But the thing is,
+okay, I I'll tell you because if if you
+think I'm obviously we're all friends
+and I mean it in a nice way, but if you
+feel I'm being a bully on this on the
+visual questioning,
+um I I'd like to remind you that the
+as an example in author, you know, we
+have an outline and overview
+When you do that on a laptop, it's
+nicely centered. But if you go to a big
+screen like a 7 27 inch or whatever,
+it's too wide and too far on the side.
+Only this week did I decide to fix that.
+So when it comes to my own visual work,
+I can very often be behind the curb even
+when it suddenly became clear this
+weekend it had to be done. So I'm asking
+you not as a teacher but as a frustrated
+colleague. And they're really hard
+questions, aren't they? What should it
+actually be?
+Cuz you can't build a thing without the
+thing having components. And in digital,
+unless you're talking about sound, in
+digital environments, that has to be
+visual, right?
+Why would you limit yourself in that
+way?
+But explain how I can unlimit myself.
+&gt;&gt; Well, I'm saying why would you live why
+would you leave out sound for instance?
+You've got you've got speakers in
+&gt;&gt; I'm not limit I'm not ruling out sound
+at all. Uh what I'm saying is that well
+well first of all sound in what we're
+talking about here
+would be a really interesting side
+project to look at. But if you had sound
+as the primer, if you have a room full
+of knowledge and they all make sound,
+that'll be a cacophony of course. So I'm
+very very interested in um in haptic
+haptics, sound textures, all of that. No
+question.
+But primarily, I mean also considering
+half of our brain is dedicated to visual
+processing, half of it, right? That is a
+very powerful part of our conceptual and
+perceptual apparatus.
+So
+saying ignoring sound only for the sake
+of this discussion
+uh digital garden
+there is
+&gt;&gt; I'm kicking around ideas
+&gt;&gt; yeah there are some terms around that as
+well um knowledge garden and all of that
+stuff but um no what I mean is
+&gt;&gt; you don't okay let's just say it's
+visual do do you guys have more thoughts
+on how you would like to put on a
+headset information is presented
+visually at least headings or titles or
+tags for text. When you open something
+up, so to speak, sure it may be in a
+completely different form, but at some
+point
+or would you prefer to only work with
+icons?
+I think I'd like some sort of a
+programmatically generated highle
+representation
+of the document. Something to give me an
+immediate indication of how many
+chapters they are. Um how deeply nested
+different parts are. Um maybe a tree map
+view.
+&gt;&gt; Uh I'm I'm talking I'm talking primarily
+when you are authoring.
+Do you would you also like that when
+you're authoring?
+authoring
+is really really difficult. The only
+thing that I feel I have made progress
+on is um when you're authoring there's
+more stuff you're working with than the
+stuff you will make.
+Although of course as you write you will
+generate new mental stuff, right?
+Yeah.
+Um
+I mean I think that one of the reasons
+that I don't like the word workspace by
+the way is because it's very bounded.
+Microsoft has deliberately designed a
+system and attached that name to it that
+is that is a bounded system that you
+know you get to only play within this
+particular schoolyard. Uh, as a writer,
+I want uh I want the ability to at least
+work on an infinite canvas and take
+things where I want them to go rather
+than where somebody tells me I should
+take them.
+And so, um, that's why from a
+terminology standpoint, that's one thing
+I, you know, I don't, um, I I'd like to
+see in a different way. Um,
+one other way to approach this is you're
+sitting in your office, you're looking
+at your bookshelf,
+you're trying to write. Imagine it's 50
+years ago, okay? You only have your
+bookshelf to work with. You don't have
+an internet. You don't have um um uh
+hard drive even. Uh, and you're sitting
+here trying to figure out how do I
+explore ideas and see new things
+based on the books that are in my
+bookshelf or the library. Take your
+pick.
+What is frustrating you the most about
+that environment? What are you missing?
+What do you still What do you What do
+you need to make yourself
+How do you get yourself from being the
+struggling writer to the empowered
+writer?
+Um, and
+how can you generate that in a digital
+way that wasn't possible? You know,
+what's what's missing from the way
+traditional books work? How are they
+dysfunctional?
+I can number name a number of them. I
+mean, for one thing,
+cataloging them is a pain in the ass. uh
+also shelving them in the sense that
+okay well this book sort of goes in this
+category and it sort of goes in this
+category where do you put it right I
+have tried so many different shelving
+mechanisms for my books over the years
+but they're fundamentally limited by the
+reality that you know a good book
+doesn't just hit one area right it hits
+a lot of different areas and may have a
+lot of application to different areas so
+that's a fundamental flaw that you could
+try to
+Um I'm sure you've gone through this
+mental exercise to a certain extent as
+you've been building author over the
+years.
+&gt;&gt; Um um but now take if you take that to
+the next level what have you not been
+able to fix with author that you would
+like to fix? Where are the frustrations
+if you're using author as a writer or
+listening to other people who are trying
+to use author as a writer? Um where are
+the points of friction?
+So, I love that I love that question
+very very much and um I'm going to go
+straight into
+in into my actual environment. Thank you
+for that way of framing it and asking
+Tom. So, it really is what I just said
+which I can expand upon. It is I know I
+need to produce a document. By document
+I mean the verb documentation of
+something. I don't necessarily mean it
+in the traditional doc or JPEG or
+whatever, right? But it's a thing for as
+an artist. That's, you know, that's my
+background. I remember as a teenager,
+there was an exhibition and I had a
+picture. It was all fine. And there was
+glass on top of it. And I, oh no, hang
+on. I'm going to put a coin on each
+corner. And she said, "At some point,
+you have to define the frame.
+You can't just have it forever growing."
+Of course, it can be disagreed. You
+could say she's wrong. But I feel that
+is really important in this context,
+right? which is partly why I don't like
+Google Docs. So when it comes to the act
+of writing, I'm trying to produce a
+package journey for someone, trying to
+introduce it clearly, trying to have
+some sort of a summary that may be an
+action. Get inspired or do this with a
+lot of points inside
+uh giving the rationale, the logic and
+the supporting evidence. Right? To do
+that I have to have two things available
+to me. One of them is all the supporting
+evidence citations which come either
+through AI support or through web
+reading or a library. You know what
+other people say and then I need to have
+access to my own thoughts. You know
+walking down the streets. Oh I need
+to add this.
+So it is for that reason that I feel
+that it is very very important to not
+only have a nice writing space
+but all the supporting stuff what we're
+talking about today the figure and
+ground the background dealing with that.
+So
+&gt;&gt; so I agree with you um as an author you
+have to construct a frame. The question
+is who gets to decide the size and shape
+of that frame? Is it you or the tools
+that you're working with?
+&gt;&gt; Hopefully.
+&gt;&gt; And this is Sorry.
+&gt;&gt; It should be you, right? I mean, if you
+have an infinite canvas, if you have an
+infinite uh that you should design the
+frame the way you want it.
+&gt;&gt; Uh and maybe things spill outside the
+frame. I mean, I've seen art that spills
+outside the frame. It does some I've got
+a piece sitting downstairs which the
+author has painted on the mat as well to
+shows the art spilling outside the
+normal frame that the mat creates for
+instance. And that's a really cool
+effect. Um, but you as the artist, you
+as the the creator should design the
+frame. The problem we run into is that
+the logistics of this are building other
+people building frames for this or not
+building I mean the book is a frame. A
+bookshelf is a frame. If you do not have
+internet, if you do not have a hard
+drive, that frame is limited by what's
+in your and maybe you can't get around,
+go to the library, whatever, but that
+frame is limited by what you can make
+sense of in front of you, right? That
+really limits the frame.
+&gt;&gt; Uh the internet is a frame in a
+different way because of the opposite
+problem. It is an infinite bookshelf and
+you just can't find So, uh oh.
+Um
+&gt;&gt; I'm still here just being interrupted
+but I can hear you.
+&gt;&gt; Yeah. Yeah. So the in infinite you know
+the the internet is a
+is a frame that is uh got the opposite
+problem. It's too much information and
+you you are the the limitation is your
+consciousness ability to absorb that
+that that that massive canvas of
+information. So now we've gone from
+being really bounded in a situation
+where we were really limited by the
+number of books that we have where you
+could go back 200 years you know Thomas
+Jefferson had the biggest library in
+America and it was in his you know in
+his study upstairs and became the core
+of the University of Virginia library
+but um you know that was his frame and
+and anything he couldn't put in it and
+so collecting more things to make that
+frame bigger was essential task. So,
+anybody who's ever collected books to
+build up a a scholarly library like my
+father's which my god took forever to
+liquidate
+um you know that's that was him building
+his frame right so how does the
+technology I think AI reshapes our
+ability to perceive the frames uh I
+think XR can also change our ability to
+perceive those frames and therefore
+change our uh capability abilities as
+author to define our own frames as
+opposed to Microsoft or Google defining
+them for us.
+&gt;&gt; So you basically said Tom what this
+entire project is about and it is us
+conceptually coming together to design
+the frame, the scaffold, the the size,
+the space, the presentation of our work.
+Absolutely.
+&gt;&gt; Yeah,
+&gt;&gt; that that's the key thing. Um I guess
+&gt;&gt; I think it's the power over that frame
+that really is what matters.
+&gt;&gt; So
+&gt;&gt; to the extent you can give that to the
+user as opposed to defining it for them.
+&gt;&gt; Yes. But um well there has to be some
+initial defining because
+the more power you give to the user the
+more Hang on the
+Yeah, the camera disappeared. Sorry
+about that. the more you give to the
+user, the more skills they will need to
+to create the scaffold themselves. You
+know, you give someone a pile of bricks,
+they can build any house, but takes more
+effort, so to speak. So, it's a balance.
+Of course, I agree with you. But in
+terms of the naming though in my own
+environment now it's called context at
+this point
+where
+you know you just you map things out and
+if they're tagged as context well okay
+here's the workflow currently let's say
+you're learning stuff about the brain.
+So you go and you produce a map in
+author about functional connetos
+anatomical things processes all kinds of
+stuff. put it out whatever way you want
+and then well oh sorry so that even
+though it's just flat on your computer
+it's considered your
+the stuff that isn't in the book that
+you're going to be writing
+&gt;&gt; then you start a new document where you
+write the brain is interesting blah blah
+blah what you do is you paste all of
+that stuff
+with what we're now talking about
+currently it's called paste as context
+&gt;&gt; when you enter the headset
+You can have two types of things
+floating in space context or not
+context.
+The so if you turn on very easily if you
+turn on ignore context that means that
+if you do select all persons if that if
+there is a person that is tagged as
+context that person will not be
+selected.
+So they kind of interactive but at the
+back of the room, right?
+&gt;&gt; I think this is an incredibly powerful
+way of looking at it and it's something
+we've been discussing over the last few
+years. But
+when I explain this to people, they
+don't get it very quickly. That is not
+their fault. That is the fault of the
+vocabulary
+&gt;&gt; or the educational system which gives
+them lots of frames but doesn't teach
+them how to be frame makers.
+&gt;&gt; Yeah, maybe.
+No, not maybe. Absolutely. I run into
+this all the time. The the the real
+cognitive leap for my students is
+interesting because uh I've actually
+with the way that I've designed my
+course right now uh I can analyze
+exactly where they run into major
+cognitive roadblocks. And the part where
+they get into immediately have that
+trouble is when I ask them to build
+their own frames. when I asked them to
+build their own environments with
+websites,
+uh they have a real struggle with that.
+And it's really interesting because the
+students that pass that on, uh on on
+schedule, in other words, don't miss the
+deadline, right? Uh 100% of them pass
+the class. The students that don't, 14%
+pass the class.
+That is and and but that's not unique to
+my students. I think that's something
+that the educational systems that
+prioritize memorization and
+regurgitation
+uh train us to do. They give us all
+these frames. They give you they give
+you problems and you have to find
+solutions for them. Well, a problem is a
+frame. If you've ne but most of the time
+when you're given a problem, you don't
+have the context for the you have to
+build your own frame around it,
+especially if it's a complex problem. So
+therefore,
+you know, you have to learn how to build
+frames. Uh, and so maybe part of this is
+a tutorial. Maybe we need to teach this
+is a way of teaching people how to do
+um
+&gt;&gt; Tom, I agree with
+&gt;&gt; to do build frames. I
+&gt;&gt; I agree with you, but we still need a
+name.
+&gt;&gt; Um, how about a sandbox?
+No,
+no, that that's conceptually very cool.
+But the thing is um and what's really
+annoying because I'm obviously talking
+to my friend Shannon at the same time
+&gt;&gt; and Shannon is suggesting knowledge
+garden.
+&gt;&gt; Mhm.
+&gt;&gt; Nothing to do with digital garden.
+Completely different. Right.
+&gt;&gt; How about a car?
+&gt;&gt; That was one That was one of my other
+suggestions, but yes.
+&gt;&gt; Exact. No, exactly. That's why I'm I'm
+joking that it's similar. So, sorry
+Peter, were you saying something?
+&gt;&gt; Yeah. How about a carol? like a study
+carol in the library.
+&gt;&gt; Uh can can you write that as well,
+please? I I'll just read some of the
+suggestions that's it's given us. See if
+we can because the thing is Jack Park
+was a wonderful guy. A lot of what he
+works on is knowledge gardens.
+And so that language is very much in the
+kind of knowledge mapping field.
+&gt;&gt; So yeah, but I mean it it looked at
+things like
+&gt;&gt; But how big is the knowledge mapping
+field? Seriously.
+&gt;&gt; No, no. I'm not saying it it should be
+ignored but then again it is
+&gt;&gt; not everybody has an affinity with
+garden as a knowledge thing rather than
+as you know a dirt place with grass they
+don't go so yeah I personally you know
+look outside I I I relate but
+um you know this there's some
+constellation orbital field it looked
+into that kind of stuff what is around
+also went the opposites ground it it is
+the ground from which you build
+&gt;&gt; vista was one this is not bad actually
+stock
+&gt;&gt; ecosystem
+&gt;&gt; what I put in there ecosystem
+&gt;&gt; very good thank you um Peter can you
+write what you said as well please
+&gt;&gt; yeah I'm trying to look up a citation
+for it
+&gt;&gt; okay it also then in the second session
+was haunt spot retreat studio den snug
+nook cozy the quiet the buzz the table
+this is for the kind of space you want
+to be in when you're writing when you're
+working
+and um towards the end here it went into
+knowledge garden knowledge terrain
+knowledge landscape
+knowledge commons the study
+so um was I can't remember the guy's
+first name uh John not I think uh what
+is the internet really this is like from
+15 years ago he went into the direction
+of an environmental eco
+explanation for describing what the
+internet was, not the web, the internet.
+Uh, and um, I think he went and landed
+on ecosystem. I've got the book here
+somewhere, but as usual, I can't pull it
+up in my XR environment, so I can't find
+it really quickly. I could spend five
+minutes digging through my bookshelf
+finding it, but
+um,
+I think it's John. That's the other
+thing is I can't remember used to
+describe
+the internet
+in his book. What is the internet
+really? It's a good book.
+&gt;&gt; It's very readable. It's a good book to
+give to people who don't who aren't
+techies, right?
+&gt;&gt; It's one o'clock.
+No, it's not the That's not the book.
+Why? Why does your clock That's you,
+Peter, right? Because you're the only
+one I know of that's sitting in the
+Eastern time zone right now.
+&gt;&gt; Yeah, that would be my Mac. I'm not sure
+what background utility is doing it. I
+set it up years ago.
+&gt;&gt; But I'm just curious because new Zoom
+doesn't by default have system sounds
+that go through it. you know, I have to
+actually tell it if I'm sharing screen,
+use the computer audio, otherwise it
+doesn't pick it up. And I could play my
+I could play my music right now and
+you'd hear it through the microphone,
+but not, you know, um
+uh but you wouldn't play directly
+through Zoom. And that sounds like it's
+playing directly through Zoom.
+&gt;&gt; Guys, do you know that I used to have an
+assistant that I developed called Lisa,
+Liquid Information Speaking Assistants?
+Are you familiar with that by any
+chance?
+&gt;&gt; Yeah,
+&gt;&gt; because that was based on a human voice
+and that would speak the time if you
+wanted. So that kind of makes me smile
+when I hear it like that.
+&gt;&gt; Yeah, he uh Nton calls it a complex
+ecosystem,
+&gt;&gt; a dumb network,
+uh a global machine for springing
+surprises. I like that. It's a little
+wordy
+and general purpose technology or
+utility.
+But the what he lands on at the end is a
+complex ecosystem,
+but ecosystem for short.
+&gt;&gt; Yeah.
+&gt;&gt; Rich ecosystem maybe. I don't know if
+you need a second descriptor.
+&gt;&gt; Well, it is um it's supposed to appeal
+to students as well. So, it should be
+&gt;&gt; right. I mean it's funny with Claude
+because I said what about thinking room
+or mental space he says mental space can
+mean insane
+and um so room to think and all of that
+is good and the clearing or thinkery
+horn
+&gt;&gt; or gaia
+&gt;&gt; study garden studying garden
+&gt;&gt; you could go with Gaia
+&gt;&gt; which as an ecosystem
+&gt;&gt; well terra
+&gt;&gt; I'm just thinking about your your
+virtual room which is of a comfortable
+size, not the entire
+&gt;&gt; and you're sitting there doing your your
+work and you have all your bits to think
+about around you,
+all your little cards or whatever.
+So, the the ad that I made was when you
+write in a thinking space,
+is thinking space so awful?
+&gt;&gt; I mean, Tom, you're the
+If would you tell yourself
+&gt;&gt; it's not
+&gt;&gt; put put on this headset and go to your
+thinking space.
+&gt;&gt; No,
+&gt;&gt; that implies you're not in a thinking
+space already. Um,
+&gt;&gt; okay. Just for your stupid students
+though.
+&gt;&gt; I don't like to think of my students as
+stupid because they're in they're in
+lies darkness. Um but uh I would say you
+know the idea of a study carol study
+room
+um reflection space
+um you know my thinking space is not a
+room it's taking walks a lot of times
+when I'm stuck I just go out and take a
+walk and you know my brain I don't I try
+not to start with a set agenda and I
+just sort of let my brain go and event
+and I end up laterally thinking myself
+into, you know, this morning I was
+worried about this article I'm working
+on for the Chronicle of Higher Education
+and but then I went out walking and I
+was like, you know, I'm going to be
+spending an awful lot of time sitting at
+my desk. I wonder if I should get one of
+those uh ellipticals that you can put
+under your desk and and then I started
+researching that. So, I mean, is and I
+didn't start out thinking like that, but
+you know, maybe it makes my my
+tendinitis better.
+you know, solved a problem I wasn't
+looking to solve. A lot of times that's,
+you know, the analogy I like to make a
+lot of times, and again, this is kind of
+the idea behind the knowledge navigator.
+If you ever do astronomy
+&gt;&gt; Mhm.
+&gt;&gt; and because of the way your eye works,
+if you're looking straight on on
+something, um, you don't actually see it
+because your retina has a blind spot
+right in the middle. So, the trick is if
+you're doing astronomy is to look
+slightly off to the side and then you
+will see it. And so to me, a thinking
+space is looking slightly off to the
+side and then you will see things that
+you're not expecting to see because if
+you're looking straight at it, you miss
+it. Uh, and I think a lot of times, you
+know, this is what my students run into
+is again, they keep banging themselves
+up against the wall because they're just
+looking straight ahead. And I'm like,
+well, go around the damn wall, stop
+running into it and complaining about
+your head hurts,
+you know? And that's that's kind of a
+natural thing I've trained myself to do
+over the years because I don't respect
+walls to but to me that's a rich
+thinking space is the again I don't like
+anybody else making my frames for me. Um
+that doesn't mean I don't want to frame
+as a photographer. U you know I hate
+framing actually as a photographer.
+That's why I go with the metal prints
+because then I don't have to frame them.
+Um the but uh but that's dex that's a
+dexterity precision thing that I just
+suck at and um uh but the idea that I
+have to you know work within a frame
+sometimes that constraint is good you
+know sometimes I know I'm like I have to
+go to this aspect ratio so I need to
+make the composition work in this aspect
+ratio that's fine but fial yeah exactly
+&gt;&gt; there
+also the notion of studio because Tom
+used to
+&gt;&gt; Yeah. studio,
+&gt;&gt; you know, that that doesn't say you're
+stupid outside of it, but it's a special
+place.
+&gt;&gt; Yeah. Studio is a great term. It implies
+creation because artists work in studios
+and uh designers work in studios. Uh
+accountants don't, but maybe they
+should.
+Maybe I should just call it phobia
+centralis and not explain to people that
+means that you're blind when you're
+there.
+&gt;&gt; I'm not sure that's a selling point you
+want to go for.
+&gt;&gt; Probably not.
+&gt;&gt; Yeah. Studio. I like the studio.
+&gt;&gt; Better than workspace thinking space.
+&gt;&gt; Absolutely. Yeah. Yeah. I mean studio is
+a little overused too like sandbox.
+Um
+&gt;&gt; what do what do the Peters think about
+studio?
+put on your headset and go to the studio
+instead of going to your physical
+studio.
+&gt;&gt; Uh, it might sound a little too artsy
+for some people.
+&gt;&gt; Good. I like it.
+I think of studio like um ideides and
+computing like like my computer geek
+side as it's it's it's you know Android
+development studio or I don't think of
+it as an art thing for my computer geek.
+&gt;&gt; Yeah, you're a geek. Um I think a
+professor
+&gt;&gt; studio
+&gt;&gt; art
+&gt;&gt; then in closing and thank you for for
+staying over time if in the work that
+I'm doing right now I have you have your
+document and you have your nodes that
+relate to the document but everything
+kind of in the background or around we
+say that is your studio not your office
+not your workroom not your garden but
+studio
+&gt;&gt; cognitive studio video.
+&gt;&gt; I was thinking that in the beginning,
+but you probably won't need that. I
+mean,
+I mean, Tom, imagine
+&gt;&gt; I'm thinking about what Peter's But
+Peter said, though that sounds too
+artsy. So, how can you make studio sound
+less artsy?
+&gt;&gt; Well,
+let's keep that in the back of our minds
+for a second. But Tom, you have a
+student just coming into your office
+&gt;&gt; struggling with something. All these
+software things are built. Headsets are
+cheap.
+Um, would you feel comfortable saying,
+"Look, listen, you probably want to go
+put all of this stuff up in your studio
+knowing that you're referring to the
+digital studio, right?
+&gt;&gt; Interctum."
+&gt;&gt; I like Inter too.
+&gt;&gt; Yeah, studio works. It might become like
+web. We say web, we know what we mean on
+the web. It's not internet or interweb
+or, you know, waste or any of the old
+names for a thing. So maybe studio will
+hit, maybe not. layer
+band cave. Yeah,
+&gt;&gt; I'll keep that in mind.
+And um I'm very grateful and we're 10
+minutes over. Thank you guys.
+&gt;&gt; Uh we'll continue this next week. I'll
+try to I'll probably do a really brief
+demo if I actually build something. But
+other than that, I'll try to keep the uh
+topic more general so it's um and and do
+that clearly to the rest of the
+community. Plato's cave. Ah, don't make
+me think. That's a good one, actually.
+All right, bye for now. Have a great
+&gt;&gt; Thanks a lot. I'll see you.
+&gt;&gt; Bye.
