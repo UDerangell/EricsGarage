@@ -1,0 +1,1 @@
+ So it could be opt in like my electricity supplier has an email every week comparing my electricity usage to the previous week.

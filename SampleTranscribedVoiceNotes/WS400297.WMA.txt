@@ -1,0 +1,1 @@
+ So I thought about asking Claude to explain co-sign similarity why it works as a measure of vector embedding distances.

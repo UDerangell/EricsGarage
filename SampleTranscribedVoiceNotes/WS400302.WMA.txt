@@ -1,0 +1,1 @@
+ So for Pete, I'm curious if anything happens when someone emails Freya's inbox and the actions triggered by that and also can Freya periodically scan for updates to my GitHub repository since the last commit and surface them to you if there's something interesting matching your profile.

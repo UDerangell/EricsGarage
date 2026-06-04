@@ -1,0 +1,1 @@
+ So there's some friction in manually converting the WMA files to MP3 files and I think FFMPEG has a way of doing this. I just need some instructions. I could ask Claude about that and I may have asked him previously, but you know, Claude Shannon's a busy guy.

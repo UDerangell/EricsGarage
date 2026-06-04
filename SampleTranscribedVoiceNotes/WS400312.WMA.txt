@@ -1,0 +1,1 @@
+ So one thing I want to test today is using workflow mirroring to take a bullet that I created this morning manually and pull it into the document that I'm going to export with these bullets from the voice notes, probably under this one as an example.
