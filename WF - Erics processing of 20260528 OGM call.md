@@ -17,7 +17,11 @@ Eric's processing of OGM call from 2026-05-28 (Voice notes recorded while listen
 - AI takes a very literal view of call artifacts (ex: tasks for followup) - I want a human centric view
 - example is where I posted chat messages while other people were speaking - how can you follow my threads of thought and relate them to topics being discussed?
 - my comment about having multiple audiences for my Youtube channel - could be a topic for further discussion - how to manage content by audience outside of algorithmic engagement models
-- Pete's projects are IFP, SWAMP and BigTop?
+- Pete's projects are IFP, SWAMP and BigTop
+   - https://github.com/inter-face-protocol/ifp
+   - https://github.com/peterkaminski-ai/swamp
+   - BigTop is unpublished
+   - also look at https://github.com/peterkaminski/hangarwiki
 - I may want to share the NotebookLM of my logs from 2024 with Pete, and/or a transcript of it for him to process
   - I shared the audio file with Jerry in response to his call for externalizers
     - I commented that people probably should summarize or curate their work before sharing
@@ -35,6 +39,7 @@ Eric's processing of OGM call from 2026-05-28 (Voice notes recorded while listen
   - In general, I hate references that require cultural knowledge, even though they create a sense of bonding among the people who know them.  An example is the Gorton's Fisherman image used as an image of what God may look like.  This reference is lost to people who never saw those commercials.  Another one is the horse head in the bed reference from The Godfather, which some young people have not seen.  So what is the appropriate accessibility layer for translating references?
 - look up Pete's OGM wiki (it may be in an email)
 - Jerry's comments on his latest substack post about Hormuz - that's important for me to reread and understand - his self-critique of his video content after it was published.
+  - For Reference: [https://wiki.openglobalmind.com/hormuz_meets_the_ghosts_of_douhet_and_ho_chi_minh]
 - should I add the video that I unlisted back to the 4OGMandGCC playlist?  This is a challenge for me!
 - levels of sharing: a 12 step meeting requires trust that the shared principle of anonymity will be upheld by all present, a zoom meeting now has issues such as AI notetakers grabbing full content and not just recorded content
 - Jerry said that civilization needs a shared persistent memory that is not a canonical reference
