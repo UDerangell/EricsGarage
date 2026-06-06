@@ -1,0 +1,19 @@
+-rw-r--r--@ 1 ericrangell  staff  29851942 Jun  1 07:18 Beaker and Pushpin POC for educator collaboration [hx3tnQNgGBc]-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  44286465 Jun  2 04:20 Building_an_autonomous_AI_networking_proxy-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff   6334986 Jun  1 07:22 Climb DAT Mountain presentation for DigLife [5JkWeyzp3k0]-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  41119170 Jun  2 04:21 Directing_AI_Agents_with_Text_Markup-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  51046990 Jun  1 07:17 Envision DAT Future! [MfedQqzJ434]-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  73674847 May 31 15:58 From_Apple_IIGS_to_AR_Music_Visuals-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  63131617 May 31 16:13 Marcus_Aurelius_s_Private_Manual_for_Chaos-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  37533357 Jun  1 07:19 Reverse Engineering Douglas Engelbart [TxccwTr0bOg]-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  64313422 Jun  1 07:20 Reverse Engineering Ted Nelson [wYRwjHnIlYA]-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  53623464 May 31 15:59 Simulating_Douglas_Engelbart_s_NLS_on_Apple_II-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  63406217 Jun  2 04:44 Stepping_into_the_3D_spatial_studio-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  52635408 May 31 15:59 Systems_Thinking_for_Life_and_Death-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  70347056 May 31 15:59 Taming_AI_with_the_Shannon_Move-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  14506707 Jun  1 07:21 Ted Nelson's Vision： Full Exhibit Walkthru [1wzov-ZlOFc]-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  56370958 Jun  1 07:22 The dZ Easy Show： Episode 00003： Upcycling Ted Nelson [CMzfsdDNEjs]-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  50574094 Jun  1 07:20 The dz Easy Show： Episode 00005： ZZstructure for Conway's Game Of Life [QK3SBETIyNk]-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  93842062 Jun  1 07:21 The dz Easy Show： Episode 00006： Brady Bunch Dimensions [RTELUmK8euA]-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  92542569 May 31 15:58 Visualizing_Beethoven_for_deaf_listeners_through_AR-mp3.mp3
+-rw-r--r--@ 1 ericrangell  staff  41316622 Jun  1 07:21 Watch Doug Engelbart Work! [4FmAckL2TSY]-mp3.mp3
