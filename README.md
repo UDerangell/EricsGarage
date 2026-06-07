@@ -9,3 +9,5 @@ Some tools used to create this content are in the following repos:
 Public feeds that may be of interest to users of this repository:
 - https://x.com/RatifyArticle1
 - https://www.youtube.com/@EricRangell/videos
+- https://archive.org/details/@repentantpirate
+- 
