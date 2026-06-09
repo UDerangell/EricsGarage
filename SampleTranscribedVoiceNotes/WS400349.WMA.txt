@@ -1,0 +1,1 @@
+ Compare AR-JS-2 WebXR and see how I can run it locally without web access. I'm pulling the code into a vendor directory.

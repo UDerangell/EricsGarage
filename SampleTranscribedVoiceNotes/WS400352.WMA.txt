@@ -1,0 +1,1 @@
+ Or I can test Fuji Net. See what kind of socket interface I can build with Fuji Net.

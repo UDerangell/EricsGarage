@@ -1,0 +1,1 @@
+ So for example, I would describe the visual that I want for Beethoven, you know, a MIDI performance of Beethoven's fifth, and then combine that, yeah, the YouTube shows what that visually looks like now, and then I can describe the objects I want Claude to create in 3D, AR, VR, starting with A-Frame, etc.

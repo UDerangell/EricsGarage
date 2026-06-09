@@ -1,0 +1,1 @@
+ So I do need a MIDI filter logic in between the Apple 2V and the piano to get rid of the zero note on's that make us the low crap.

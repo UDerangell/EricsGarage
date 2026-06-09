@@ -1,0 +1,1 @@
+ So I need to combine MIDI following technology where the Fuji Net receives a segment of MIDI and then follows it based on cues received over the socket.

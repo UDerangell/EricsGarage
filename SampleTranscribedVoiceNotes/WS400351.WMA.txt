@@ -1,0 +1,1 @@
+ So look up a request animation frame.

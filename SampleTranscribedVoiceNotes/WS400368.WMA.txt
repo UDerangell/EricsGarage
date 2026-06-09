@@ -1,0 +1,1 @@
+ So around 13 and a half minutes it talks about the relay architecture starting to instruct Claude, decoupled multi-threaded designs.

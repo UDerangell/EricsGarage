@@ -1,0 +1,1 @@
+ So a nice project is the Pi 400 playing a MIDI file in the 2GS, receiving the data over Fuji Net at the 2.8 megahertz. And doing a visualization based on the Web socket data, the equivalent to Fuji socket data.

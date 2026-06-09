@@ -1,0 +1,1 @@
+ So I want to create the sequence file for the Co-Siefon 2D Orchestra piece and that involves figuring out the pan. I need to document my procedure for doing that to load it up, figure out the pan and then looking at the tracks and which channels they're mapped to, maybe remapping some tracks.
