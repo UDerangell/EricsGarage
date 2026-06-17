@@ -1,0 +1,1405 @@
+Kind: captions
+Language: en
+All right. Hello everybody. Um, my name
+is Jeff Brace. I'm the VCF East
+showrunner. Um, the VCF East is Vintage
+Computer Festival East held in Wall, New
+Jersey. Uh, I'm the showrunner and also
+the Vintage Computer Federation
+President. Um, so we we had we and we
+are unfortunately had to cancel
+breaking up
+and myself in the background. Sorry
+everybody. All right. Uh we are
+incredibly honored today to host a true
+titan and not just of early computing
+hardware but of the social movement that
+put computers in our homes. Our guest
+today has spent over 54 years on the
+front lines of the digital age in the
+1970s when the tech industry thought
+computers belong strictly to massive
+corporations and governments. It was
+part of a counterculture movement that
+demanded otherwise. As the legendary
+moderator of the home computer club, he
+helped shepherd the chaotic birth of the
+PC industry, acting as the sounding
+board for people such as Steve Waznjak
+and Steve Jobs. As a brilliant engineer,
+he helped to design the iconic Soul 20,
+the historic Penny Whistle modem and
+Osborne 1, the world's first mass-
+prodduced portable computer. But more
+than the hardware, he's always been
+championing the idea of the technology
+and must empower the individual. Today,
+as he is here to look back at what we've
+been, challenge the predictions that
+failed, and talk about the critical
+choices we face regarding the future of
+personal computing. If you have any
+questions, please post them into the
+YouTube chat and we'll take them at the
+end of his talk. So without further ado,
+please give a warm virtual VCF welcome
+to an original digital pioneer engineer
+and philosopher, Lee Felenstein.
+&gt;&gt; How do I follow that? Well, here we go.
+&gt;&gt; All right. So, I'm going to put up the
+slides now so everybody can see them.
+&gt;&gt; All right.
+&gt;&gt; Okay.
+&gt;&gt; Okay. So, the title is hacking into the
+future of PCs. And that's from the sense
+of not hacking into in terms of entering
+un unauthorized but rather than
+hacking in order to create the future of
+PCs.
+And I must apologize to the antiquarians
+here who uh say, "Well, we're only
+vintage computer place. What are you
+talking about the future for?" Well,
+that's where they come from.
+And if we don't keep doing it, we won't
+have one.
+Um,
+so I'm using the term hacking to mean
+not the malicious or criminal in
+manipulation of computer systems, but
+rather the process of personal
+exploration and discovery through which
+the is development oops lost my plates
+to which development of computer
+hardware and software occurs outside the
+rigors of school or employment.
+I published a book and that's the title
+on the screen which attempts to explain
+how I developed what I call my life's
+work of social media development which
+at age 81 I still pursue with some
+urgency.
+This work has led me to my involvement
+with personal computer hardware
+development and conducting meetings of
+the homebrew computer club. I called
+myself the toast master just because I
+didn't want to visual myself.
+In 1984, I became a significant
+character in Steven Levy's book,
+Hackers: Heroes of the Computer
+Revolution, which should cement my claim
+as a hacker.
+I define hacking. Next slide, please.
+Yeah, I define hacking as a
+technological as technological
+development driven by application of the
+inherent human sense of play and the
+quest for adventure.
+Now play is fundamental in human
+development. People say play that's not
+serious. No, it's very serious. It is
+how children learn about their
+surroundings and their place in them and
+is observable in even in many animal
+species.
+Many industrial accidents have their
+cause in attempts by workers to play
+with tools that are unforgiving.
+Next slide.
+Motivation for this playful process of
+hacking includes display of virtuosity
+before peers who can appreciate such
+displays.
+Bragging rights within peer groups
+and reaction against strictures of
+employment or mo more regular processes
+are I'll say demanded. I was about to
+say required.
+This is especially manifest when the
+reaction leads to transgression against
+rules inhibiting access to information
+in violation of the implied command.
+This you shall not know. Hacking is
+basically that.
+Next slide.
+In the history of computer development,
+we can define the past and one a future
+era as the mainframe era starting in
+1952 with UNIVAC 1. And I had the honor
+just out of high school of uh
+staffing the UNIVAC one behind glass
+exhibit uh at the Franklin Institute
+Science Museum in Philadelphia, which at
+the time was the center of the computer
+industry.
+They closed that down. They removed the
+Univac one during my tenure. So I was
+the last demonstrator.
+The minicomp computer era starting in
+1959 with Dex TX0 and that story is
+covered in uh Levy's book.
+The PC era starting as we all know in
+1975 and the AI era which is just
+beginning.
+Next slide.
+mainframe era
+I need not say dominated by IBM
+similar to past eras when dinosaurs
+ruled the earth the industry quickly
+became dominated by IBM with its vast
+infrastructure developed to support the
+elect its electromechanical business
+machine operation
+computers were not sold but leased to
+users and technology was tightly
+controlled so that non-employees would
+not have access to information about its
+operation.
+Components were manufactured by IBM and
+training was restricted to employees who
+had to expend great effort to learn,
+thereby removing motivation to pass the
+information outside the corporate
+boundaries.
+IBM formed a community which functioned
+like a cult with dress standards,
+corporate song books, and inclusion of
+employees, families. I lectured before
+an [clears throat] IBM
+meeting of some sort uh back in the
+1990s.
+I talked about I was talking about the
+Soviet Union at the time which was
+falling apart. I said suppose
+IBM ran everything like it had IBM
+bowling alleys and so and someone in the
+audience applauded.
+Okay.
+And of course as regards components as a
+habitual
+haunter of
+uh surplus stores it was a great
+disappointed when disappointment
+whenever I came across something that
+had the IBM stamp on it. It's like I was
+never going to be able to find any
+information about this. Give it up and
+don't buy it.
+Any
+company attempting to market a
+peripheral device that was plug
+compatible with IBM computers came under
+ferocious legal and commercial pressure.
+This led to the prosec to a prosecution
+for restraint of trade and a consent
+decree that cooled IBM's aror in that
+somewhat.
+The concept of sharing software was
+anathema as demonstrated by one Herb
+Groch, a columnist for the Thick Tabloid
+Weekly Computer World.
+When he toured the nation in 1975,
+sending columns in reporting on what he
+learned on the road
+approaching San Francisco, he wrote that
+he had heard that sharing of software
+was taking place in Silicon Valley.
+Quote, "I'll believe that when I see
+it," he said. he wrote in his column. In
+the next week's edition, Gross reported
+on his visit to the Homebrew Computer
+Club with genuine horror as he saw club
+members enthusiastically copying and
+exchanging software.
+Don't share software, he exorted in an
+apparent existence existential terror.
+We ignored him.
+university administrators of mainframe
+systems though not employed by IBM or
+whoever the manufacturer of the IBM was
+because it was control data and others
+but without the clout that IBM had
+those administrators would according to
+Ted Nelson guard their domains as
+jealously as if they owed allegiance to
+the cult and there's the cover computer
+live book from 1974
+when Ted tried to convince them to allow
+to develop his hyperlink li literary
+software on their machines. Their
+response amounted to you will not use
+the machine for such purposes.
+This is in the book. Fortunately, TED
+published this in 1974 free form coffee
+table book computer which I have
+previously introduced.
+It became our common text.
+I can't tell you how many people
+contacted me and said, "I just read I
+learned about all about computers and
+computer lib and I want to get in."
+Largely due to Nelson, IBM became viewed
+by us as a major threat to the
+development of personal computers.
+Though no one could articulate exactly
+how they would wield that threat, we
+feared that they or Japan incorporated
+another shadowy boogeyman
+would make some devastating move that
+would reduce us to irrelevance and
+poverty.
+Most hacking took place on university
+computers when the operate opportunity
+presented itself. And of course, we know
+about
+Microsoft
+Alter Basic,
+which they said used $40,000 worth of
+computer time, probably on a university
+machine, and therefore we should pay. Of
+course, we all knew what a computer time
+cost.
+Next slide.
+The minicomp computer era. In 1959,
+MIT contracted with Digital Equipment
+Corporation or DAG,
+a local manufacturer of digital modules
+for a large computer, the TX2,
+to be used in development of time
+sharing software.
+In order to enable the de debugging of
+this computer, the small computer, the
+TX0, was also contracted,
+the first mini computer. Once the TX2
+was operational, there was no further
+need for the TX0 and it was left with
+MIT for use at its pleasure.
+Once the TX2 Oh, sorry, I just read
+that. MIT was smart enough to be easy
+about allowing students to use the TX0.
+Unofficial use was offered on an as
+available basis.
+Students would leave their programs with
+a computer for others to use in a
+culture hadn't developed
+which of course includes sharing of
+software.
+Deck began developing various small
+computers some of which were loan to MIT
+so that students could learn their
+details and provide a hardware and
+software skill resource for deck.
+Remember deck was in Marlboro,
+Massachusetts. It's right next door.
+In order to offiscate this process, deck
+did not call their products computers
+but merely program data processors or
+PDPs.
+That's to get around bureaucratic
+obstacles like computers. Well, that had
+to go on this major capital budget. But
+whatever this PDP thing is can go on a
+lesser budget that actually has money in
+it or actually doesn't have rules saying
+it must be IBM.
+The story of this hacker this hacker
+subculture is fully told in Levy's book
+hackers heroes of the computer
+revolution
+in it Levy sets forth the hacker ethic
+which he observed with ex which extended
+from MIT to the developers of personal
+computers
+and which helps define hacker to the
+present day.
+Next slide.
+the PC era.
+The Altar 8800 kit opened a new era in
+computer development, one that bypassed
+the existing manufacturers.
+Amateur enthusiasts insisted by some
+renegade professionals, I supposes me
+and others took the lead in filling
+shelves with cheap, simple machines
+ready for software development. The
+hacker ethic provided the rules and
+pent-up enthusiasm for real personal
+computer.
+Oops. Real personal computers and
+enabled self- financing companies
+to be bootstrapped by sales within the
+growing group. We sold to each other.
+Software development was financed by the
+impulse to display virtuosity. Clubs and
+small publications shared expertise in
+minimal marketing services.
+It took two years for the computer and
+industry
+to recognize this new segment growing
+from nothing.
+Eventually, semiconductor companies
+recognized the new situation and began
+to adjust the road maps to accommodate
+it. Next slide.
+So, we're pretty much all they're
+familiar with the the the PC. I don't
+need to lecture too much on that. Now,
+[clears throat]
+we come to the AI era.
+50 years later we be confronted by a new
+and also old situation
+we are back in the mainframe era.
+AI cannot be implemented without massive
+investment data centers teams of
+engineers and programmers and the users
+are relegated to passive roles of
+writing prompts.
+This ought to sound familiar.
+The product is created through totally
+opaque software operation.
+I mean, yes, hands. Who can tell me how
+AI works? The one you're using? You can
+guess at it.
+With only human creativity being
+expressing prompt verbiage, I said that
+already and it's worth repeating.
+By tying the process to the resources of
+the internet, an averaging process is
+all that can be expected out of it. It
+reminds me of a fellow student in high
+school who could never come to believe
+that he could have a correct answer on a
+test. And so in every test, he was
+polling everybody nearby. What's your
+answer? What's your answer? What's your
+answer?
+That's not going to be a great student
+do good work. And that's what AI does.
+That's how it works.
+Excellence
+require which requires innovation is
+outside the range of possible AI
+outcomes.
+Maybe this is controversial, but that's
+what I'm here to do.
+Full artificial general intelligence,
+AGI, cannot be expected, I say, and
+would probably be toxic if manifested.
+We're probably going to get a chance to
+try that.
+We are left outside the cult facing the
+denial of access to forbidden knowledge.
+Next slide.
+What can now be done?
+We are back where we started. But we now
+have large bodies of experience and an
+open-source culture.
+Those of us not willing to abandon
+creativity and excellence must coales
+into communities of purpose
+as we did through the homebrew computer
+club and other places. The publication
+certainly
+now we have the internet. We can do do
+it a lot faster
+where we can explore our way around the
+stasis of the new AI mainframes.
+We must include youngsters at the
+beginning of the technology journey of
+their technology journeys. I began at
+age 11 and believe that I have found
+empirically that this is the optimum age
+to begin. I'll talk about that a little
+bit later.
+Our task will be to create the world
+within which we can act effectively to
+exercise creativity and to do so in a
+way that makes the process
+self-replicating in new generations. And
+here I am 81 years old. It's like, well,
+there's so much I still want to do.
+Well, other people are going to have to
+do it. And those people are young now.
+Next slide.
+Generational skill transmission. I have
+developed a learning device which can be
+used to teach students of 11 and older
+the design and prototyping of hardware
+state machines.
+I did it by reverse engineering the
+first programmable logic devices and
+laying it out with a grid of wires
+instead of fuses so that you can connect
+them with physical connectors.
+And this makes use of our visual tactile
+methodology to learn. It's very
+powerful.
+This teaches state log. It teaches logic
+develop pardon me. It teaches logic
+equation development in an interactive
+process. It's a two and a three/4er hour
+session with about six students and the
+11 year olds can work through it. The 10
+year olds are all gone by the time it's
+over.
+As we did in 1975 through 1977,
+we can start to explore into new areas
+of possibility [clears throat]
+which I call essential computing.
+This involves the development of minimal
+hardware and software modules
+using embedded microcontrollers and open
+hardware. We see these being
+manufactured and sold now
+using embedded microcontrollers and open
+hardware. I think fourth a highly
+efficient language could be used to
+power them as it is also configured in
+easily in uh understood modules from my
+limited experience of attempting to
+modify a fourth program.
+Much of the challenge will be in
+developing protocols for distributed
+interruption interoperation
+of these modules.
+Next slide.
+single-handed corded keyboards
+which were initiated with Anglebart's
+uh demo but went nowhere in particular
+experienced a leap in usability in the
+1980s that was nearly lost.
+Developed in Great Britain by an
+American expatriot
+uh
+damn I forgotten the name but I'll come
+up with it.
+The microritriter visual pneummonic is
+easy to learn and to implement. I
+learned it in about less than half an
+hour when I tried it. It first came out.
+It promises low cost and portable use
+with good performance.
+It would, I believe, be a good candidate
+for a culturally proprietary element for
+use by young hackers
+that you can walk around with a keyboard
+in your pocket
+and type. Of course, you have to see
+what you're typing, but we'll get to
+that like in a bit.
+Now, while much effort has been invested
+in attempts to imbue computers with
+unspecified natural language
+capabilities so that the computer
+understands our language, whatever that
+may be.
+We have been ignoring the fact that our
+species, human beings, normally learns
+other languages all the time. We should,
+I believe, experiment with defining
+computer languages.
+And I don't mean programming languages.
+I mean language for expression
+for communication with humans, phone
+names and dialects that we can learn.
+Here's an idea. Hawaiian is pretty
+simple.
+Why don't we try using that as a
+language that the computer speaks to us
+in? We can learn it.
+Pigeon English, maybe that, too. as the
+universal was the universal language of
+commerce in the South Pacific.
+We can build tiny metronome displays,
+at least elements that can take
+advantage of human persist persistence
+of vision. I think of a little
+my own camera. Here we are extending a
+little wand
+that and starting it at swinging back
+and forth and it's being driven
+underneath by a resonant circuit. Tick
+tock, tick tock. At the end there's a
+small array of LEDs, eight or 12 of them
+and they sweep through our field of
+vision and the phase lock loop is
+generating a clock, a dot clock. So it
+paints out a row or an arc of
+characters on our retinas through
+persistence of vision. Nobody looking at
+it from the side can see this
+perfect little private display
+that we could hang on our bodies or
+refer to whenever we want to.
+The kids could develop this.
+Not too hard.
+So, I hope I mean it's one of many
+projects that I was going to get to, but
+I have my big project now and I've got a
+concentrated on it for the rest of the
+time available to me. So, other people
+have to take that on.
+There's also mesh wireless networking
+using protocols like low raw.
+They've been tried as direct
+replacements for real-time multi-point
+networking and found wanting because
+they're slow
+because that's the price you pay for
+mesh networking.
+Well, we can adjust the data format from
+real time to package data. let's say
+voice grams and textgrams
+that you
+you know record and then you transmitted
+and they get there reasonably soon. But
+so what
+it should be possible to bypass the
+perceived need for extensive
+infrastructure and network this way
+latency can be traded for reliability at
+low cost. As I was saying, would anyone
+be interested in pursuing this?
+A whole range of personal devices
+interoperating on principles knowable by
+new generations will be possible if we
+agree to leave behind our powerless AI
+future and move forward with the future
+we develop.
+Next slide.
+Oops.
+Next, next slide.
+Jeff, can you hear me?
+&gt;&gt; Hold on one second. [laughter]
+&gt;&gt; There's one more slide.
+&gt;&gt; All right. Hold on.
+Let me stop for a second.
+&gt;&gt; Oh, wait. Sorry. No, wait. No, no, no,
+no, no.
+I think
+&gt;&gt; that was it.
+&gt;&gt; No, that was it. That was it. I was
+sorry about that.
+&gt;&gt; Tada.
+&gt;&gt; Open for questions. Now, let me open my
+chat because I may not be able to see
+it.
+&gt;&gt; So, I So, I do have um questions that I
+wrote down that people did put into the
+chat. So, I do have a first question. if
+you're ready for it.
+&gt;&gt; Um, I think I'm ready. My screen is
+doing funny things here, but I'm ready.
+&gt;&gt; All right. So, it says, "Do you think
+there should be a chargeback
+system for companies that collect AI
+subscription revenue to pay for
+externalities to communities impacted by
+data centers?"
+&gt;&gt; Well, it's probably worth trying. Uh
+this is one of these frontal assault
+things
+um that
+some of us were trying back in the '9s
+computer professionals
+for social responsibility or something
+there. Uh they would talk talk about it
+and they would try to somehow gain
+access to mainframes.
+Um, they never got anything to happen
+from what I could tell, although I'm
+probably being too harsh.
+Um,
+I had not heard of this and because I've
+not been been paying attention to it,
+you know, the chargeback for
+for material copyright in effect, he
+needs to have everything registered
+properly and that that can be a problem
+setting up and so on.
+Uh I think that yes worth a try but I
+don't think it's going to be the fix. I
+mean first of all the remediation or the
+med
+the u mllification of externalities
+meaning problems that data centers uh
+involve
+um I kind of think that's going to be a
+public matter that will handle be be
+handled by taxation
+if we're lucky but I'm not
+&gt;&gt; [clears throat]
+&gt;&gt; Next question. I can't read it. It's a
+little small.
+&gt;&gt; All right. So, I'll read it. Um, the
+internet of course allows us to remove
+geography from group collaboration.
+In your experience, do the advantages of
+in-person meetings outweigh the diaspora
+gathering of virtual groups? I'm in
+favor of combination.
+Um, in-person meetings [clears throat]
+are very important because they
+communicate a lot of information. I
+mean, I'm reminded, this is a good plan
+time to talk about Steve Jobs first
+appearance at Homerook Club. Now,
+Bosnjak was always there from the
+beginning
+and he staked out at the the one
+location in the slack auditorium which
+had a an electrical outlet because in
+those days electrical outlets were only
+useful for the floor polisher.
+Um, and he did his work there with Randy
+Wigington and Chris Espinosa and other
+helpers and people would help him.
+Finally, it came to uh spring of 1976.
+He disappeared at certain point. He went
+uh into stealth mode as we call it on
+the Apple one.
+He turned up again and there was a guy
+standing behind him. Now, I recognized
+this guy as the guy who had conducted me
+into and back out of Al Akran's office
+at Atari in 1974 when I went in to apply
+for a job as a design engineer.
+It was Steve Jobs.
+Um,
+now I had brought along material from
+community memory, which the social media
+system that I helped start in 1973.
+And uh the idea was to try to sell Atari
+on the concept of social media.
+Well uh my interview with uh Al Alorn
+who's a good friend of mine now was very
+short. He just said we're not looking
+for design engineers. We're looking for
+manufacturing engineers. Thank you very
+much. Go away. And it was Steve Jobs job
+to conduct me out to the street. I tried
+to sell him on the idea of social media
+while I was going. He would not look at
+my materials. He made little bobbling
+motions of his head while he was
+walking, which communicated to me, get
+me out of this this uh away from this uh
+proitizer.
+And soon we were out on the street and
+that was when Steve Jobs or how Steve
+Jobs missed out on social media.
+I that's in in my book. Um
+so he was there he didn't say a thing.
+Um okay we came to the mapping we we had
+the mapping session where people stood
+up when I pointed to them and stood up
+so they could be identified by everybody
+gave a brief description of why people
+would want to talk to them and my job
+was to stop them when they wanted to
+explain everything.
+Uh then we went to random access after a
+certain point at which you could feel
+the place getting you know about to blow
+and everybody would come down to the
+floor of the auditorium and and you
+would then talk with the people you
+wanted to talk to.
+Jobs came running down to the floor
+running around the room trying to
+overhear every conversation that was
+going on.
+It's the only time I ever saw that
+happen and it happened again. And I
+think the next meeting Jobs did the same
+thing.
+Well, okay, that's something that can go
+on uh in a per in an in-person meeting
+that can't go on online.
+Uh but otherwise,
+you learn a lot about other people in
+person that is not communicated online.
+I shouldn't need to tell you that.
+And so my concept is that most of the
+information transfer occurs online
+but with with well with with regular
+established in-person meetings where you
+can have a more in-depth conversation
+with somebody or some group and that's
+where some of the benefit occurs with
+group formation.
+Um,
+and I am in fact trying with my I call
+it my life's work to be grandiose.
+The next social media system that I'm
+working on, I call it the commons of
+information. the model for which is a an
+in-person
+gathering
+and we can facilitate
+through
+uh the terminal is a smartphone.
+uh
+we can we can not just simulate we can
+develop conversations group
+conversations
+which is what you have to do and there's
+a there's a dynamic of group
+conversations that I've developed it's
+in the book um
+you know I would still think that that
+even with with a
+a cybernetic version of that hesitate to
+use that word because it has meaning. I
+don't want to involve
+um you still need to have inerson
+versions of of the same thing.
+So, uh I say both.
+Next question.
+&gt;&gt; All right.
+Next question. What role do you see for
+augmented reality in educational
+settings? [snorts]
+&gt;&gt; Very glad to hear that word augmented.
+Um
+because in my view it it should replace
+artificial
+for artificial intelligence augmented
+intelligence augmented reality
+that's something that can as I think we
+understand now superimpose
+uh or otherwise present
+alternate ways of seeing things
+uh to people who uh are trying to
+explain something
+people who are trying to understand
+something. I think it's going to be
+quite important and I think it's going
+to have to move into more domains than
+simply the visual.
+Um, one of the things that I wanted to
+do at interval research, which I I was
+not in charge of,
+um, I was only in charge of prototype
+development,
+was to launch a multid-disciplinary
+project to understand
+how impressionism
+worked. This is the time when in about
+the turn of the n the 20th century
+fine artists had come to the level of
+being able to produce perfect
+representations of reality but
+they were still pictures on paper.
+And then other artists explored other
+ways of communicating what the art was
+supposed to say
+through much simpler
+uh patterns and techniques. Uh
+and it's raised a tremendous fewer.
+There were riots at the artic
+exhibitions.
+Um
+and uh
+it has come around to become a a
+an expected kind of technique that no
+longer arouses
+outrage.
+Uh but we I need I think we needed to
+find out nail down
+more specifically more objectively how
+does this process work and it still
+needs to be done
+uh
+and it can be I would say implemented
+with augmented reality because in effect
+impressionism is augmented reality.
+it sort of reminds you of things you've
+seen
+u and other techniques like that we need
+to involve those
+there's audio there's tactile sensation
+all sorts of things
+u
+the the
+role is immense as long as it remains
+augmented
+I well I don't know about I would hope
+we have uh past the era of complete
+representation of every pixel.
+You know, in effect, the retinal display
+is what I'm talking about. It's a nice
+thing to have, but
+it isn't reality
+and we don't feel it as reality.
+Uh
+it needs additional stuff, you know,
+depth, representation, focus, and things
+like that.
+So it's uh
+you know this being being developed. I'm
+not saying it's completely undone but uh
+it's going to be important and I say
+that that's an area where people who
+have training and an experience in the
+arts
+will be quite useful as we really should
+know by now because people with the
+qualification and education have been
+part of uh graphic uh user interface
+development for some while. Was that the
+last question?
+&gt;&gt; I see.
+&gt;&gt; No, we have more. So I Yeah, I just took
+out the sharing. So if you're finished
+with that one. So this um question is,
+can you tell us some stories about the
+community memory system?
+I guess I could if my voice holds up.
+Um,
+once again, you've heard this if you
+you've seen this if you read my book,
+but not that many people have read it.
+Um,
+where to start? Well, I came to
+computers in fact, well, I came to
+computers in 1959 when my brother, my
+smarter older brother, started a
+computer club in high school.
+and he drafted me as as a chief
+engineer. I was building vacuum tube
+flip-flop circuits that actually worked
+pretty well. But we did not know that
+our method of generating a pulse, which
+was to flick a piece of metal with a
+wire was one of the most effective ways
+of generating random pulse trains. So
+they worked about 50% of the time and I
+gave up on that. I figured this this
+digital business is too finicky. I'm
+going to stick with analog, audio,
+radio, things like that. 10 years later,
+I had to I I could no longer make that
+decision. It was do that software or
+quit the job.
+And that was when I developed an
+understanding that the system I was in
+search of for
+my
+path of trying to achieve
+uh
+miner von which was the the process I
+saw in operation when the counterculture
+came to Berkeley in 1965. the campus
+opened up after the free speech movement
+and everybody was trying different
+things.
+Uh I was, you know, enrolled in a
+political science course which dumb
+engineers like me weren't supposed to
+do.
+Bands were forming magazines were being
+started. It was wonderful. I want that
+all the time and I still want it now. So
+how to do it was well I could do
+technology. So what was the technology?
+It took me a while. So that finally in
+1970 I realized what I wanted was a
+network of computers.
+Well then where am I going to get a
+computer? A year later I was joining the
+group that had in fact secured the
+long-term loan which means don't bring
+it back
+of Doug Angelbart's
+old computer on which he had run the
+mother of all demos. We didn't know that
+at the time, but we were dealing with a
+mix of people in Silicon Valley who had
+worked on that and could help us.
+Okay. So, we wrote a an information
+retrieval system that was dynamically
+indexable as the trick. So you could you
+add new index words any time to the
+database and the computer would do all
+the bookkeeping which is of course what
+computers do.
+Fine.
+How about getting it out to the people?
+Well, we had been maintaining we had
+started
+as an offshoot of what was called a
+switchboard.
+It wasn't a PBX switchboard by any
+means. It's just a switchboard is
+basically room with a phone and maybe a
+f an index card box or maybe a bulletin
+board or both and somebody who knows
+about the subject material
+that the switchboard is is concerned
+with. This was a a staple of the
+counterculture in the first
+years up to 1970
+I suppose maybe beyond. and some
+switchboards are still running today. It
+was just an information exchange point
+and the indexing system was in the heads
+of the people who who staffed it and on
+the wall where they could put up
+notices.
+What we were doing was making
+connections between people who called in
+with what they needed, what they had to
+offer, their suggestions, their ideas,
+and so forth.
+Um, so the group with it which got the
+computer had in fact originated as a
+spin-off of the San Francisco
+switchboard which basically had gone
+dormant.
+But we didn't maintain our contacts.
+And so by the time in 1972 when we were
+able to trot out this information
+retrieval system using teletypes, modems
+and phones,
+we tried to contact the switchboard
+collaborative meeting that was going on
+and they couldn't understand who we were
+or what we were talking about. Somebody
+seemed to remember a rumor to this
+effect that there were some people
+working on a computer system, but there
+had been no followup, so why bother with
+it?
+Now,
+Ephraim Lipkin, who was a close friend
+of mine at the time,
+um, whom I had brought in as assistants
+programmer,
+went to a meeting with some reference
+librarians. Now these were the
+librarians among libraries
+where their books had to be exchanged
+among libraries,
+&gt;&gt; pardon me.
+And he explained the system as best he
+could. They said, "Well, it looks like
+you've got a
+um got some shelves with no books on
+them. Why don't you make the shelves
+available and see what books you can get
+off them?"
+He came back and he said, "I've been
+thinking,
+what if we put a computer out in the
+terminal out in public?"
+I mean, remember the terminal was only
+the part you typed on and saw the result
+on whatever the screen of paper was. It
+wasn't the computer. Nowadays, we use
+our computers as terminals.
+And you know, kids these days
+don't know the difference. All right?
+And I thought about it and I said maybe,
+you know, it sounds risky. We went to
+try it. And so I made a presentation
+before the Associated Students of the
+University of California board. It was
+the student council of Berkeley, the
+University of California, Berkeley,
+because they had started a record store
+to drive record prices down, Leopold's
+records.
+Um,
+and then we figured it would be a good
+place to set up a terminal. They had a
+huge bulletin board there which is for
+musicians
+and they had a continuous stream of
+students going in and out.
+Um,
+okay. So, I made the presentation and
+the board said, "Hey, great. Do it." No
+issues about insurance or anything like
+that.
+And so in August 8th, 1973,
+we showed up and set up a
+teletype on a uh
+in in a cardboard box that I had built
+that had urethane foam for muffling the
+sound. And it had to have a little fan
+on it because it would get hot, but it
+had two holes in front where you could
+stick your hands.
+and that was facing out and there was no
+there was a chair there but nobody was
+in the chair. We had somebody in the
+chair next to the colonel
+who would greet people by saying would
+you like to use our electronic bulletin
+board? We're using a computer.
+And I thought that maybe half the
+students walking up would be repelled by
+the idea of a computer. But no, only one
+person ever did that.
+Everybody else said, "Oh, wow. Can I use
+it?
+And here's what they did. The traffic
+came over from the bulletin board, this
+physical bulletin board to make one of
+the richest elements of the database.
+And I saw people who
+clearly looked like they were in a
+different astral plane at the moment do
+very good searches on it because they
+were making their living from the, you
+know, the gigs they could get.
+[clears throat]
+Um, no. Efim had thought that there
+would only be three uses for it. Jobs,
+housing, and computers. No. Why did I
+say that? Jobs, housing, and cars.
+In 1973, they were the things foremost
+in the minds of many young people.
+But the database expanded tremendously.
+In fact, a problem that we began to
+identify was that things weren't
+clustering.
+There were only a few applications of
+every keyword, but there were a lot of
+keywords in these. At any rate,
+that search methodology
+and indexing methodology which was
+think of a word
+if you're if you want to index it, think
+of a word somebody might think of and
+put that in and push the, you know,
+green button
+and think of another word that people
+might use. You could have any number you
+wanted.
+Sorry.
+Um, search was the same thing. Think of
+a word, try it out, see what gets
+printed out as the first lines of the
+first 10 items that we found.
+And if you want, think of a second word
+and put them both in.
+And you would get the the logical and of
+those.
+Maybe it was a logical or, I don't
+remember.
+But a search methodology like that, an
+indexing methodology
+would not be suitable for business
+because you would miss things. But it
+was fine for the electronic bulletin
+board.
+So we basically stumbled into that
+realization
+and the realization that people would
+generate their own content.
+In 1993, I was invited
+um as a destabilizing element to
+participate in a an annual
+24-hour kind of seminar
+of uh leaders of the communic of the
+communications industry in the
+entertainment industry run by Jeff
+Sonnenfeld, the hot shot professor who
+is still on TV these days.
+And I got to tell them, look, I mean,
+the the the the understanding at that
+time, the received wisdom was, we own
+the content, therefore we own the
+internet, and the content was movies.
+However, there I was
+talking about how
+taking at least a strong advocate of the
+position that the internet is pipes with
+meters,
+not movies.
+Uh, and that people would make their own
+content that we tried it and it worked.
+Nobody had any questions for me. Nobody
+came up afterwards to discuss the
+matter. I was definitely as dess
+stabilizing element among a number of
+people who value stability quite a bit.
+However, I came I was all invited back
+over the next 10 years and they came
+around.
+Uh so within a few years they're talking
+about how many clicks they're getting
+and so forth.
+Um I suppose there's something to learn
+from that but I'm not in business
+at least that way. So anyway, we made
+some major discoveries this way. We did
+not have a marketing plan. We did not
+plan on
+uh doing any more than locally and
+growing it and seeing what happened. We
+went through three versions
+and the final version 1990
+to 1992
+um was very modern.
+First of all, our terminals are were in
+these uh
+cabinet work stands, one of which is on
+display somewhere in a computer history
+museum. In fact, they're just PCs.
+Basic no name 4.77 meghertz
+one floppy drive monochrome display PCs
+and with a little uh with with a 2400
+board usually a wired modem in it but
+could be a standard modem on a phone
+line.
+And they were now test browsers
+and they would run software locally that
+they loaded from the floppy disc
+and only communicate off the network
+when they wanted to retrieve
+packets from the databases uh server
+that was on the network.
+Um
+so this was a kind of a downscaling of
+what was going on on the web.
+uh in text with really simple cheap
+hardware.
+That's where it stopped
+until now when I can restart what I
+perceive to be the next version which is
+quite a bit different but still on the
+same basic architecture.
+Um
+there was maybe one inquiry at the
+beginning early days of community memory
+from the source which I believe was a um
+a bullet board company that was being
+set up with with
+serious computers and went away
+eventually. People would log into it.
+But of course the distributed BBS
+systems really took over from that in
+part because you didn't have to pay for
+them. but also because they would run on
+you or Commodore or whatever. Uh so
+anyway, uh great recognition to the
+people who's created that the word
+Cunningham and um
+another local fellow who's a bit of a
+freak and who spread them far and wide.
+Um
+and I'm forgetting names.
+Happens when you're my age. Okay, those
+are the stories I have right now. And of
+course, I could elaborate further, but
+&gt;&gt; read the book.
+&gt;&gt; Not only in there, but also it talks
+about the future.
+&gt;&gt; The last
+last six chapters of my book are a
+standalone publication. So, they do
+repeat some of the historical
+information, which is basically the
+outline for how I think we should be
+thinking about social media in the
+future. And I've improved on it some.
+Next question please.
+&gt;&gt; All right, we have two more questions.
+Okay, the next one is regarding mesh
+networks. What technology layers are you
+thinking of? Low ra has mainly
+meshtastic. I'm curious what you've been
+thinking about.
+&gt;&gt; Well, I haven't been thinking much about
+metastic. Meshtastic was because I don't
+know much about it at all.
+I presume that it is an overlay of some
+sort, but I don't know its
+characteristics, so I can't really talk
+about it.
+Um, I'm not very well suited to answer
+this question.
+Uh, I had thought I a few years ago I
+was introduced to an activist on the
+from the Pine Ridge Indian Reservation
+and I asked him what's the status of
+telecommunication
+on the res. He said it's bad.
+And so I began thinking about
+uh first of all communication over large
+distances of Pineriidge Reservation is a
+significantly sized piece of land with a
+low population density. And of course
+it's a closed community.
+You know they have their language, they
+have their interconnections and so
+forth. They're, you know, they have
+tribal sovereignty.
+So it would be a very good place
+to uh try out mesh networking and so
+forth. I began to look into that but
+from a harder perspective which is where
+you have to start.
+That's where I developed the idea of the
+voice gram and the text grant the
+datagramgram.
+the fact that while it might take, you
+know, 15 minutes for your message to get
+there,
+things move at a different pace on the
+reservation.
+And the difference between getting there
+and not getting there is what matters,
+not so much the time that it occurs
+over.
+But that did not pan out. I was not able
+to maintain contact with that person.
+Asked him to refer me to somebody, got
+no response. I've still got some
+transceivers and somebody else can have
+them. Um, but it was pretty clear it
+needed a
+needed an application
+and um the application had to be able to
+deal with voice as well as text because
+literacy is not universal on the Indian
+reservation.
+they all know their language
+but in terms of writing that's a
+different matter and then we come to
+keyboards which is where the microder
+comes in so I'm afraid I can't really
+help you very much on that one next
+question
+&gt;&gt; all right last question
+do you think AGI artificial general
+intelligence
+um I think this will be here closer than
+people will think what safeguards need
+to be in place to make it safe?
+&gt;&gt; Well, that's a very big question and I
+don't I don't have the answer to it.
+First of all, I think we're it's going
+to hit a wall before it becomes I mean
+some people will call what they have
+artificial general intelligence
+but we will soon discover the walls.
+Human beings are very good at that.
+Um
+the really the safeguard we need to
+apply is to get people to stop thinking
+about artificial general intelligence is
+smarter than us. It will be cleverer
+than us in some areas and in other areas
+I think due to the nature of its
+structure
+because it we don't understand
+intelligence. How can we build something
+that does intelligence? Now then the the
+theory now is well we'll build something
+that builds something. I don't think
+that's going to work. Uh and I think a
+lot of money is going to be expended in
+hitting those walls.
+Um
+and I think the safeguard will be for
+people to think okay well intelligence
+is something that's reserved for people.
+Computers can help. They will be
+assistive intelligences
+but they they will not be able to outdo
+us or even replace us in my view. Now
+I'm an old grumbrey guy so you know take
+that for what but it will
+but I would say that effort in invested
+in
+the assistive part of it will pay off a
+lot sooner and better than effort
+assisted in or the artificial aspect.
+I think I should leave it there.
+Any others?
+&gt;&gt; Nope. That's the last question. Um
+I appreciate you doing this talk. Um we
+had to cancel it for VCF. So I'm glad
+that we could make it up uh albe it live
+streams. Um so this stream is recorded
+and will be available to people after um
+this uh live stream so people can look
+it on our VCF YouTube channel. Um, so
+Lee, um, is there any other in-person
+uh, events that you'll be at in the
+future?
+&gt;&gt; I have nothing scheduled for the present
+time. For the last year, I've been
+trying to come to the VCFs that I can
+and talk and sell books.
+And since I prefer to travel on the
+ground by train, it's a while. I made
+three transcontinental trips, each of
+which takes four days each way. Um, but
+now I have to get busy on my social
+media and so I'm going to be limiting my
+appearances to virtual appearances like
+this. Nothing is yet set up. Doesn't
+mean there won't be any, but I can't
+give you a a list. I suppose I should
+Well,
+my website is thousandsigns
+s i g ns which tells you how to
+pronounce it.com
+and I'm selling the books and and
+posters and t-shirts there apparently
+none of which have sold. Um,
+and uh, I've got a section called Watch
+the Skies, and I really have to make
+that a notice board for my next uh,
+appearances. So, I'll say look for that,
+and this will force me to do something
+about it.
+&gt;&gt; All right. So, the the website again is
+uh, how do I spell it?
+&gt;&gt; F L S N SI G NS Fells in Signs.
+The publisher of the book is me doing
+business as
+&gt;&gt; thousandsigns.com.
+I like it. [laughter]
+Thousands signs.
+&gt;&gt; Yeah.
+&gt;&gt; All right. Um I think that's it for
+today. We I appreciate you coming in and
+talking. Um this was a lot of fun. Uh
+I'm glad I could participate because
+usually during the show I'm running the
+show instead of
+enjoying the the show. So, I'm glad I
+could participate in this
+&gt;&gt; shows you've done because you've showed
+up every one of those VCFs.
+&gt;&gt; Yes, I've seen you I've seen you
+probably six different times in the past
+year at the different it
+&gt;&gt; every single VCF that you've been to.
+Hope um and others. So, um I'm I'm glad
+that you can get out and meet people in
+person because it's a rare opportunity
+for people. Um, and I look forward to
+seeing whatever projects you are and
+hopefully we can help you promote
+whatever you're doing.
+&gt;&gt; Thanks a lot for the e forum.
+&gt;&gt; All right. Um, we're going to sign off
+everybody. Thank you everybody for
+watching. Uh, hope you enjoyed this. Um,
+we hope to do another live stream soon.
+Um, we were hoping to do a follow-up to
+the um, YouTubers um, live uh, that we
+had done um, which got cut prematurely.
+So, um, that's it for now everyone. I
+appreciate it and thank you very much.
+&gt;&gt; Thank you.
+&gt;&gt; All right. So, this the streaming
+stopped, so it's just us right now.
