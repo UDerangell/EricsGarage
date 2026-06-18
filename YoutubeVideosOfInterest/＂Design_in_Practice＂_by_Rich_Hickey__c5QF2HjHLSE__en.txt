@@ -1,0 +1,1676 @@
+Kind: captions
+Language: en
+thanks everyone for coming it's so great
+to see all the old friends and all the
+new friends and especially all the very
+cool things everyone's doing I want to
+doubly thank Alex for scheduling a talk
+before mine that was so full of amazing
+Graphics that no one would possibly be
+able to Bear anymore and I could I could
+leave them out of my talk
+so this is a design and practice and the
+objective here is to demystify designs
+so much I think somewhat I think I've
+given a few talks in the past they're
+about a lot of the ideas in design but
+left the concrete practice of it sort of
+underspecified and it's led to maybe a
+certain uh imagined
+magicness to to design that I wanted to
+spell I think design is something that
+you can learn to do
+I think it's something that has concrete
+activities you know practices or things
+that we do oh by the way if you're
+playing word definition Bingo you're
+going to wish you had like more than one
+card today
+uh and uh and to try to talk you through
+some of the I what I think are kind of
+lightweight things that we do actually
+really do uh in trying to do design as a
+team on uh closure in daytonic as we
+work so we're talking about concrete
+things another thing I want to do is
+talk about things that you can make into
+activities I think a lot of people
+struggle when they say well I want to do
+more design in our shop but we can never
+get it Justified you know we're saying
+nebulous things like I want to take two
+weeks off and think about the problem
+before we start and even if you get that
+you know two weeks at the beginning
+isn't necessarily what you're going to
+need so one of the things that's good
+about reifying activities is that they
+can become things that go into your
+project management system as stories
+that you're going to do that will have
+outputs
+the other thing I want to talk about
+today is progress a lot of times people
+say I know what design is you know I've
+seen you know people doing planning
+sheets or diagrams or things like that
+but I don't really have a sense of you
+know did I write the right diagram am I
+am I accomplishing something when we
+make software you know we see it accrete
+and we see it do more and more stuff
+every day and when we design you know
+what does it mean to move forward do we
+know we're moving forward or just
+spinning around so this isn't any kind
+of method you know I don't want to adopt
+that I'm not trying to rain on
+you know proper methods and there are
+there are plenty of really cool design
+methodologies out there so
+we all know I'm just reminding you Latin
+for design means not being allowed to
+code
+uh and uh I don't actually think that's
+true in fact I think that you know as
+we'll see as we go through the talk that
+you you do coding throughout the design
+process not necessarily starting to
+write your system but exploring what
+your system might become learning about
+the things that are going to be parts of
+your system answering questions and
+things like that and it's one of the
+reasons why I think it's important to
+work in a language where that kind of
+work has zero projecty kind of overhead
+that you do not need to have been have
+started your thing or be in a context
+that be in a project context to start
+doing exploratory programming you open
+up your editor and you go
+uh no so really design right the word
+means to Mark out a plan for doing
+something or at least the meaning that
+we're going to use in this talk uh I'm
+going to expand that idea to be the
+entire step set of steps that get you
+from uh you know a sense that something
+should happen in the world to the
+ability to Mark out that plan the
+marking out of the plan and then
+hopefully the subsequent uh development
+of it and this marking out is something
+I think is going to be super critical
+that we're going to be writing all the
+time we're going to be writing putting
+text in front of our faces and in front
+of the faces of our teammates so we can
+see what we're thinking about and I
+think this is something that's very
+important for helping you think in the
+first place this is not an archival
+activity this is not about capturing
+things for posterity it's not about
+creating documentation as you go or
+anything like that this is about writing
+as part of thinking
+putting something down on paper makes it
+a thing it's something that you can then
+look at and now it becomes an input to
+you even though it started in your own
+head it also helps you pick things up
+when you've left them around for a while
+or allows people to join you in your
+work
+uh and then maybe eventually you'll turn
+into something that you'll use to
+document what happened in the end so
+we're going to be writing we're going to
+be talking but especially writing words
+down hopefully and we can write diagrams
+now too and I think that choosing good
+words is super critical it's something
+you should do all the time and you know
+I'm not talking about picking the right
+name for your product or anything like
+that or doing something that's about
+marketing
+uh it's about choosing words that have
+the meaning that you intend and that
+help everybody come to a shared
+understanding of what you mean when you
+say something you know this idea of
+precision and cutting is going to come
+up all the time that's CIS part is about
+cutting it's the same part of decide
+so we we need to be precise when we're
+saying things so we know what is the
+thing we're saying and what is not the
+thing we're saying so I do not like
+nicknames no superheroes or anything
+like that you know one of one of the
+most horrifying things was arriving you
+know at a project and finding you know a
+diagram of the project that was you know
+nickname in a box nickname in a box
+nickname in a box with unlabeled arrows
+you know pointing from one to the other
+you're not you're not helping anyone
+else and you're not helping yourself
+these names are not semantic and in
+particular by not being a meaningful
+name it means that it doesn't have to
+change when you change your mind you
+just I called it you know Kryptonite or
+something you know the Flash and you
+know if I change what I'm doing you know
+because silvik's called The Flash
+well it'll be fine so you want to use
+precise words and the other thing you're
+going to need to be able to do often is
+say something rather involved in not
+much space
+and I think that is another critical
+skill you're going to see me say
+succinct over and over and over again in
+this talk and it's important to sort of
+understand what that means which I
+didn't know what it meant you know
+from an etymology standpoint so I looked
+it up it means to gather up your like
+toga
+before battle
+to gerd or gather up and the important
+thing is that what you're Gathering up
+when you're trying to be succinct is the
+entirety of things it's not about being
+concise it's not about being uh you know
+I've only got six words to say here so
+I've got to leave out the critical
+details because I need to get it done in
+six words all right so we're going to
+gather up our thoughts the other thing
+is this dictionary thing you know it's
+not just good for writing talks it's
+good every day we do actually use the
+dictionary why we work we're you know we
+get to a point where we need to name
+something and we will take out the
+dictionary but he's racing through the
+thesaurus and trying to find the right
+word and a good word I can't you know
+State how wonderful I think that is and
+I encourage everybody to go do it
+especially to get down to the origins
+where they break apart because Origins
+will always show you that most of the
+words that we use are composite
+and that that you know prepositional
+prefix part is full of really
+interesting things like is it towards
+something is it away from something is
+it moving stuff together is it cutting
+it apart
+I think that doing this
+fires up the process of abstraction you
+start thinking about things in in a in a
+way that's not tied to the details but
+more about
+bigger ideas
+the other advantage of using precise
+words is that uh
+you could be looking at this word and
+trying to communicate something and it
+becomes evident that that word is the
+wrong word it might have been a good
+word and it might be that you know
+perfectly in a perfectly fine way you've
+changed your mind you've evolved your
+thinking you've got some new information
+and you're doing something different but
+the great thing is if you've been using
+precise words they will seem wrong and
+you can pause and pick a better word
+uh
+all right so we're gonna have our first
+technique the first technique is add a
+glossary to your set of stuff that
+you're building while you're working
+right we're going to have all kinds of
+terms and Technology uh that's going to
+happen it's amazing even amongst
+technologists will say a word and
+everybody in the room will have a
+different idea in their head even though
+they've heard it and used it over and
+over and over again so don't presume
+that everybody understands what you're
+saying you want a place where you define
+things one place where you define things
+and then after you've defined it you
+want to use it consistently don't use
+words to mean two different things don't
+be lacks about that this is hard to do I
+think in general so it's an objective we
+no one does it perfectly this is stuff
+to Aspire to
+and then you know the other thing is if
+something breaks fix it or drop it so
+this is you know some of these some of
+these artifacts and some of these
+techniques are things that you know
+they're ephemeral you're going to do
+them and you're going to move on but
+this is one that you have to maintain
+so this is an example glossary you
+probably can't see that
+I think I worked on how I can make you
+be able to see a little more but this is
+real this is a real one
+uh talking about a feature we have a
+bunch of very specific words that we're
+using to talk about locality affinity
+and partitions and datomic and so this
+is a thing that we have and that we've
+maintain through a project that lasted
+eight months or so so I encourage you to
+do this
+all right so the other thing we're going
+to be doing as part of uh an overarching
+sense of uh of skills is asking
+questions
+this is a very powerful tool asking
+questions and it's an old tool and one
+of the beautiful things about asking a
+question and formulating a question is
+you've made clear that you're looking
+for something that there is a thing that
+you want and and I think that we state
+things all the time when you state
+things your intentions are not evident
+when you ask things not only do you want
+to try to get an answer but what you
+need becomes evident
+so I think asking good questions is a
+skill it's another one of these things
+that you know if you do it more often
+you'll get better at it the other thing
+I think is an aspect of questions is
+that they're provocative you know they
+poke you and of course when you ask a
+question of someone else they feel like
+they've been poked
+so you have to get good at asking and
+being asked and being comfortable with
+the the questioning process as something
+uh that's a positive thing logic is an
+important part of making decisions and
+solving problems but it's mostly a
+negative thing I mean we use logic to
+say net
+this doesn't hold this is inconsistent
+if this is true that can't be true it's
+mostly a way we use to rule things out
+so another technique I recommend is to
+discover read about and utilize the
+Socratic method this is a proper thing
+with a lot of
+history behind it obviously and
+some good organized descriptions it is
+an activity you do together
+it's not like a leader you know
+torturing people with questions although
+my teammates will disagree with that
+statement uh but but it means to sort of
+work together on trying to find the
+truth by asking and answering questions
+by taking an answer to a question and
+exposing that answer to further
+examination eventually trying to get to
+the truth and I talked before about
+questions being provocative you know
+it's supposed to be a dispassionate
+examination of of ideas and that means
+not suffering and I think that it's a
+big challenge as you try to do Socratic
+method with teams this is not common and
+I think socially this kind of dialogue
+has fallen away and its use as a skilled
+practice amongst people who are
+cooperating has fallen away so it just
+seems like a form of argument or or
+attack or hostility or something like
+that that's not what it is
+so one of the things I recommend is you
+try to you know detach yourself from
+your your own ideas even when you do
+this by yourself you should be able you
+should be thinking about your ideas as
+things you're going to pose and shoot
+down and do that over and over and over
+again and not get attached to your ideas
+not co-identify with your ideas and the
+whole idea here is that there is some
+objective truth and we're trying to find
+out what it is we're not adventuring it
+it's not coming out of our heads we're
+discovering it if you want to learn more
+about the Socratic method I recommend
+this book it's really fantastic there's
+a bunch of History maybe at the
+beginning you would skip uh but I think
+it's great
+so some of the uh the the biggest
+Socratic Wizards in the universe are the
+Jesuits and uh I I was lucky enough to
+study with the Jesuits back in high
+school and my homeroom teacher was
+father Watson a Jesuit and he would
+always be asking us these four questions
+and he would ask us these questions in
+physics class and in algebra class
+as a way to you know do the work do the
+problem right this stuff makes sense
+when you're looking at a problem what
+have you got I've got X and well I know
+Y and I'm trying to find X and the
+stuff's over here where are you going
+I'm going to try to you know discover
+what x is you know I know X I need to
+know why what are you going to do I'm
+going to try to isolate y by moving
+stuff over to the other side and that
+was all fine but it also asked us these
+questions in homeroom you know as life
+questions where are you at where are you
+going what do you know what do you need
+to know and I think that as developers
+this where you're at where you're going
+this is what we do we're good at this
+right this is you know stand up what'd
+you make yesterday I made a bread box
+what are you making today I'm making a
+toaster
+you know and then checking stuff off and
+you're busy doing things or you're not
+often talking about why you're doing the
+things and the important part of these
+latter two questions is that you're
+you're now talking about uh why you're
+doing things
+from the perspective of moving your
+knowledge forward so we're going to
+break down these four questions into uh
+two axes and two stages one is the
+understanding
+axis right what's happening to our
+understanding how is our understanding
+moving forward right we understood this
+much now we're going to understand some
+more I talked about when we're dabbing
+we know when we're getting progress
+because we're creating more code and
+maybe more features and the software can
+do more things when we're designing
+where what are we creating I'm going to
+say one way to think about design is
+that you're creating understanding
+you're expanding your understanding at
+your what the driver for activity should
+be expanding your understanding you're
+going to take the two questions and he's
+thinking and say one is a status
+question
+right what do we what do we know right
+now what have we got in hand for both
+axes and then the other is what do you
+want to do next
+and we're going to drive what we do next
+that activity side from what we want to
+know next what we want to understand
+next and I think what's cool about this
+is that this framing I mean father
+Watson asked us these questions all the
+time over and over and over again this
+is a frame you can take out on any day
+and say where am I at what do I know
+what do I need to know what do I want to
+do about it and as we talk about the
+different phases of design we'll talk
+about the fact that this framing can be
+used over and over the other thing I
+want to talk about here just briefly is
+look at how this is reflective you're
+thinking about your thinking
+this is super important
+being aware of what you're thinking
+about helps you think it also helps
+agendaize your background thinking so
+that's where it becomes reflective so
+we're going to call this reflective
+inquiry
+I just want to talk a little briefly
+here before we dig into the steps that
+uh I'll be talking about contributing to
+this top ticket one of the challenges I
+find people have is they have these
+project management systems and they're
+like we're going to make a thing and
+they start writing tickets and it's like
+you have no idea what you're doing yet
+how could you write a ticket and how
+could you even know what your tickets
+are supposed to be and you need to have
+a ticket for what your tickets are going
+to be you need to have a ticket that
+says this is what the overarching plan
+is and the thing is that ticket it's
+neither the first ticket nor is it the
+last ticket it's sort of an early ticket
+the top story that says
+with a good understanding of what's
+going on this is our agenda before that
+ticket though you should be doing some
+design work right that contributes to to
+the initial story to saying we have a
+mission we understand a problem we're
+going to take it on we're good this is
+the approach we're going to take and
+this is how we're going to do it I think
+all stories should have these four
+sections I'll talk more in detail about
+them in a second a title a description
+of the situation a problem statement
+which we'll talk about more and then
+eventually after you've done some design
+the approach you're going to take to
+doing it so when I talk about stories
+contributing to the top story I'm
+talking about early design stories right
+we said we want to agendaize design
+activity we're gonna have early stories
+that are about doing design they're
+going to contribute to a top story which
+will be sort of your lead story to move
+forward
+all right so this is an example sorry
+this is not an example top story it's
+just an example of a story with a decent
+shape right does this uh thing people
+are talking about
+I wish I could use closure you know Java
+streams enclosure seek functions the
+description which is about the situation
+in the world without necessarily talking
+about what's wrong the problem which is
+talking about what the challenge or
+obstacle is to that and then the
+approach this talk is going to dig into
+the details of all these things but
+that's what a story is and the top story
+will look like this but it will be about
+the overarching objective
+all right so I sort of talked about this
+already design progress we're going to
+do we're going to measure in terms of
+increasing our understanding and
+tracking the decisions we made but
+importantly why what's important is that
+this is not a checklist kind of thing
+I'm not going to say that any of the
+activities I'm enumerating are necessary
+or that you should put them in a list
+when you get home and then say we're
+going to do richiki design by checking
+off these things that is not it right
+you're going to do whatever these things
+make sense in order to move your own
+understanding forward
+so I do think that this moving forward
+this linearity of design is a real thing
+uh you know this is tremendous
+pushback or there was a tremendous
+pushback against waterfall development
+this idea that you analyze Your Design
+you spec you code the thing and then you
+deliver and isn't that horrible you know
+isn't that awful and it was it was awful
+because I think there were uh
+organizational structures put in place
+that had you know one person doing this
+part and then dumping on the next person
+who did this part and then dumped on the
+next person so I could handle this thing
+I was like do you realize all these
+things about what you did were not right
+but we've replaced that we've replaced
+that with uh a non-idea which is this
+idea of iterative programming and this
+Latin for do-over is not a joke that's
+what iterative means do over and I don't
+think do-over programming is a thing I
+don't think that's a way to make
+anything that's really good incremental
+is probably a better word so we're going
+to try to move forward and increase our
+understanding it is not monotonic we
+will think something is a good idea we
+will learn some more stuff and we will
+say nope that wasn't a good idea and
+we'll we'll try another route up
+but the uh the cool thing about the word
+phase is that it means appearance like
+phases of the moon like you you did
+something and then you saw
+the next thing you saw the next step
+it's not like you know you programmed it
+into your nav and it said here's
+everything that's going to happen in
+your future there's no nav for software
+development so it's okay it's not
+monotonic you want to stay open-minded
+you will backtrack the one thing I will
+say is if you're backtracking say so so
+like say look we thought we had an
+approach that worked we started to look
+at some of the implementation details we
+found another
+problem where we found that we didn't
+really understand the problem or we
+can't do what we intended and now we are
+going back to a prior phase where we're
+going to try to find a different
+approach because there were obstacles in
+our way
+extra points for the King Crimson
+reference
+uh did anybody get the Concordance
+all right
+that was a low that was a low
+probability
+all right uh so I'm not gonna I'm not
+gonna break these down now because this
+talk breaks down all these things
+describing diagnosing delimiting the
+problem choosing a direction at a high
+level choosing particulars at as
+implementation details and then doing it
+uh the one thing is that I do think that
+these are phases that kind of lead into
+one another but on an overarching level
+there will always be the potential to do
+deciding and in this case when I'm
+saying deciding I'm talking about
+scoping right you may encounter a
+problem and you've required some level
+of understanding of it and said
+we're not doing anything about that or
+you've you know gone through and seen
+what the various approaches are and
+found that no approach will cover more
+than 80 of the problem and you're going
+to say that other 20 we're not going to
+do or someone's going to tell you
+there's no money for your project and
+you'll say all right well that's that so
+this deciding doesn't have a spot
+uh in the in the order you need you're
+going to be ready to make decisions
+hopefully at any time
+so describing literally just means to
+write things down in the very first
+phase of design is just to write down
+what you're hearing right users are
+complaining about whatever people in
+slack want X everybody says closure
+sucks because blah you know whatever it
+is you're hearing things and you just
+want to capture that maybe you've seen
+failures in a system right remember what
+the thing that you're trying to take on
+now has to do with a bug so you have bug
+report so you have exception stack
+traces or you have logs from uh
+production systems it doesn't matter
+what you're going to be doing here is
+just writing it all down maybe having
+more logs gathered maybe having more
+conversations to people right with
+people to get to get the information so
+what do you know something seems wrong
+with the world
+right what do you need to know you need
+to know like what how well how big a
+problem is that where is it what are its
+impacts things like that
+what you're doing
+you're observing and you're listening
+and where are you going you're trying to
+produce two things out of this an
+initial story that top story the title
+for that and also the description
+paragraph for that
+so subscription paragraph it should just
+be a paragraph it should be the
+situation you find yourself in the
+symptoms or those problem reports all
+those things you just want to capture
+the high level view of what they are you
+can point to the details the very
+important thing about this is that
+you're not saying right now what the
+problem is right this is I have a
+headache you're not saying you know
+because I have a brain tumor because you
+could have a brain tumor or you could
+have not had enough water today or your
+eyeglass prescription could be wrong
+right that's not what you're saying
+you're talking you're saying patient has
+a headache so you just don't say what
+the problem is you say what the symptoms
+are what the complaints are and things
+like that if somebody has a complaint
+that seems to incorporate the problem do
+not accept that as a fact
+right just say
+somebody said they think this is the
+problem
+okay and we're going to write that down
+in our top story
+the next phase is to diagnose the
+problem and diagnosis in another great
+word it's not Latin it's Greek and it
+means to know across that a cross is the
+dire part like diagonal or diameter same
+same root nusses to know uh I was again
+I get looked it up and it was super cool
+that this is what it meant because I do
+think that this is a Crossing this is a
+movement from one possible set of
+knowing to another set of knowing and
+there's two kinds of problems I'm gonna
+I'm gonna say that we're you know we're
+talking about design for both of these
+one kind of problem though is like your
+thing is broken and you're trying to fix
+it another kind of problem uh is that
+people want a feature or you want a
+feature or somebody talked about some
+feature or and
+hopefully that feature is about a
+problem so you need to go from the
+feature to the problem so what do you
+know you know the symptoms and the
+context that's what you just did uh what
+do you need to know you need to know the
+cause so now we're going to go and say
+all right well you have a headache
+here's five five reasons why you you
+know you might have a headache so you
+have a good description that's what you
+did before and you have the evidence
+that you collected before and where
+you're going is you're going to try to
+figure out what the problem is
+so I'll take these in two different
+parts diagnosing bugs is a knowing
+across from a symptom
+to maybe multiple possible problems and
+finally down to you know what's actually
+what's actually wrong it's your eyeglass
+prescription is off you need you need
+better glasses that's why you're getting
+headaches all the time so you'll have
+hopefully more than one hypothesis this
+more than one it's going to come up all
+the time
+design is not you know thinking of one
+thing and then writing it out that's not
+designing that is designing is about
+thinking of more than one thing that's
+like the first skill you should have is
+if you think it's one thing just think
+of a second thing think of a second
+possible reason if you're on a team have
+everybody try to think of a reason of
+course if you're playing that game you
+don't want to go last so
+uh and then you're going to need to
+address them and the one thing I would
+say here is that address them one at a
+time in other words explore these things
+one at a time people will get a bunch of
+ideas about what's wrong and they're
+like I think you know the system's
+falling down we're getting this
+exception I think it's either uh you
+know we have a bug in our code there's a
+bug in the library code there's a bug in
+the jvm solar flares you know uh and and
+then they'll be in the code or running
+something like looking for all these
+possible things you just don't do that
+you need to pick one now logic helps you
+here right sometimes you can look at the
+possibilities and say you know it can't
+be that you don't wear glasses so
+although maybe you should
+uh
+so we can use logic to rule stuff out
+and then there's a bunch of things I'm
+not really going to dig into any of
+these too deeply because every one of
+them would take an hour but you'll have
+the thing that maybe most likely either
+due to your Intuition or it's the thing
+for which you have the most evidence
+seems like this all the evidence seems
+to be pointing at that from our
+intuition standpoint I think one of the
+most powerful tools you have here is to
+make the problem space smaller like if
+one of your hypotheses makes the problem
+space smaller that's often a good thing
+to explore early I'm often telling
+programmers you know that I work with
+get that into a smaller context right
+you see a problem in your system well
+your production system is this big hairy
+monster you know can you reproduce this
+problem with just this tiny piece of
+code can you reproduce it not using your
+code at all if you think it might be a
+library you think it might just be an
+algorithmic you know snafu can you just
+write a little piece of closure code on
+the side and and and reproduce it there
+and a great technique here is the
+scientific method Stu's given a good
+talk about this and I'm not going to do
+that here but for each hypothesis you
+take on you know formulate a conjecture
+you're going to try to prove or disprove
+you're going to design an experiment
+which is going to be some code you get
+to write the one tip I will give you
+here is that frequently people will say
+I'm trying to figure out this thing and
+then they'll go and run some tests and
+then they'll you know need to summarize
+what they ran and then you'll look at
+the summary and be like I don't think
+you've got any information that helps us
+prove or disprove this conjecture so the
+tip I would give you is that if you're
+going to go and run an experiment the
+very next thing you should do before you
+write the code that tests the experiment
+is to write this spreadsheet or the
+template that says this is what how
+we're going to display the results this
+is where we're going to put the results
+we're going to have a column for this a
+column for that and rows for these
+things and you want to look at that
+template and say yeah you know what if
+we filled this out we would know
+everything we need to know to do this
+conjecture and then write a program that
+can provide the values for that template
+don't exploratory code and then wonder
+why you didn't get the answers that you
+need to do it
+okay
+much trickier and much more common and
+much much more commonly needed and much
+less frequently exercised is the knowing
+across from a feature request to the
+actual problem right so people ask for
+features laws I wish you had this I wish
+you had that you do also right you have
+your own internal feature requests your
+backlog and things you thought might be
+good features we don't have feature X is
+never a valid problem statement right if
+you need proof of this you only need to
+look at a modern car you know which has
+a touch screen you know where no one
+said you know I need to slide my finger
+on some random piece of glass to a
+precise point to set my blower in my car
+while I'm driving right no one has ever
+said that right but somebody did say we
+need touch screens because you know
+young people will never buy our cars
+right this is what happens when you're
+not talking about the problem so we're
+trying to get from a feature request
+from a feature request to a problem for
+which that feature is one possible
+answer so there's two things that happen
+here that were magical one was you went
+from feature to Problem the other is you
+went from one answer to maybe an open
+set of answers that's where you get the
+flexibility to do design if somebody's
+just going to cram down you know it's
+time to make the toaster uh well you may
+not be solving a problem
+right so here are the exercises to say
+take the feature requests or your own
+feature idea and say what were your what
+is your intention here and then what's
+in your way
+okay
+so now you've got these feature requests
+uh turned into problems and
+you have just one more step I think
+before you have a problem statement
+which is to try to Z Limit it right as
+you've done this thing you may have a
+notion of the problem you may have com
+had conversations about the problem
+delimiting the problem is really just a
+matter of saying what is the short
+concise precise way we're going to talk
+about the problem that we're going to
+take on making software to solve right
+so you know what the problem is you sort
+of did that in the diagnosis thing all
+you're trying to do now is state it
+succinctly and give it some scope
+all right so a problem statement is this
+succinct statement of unmet objectives
+right we're talking about what is the
+user's intention right and the cause
+it is not the symptoms anymore we did
+that in the in the described phase and
+it's not the remedy we're still that's
+still in front of us what to do about it
+right so that if that still exists if
+any sort of what we're going to do about
+it is still present here you want to get
+rid of that right at the point you've
+got a problem statement you're going to
+be able to do two things with your top
+story you're going to be able to modify
+the initial story title was probably
+something like
+I think a toaster might be a good idea
+and now it is you know the user likes
+caramelized bread
+uh
+and there's maybe more than one way to
+deliver that
+so you're going to modify the title of
+your your top story here to try to make
+it about the problem right we've given
+somebody a way to accomplish X it's the
+objective now that's the name of your
+story this is great when you work in a
+project management system that isn't
+like build toaster build Bread Box build
+whatever but it's like solve this
+problem solve that problem solve that
+problem and you look at like what you've
+done that ladder list is way more
+satisfying than the one that's just
+Feature Feature Feature Feature
+uh so the other thing you're going to do
+is you're going to now add another thing
+to that top story you had the title
+description now you're going to have
+that problem statement right this is not
+forever and ever and ever you're going
+to refine this you may have gotten it
+wrong you may have you know missed
+subtlety you'll discover later so this
+is another thing that needs maintenance
+but it's also it should be short it
+should be a paragraph that says what the
+problem is this is super important if
+you do not have this and if you do not
+relentlessly focus on it you run I think
+a very high risk of asking somebody to
+slide their finger around on a
+touchscreen while they're driving in
+order to Turn up the radio
+all right so now I'm going to talk about
+two things of sort of Direction and and
+uh
+uh like strategy and tactics and I I'm
+not trying to imply that you will always
+have this differentiation or your thing
+will be layered like this but uh
+certainly if it's a bigger thing you
+will likely have two phases here you'll
+have a direction setting moment and then
+you'll have many
+implementation decision moments where
+you're going to be doing similar things
+just at a different level about a
+different level of detail so at the
+direction stage it's about strategy
+right strategy means to be a general or
+to lead and fundamentally it means about
+where are you going
+right we're all going to follow you that
+way
+the things you want to capture here is
+you want to capture those intentions and
+objectives of the user not how but what
+they're trying to do and you're then
+going to start thinking about what are
+the ways that you could possibly address
+address it we're going to call them
+approaches and these are high level and
+I'm not trying to enumerate them all
+here but a very basic one would for
+instance be are we going to try to
+provide an automated solution to make
+this happen for the user or are we going
+to provide a tool for the user to you
+know do it for themselves that's a kind
+of directional decision that you want to
+you want to make so you know what the
+problem is what do you need to know you
+need to know about the user objectives
+in more detail you're going to dig down
+a level on the user objectives you're
+going to enumerate a bunch of possible
+approaches you're going to try to decide
+which one is best so this is a big this
+is a big phase
+and along the way you're going to have
+to have reflected about what matters to
+you in making this decision
+right and then what are you going to do
+about it here you're going to you've
+already got the description the problem
+statement you're going to want to walk
+out of this phase with enumerated use
+cases
+you want to walk out of this phase which
+with what I'll call a strategy decision
+Matrix I'll show you that in a second
+but incorporates the criteria for
+deciding the approaches you might take
+and the trade-offs of each you'll also
+be doing the high level scoping thing
+which could include we're not taking
+this on right now but it may include
+we're not going to provide an automated
+solution because that's going to be too
+big we already have that sense but we
+may provide a tool for the users to help
+themselves do this thing
+and eventually you're going to get
+something to write in your top story
+that is the approach you're taking so
+use cases I think everybody thinks they
+know how to do use cases
+and that's usually not what I want to
+see in a use case because I think again
+there's two phases the best first phase
+for use cases is to talk about only what
+people intend to accomplish what what
+they like to be different about the
+world what they wish they could do not
+have
+right so you're going to make a little
+tiny sheet that says intention intention
+intention now it's got a how column
+that's that's blank I don't believe in
+this you know make a card that says the
+user should put a push a button it's
+going to be this color and we'll do this
+thing I mean if you want to do that
+that's great that's not what this talk
+is about later you'll have a strategy
+that you've chosen and you'll go back
+actually you'll know a little bit more
+about how you're going to implement it
+and you'll go back and say you know what
+we're actually going to do
+we're gonna give the user freaking knob
+for the uh volume please
+all right
+so here we go this is about a template
+for a use case should be it's not very
+sophisticated right but always put your
+problem in A1 right just remind
+yourselves this is what we're thinking
+about right if you leave that off I
+don't know what I don't know what this
+sheet is about you're going to fill in
+column A objective objective objective
+right I wish the radio was louder
+I wish I could make the radio louder I
+wish I could turn it off I wish I could
+mute it while my phone call came in not
+how
+these are just things I'd like to be
+able to do and then how you'll do later
+all right so this is real again we
+really do this
+ever heard about Morse today maybe
+Rebels successor
+this is a lot of things you could do
+with more a lot of context in which you
+could use Morris in a lot of ways you
+might want to connect more to your stuff
+and we were just sort of brainstorming
+and this is not a giant thing this was
+you know we sat and talked for 40
+minutes and this is what we did while we
+were talking we made this sheet we
+filled it out and we talked about uh
+what was what but in the in this use
+case phase we'd only do a
+right this is a completed story that uh
+shows B column B the how as well
+all right
+so the other big technique in this phase
+is the decision Matrix and this is the
+heart of the talk is to talk about
+decision Matrix I used to do this when I
+was mostly designing by myself in org
+mode but I am a complete convert that
+the best way to do this kind of design
+and this phase of design and this this
+work is in a spreadsheet and in
+particular it's in a spreadsheet that's
+a live editing spreadsheet so we use
+Google Sheets for this thing
+right so what is a decision matrix it's
+a spreadsheet it's a spreadsheet that
+more than one person can see at the same
+time and edit at the same time I don't
+know if somebody else I'm sure Microsoft
+has one
+uh
+A1 will be what what decision are you
+trying to make what problem are you
+working on always A1 if I come up to
+your project and you want some design
+mentoring and A1 is not filled in guess
+what we're going to be working on A1
+have a good problem statement you can
+copy your problem statement you know
+right in here often though this is more
+specific decision but it should be
+related to that keeping your problem in
+your face is super important it should
+just be always like this problem is just
+haunting me
+and I'm seeing it which means I'm forced
+to think about it as an external
+stimulus that's also critical all right
+so what are you going to have you're
+going to have different approaches to
+solving the problem these will be your
+columns
+uh
+the first of the columns will label the
+rows but the other columns will be your
+your various possible approaches you'll
+have criteria right how are you going to
+make this decision these will be the
+rows right except the very first row or
+two labels The Columns and finally you
+have the interior cells which is the
+aspects of a particular approach
+from the perspective of that criteria
+that's what goes in the Inner Cell I do
+strongly recommend sheets over docks
+here docs are linear and they do not
+support contrast which I'll talk about
+in a second so this is a template for a
+DM I don't think I've Zoom this one in
+right this is not real this is just a
+template the upper left corner A1 what
+problem are you working on
+b c d e are the current are the
+approaches you want to take if you have
+uh if you're modifying A system that
+already kind of does this or has a
+lacking in this area make that the first
+approach right the first approach is do
+nothing like where are we at what does
+our system do right now usually there'll
+be something not great in that column
+and then you have other approaches I'll
+talk in detail about that in a second
+right and then down the rows are
+Criterion Criterion Criterion and inside
+we have the aspects where we're going to
+talk about how the approach deals with
+Criterion so the approach is we're going
+to label them in the top again you need
+to be succinct but don't take goofy
+names don't do super shorthands if
+somebody walked up to your thing and
+they read just the first
+box of column C would they understand
+what comsy was really about or did you
+shorthand the meaning of it away if you
+if you can't get it done in something
+that's more like a title like in row one
+take a second row and put in you know a
+sentence length thing you need for what
+you're talking about to be super clear
+I've seen a lot of people just struggle
+here because they have columns and it's
+not actually clear what this column is
+about what strategy what approach this
+is about put enough detail in there so
+you can distinguish the two and then
+freeze those rows
+I already talked about using the first
+column first approach to be like what
+you do right now
+you want to think about other people do
+right this is stuff from hammock driven
+development and then you're going to
+have your own first ideas about you know
+possibly good approaches the main thing
+I want to do here is this is not it's
+emphasize this is not a shopping
+exercise this is not just like well I've
+got what we do what other people do and
+my first idea and let's we're going to
+pick one that is not what it's about
+it's about going through the exercise of
+examining how they differ from each
+other what their qualities are and
+hopefully driving the birth of one or
+more new columns new approaches this is
+a place where you can innovate uh so
+it's not it's not shopping
+all right criteria this word is very
+important it's not characteristic it's
+criteria criteria it's a means of
+judging deciding critic critical all
+those words are about making a decision
+and about saying positive and negative
+things about things so that you can
+judge but what is the basis for that
+judgment well that's
+that's something that's got to be
+reflective right it's not in the problem
+it's in how you feel about addressing
+the problem I mean that some of it is
+driven by the problem right if you're if
+you're if your approach doesn't solve
+the problem at all if it doesn't make
+the headache go away well it's not
+really an approach to getting rid of
+somebody's headache so you will have
+some rows for solving the problem but
+you'll have a bunch of other rows
+potentially that are about meta
+characteristics of this approach how
+much development time does it take is it
+compatible with what we've done before
+is it going to possibly break things
+right
+how much does it cost how much will it
+cost to operate is it allowed by you
+know some regulatory thing you're going
+to have a bunch of things that are
+candidates for rows but you should never
+like fully enumerate them in advance
+every time you take on a problem you're
+going to need to be selective about what
+matters and only put in what matters
+right so you want things that are
+salient or relevant Sally it means it's
+an aspect of this thing that sticks out
+right and relevant means that it's an
+aspect of this thing that matters to our
+problem right if you have you know one
+of your columns is you know a live Bunny
+and another one of your columns is a
+tank in a bunny suit right you're not
+going to have a row that's like well
+what color is the fur or like how soft
+is it right you're gonna have a world
+that says like how much lettuce does it
+eat and you're like can it crush a truck
+and what kind of ammunition does it need
+right the things that really distinguish
+these two things like say well maybe we
+don't want to I don't know how much does
+the tank weigh we don't want a really
+really heavy bunny
+all right so it's not characteristics
+it's criteria
+and then we're going to have the aspects
+this is again succinct description that
+goes in the Inner Cell uh I you really
+want to write some words here you really
+want to help people understand when this
+approach you know when you think about
+this approach from this perspective or
+when you look at this approach from the
+perspective of this criteria that's what
+aspect means look at something when you
+look at it from that this is what you
+see it should be like it should be words
+here not mostly not yes no true false
+that kind of stuff try to say you know
+if it if it doesn't say how it does it
+not that yes it does it say how it does
+it because you're going to have two
+different answers that both have a yes
+but how they do it differs write down
+how they're doing it not just yes they
+do it yes they have it they have do they
+have a backup strategy yes yes well you
+know one may use floppy disks and one
+may use replication so say that the
+other thing you want to do here is you
+want to avoid subjective judgment in
+your text don't do that right just write
+what the facts are when we look at this
+from this perspective this is what it
+has or maybe it doesn't have this right
+and then what I'd Advocate and what we
+do is we use colors right which you saw
+before some colors on this sheet to show
+subjectivity this is the only place that
+we use subjectivity on the sheet right
+if something is just okay for this we
+leave it neutral clear if there's some
+challenge or negative characteristic to
+the way that this approach deals with
+this Criterion and we'll color it yellow
+if the way it does it seems completely
+blocking it's as prohibitive to us
+prohibitive to the user failing to
+answer the problem we'll color it red so
+it's kind of blocking and if it's
+particularly nice
+uh desirable or better than the others
+will color it green
+you can as a shorthand just start with
+pros and cons rows right here's my
+approaches here's the pros of this and
+here's the cons of this but the thing is
+maybe you're picking between you know
+two libraries and uh you know one of the
+libraries says I have really low latency
+and the other one says I really have
+high throughput right and these are
+their features well okay that's two Pros
+but you haven't looked at the high
+throughput one on the basis of what is
+its latency and you haven't looked at
+the low latency one from the perspective
+of you know how is its throughput
+so until you've broken up these things
+so that every Criterion gets its own row
+you're not going to have the ability to
+contrast right what we're trying to do
+is to get things next to each other that
+are different right that's what makes
+our mind go we love edges we love seeing
+edges you need to create edges in your
+ideas that's what's going to trigger
+your thinking
+all right this is a real DM here
+uh
+right we're trying to think about we are
+thinking about this is not something
+we're shipping yet uh
+how do we deal with functional
+interfaces in closure there's a lot of
+ways to do it there's you know this
+sheet goes goes over there but you know
+there's a concise problem statement in
+A1 you can't use Java methods to take
+Java functional interfaces without using
+an adapter or reify today column B is
+what we have today right people are
+writing reaphile up they need to know
+the types that they're trying to Target
+it's a lot of redundant stuff that
+column is kind of a lot of orange which
+is between yellow and red and yellow
+uh
+so and then there are other approaches
+which are good it's rare that something
+is totally
+amazing all right so some tips about
+doing a good DM avoid the all green
+column that's very unlikely that's a
+sign you might be rationalizing right
+nothing is like totally wonderful avoid
+undistinguished columns if you go
+through in those two columns and they're
+not different in any way you're probably
+missing a row you're probably missing
+some criteria that distinguishes them
+and you want to find it right I talked
+before you don't want an exhaustive row
+set right you don't want a predefined
+row set and you don't want like every
+characteristic of every possible
+approach you just want the ones that
+matter and relentlessly move up and the
+other nice thing about a spreadsheet is
+you can move rows up just drag them and
+they go up so keep pushing up on your
+spreadsheet on the things that most
+distinguish your different approaches no
+one cares about pages of pages of like
+everything's the same on this on this
+from this perspective right avoid links
+or kind of references out as your
+primary cell content write something
+there the key here from a thinking
+standpoint is you are seeing the stuff
+that matters if it's a link you're
+seeing nothing you've got to go break
+your concentration and go follow the
+link down you can have links as
+supplements don't use the features of
+these things that allow you know like
+comments I see like a little you know
+triangle in the corner like what is that
+I got a hover or click and now it's over
+here if you have a question about
+something or you think it's bad or
+whatever you know just write it you know
+on the cell next to it or in the notes
+you'll see a lot of these things have
+notes columns just write it in the notes
+so it's in someone's face now they have
+to opt into seeing what you think you
+said what you think and you put it in
+their way
+and then avoid phrasing the criteria as
+questions this is because you want to be
+able to write questions in your sheet
+and you want to be able to search for
+them right as you were going you're like
+I wonder if this can do this I wonder if
+this will be fast enough I wonder if we
+should be thinking about this thing uh
+if you if you phrase your criteria as
+does it have this question mark does it
+have that question mark then you can't
+search for question mark and find your
+questions
+all right so what do you get when you do
+this you're going to have a good
+description of the problem you're going
+to have a bunch of approaches with good
+descriptions of those you'll have made
+decisions about what matters you'll have
+done that that introspection right so
+it's reflective you'll have details
+about how everything approaches it and
+you'll have an at a glance subjective
+assessment so I can quickly if I'm
+coming into your thing and you've done
+this I can quickly see what you think is
+good or bad or what you're trying where
+you think the trade-offs lie and all the
+subjectivity is in one dimension right
+if I don't agree with you I can take
+your sheet dupe it and change all the
+colors to blank and I will be dealing
+with something with no subjectivity left
+all right so what what are the benefits
+benefits of having done this well
+certainly you get to come back later and
+resume your work somebody else can join
+you in the thought process and arrive
+late and catch up while more than one
+person is working on this you all can be
+looking at the sheet this is so much
+better than just gabbing on zoom and
+having everybody take independent notes
+and then maybe trying to reconcile those
+notes we always make a sheet and stick
+it in our face and type into it while
+we're talking and it means that you're
+going to have shared understanding
+you're going to be able to say I don't
+think you're saying that right I don't
+think that you know that is the case
+that's good that's the Socratic method
+saying you know questioning is that
+really true
+the other thing I think happens as
+you've done this sort of cutting up and
+and pick the criteria is you're starting
+to do abstraction you're trying to see
+well I had five possible choices but
+only two ways to do this right you're
+learning the physics of the problem
+there's only two ways to do this there's
+only one way to do that everybody does
+it the same way maybe there should be
+another way you could ask the question
+and you're finding characteristics that
+maybe you want to lift later as
+abstraction and then this is the kind of
+thing if you do this during the day I
+promise you you're going to get new
+ideas when you hit the hammock or the
+bed
+all right and then the next phase of
+design
+next phase of design is design and I
+purposely made design a phase of design
+because this design
+is about Mark out a plan for doing it
+right this is the actual traditional
+notion of design by putting in the
+context of what is design because you
+actually cannot start here you can't
+just say I'm doing Design This is the
+first thing I'm going to do I'm going to
+start talking about how
+I'm going to make something you see now
+you will have skipped over all this
+other stuff that's valuable so uh so now
+you'll actually be down to all right we
+have an approach we've chosen to take uh
+we think it's the eyeglass thing now
+we're going to go and try to figure out
+how to make it or maybe we've figured
+out we're going to want a knob and we
+have to figure out where to put it and
+should it be grippy or should it be
+slidy Hint it should be grippy should it
+be detented or not yes it should be
+detented you know this kind of stuff
+all right so what do we know we know the
+problem and the direction already and
+you see this you're gaining power you're
+gaining velocity you're gaining
+confidence right you know the direction
+you're going to take what do you need to
+know well you you've got uh
+maybe an approach you're going to take
+but not exactly how you're going to
+implement it right now is where you'd be
+talking about like what's the API going
+to look like we've decided to make an
+API we decided to make a library for
+people to use to do it on their own
+we're not going to automate it but now
+you'd be talking about like was that API
+going to look like was the signature is
+going to be same thing is going to
+happen
+hopefully you're going to create more
+than one idea then you're going to try
+to pick the best you're going to use the
+same techniques to decide right criteria
+the other thing that's new here and
+different is before with approach we
+want to know in detail what are the
+user's intentions now we get to talk
+about right as we make implementation
+decisions we can go back to that use
+cases sheet and say this is how they
+will do
+they will accomplish their attention
+given the solution that we're intending
+to make and the implementation decisions
+we're choosing right now
+right so what do you got you have the
+use cases and you have this DM you're
+going to have more DMS right these can
+be very light 15 minute exercises we
+need to make this choice you know we
+need to do something here what are our
+choices boom what's the trade-offs of
+these things this that or the other can
+be very lightweight what I'm not talking
+about
+you know
+suffering over every decision talking
+about just trying to be considered as
+often as you can this is when you may do
+diagramming you're certainly going to as
+an outcome of doing these DMS you're
+going to make implementation decisions
+you're going to go back to that part of
+the story which is the approach and
+which has the direction in it right now
+and you're going to add the details if
+you I don't know if you remember back to
+the other thing but we said like what
+are we going to do about this problem
+we're going to have these three apis
+right
+uh and you're going to be able to do
+this and then you go go back to your use
+cases and fill in the how column it's
+certainly possible that in doing I
+talked about this before and doing the
+implementation details you may actually
+need to go back and alter your scope we
+we thought we were going to do this and
+we didn't find a way to implement so
+that wasn't going to be too much work or
+too possibly risky in in altering code
+that we already had and we don't want to
+take on the risk of of that much change
+and then you're going to back up
+all right this is a real implementation
+DM for something we did already ship
+right which is the you know we had this
+problem right newcomers to closure uh
+don't know Java they don't know there's
+a Java math
+thing and they don't know how to do you
+know cosigning and you know it's just
+this hurdle for people but there's a lot
+of different things you could do about
+it right you could do nothing and say
+all right well
+we'll we'll give you a better way to
+find the javadoc
+so we have these characteristics the
+same thing right we could do static
+Imports we could have a program that
+gen's the thing from the Java which is
+what we ended up doing or we could hand
+code and we're looking at these
+trade-offs so
+that's how we do that diagrams are out
+of scope again I could talk for an hour
+about this but this is when you you want
+to use this when pros and tables are
+inadequate a lot of times when you're
+talking about flow relationships between
+things you know visual representations
+are super important so you want to do
+that the one tip I would give you here
+is this is not just about diagramming
+what you're going to do you should
+diagram what's wrong right if you don't
+know how things are going to flow if you
+have this problem of you know I only
+know this here and in Our intention we
+need to know it over there we'll draw
+the diagram that shows you know I have a
+question mark about how this gets over
+there because we presume that this
+knowledge would be here or would be in
+this database and we haven't decided yet
+how it gets there so diagramming your
+problem before you diagram Your solution
+is is a good technique and finally
+finally you've done all this design
+you've got this top level story that has
+what is wrong what if people you know
+what's the context what is actually the
+cause what's the strategy you're going
+to take what are the details of the
+implementation choices you're going to
+make you know why you're doing things
+you know how you're going to build it
+you should have a very high confidence
+that what you're going to build is going
+to work you have a ton of supportive
+material right this will help you do it
+when you're trying to do it you don't
+have to remember you'll look at the work
+you did before if you need to grow the
+team or hand it off to someone else you
+have a lot of stuff to give them and
+then the contention I will make in this
+talk is that I believe very strongly
+that if you take this kind of rigorous
+approach to doing design the thing you
+will make in the end will be smaller and
+more General
+you know a lot of times people like you
+know but we like this about closure we
+like this about that about closure and
+it comes from this kind of a thing right
+it's just you keep cutting it down and
+cutting it across and you end up with
+small things that are more composable
+and more General
+due to having done the design so
+obviously there's a million talks about
+how to do Dev I think people have
+strategies for CI whatever This Not That
+Talk
+the one tip I would give you is don't
+build something on the same day you
+think of it why not
+you haven't slept on it I promise you if
+you do this kind of work during the day
+and you start coding in the afternoon
+the next morning you're like
+that no that wish shouldn't have done
+that so just don't even bother you know
+go out for coffee or you know talk about
+something else uh but give it a day
+all right so thanks I want to thank
+especially Dan he's not here but he's
+been tracking me doing a lot of
+mentorship of design and taking a lot of
+notes which really helped me build this
+talk and you know Stu and Alex and all
+the people I work with on the Collision
+day Atomic teams uh you know we do this
+I think it's hard to do and I think it's
+hard to learn but I think you can do it
+you can learn it and with practice uh
+you can accomplish things so thank you
+very much
+[Applause]
+[Music]
+[Applause]
