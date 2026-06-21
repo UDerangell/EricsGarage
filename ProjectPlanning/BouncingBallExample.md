@@ -572,7 +572,7 @@ A doubly-ended version of `LinkedBlockingQueue` — elements can be inserted or 
 ---
 
 |Class|Ordering|Bounded|Put blocks?|Take blocks?|
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 |`LinkedBlockingQueue`|FIFO|Optional|If full|If empty|
 |`ArrayBlockingQueue`|FIFO|Always|If full|If empty|
 |`PriorityBlockingQueue`|Priority|Never|Never|If empty|
