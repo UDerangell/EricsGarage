@@ -945,3 +945,48 @@ No Clojure-specific skill — I'll build this from first principles based on our
 
 Routes with nested transforms parse correctly now. Let's run the full test suite:All 24 tests, 52 assertions — zero failures. Now test the full config file and package everything:All routes resolve correctly including the named `standard_piano` transform set. Now run the full test suite one final time:24 tests, 52 assertions, zero failures. Now package and copy to outputs:
 
+- Prompt: Continue
+
+The jar starts cleanly, enumerates MIDI devices, loads the config, attempts to connect all routes, and waits — exactly correct behaviour in a headless environment with no physical MIDI hardware. Now copy everything to outputs:The project is complete. Here's a summary of what was built and delivered.
+
+---
+
+## What's in the project
+
+**24 tests · 52 assertions · 0 failures.** The jar starts, enumerates MIDI devices, parses the config, and waits for connections.
+
+### Namespace map
+
+| File | Responsibility |
+|---|---|
+| `core.clj` | Entry point, shutdown hook, `start!` |
+| `config.clj` | YAML load → normalise → validate |
+| `router.clj` | Builds routes from config, manages lifetime |
+| `midi/message.clj` | `javax.sound.midi` ↔ Clojure event map |
+| `midi/devices.clj` | Device enumeration, partial-name matching |
+| `midi/adapter.clj` | `reify Receiver`, `open-route`, `close-all!` |
+| `transform/core.clj` | `run-chain`, `make-chain-fn`, registry |
+| `transform/note.clj` | `transpose`, `velocity-scale`, `note-range-filter` |
+| `transform/control.clj` | `cc-map`, `pressure->cc`, `cc-scale`, `channel-remap`, `channel-filter` |
+| `src/clj_yaml/core.clj` | Self-contained YAML parser (no external dep needed) |
+| `src/clojure/tools/logging.clj` | JUL shim (drops in when `tools.logging` jar isn't present) |
+
+### Running it
+
+```bash
+# With the jar (no Clojure install needed):
+java -jar midi-thru-0.1.0.jar
+java -jar midi-thru-0.1.0.jar path/to/custom-config.yml
+
+# From source with Clojure CLI tools:
+clj -M:run
+clj -M:run path/to/custom-config.yml
+```
+
+### Adding a new transform type
+
+Only two files need touching:
+1. Add a constructor function to the appropriate `transform/` namespace (`note.clj`, `control.clj`, or a new file)
+2. Call `(xfcore/register! :your-type your-fn)` at the bottom of that namespace
+
+Nothing in `router.clj`, `adapter.clj`, `config.clj`, or `core.clj` changes.
