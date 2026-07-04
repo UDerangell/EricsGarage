@@ -1,4 +1,4 @@
-Note to readers: Search for **Prompt:** to navigate to each prompt to find topics of interest.  There is an interesting story towards the end of the document.
+Note to readers: Search for **Prompt:** to navigate to each prompt to find topics of interest.  There is an interesting story named "The Oaks Project" towards the end of the document that has ideas for AR collaborative workspaces.
 
 Prompt: Please outline a project plan for building a server in Clojure that responds to a byte stream which contains keystrokes, mouse movements, and chord keyset chord values (5 bits: 0-31).  The server will respond to each command in the byte stream by serving a byte stream response to the caller based on the user account associated with the connection.  Design an extensible interface that will allow the user to select OPML documents from their directory on the server, navigate them in a manner similar to Douglas Engelbart's NLS system, and save their changes to newer versions of the OPML files, where older versions remain preserved in a Journal system.
 
