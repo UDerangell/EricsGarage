@@ -21,6 +21,7 @@ peer A> hello
   [peer A] appended block 0 (1 total, 5 bytes)
 
 peer A>   [peer B] <- received block 0: "hello"
+
 world
 
 [peer A] appended block 1 (2 total, 10 bytes)
