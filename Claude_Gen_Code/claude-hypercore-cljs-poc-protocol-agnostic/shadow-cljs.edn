@@ -1,0 +1,13 @@
+;; Requires a JVM + normal internet access (downloads Clojure/CLJS jars
+;; from Maven Central on first run). Not usable in network-restricted
+;; sandboxes -- use nbb there instead (see README). The :pluggable build
+;; was written for shadow-cljs compatibility but only actually verified
+;; under nbb in this environment.
+{:builds
+ {:app       {:target    :node-script
+              :output-to "out/main.js"
+              :init-fn   poc.core/noop}
+
+  :pluggable {:target    :node-script
+              :output-to "out/pluggable.js"
+              :init-fn   poc.pluggable/noop}}}
