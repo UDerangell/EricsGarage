@@ -1,0 +1,2303 @@
+Kind: captions
+Language: en
+Global collaboration.
+&gt;&gt; True. True. Hi Fro.
+&gt;&gt; How are you?
+&gt;&gt; Yeah. Your headset on.
+&gt;&gt; Let me see. Uh, you hear me better?
+&gt;&gt; Yes. Yes. All good now.
+&gt;&gt; Fantastic. Um, just there's this
+dialogue that needs to go away from Zoom
+before it can say hello. Come on, go
+away.
+It's trying to do too many things here.
+Let's do this. Boom. Here I am. And Eric
+is here. That's really nice.
+&gt;&gt; Yeah. Hi. Yeah. Thank you for inviting
+me.
+&gt;&gt; No, absolutely. Glad you are here. And
+Moheit, I saw you were early. I I
+sometimes I'm early, but it's extremely
+rare because I have to pick up Edgar, my
+son, as most of you know, right before.
+So, it's kind of a rush rush to get here
+to you guys. So that's why I'm usually
+on time or a bit later.
+&gt;&gt; So yeah, very good. Hello, Peter. Peter,
+&gt;&gt; so what's the temperature in New York
+then, Peter?
+&gt;&gt; Well, I'm in I'm in North Carolina, a
+little further south. It's actually
+cooled down here. We had thunderstorms
+last night, so a little bit of
+&gt;&gt; it's only in the
+&gt;&gt; upper 80s Fahrenheit.
+&gt;&gt; That sounds good. I traded I traded 112
+degrees the other day for 70° with
+torrential downpours today. [laughter]
+&gt;&gt; It's same in Mumbai. You know torrenial
+downpours streets are flooded
+&gt;&gt; really
+&gt;&gt; all across you know I I think you know
+at least uh 80 100 kilometer radius.
+&gt;&gt; Wow.
+&gt;&gt; I'm in Delaware and we just got a flash
+flood warning so we're getting weather
+too.
+Uh that's
+&gt;&gt; so um Peter Rosilo in New York. It's
+only 24 degrees today, but as you said,
+that's not the main issue. Uh today we
+are actually warmer in London. We have
+31.
+&gt;&gt; Oh,
+&gt;&gt; in real degrees. I don't know what that
+is in your Fahrenheit thing.
+&gt;&gt; Most of you here are American, so I
+guess I I should make uh allowances.
+&gt;&gt; Don't apologize for being logical.
+&gt;&gt; [clears throat]
+&gt;&gt; Yeah. Well said, Peter. And Tom is here.
+So, I have to ask you, did anyone of you
+see any of the football games?
+&gt;&gt; Hi, Tom. Have any of you seen any of the
+football games?
+&gt;&gt; Yes.
+&gt;&gt; And where did you think?
+&gt;&gt; What are you waiting for? England or
+Norway?
+&gt;&gt; Yes. [laughter]
+&gt;&gt; This is recorded. I'm not going to give
+you more than that.
+&gt;&gt; I only follow Graham Sumo.
+There is um I I'll just hang on. I'll
+I'll just
+Yeah, it's kind of interesting actually
+uh because some of it actually goes into
+to our world. I'm just going to upload a
+a brief picture here real quick from
+computer.
+One moment.
+Uh where is it?
+Yeah, that was a bad game last night.
+&gt;&gt; Yeah, the England match.
+&gt;&gt; The England match.
+&gt;&gt; It was too late for us, but um
+&gt;&gt; Oh, yeah. That's true.
+&gt;&gt; We saw the Norway one. But but what's
+really interesting is it it used to be
+at least the England team. By the way,
+Eric, you haven't suddenly entered into
+the wrong crowd. Okay, this is not our
+normal discourse, just to be clear.
+&gt;&gt; Go ahead. [laughter]
+Um, you know, like we I've seen some of
+the top top games in history because it
+kind of had to and it was very often
+these egos running around on the pitch,
+but the Norway game was much more
+organized and the England game
+considering what they were up against.
+The manager, the way he put it together,
+really impressive. It really comes down
+to the things we talk about,
+collaboration, figuring out what's going
+on spatially, all of that was there just
+in a bold manner.
+So, yes, my son did go to school today
+in the Norwegian uh football uniform. Uh
+&gt;&gt; oh.
+But
+&gt;&gt; that's dangerous.
+&gt;&gt; Well, yeah,
+&gt;&gt; this for this week at least.
+&gt;&gt; Yeah, maybe.
+&gt;&gt; Holland plays for uh Man City, right?
+&gt;&gt; Hold on. Hold on. He's changed his name.
+He used to have a have it differently.
+&gt;&gt; Uh I have no idea.
+But he plays for
+&gt;&gt; he plays for a um
+&gt;&gt; he does play for a British team so that
+does become an interesting issue.
+&gt;&gt; Um so um today Moit did a presentation a
+while ago which was great. Uh he has
+sent me a paper that has taken me
+significant amount of time to suddenly
+look at and it's very very interesting.
+So we're going to schedule him doing a
+implementation presentation soon where
+it's not why but what. So I look forward
+to that. I did plan to have it as the
+last slide in the present in in my brief
+let's have a discussion presentation
+today but uh it's so very very different
+from the topic of today that uh I don't
+think it's useful. So I'm just going to
+show you guys a few slides. Um and Eric
+uh being the newbie here the way we do
+this um first of all we try to be a very
+friendly bunch I believe we are if
+someone has to leave early or come in
+late it's never a problem some people
+come here for many sessions some come
+here for a few we all have lives so
+there's no no formality as oh I'm sorry
+I have to leave or whatever it's just
+the way it is similarly we tend to start
+with um some sort of a presentation
+and then we make not a lot of effort and
+staying on topic.
+&gt;&gt; So, it it it's just a kickoff. So,
+right,
+&gt;&gt; I'm here to learn.
+&gt;&gt; You're here to learn. Okay, cool. Uh I'm
+not sure if there's going to be any
+learning happening, but I hope we'll
+have a good enough time. Yeah, you can
+see, right?
+&gt;&gt; Yes.
+&gt;&gt; So, I've had as I'm sure you have had
+real problem with two things. Why would
+anyone want to work in a headset?
+and what are the things to work with in
+the headset? So today at the beginning
+at least it's really about the elements
+in space
+what what what are they what what should
+they be right so uh also this is for
+thinking not necessarily for academics
+we often tend to go towards academics
+but this is not we we don't have to
+worry about citation bib and all of that
+in this context right let's try to
+rethink thinking
+which is a bit of a stretch right So,
+&gt;&gt; I had a chat with my friend Shannon, uh,
+Eric, that's who I sometimes I call.
+Yeah, good. You got that immediately.
+Um, and it went through a few things.
+I'm going to go by them quite quickly
+because they're just really brief
+inspirations for us,
+but it talked about how um,
+&gt;&gt; human memory. Oh, oh, by the way, the
+the way this conversation was had was
+Claude Five Fable is back, so I'm sure
+you all know. So I asked Claude first if
+you look at Claude five fable if you
+only look at neuroscience
+and psychology what are the things we
+should have in our space it immediately
+downgraded to f from fable to 4.8
+because of guard rails and all of that's
+fine. So I then said okay can you please
+summarize this and rephrase it as a
+question so we can try it with Abel and
+it failed again but what happened was
+because it was a new instance of Claude
+it started arguing with itself.
+I I know you all have a lot of
+experience with AIS, but I really found
+it was quite fruitful because I went
+through this four times where it said,
+"Oh, this really makes sense. This is
+great." Then the next time it would say,
+"No, that's really stretching the
+point." So, so that's how these few
+slides came about, right?
+Started talking about how human memory
+is reconstructive. We don't remember a
+thing as a solid factual object.
+talked about structures, right? And then
+a really nice thing and I wish Mark
+Anderson could be here today. The
+primitive as in primitive like shapes
+primitive act of mind isn't asserting,
+it's distinguishing. That makes sense,
+right?
+This is different from this.
+Not necessarily this thing is kind of
+useful.
+&gt;&gt; Or this is the same as this or similar.
+&gt;&gt; Exactly. Yes. Yes. Exactly. So th this
+became interesting cuz I said um what
+about the notion of a node if you look
+at the mmology cuz a node originally
+meant not of course. So then the string
+the connector is the vital thing. The
+not is just a thing on it. This is the
+thing that Claude argued against itself
+a few times.
+But what comes out of this is I'm I'm
+sure we would agree that if you have a
+knowledge graph any node or connection
+should be interchangeable. you should be
+able to display it like the node is a
+connection or the connection is a node.
+&gt;&gt; And in the system that I'm working on
+where you can define concepts
+um
+because here on these ones it it keeps
+talking about threads and connections
+rather than objects, right?
+Uh this one is kind of obvious. you
+can't focus on many things but
+um
+&gt;&gt; yeah so build the knot and the thread
+you know build building them together
+the these are really the key points so
+all I decided to do as a practical thing
+that came out of this is in the I'll
+show you it's so simple
+so let's open uh
+uh mah I've been reading your paper
+again by putting it in author So let's
+say I had defined the word augment,
+right? So in here I had define and I had
+lots of words. In fact, let's find
+something that is defined. No, nothing's
+defined. Okay,
+&gt;&gt; I wrote this in author.
+&gt;&gt; Oh, you did.
+&gt;&gt; Yeah,
+&gt;&gt; okay. So this is really fascinating in
+terms of how Claude can actually
+contribute towards a function. Right. So
+it said that the system and I'm sorry it
+wasn't in the slides. The system should
+ideally not let you just add a thing.
+You should have to add it with
+connections.
+So that makes sense. So all I'm thinking
+about is adding when you go through the
+definition you've written. Oh sorry u
+Eric just briefly um this is just a like
+a glossery defined concept in in my
+software author which is you know
+obviously how I think right. So why not
+when you [clears throat] select text in
+there should you not be able to define
+that directly from here
+so that is a fun right so that's a
+function in a piece of software but the
+idea is that
+uh let's just open something this one I
+think has a few defined uh okay so if
+you look at this this is a real document
+that I have been working on
+here's a definition of anglebar
+ignore whether it's correct or useful or
+whatever but for the sake of uh argument
+so to speak right the bold text are
+links to other defined terms so if I
+click on pharmicon it'll show me this
+click on Socrates it'll go to that
+so if you then while you are defining
+your things to see if you understand
+them can define the terms you're
+It may be useful.
+Did I over talk that or did that make
+sense?
+&gt;&gt; Yeah, that does. You know, I am reminded
+of the uh the the browser company of New
+York, you know, in the browser the arc
+when they launched on phone uh they had
+this thing uh which was uh I'm just
+opening uh if I still have that. I don't
+have that but you know they had this
+thing browse for me. So you can
+highlight it and there's this thing you
+know that would open up browse for me.
+So what browse for me used to do was it
+used to dynamically generate a web page
+but that was not specifically for you.
+You know if you uh did that uh uh with
+something on your phone, it will show
+you exactly uh the same web page as it
+would to me. But you know for uh both of
+us you know that browse for me what it
+could do should be actually a sort of
+you know uh a little individualistic
+based on the kind of things that you
+have in your resource library you know
+the kind of things that you want uh that
+you have previously interacted with that
+could be uh relevant.
+So you know in here uh when uh I was
+just reminded of this uh when you were
+so the definition of a term of a
+relationship uh that uh you know keep
+even that uh even when we are talking
+about book or an article or a scientific
+paper the kind of bibliographies that
+are there they are set but they could be
+a lot more relevant based on the readers
+uh experience.
+Uh yeah, that that makes sense. And um
+ju just to kind of um frame this a
+little bit
+when we go through these things, it's
+really important I think to be very
+abstract in our thinking and let's just
+have fun. So we can imagine we make a
+piece of knowledge here,
+right? And then oh it's we it means this
+stuff
+but then I have to define one of these
+stuffs. So when I show you a MAC
+interface
+you know that that's a very cluji way to
+try to make this real.
+&gt;&gt; So hopefully we we can think of um and
+Mo what I think you're talking about is
+partly context. So yeah you're defining
+these things but there's all this other
+relevant stuff. So but if we think about
+it as floating clouds or spheres
+uh which I think we should it can become
+difficult to
+um grab them. And one thing that I think
+Claude said quite well is that these
+things do need a shape so the human can
+touch them and interact with them and
+move them
+&gt;&gt; contextual defined further defined and
+so on.
+So, I've been thinking about Douglas
+Engelbart's demo showing his route going
+home, the grocery store, and all the
+things you have to get. So, if you think
+about that was a very simple map which
+had links into each node and you could
+expand and collapse and I think we need
+that metaphor in AR somehow.
+So um a document I shared with some of
+you it's um it has a story of a
+distributed team working in AR and um it
+what I found interesting is that Claude
+picked that out that node graph as a
+first class element.
+So something to think about.
+I'm so glad you said that because
+to me that bit of Doug's demo is
+probably the coolest and it's probably
+the furthest from what we have now. I
+mean we used to have image maps, right?
+An average person could do something
+like that and then they disappeared.
+And the problem we have developing for
+something like Vision OS, if you do it
+native rather than Web XR or something,
+is that you can't connect to things
+currently that aren't in the document.
+So Eric, what you're talking about is
+absolutely the kind of thing we need
+where you have whether it's a root home
+or whatever the shape is to be able to
+get more stuff is is just absolutely
+super important. But can you
+tell us some more about the distributed
+AR team that you were talking about?
+Okay. So, um, yeah, at the beginning of
+my chat, I was, uh, just ideulating
+about what it would take to build NLS
+today. And Claude had some ideas, but
+then I had it write a story. And um the
+prompt is write a story about a
+distributed team using this system in an
+augmented reality environment where they
+can meet virtually at times convenient
+for them, co-work with other team
+members who are present, leave notes on
+shared boards in the environment, and
+optimize team productivity towards a
+project goal. So, I wrote a nice story.
+Um, and um, yeah, it was pretty much
+what I would expect, but then I added
+some wrinkles to it uh, to illustrate
+the security concerns. And I was
+thinking local first if we had uh,
+decentralized data in this system and it
+outlines some security issues with
+rekeying. So um I'm going to share the
+link to the uh the document in chat and
+um yeah there's also an issue in that
+GitHub where you could uh comment on it
+and I have some links in that issue to
+other resources if you want to explore
+this topic further.
+So this is really fun because
+I started the day talking about what
+should things in space be and Claude
+said forget the things it's the
+connection and then Mojit makes me
+through being in my email inbox for a
+couple weeks read about context as a
+system right and then Tom H is building
+a knowledge navigator and Eric you are
+looking into ideas around rebuilding NLS
+this to me is very very exciting
+you know, if we can manage to find ways
+for this stuff to work together. I mean,
+there's been so many types of um formats
+and interchanges. There's been J well,
+there is, not only has been JSON and all
+these things, but maybe for fun, we
+should look at things like MCPs.
+We aren't building AI systems and I have
+no idea what an MCP is in reality, but
+it seems to be very flexible since it's
+one AI saying here's some stuff to
+another AI. So, um I'm I'm looking at
+what you shared, Eric, but I'm wondering
+what you guys think about
+the way these things can flow together.
+&gt;&gt; Especially the villain. The MCP was the
+villain in Tron.
+&gt;&gt; [laughter]
+&gt;&gt; That was a different MCP. Is that what
+it's called? MCP. I don't even know
+that.
+&gt;&gt; Master control protocol. Yeah.
+&gt;&gt; Yeah. Right. [laughter]
+&gt;&gt; Master control program. That's the Tron
+bad guy.
+&gt;&gt; Yep.
+&gt;&gt; Or male chauvinist pig. That also works.
+&gt;&gt; For anyone listening, it's model context
+protocol. That's what it means.
+&gt;&gt; Yes.
+&gt;&gt; We run out of initials after a while.
+It's just it's it's funny. Um
+yeah, I've kind of had a uh
+shall I say a um existential crisis over
+the last few weeks as I have been trying
+to drag my students kicking and
+streaming up um up the thinking line
+layers
+and thinking that [sighs and gasps]
+giving them the right tools in AI to do
+that will help them make that transition
+because that's a that's an eternal
+struggle as a teacher.
+Um, and that's why I put the Bloom's
+taxonomy on there because that is
+something I don't know how many of you
+guys know what Bloom's taxonomy is, but
+it's very, you know, it's it's it's kind
+of one of those foundational things in
+the educational
+world to people who actually pay any
+attention to what actual teaching is as
+and that that's a fairly small
+percentage of people in the educational
+world, but that's another story
+entirely. Um but uh you know it
+basically goes from the lowest or the
+foundational level which is basically
+read and regurgitate all the way up to
+create at the very highest level where
+you're synthesizing things and building
+building your own things out of them.
+And the AI can reasonably mimic
+everything up to the analyze level. Uh
+and um the the and it can do create too.
+It's just bad at creating. I mean, we,
+you know, we have very low standards for
+creation sometimes, but you know, if you
+really think about it, the people who
+are real artists should not be
+threatened by AI. Um, but the thing that
+I wanted to get to here is that, um,
+this proved to be a lot harder than I
+expected. Um, people are trained to work
+at the low levels. People are trained to
+work in an industrial system where they
+are cogs in the machine. And that
+training is hard to break.
+And a lot of the stuff we're talking
+about here in terms of being able and
+and I know our audience, well, at least
+it was for the the Sloan project was um
+uh was the was academics, right?
+Scholarly work and things like that.
+Theoretically, they are already working
+at that higher level. I wouldn't put
+that as a guarantee though. Um but the
+idea that we can suddenly build it and
+they will come
+uh has been a bit of a shocker for me.
+Uh and I'm question it in the context of
+the knowledge navigator. But I also
+think depending on what who our audience
+ultimately is. If we look at this as a
+worldchanging device or system like Doug
+looked at the NLS which is also again a
+way of pushing yourself up that higher
+up. That's what he's talking about when
+he's talking about augmenting human
+intellect. He's talking about pushing us
+to the creativity level. Uh the version
+of Blooms that existed, there was a
+version of Blooms back in the 1950s, but
+it it's been superseded by this more
+complex model which has six levels. He
+may or may not have been familiar with
+it. I don't know. Um but uh that's
+clearly what he's talking about when
+he's talking about augmenting human
+intellect. He's talking about and to and
+the thing I said a few weeks ago is that
+it's only augmentation if you grow from
+the process as well. If you're basically
+the same place you are at the end of the
+process than you were at the beginning
+of the process, i.e. I asked a bunch of
+questions about history. It gave me a
+bunch of answers. I've forgotten those
+answers. I'm back to where I was. Um
+then you're not augmented at all. But if
+you are thinking at it a different way,
+if you're thinking about problems in a
+different way, and I think that's a
+critical thing when we're talking about
+here, when we're talking about our
+system or your system, Froda, is is that
+it's about shifting perspectives and
+making those connections in a different
+way. Um because otherwise, why do it?
+Because it's already all in books,
+right? So, uh I personally agree with
+you that books are a good way to hide
+information. Uh, and I love books, but
+they are not terribly efficient in some
+ways in terms of seeing the
+constellation of information because
+they're a linear product. Um, and so,
+uh, yeah, and oh, by the way, you know,
+I have been telling you, uh, Frodo, that
+the the key is the connections. And so,
+I I I see Claude finally confirmed me.
+[laughter]
+&gt;&gt; Oh, yeah. Yeah. No, absolutely. It's a
+it's an important um it's an important
+thing. You know, knowledge is is
+connections. But it was really
+interesting to have uh Claude fight me
+and say, "Why are you talking about
+stuff? Shouldn't talk about the stuff.
+Talk about the connectors."
+&gt;&gt; Yep. And that's what Doug was and um
+certainly that's what Ted Nelson's
+talking about when he's talking about
+transclusion. Uh it's it's it's what
+Doug essentially is talking about uh in
+in augmenting human intellect in terms
+of you know that's all about making
+connections. It's what Bush of course
+the associative trails Vanavar Bush
+that's connections. I mean this is a
+repeating theme and something that we
+that anybody who looks at this stuff
+from you know Angel and Nelson on Allen
+K you pick your pick your poison all
+recognize that that's the critical
+element that's always been missing from
+our supposed implementation of Bush's
+ideas from as as we may think is that
+that we lose those that we've never
+built a good connection machine. We
+think we have, but the connections have
+still all been manual. If you are using
+the web and you're creating
+um links and things like that, that is
+your that is your um uh uh making the
+connection based on what your biases and
+your other, you know, this is important.
+There should be a link to this so that
+person can go read read that article.
+That's your call. And I'm not saying to
+take that away, but uh it's it's still
+working in through the blinders of the
+author in a sense. And so how do we get
+beyond the blinders of the author? Um
+and that's
+and then how do you build something that
+people are able to consume? And that's
+that's my problem right now is I'm like,
+okay, yeah, I can't just put this plate
+in front of people and expect them to
+understand how to eat it. Uh, and uh, I
+had a bit of movement, but it really is
+I'm pulling people by the scruff of
+their neck across this this these lines
+uh, where I thought that the AI would be
+more effective at automating those kinds
+of questioning because that's what I've
+been talking about. And it happens with
+me. I'll often start out with a
+low-level question and by the end of the
+conversation, I'm at the create level
+going, "Oh, well, this piece of
+information connects to this piece of
+now. Okay, now I get it. Now I can put
+these together and make something
+different.
+And that to me is incredibly exciting.
+That's what I consider learning. Um, but
+getting my students to do that is not
+easy. And this is a big problem because
+it's also a problem for the workforce
+because we're going to hand AI to all
+these people and expect them to suddenly
+become massively more productive. Well,
+productive to me means working at a
+higher level, not work. And it's not
+about working faster, it's about working
+smarter. and um industrialization and
+the way we measure things in terms of
+productivity and things like that. It's
+all about going faster. Uh and and
+that's that's a that's a massive problem
+too because
+um that's where you make first of all
+from the perspective of using AI that's
+where hallucinations really bite you in
+the butt because if you're in a hurry
+and you're not checking things and
+you're not you know you're not thinking
+about what you're doing you're expecting
+the AI to do it for you and it makes a
+mistake then you own that mistake and
+that's where we get the stories of the
+lawyers submitting briefs with cases
+that don't that that are fictional and
+you know I've I've done it too. I
+screwed up the last assignment in my
+class in terms of the instructions
+because I was in a hurry at that point.
+I was just putting stuff together uh and
+the AI did something that I looked at
+after the fact and went, "Oh, yeah, this
+is incredibly confusing." Fortunately,
+it wasn't a big deal at the end of the
+day because most of my students didn't
+make it to that assignment, but those
+that did. So, but yeah, it's a thinking
+problem and so can we use this these
+technologies to elevate our thinking? So
+Tom, you in one of your articles, you
+made the point that I think the title
+even was never ask the AI just one
+question,
+&gt;&gt; right?
+&gt;&gt; There has to be a follow-up. So, thanks.
+Hey, Peter. And yes, go.
+Yeah, it's gotten so bad with the AI
+usage in law that they have formally
+changed the continuing legal education
+requirements for the bar in New York
+State to require us to take actual
+courses to tell us that we shouldn't
+just trust the citations that the AI
+comes up with to legal cases that may
+not actually exist.
+It's that bad because people are just
+offloading too much of their cognitive
+activity to the LLM models and they're
+way way way too trusting. So now we
+literally have to sit through hours of
+being lectured that it's not a good idea
+to hand the judge papers that you didn't
+actually create yourself or bother to
+read.
+&gt;&gt; Yeah. I mean I I think a lot of times we
+overestimate how much intellectual
+activity is actually going on. But
+that's another conversation. But but
+this but that goes for humans too. I
+mean I had a conversation with my
+closest friends today who is in a
+completely different discipline and um
+you know I was thanking her for the
+dialogue because you guys focus on this
+similarly to me and that's really good.
+We may tunnel vision us a little bit.
+She comes in and asked completely
+different things and because I respect
+her intellects if she sounds stupid I'm
+the one being stupid. So it's a really
+good opportunity to think further. But
+this kind of way of how to learn to deal
+with other minds, one of the exciting
+things about now is we have to learn how
+to deal with AI.
+&gt;&gt; You know, we this is really part of what
+literacy means now. And you know, like I
+the little anecdote in the beginning, I
+made the AI argue against itself. I
+didn't put it into another AI.
+&gt;&gt; That's kind of fun, but it's this. So
+Tom, the stuff you're trying to teach
+the kids cuz you're on the firing line
+here, you know, it's the same stuff. And
+I don't know, it's a pioneer time we're
+living through when it comes to this.
+&gt;&gt; Oh, Eric, please speak your question.
+That's a great question.
+&gt;&gt; Okay. Okay. So, I'm wondering if you had
+different types of learning environments
+um embodied learning using the body uh
+physically or can we have an AR learning
+environment and situations which can
+actually put the students in a situation
+where they need to cooperate or um
+analyze something critically
+and u maybe they can use some AI I but
+maybe AI can prompt them in a way to um
+think more critically if it's built
+correctly.
+&gt;&gt; That is the fundamental question if it's
+built correctly. Yeah.
+&gt;&gt; This is not a technological problem.
+This is a human problem.
+&gt;&gt; Exactly.
+&gt;&gt; I mean right now I I don't know if he
+can hear me. Um my son who is an
+incredible boy is not a very loud boy.
+um he had an argument with a friend and
+there were some issues on how he dealt
+with it that I don't agree with. So you
+know that's a human teaching human thing
+and the worst person to teach is of
+course the parent at the moment. you
+know later on turns out he will have
+picked up things when it comes to
+distributed teaching you know with with
+students of course it's a different
+dynamic but despite talking about
+abstractions in the beginning of the
+call today
+information is very very literal so
+maybe it's more useful for us if we talk
+about specific things I mean right now
+considering what we're sitting through
+climate change is one of those issues
+you know how do to teach that.
+I mean, that may be basically a movie,
+maybe better than any facts or
+interactive system, right? It's it
+really comes down to what we're trying
+to
+transfer to someone, doesn't it?
+&gt;&gt; Yeah. I mean, uh, if you've never read,
+uh, Diana Laurelard's, um, work on
+education, she used to be, uh, vice
+chancellor of the open university. Uh,
+and, uh, she's done a lot of really good
+thinking about, uh, teaching and
+learning in a technology environment and
+but the fundamentals of what happens in
+a learning environment. And uh she has
+this thing called the conversational
+framework
+uh which uh is showing all of the
+different conversations that happen
+between the the teacher and the students
+and among the students and within the
+student and uh it's a really good guide.
+The thing that I have really noticed in
+terms of my own students is I can get
+incremental change if I'm in a
+synchronous situation with them. I'm
+either in a Zoom kind of class or in a
+physical classroom with them. But the
+ones that I that really are this is
+where the blood bath occurred this
+summer was in my completely asynchronous
+classes. Uh because they never get that
+conversation with me because I can't I
+can't meet with them live. I can't force
+them to meet with me live. I I can hold
+office hours but if they show up I mean
+I did that a couple times and like two
+students showed up. Uh, and um, but it
+was it was just it was awful because
+they couldn't I was hoping the AI would
+replace that and they they would have
+those conversations with the AI and I
+put all sorts of materials together and
+I wrote you know and created comics
+uh to illustrate because they won't read
+lots of instructions. I mean this is the
+fundamental problem too. You can, it's
+the same thing with game design. You
+know, you can either make it realistic
+or easy. And the trick with a game
+designer is to balance those two uh
+against each other because if it's too
+realistic, it's unplayable.
+Uh there's a famous game uh I think it
+was it the North African campaign or
+something like that that was partially
+made as a joke but it's supposedly so
+complex that no one's ever actually
+completed it. [laughter]
+So, but you know that's the problem as a
+teacher too. And in terms of any sort of
+information exchange, you make it simple
+and you lose you you it's hard to make
+things simple, but it's you lose that
+level of of specificity.
+But if you make it too complex, they're
+going to ignore it because they can't
+understand it anyway. Now, of course, AI
+can help on both of those counts. I
+mean, I've used AI extensively to write
+my instructions to be more
+understandable. I have used uh and I
+tell my students also if you don't
+understand what I'm saying or you don't
+understand what these instructions are
+saying drop it into your local chatbot
+and say explain this to me so I can
+understand it and don't let it off the
+hook until you do.
+They don't do that as far as I can tell
+but that's you know but the point is
+that these are things that to me seem bl
+glaringly obvious solutions to problems
+and roads that they just do not take and
+I you know again that's been my real
+frustration. I mean, I was I was so
+hoping that AI would would would put
+that in front of them. But again, I
+think it's partially training. I think
+they've just been so trained by the
+system. The the fall back when they
+start to panic is, "Well, what do you
+want me to do?" And I'm like, "Well, I
+want you to think, and I don't want you
+to imitate me." But of course, imitating
+is what they've learned to do. You know,
+the teacher says, "Well, do what I do."
+And and um that's not thinking for
+yourself. And that's this is the
+problem. Um but I this again this goes
+well beyond my students though I've been
+a manager I've managed 50 60 people
+exactly the same problem you can give a
+lot of detailed instructions and really
+handcuff people or you can take your
+chances on the people thinking and that
+latter one they don't all you would
+think in my situation I always like that
+if my boss said okay just handle it
+here's here's where we need to get to
+let's just handle it But most of my
+employees found that very uncomfortable
+because I was pushing the risks onto
+them and thinking is risky. Uh and
+that's that's kind of what I'm
+struggling against a bit now. Um I don't
+know if again I don't think there's a
+technological solution to it. I think
+there are things that can augment our
+ability to overcome it. I do think I
+still think AI can do that but it's
+going to be a lot harder than I was
+thinking say a couple of months ago. So
+one of the things you said there uh
+about instructions Tom
+when I was teaching one of the things I
+did with the first years I asked them to
+go and take three black and white
+photographs of something of London. It
+needed to be printed on A4 paper black
+and white square in the middle.
+And um the whole point was exactly that
+if someone I asked for three pictures if
+someone gave me four I would fail them.
+right to to really get it early in, read
+the damn instructions,
+right? Of course, it was it was first
+year, so it was a bit of a shock class
+where they were like, "Oh, what's going
+on?" You know, once the emotion was
+there, who cares? It's not important.
+But just getting people to read the
+instructions is hard. But if but if we
+go a little past education and look at
+our own
+um that actually, Eric,
+here's the thing. Do you mind
+introducing yourself?
+&gt;&gt; Yeah, sure. Hello.
+&gt;&gt; A bit of context. Thank you.
+&gt;&gt; Okay. Um, so I'm a retired software
+engineer. Um, started in the corporate
+world doing cobalt year 2000 and
+eventually uh Java and C. And these days
+um I'm trying to learn closure on the
+recommendation of Sam Han who's a mentor
+to me and uh he trying to get my h head
+around the immutability and how it could
+solve concurrency problems. But um I've
+been interested in the ideas of Ted
+Nelson and Doug Engelbart
+and um really thinking ahead
+because it really is a shame when you
+see how they're have great ideas that
+just haven't gone that far. And so I'm
+excited about possibilities for AR. Um,
+I've done little experiments like using
+A-Frame just to get a sense of a 3D
+space, but um, I see possibilities. I'm
+also interested in decentralized data.
+Um, I've been just exploring those
+technologies.
+Um, but one key thing about that, it's
+very difficult to find a business model
+for decentralized data. Um,
+yeah. So there's like a different
+culture where you have to um you like a
+hacker culture that a small groups may
+adopt it but yeah practically for we're
+talking about there's that mainstream
+like Apple community uh with a vision
+pro you you I'm glad you have an
+offering going in their app store to get
+um yeah some publicity around the
+possibility of text and AR. Um, so there
+there's a lot of possibilities. Uh, so
+I'm just trying to figure out where I
+can fit in, how I can help right now.
+&gt;&gt; Thank you, Eric.
+I I'm looking a little bit also at our
+our chat and I have to ask the question
+uh considering the problems in the world
+right now where we're talking about war,
+climate change, uh
+equality differences in many many realms
+and so on. What are the things that we
+for the sake of this discussion, the six
+of us really think
+should be taught to the next generation?
+Cuz if we're talking about
+straightforward maths, engineering,
+history, to an extent,
+that's old. But I I do think all of us
+agree that metacognition is important.
+People really need to learn to think
+better as do we. I'm sure I'm sure we
+can also be improved. But as an example,
+what what are the things we would really
+prioritize being taught?
+Cuz Peter is talking about
+um yeah, Peter Rosila, why don't you
+elaborate because it may come into this
+discussion, you know, what what are
+these professors really trying to teach,
+right?
+Well,
+&gt;&gt; what do we want to teach
+&gt;&gt; in law school? They were trying to teach
+their worldview. And it it wasn't a
+party politics thing. It was just a how
+the world works and how things function.
+For instance, I locked horns with my
+adviser in law school many times over
+software patents. And I told them, I'm a
+programmer. I know dozens of
+programmers. There's not one of them
+that's motivated by the idea of running
+out and grabbing software patents and
+litigating over them. I it's a
+non-issue. But the official sanctioned
+law school view was that the only reason
+the software industry exists is because
+of our rigorous IP laws and they have to
+constantly be strengthened and built up
+higher and thicker. And because I was
+questioning that worldview and my push
+back made sense, you know, it suffered
+when it came time to be writing letters
+of recommendation for potential
+positions after law school. So I paid a
+price for my honesty and a lot of other
+people had similar situations. We had
+one student in my freshman year who was
+doing push back on questions related to
+Middle Eastern politics. You know, it
+shouldn't have had anything to do with
+class, but because
+he expressed that viewpoint, the
+professor came down on him like a ton of
+bricks and that was the end of his
+participating in class. as soon as he
+correlated the fact that true actual
+open discussion
+results in severe personal consequences
+that extend into the grading world.
+Unfortunately, uh he learned the lesson.
+So what were they teaching? They were
+teaching the students to as perfectly
+current their views on literally
+everything. You not even politics per
+se. Just if the professor views that
+certain abstract values are more
+important than other ones, then you damn
+well better pirate that value hierarchy
+when you're writing your exam answers or
+you're going to suffer. So the only
+question that the students ask is what
+do you want me to think? I I know you
+won't really care what I actually think.
+What do I need to tell you that I think
+so you will think that you've succeeded
+in teaching me to think about everything
+the way you think about everything so
+that you will reward me for thinking
+about everything. So please let me
+become a clone of you dear professor.
+How can I better let myself become a
+clone of you? I am putty in your hands.
+And that's the mentality that is
+implicated into the students because
+they see what happens when somebody gets
+out of line.
+&gt;&gt; So this is really interesting because I
+I don't know the right word for it but I
+would say I neither agree or disagree. I
+see it differently and we should have a
+word for that and that is um
+if you pardon me Peter was elko um let's
+say a lawyer view and I have several
+friends who are lawyers not just you
+Peter uh maybe that your stance in the
+world is that it's the patent thing you
+know if your patent if the only tool you
+have is a hammer everything is a nail
+right it's not just that it is also our
+everyday background processes
+So my father was a businessman. For him,
+how's he going to make money? You know,
+he he was a good man, but the primary
+driver for him was like we talked about
+football, making money once you have
+enough to live in business is is goals.
+You know, you're doing something. In the
+military, you have a very different
+worldview. How do you blow up that
+bunker?
+I I think we need to figure out a way
+and I'm so glad this came up to harness
+this because we are a bunch of whether
+we're politically leftist or right or
+whatever is a bit irrelevant but all of
+us here are Doug Engelbart want to do
+better with the world
+take care of each other we expect other
+people to not want to destroy our
+database so to speak and as most of you
+know Ted Nelson thought that Doug was
+extremely unrealistic in this. So, how
+can we take into
+account
+these professors who have this
+worldview? They may very well be
+representing their profession. I mean, I
+I've noticed it within my profession,
+too. You know, I I saw your comment
+there, Tom. I have a PhD
+but I got my PhD as an adult and I got
+it for many reasons that wasn't just the
+straight through studying. The reason
+that I'm building my software is partly
+so that people like my dear friend Mark
+who many of you know and who I love and
+adore greatly shouldn't just be people
+like him who can do well in academia.
+He doesn't love the kind of things he
+has to do like latte and stuff but he
+has the brain that enables him to do it.
+So, you know, all these professors, we
+need to
+I don't know. [clears throat] It's an
+interesting discussion. I'm glad it came
+up.
+&gt;&gt; Tom, you wrote a book. I'm not
+surprised. You write a lot.
+&gt;&gt; This is that's this is technically my
+first book, but learn at your own risk.
+&gt;&gt; Um, which is I wrote this during the
+pandemic. My discovering digital
+humanity was a work that took years to
+write. I wrote this in four months. Uh
+and um was kind of meant to be a sequel,
+but it took too long to fix the other
+book, so it became the first book came
+out second. U but it's based on the same
+kind of thinking. Um but yeah, I mean
+the you know, we should never forget
+that education is an industrial system.
+It's built on grades. Um, law school is
+kind of the pinnacle of that. Um, and I
+wisely decided not to for, you know, get
+into law school. Uh, I was foolish
+though in thinking that when I went to
+grad school that this was an invitation
+for me to think for myself and develop a
+mechanisms for thinking myself. Uh, and
+I learned that that was not the case
+with this particular professor who
+failed me on my political theory comp
+because I would not cowtow to her view
+of these books which I thought was
+naive. [laughter]
+I think she was u I would I I'm
+generally speaking a non-interventionist
+when it comes to international the
+course was ethics and international
+relations and I'm generally a
+non-interventionist when it comes to
+inter international relations because
+although I may want to help I've seen
+time and time again if it's not your
+country you're probably going to mess it
+up worse than when you when you went
+into it. There are very few exceptions
+to that. You people sort of have to
+solve their own problems at a certain
+level. Um and um especially if that
+country is distant in in space and
+culture uh that makes it even worse. So
+interventions in the Middle East with
+the United States or at the time it was
+was talking about Yugoslavia. Uh and uh
+although that turned out better than I
+expected uh in the end but at the same
+time
+yeah I you know she was very much hey if
+these circumstances occur then you can
+you can you're justified in going in and
+I'm like that's not what [clears throat]
+these authors say. They put up a list of
+criteria that's awfully hard to meet and
+if you think about this objectively,
+you're you're never going to meet their
+standards to do this. And she didn't
+agree with me and we went back and forth
+and she failed me on my comp twice and
+yeah, prime directive. Exactly.
+[laughter]
+That's exactly right. So, but yeah, I
+mean the point is that um the system is
+designed to create conformity and I
+would argue that law school is is was
+very is very much designed to create
+conformity. Uh, and in a world of AI, in
+a world of AR, we're trying to break
+down walls, and this is a very
+non-conformist notion. And I think those
+parts of Englebart that never got
+accepted were the most dangerous in
+terms of that conformity argument. I
+mean, they they took his tools to make
+things faster and easier, but they
+didn't necessarily make them better.
+&gt;&gt; And so, yeah,
+&gt;&gt; I just bought your book, Tom. Thank you.
+&gt;&gt; Oh, okay. And um for those of you who
+are not in the future of text series of
+books, please get in there and if you
+published a book, tell me because then
+I'll buy it. I'll probably read it, but
+definitely put it on my bookshelf. It's
+about a meter long now of books. So
+people have been in it. So thank you,
+Tom.
+Um
+&gt;&gt; that's good.
+&gt;&gt; Okay, Eric asked a nice question. So I'm
+just going to share something with you
+really briefly.
+Uh you can still see, right?
+&gt;&gt; Mhm. So, this is um a little guide to
+using author for vision that I just put
+together this weekend. Forget about the
+words. I'm just going to show you a few
+images because uh the question Eric
+asked was about reading in AR, right?
+So, a basic thing we've done is you can
+read like this. It's a normal scrollable
+document that you can resize
+and you have a context menu that's kind
+of cool and a toolbar. But
+we did a thing where the stuff in space,
+the nodes,
+there's a category called sections which
+can be automatically created based on a
+document's heading and the text below
+it.
+So that means that you can instantly
+have all the sections of your book like
+this or by depth or anything you want.
+It is extremely rudimentary and
+unsophisticated,
+but it does immediately blow up what a
+book or a document is, you know, when
+you when you can walk around and look at
+it. Uh, of course, feel free whatever to
+look at all the different things like
+this. But because of that question, I
+just wanted to show that that's all.
+&gt;&gt; So, okay.
+&gt;&gt; Yeah. No, go on. I'm sorry. that um so
+when I see those pictures that's a case
+of the system automatically dividing up
+the book and I guess it's assuming that
+it's an unstructured document see
+Angelbart had structuring and that's why
+you were able to collapse sections see
+the first line of every paragraph and
+things like that so the thing is yeah
+can we get back to a structuring
+methodology or automatically structuring
+&gt;&gt; it's semi high structured.
+&gt;&gt; Yeah.
+&gt;&gt; Uh and the structures come from number
+one are the headings themselves
+&gt;&gt; and number two we have the notion of
+marking sentences not just highlighting
+them but marking them. Uh and the reason
+for that by default they turn orange.
+There's two reasons. Number one as you
+work through your own document and you
+get to paragraph it you can pull out
+this the sentence that really or words
+that really that's what it's about. And
+if you don't have one per paragraph,
+then you probably should rewrite your
+paragraph. But when you then go into an
+outline or overview, all of these show
+up.
+So instead of the first sentence of
+every paragraph, it becomes the first
+semantically valid unit of every
+paragraph that comes up. So that's why
+I'm saying semistructured.
+the what you saw here you're absolutely
+right to in a nice way attack as being
+compared to NLS augment kind of a cluge
+I completely agree that we need to go
+further in the direction of the system
+knowing what bits are so we can more
+intelligently change the viewspec and so
+on so fully agree with you there Eric
+&gt;&gt; okay thanks
+&gt;&gt; and the reason I I showed that was
+partly because of that nice question but
+also as a
+counterpoint to our discussion today
+where we're trying to ignore both paper
+and text and look at thinking.
+I wonder what thoughts there are on
+that.
+You know, if we try to ignore teaching
+and try to ignore books. So, one second.
+Say hi. Yes. There you go. Say hi.
+&gt;&gt; Hi.
+&gt;&gt; They can only hear me through here, so
+you can't hear them. Can you please open
+my windows and close the door because
+you and mom are being super loud?
+Um so I if we ignore teachers and
+professors and grades
+and if we just imagine this beautiful
+idea of building
+let's say knowledge sculptures
+and knowing that the vocabulary around
+that we are really ignorant at all of us
+all humans that we want to do something
+towards that
+what should we be able to even do in
+such a thing I think even that question
+is difficult
+Yeah, very difficult.
+&gt;&gt; So, I'd like to talk about vocabulary
+because in you have definitions for how
+you see the world. I have my own
+understanding. And to get to a common
+understanding,
+there has to be some kind of mapping.
+And um what if each individual had their
+own um glossery that they build over
+time and then it can be transcluded to
+other people's glosseries. So they see
+the relationships between the terms and
+it's also related to topic mapping.
+&gt;&gt; I completely disagree with you.
+&gt;&gt; Okay.
+&gt;&gt; Which is great fun. Um obviously you
+know Jack Park.
+&gt;&gt; Yeah.
+&gt;&gt; So I have great fondness for the whole
+field of topic mapping, knowledge
+mapping, all of that stuff. But uh just
+to twist it
+um especially with the beginning
+discussion we had today on what the
+brain really does, you know, it's it's
+it doesn't store object things. It
+stores object relationships.
+I I think the notion of being able to
+you know Eric has a definition of let's
+say America you just had a big birthday
+let's talk about America right I'm sure
+your notion of America and all of our
+notions are very very different
+but the key is a lot of things we will
+share in that notion like we all share
+we will share that George Washington was
+a person that's not really disputed
+right so what what becomes really
+interesting then is
+not the mapping as objects. And Eric, I
+think you probably disagree with this,
+so I know I'm
+can we find a way where we don't have a
+knowledge mapped, but we have
+directions,
+right? Like,
+yeah, literally think more about magnets
+and things rather than
+the things themselves.
+Because if we just have two Americas
+come together, there's so much behind
+them. Maybe there is more of a, you
+know, my some of my context as as a
+person and Moit being also a
+non-American.
+You know, he's Indian, I'm European, you
+know, I have a Viking history. Some of
+these are obviously going to interpret
+how we see America.
+Some of them might not. some of them,
+you know, I may go against my own
+culture because I don't agree with the
+predominant culture.
+So, how do we get these kind of more
+dynamic
+rather than a a a plug more more of a
+push and pull?
+So I'd like to suggest can you trace the
+provenence of the evolution of your
+concept of America over time and then
+can that be mapped to somebody else's
+understanding where you see everything
+and they can get a to a common
+understanding even if they disagree on
+specific points.
+&gt;&gt; See this is where it becomes very human.
+So I I I'll bring up one very very
+specific thing Peter mentioned or
+somebody actually mentioned in chat you
+know politics like Middle Eastern
+politics. So I'm going to bring up a
+situation where let's not waste our time
+on the politics but on the human side of
+it and that is um Israel Palestine at
+the moment right
+so I come from perspective of being
+Norwegian and having friends who are who
+deal with a situation who are very much
+like Palestine Palestinians are fighting
+occupation blah blah blah that's the
+stuff we don't need to discuss but in my
+own journey
+um from a from Jewish perspectives
+has been really really fascinating
+because logically I can see things in
+one way but
+I'll give you a very specific nugget. So
+one of my friends I went to school with
+who is British Christian white male his
+father was Jewish.
+His brother considers himself Jewish but
+not him. Fair enough. But he took an
+entire evening to make me emotionally
+understand that
+the the the fear of the fact that he is
+a Christian, but he has a certain
+hereditary connection to being Jewish
+means that other people may not accept
+his Christianity.
+They may point the finger at him and
+say, "Well, no, you are Jew, right?"
+That's the kind of thing that I don't
+think can be mapped necessarily. Maybe
+it can. and Eric, I would love to work
+towards it, but that's the kind of human
+lived experience that a close friend
+I've known since I was 15 takes an hour
+to drum into my head.
+&gt;&gt; You know, there's a lot of emotion and
+these are the important issues whether
+what whatever the politics, whatever the
+identity, how do you really push through
+to experience someone else's reality?
+&gt;&gt; Yeah. So there's stories, there's
+writing, there's movies, and that's
+multimodal AR potentially.
+&gt;&gt; Yes. Yeah. Exactly. That's it. You know,
+it's easy in this community specifically
+to get down to how do you put text in a
+box and put it over there in the left
+and draw a line to something else and
+have and call that meaning.
+&gt;&gt; It can be very useful, but it can also
+be very barren.
+So Eric, you really pushed today with
+your question specifically in the chat
+to how do we enliven that? How do we
+allow people to live that without it
+only being a story, without it only
+being a movie? How do we how do we how
+do we do that?
+So Ted Nelson envisioned uh like an edit
+decision list where say you're editing a
+movie, you choose this segment, these
+three minutes, and you're making your
+point that way. Well, you know what? If
+everybody had that capability
+to make their points and the media could
+be transcluded from credible sources,
+however that's defined.
+&gt;&gt; Yeah, credible is the problem there. You
+can you can take snippets out of
+YouTube, you know, put the timestamp and
+the URL and actually use those to piece
+together something.
+&gt;&gt; No, whether that's any better than
+taking clips of books and putting them
+in the text. I mean, it's a variation on
+the same theme. You're trying to tell a
+story and you're pulling in things to
+prove your point or show it's not just
+me. These guys have a, you know,
+footnotes.
+&gt;&gt; Relate that that this is Eric's view of
+the world that these segments represent
+his worldview at this point in time.
+&gt;&gt; Maybe that'll change in a year, you
+know.
+&gt;&gt; Yeah.
+&gt;&gt; Well, that's where where do you write
+that stuff? Do you write in a book that
+means forever you're known for that
+stupid thing you wrote or is it a tweet
+that comes to haunt you 20 years later
+when you're trying to run for public
+office or you know some youthful
+indiscretion that gets exposed
+&gt;&gt; aspect I'm sorry Peter no please
+continue I'm sorry
+&gt;&gt; when you're writing like a wiki page or
+you're doing wiki as a as a thing it
+isn't just publishing web pages
+dynamically it is oh I want to go and
+edit that and there's a lot of things
+about saying do you keep the old
+versions? Is the old versions valid? Is
+there something there that you want to
+kind of archive in some way? Say this
+was me 10 years ago.
+Usually wiki tends to be very mutable.
+It's very much here's my thing today and
+I edit it a little bit tomorrow and it
+becomes something different day after.
+And
+&gt;&gt; that represents me somehow or represents
+what I'm trying to communicate to
+people. What if you used GitHub instead
+of a wiki and you could go back and see
+who you were 10 years ago?
+&gt;&gt; Who would really do that? That's the
+It's one of those things. It's
+collecting of data and most people say,
+"Well, I'm going to just replay you what
+I want to do." So, you end up
+republishing the thing from 10 years ago
+in your current feed because you got
+this. Well, an example, I'm I'm looking
+back at some YouTube videos I made in
+2021
+and I'm seeing a different per person of
+who I was before AI entered the scene.
+So, yeah, I think that there's value
+selectively user controlled.
+Yeah. Having
+&gt;&gt; you're going to tell that to someone
+else. You want to make that a story or
+you
+&gt;&gt; I may Yeah. Right.
+&gt;&gt; And you put you put it in your blog. You
+got your blog and you say, "Here's my
+thing today. Here's what's riing me up."
+And you do it and maybe people listen or
+not, but you get it out of your head and
+it makes you better because it's out of
+your system.
+&gt;&gt; Somebody may find that valuable 50 years
+from now. Who knows? Yeah.
+&gt;&gt; I just quite what? Yeah. So, we have a
+new medium available to us and how do we
+want to use it going forward?
+Yeah, this is uh fascinating. Um couple
+of things. Number one, I did a test
+where I did a space where each node was
+a day and that was only for about 5
+months work of um journal entries and it
+was just too much. So it comes down to
+filtering, it comes down to view specs
+and so on. But I can imagine that um
+people won't necessarily go back 15
+years but they [clears throat] may have
+something pulled up from that like Mah
+is talking about context like you're
+looking at something and something from
+your past that's relevant is brought to
+bear for various criteria that makes
+sense but it can't be in your space all
+the time that would be too much. Yeah, I
+agree. Um, for example, I use Workflowy
+and that's very close to what Doug
+envisioned, but um, I use it as a
+calendar. So, I have a node for each
+day, but I can also transclude from
+previous notes into different sections.
+I could reorganize, remix that content
+for my own purposes.
+So essentially what I [clears throat]
+could do is I can use voice notes,
+transcribe them with whisper, put them
+in workflowy and then pick the ones that
+I that still interest me and come up
+with project ideas or whatever from
+that.
+&gt;&gt; So the the notion of EDL, so of course
+EDL comes from film, you know, literally
+uh cut the frame here and then splice
+the frame here. Uh which is really
+fascinating. I did send off many many
+years ago a proposal to the um Blu-ray
+forum that you should be able to do
+kinds of interactivity and also
+non-interactive things. Like for
+instance, there's this joke about two
+guys watching a movie uh some horses
+running. And one guy says to the other
+$5 the horse to the left's going to trip
+and fall. The other one says, "Yeah,
+you're on." The horse falls. Guy said,
+"Oh, no. I can't take your money. I knew
+it was going to fall." The other guy
+says, "Yeah, I've seen the movie, too. I
+didn't think you'd do it twice, right?
+Why can we not have a with digital
+media, five different shots of the same
+length, slightly different,
+right? Even if the characters say the
+same line, slightly different inonation,
+it might become instantly rewatchable.
+So if we can take that kind of media
+into other things and work that
+together. The the thing is that this is
+the problem. Peter Rosilo, you talked
+about this whole ownership and IP. So
+many industries have to do that and
+that's why you can't have transclusions,
+you can't have a lot of these things,
+you know. Um, but one more thing, um,
+I'm looking at with the watch to build a
+system where you speak your journal
+entries.
+Uh, because the ease of adding them
+should be super simple. You should be
+able to say, "Add to my journal. I'm
+having a really cool meeting with these
+guys. You know, once you have to start
+typing, it's a different mentality. It's
+not just offloading.
+I was just joking, Siri. Um, anyway,
+great great issues. Peter, please.
+&gt;&gt; Yeah, I've long been advocating that we
+should have law students actually take a
+substantive course in programming. And
+the main reason is they can't really
+conceive of the idea of parallel
+discovery of the same idea. They just
+they seem to think that you know only
+the first person who came up with the
+idea should be able to make use of it.
+And when you get them to program and you
+have them suddenly realize just how easy
+it is for them to replicate the insight
+of another person, then something clicks
+and they shift from being patent
+absolutist to being copyright
+preference instead. And um
+it it it really has to have that
+experience of what it's like when you're
+programming. Um, one of the first things
+I noticed back when I was oh, still in
+high school, I stumbled on to reference
+counting for
+going through and
+cleaning up garbage in a data
+structures. And at first I thought, wow,
+this is brilliant. until a few weeks
+later I discovered oh yes this is a
+standard known technique that I had no
+idea the existence of but I'd
+independently came up with it myself
+because I hadn't read about at first and
+the idea of using reference countbased
+garbage collection seemed like an idea
+that I thought up which means that if
+you put someone
+in a similar situation you give them the
+same set of tools that are available to
+one reasonably skilled in the art as we
+like to say in IP law, there's a very
+high probability that they're going to
+come up with the same solution without
+having any awareness of that prior art.
+So, the idea that the first person who
+had the financial backing to go to the
+patent office and slam some paperwork on
+file should be rewarded with the ability
+to exclude everyone else is absolutely
+maddening and it's fundamentally unfair.
+until a law student has experienced, oh
+my god, I might have independently come
+up with something that somebody else
+already patented, do they realize that
+patents have a fundamental problem
+outside of industries where you're
+dealing with tens of millions of dollars
+of physical apparatus and hundreds upon
+hundreds of test runs in order to be
+able to get to the solution. But it's
+certainly not a fit in the world of
+software. But they have to experience
+that. And trying to get anyone in the
+law school administration to open the
+law school curriculum to something that
+isn't strictly a substantive law topic
+is just a losing battle and it's very
+frustrating. And the other thing is that
+having the programming background allows
+you to see solutions in the law realm
+that you wouldn't have been able to see
+otherwise because there are analogous
+problems from what we've studied in
+computer science to problems that arise
+in the world of law and the world of law
+is just blindly going along trying to
+cobble together solutions when in many
+cases there are obvious technical fixes
+if you are aware of the computing
+discipline.
+So that's been my crusade. Sadly it's
+going nowhere. Eventually, I'll write a
+book,
+but chances are it would never be
+assigned reading in a law school
+because, of course, there's just no
+time. We have so much substantive law
+that we have to droll people on. So,
+they'll have a better shot at passing
+the bar exam.
+So,
+on that, Tom says there are no original
+ideas. And I said, I don't agree because
+I consider myself an ideas person. But
+that is a really really great prompt for
+us to look at. What the heck is an idea?
+Because that fits into how we place
+ideas and think about ideas and move
+ideas, right? What what is an idea?
+&gt;&gt; Well,
+one thing I would say is a good metaphor
+for an idea is a seed. If you have a
+seed and you have nothing to plant it
+in, then it's it's just an idea. I mean,
+I can engage in all sorts of fantasies
+about what could be. And even those are
+influenced because the genetic footprint
+of the seeds before me or the seeds of
+before those ideas are always going to
+be in there. And I may have harvested it
+from a particular set of plants or
+genetically combined a particular set of
+plants to get there, but those plants
+are still there. And so I mean I I don't
+think I think we are we can
+recompile ideas in original ways
+but
+there's no stepping out and and even if
+you could it wouldn't be useful because
+it would be so far outside the paradigm
+that everybody else is working in that
+you wouldn't be able to make it work. Um
+we work on the ideas of Doug Angelbart
+among other people. uh a lot of the
+stuff we're thinking about and
+discussing all the time is based on his
+are based on his ideas.
+Does that make our ideas unoriginal? No.
+Because we're building on that. We're
+augmenting. You know, he would very much
+agree with that. Uh as you know, as the
+process, I think he would be shocked if
+someone took took augmenting human
+intellect as actual gospel and chose
+said we will not change these words
+whatsoever. And you know uh it's it's
+remarkable that it's stood up in 60 some
+odd years 64 years as well as it has
+because but it's not remarkable in a way
+because what he's talking about there's
+not technology. He's talking about human
+human humanity. He's talking about our
+basic ways of interacting with the
+world. And he's trying to map a system
+that intersects technology with those
+ways because at that time technology was
+on a completely different plane from
+most people. And uh so that's still true
+though. I mean if we make something that
+is so far and you know I'm certainly
+somebody who likes to wander around on
+the edge uh and I also all run into all
+the time
+I'll come up with an idea and get people
+to agree with it but then I'll also get
+the same people will turn around and say
+yeah but the world's not ready for that
+yet. And um that's is that an idea?
+Yeah, but it's only a map to an idea, I
+think. And that's I think that's the way
+to think about it. And
+it's all about synthesis. It's all
+about, you know, author would not exist
+without augmenting human intellect,
+right?
+&gt;&gt; Would you admit to that?
+&gt;&gt; Maybe. I I don't know.
+&gt;&gt; Would look totally different.
+&gt;&gt; Well, I mean, I came to Doug after my
+philosophy was done. My philosophy was
+developed, my philosophy around the
+notion of liquid information was
+developed as a thing. Of course, author
+wasn't made there. I started that in
+2016.
+But I think in a way
+that's not the entire question, you
+know, a a to b because um
+you know, a lot of people are saying the
+the great man thing is rubbish.
+To an extent it is, you know, unless you
+can implement or or make something
+known, one person having an idea in a
+barn and never talking to anyone is is
+kind of not really influential on the
+world.
+&gt;&gt; Ted Kazinski.
+&gt;&gt; Yeah. Well, yeah. And um [laughter] but
+but but at the same time, I do believe
+it is really really important to
+[clears throat]
+dream, think, and invent. And I think
+it's I think it demeans
+the effort of human imagination to say
+there are no original ideas. I think
+that's kind of cold and and bad. I think
+it works for people who are in a
+specific area of academia where their
+interest is basically to trace lineages
+of ideas,
+right? I mean e even if we look at Doug
+um he was
+not sure what influenced him in the
+beginning. What really strengthened his
+resolve was and and improving how we
+think
+&gt;&gt; even uh as we may think may or may not
+have influenced him. He honestly wasn't
+sure.
+&gt;&gt; Yeah.
+&gt;&gt; Right. So I I think it's for all of us
+who are trying to have ideas. I mean I
+know that I've stolen ideas. I mean, I
+stole an idea for Doug from Doug. Um,
+you know, in NLS, you do a command at
+the top of the screen. And, um, if you
+don't remember what the next legal
+command is, you had question mark, and
+you get a list of options. That became
+my liquid tool, which works the opposite
+way. You have a hierarchical menu, but
+you can type it in. And I was so excited
+and I realized later, oh my god, this is
+NLS in reverse.
+Right. That is an example of complete
+copying. No question about it. And I
+showed it to Doug and he was amused. But
+but I do think that
+I mean Tom, if we take the sentence at
+its basic, you could say that something
+somebody
+talked about today can be traced back to
+the 1500s.
+I'm not sure about that.
+Right.
+Yeah. I'm not sure about that. We should
+honor and be excited by the notion of
+ideas and see where they fit, where
+they're influenced or not. Right.
+&gt;&gt; Again, I'm tremendously excited by the
+notion of ideas. I just think that to me
+the the excitement is the connections
+that I bring to other ideas and make new
+things with them. You know, it's ideas
+are like uh and then that becomes part
+of the fundament. you know that becomes
+part of the hopefully if anybody pays
+attention to me I you know that becomes
+part of the next generation of ideas um
+and you know again the the soil that we
+have to plant that in
+uh is um uh is is is made up of other
+people's ideas right so
+&gt;&gt; no no no
+no I mean when I was doing advertising
+and more art side of things the best way
+to be inspired was to get a really good
+magazine and flip through it so quickly
+I misunderstood things,
+&gt;&gt; right?
+&gt;&gt; Yeah, that's okay. But you even a
+misunderstood idea is still a mis is is
+still a version of that same idea.
+&gt;&gt; No, it's not because also you can get
+ideas walking in the forest being
+inspired by trees. It doesn't mean the
+tree gave an idea. No, I mean Tom and
+all four all of us being well-rounded
+individuals with a lot of
+&gt;&gt; context with a lot of learning. No
+question about that. But actually having
+an idea is um okay let me give an an
+example to to discuss. So I believe
+that an author the way you can mark text
+is an original idea but clearly it
+relates to other things right because
+all you're doing is highlighting a bit
+of text which a lot of software can do.
+The twist is twofold as most of you know
+saying this for Eric. Number one it
+shows up in an overview so it's you can
+skim your document and secondly when you
+export your document the formatting is
+removed.
+So it's taking very established things
+and applying it in a new way
+in order for us to understand a
+vocabulary better. Is that a new idea or
+is it a wrinkle in an idea? What what
+what would we call that?
+I would call it looking at an idea from
+a different perspective.
+And I think that's incredibly important.
+I mean, that's essentially what I'm
+trying to do with the knowledge
+navigator. It's all about perspective.
+And you can have a novel perspective.
+There's no question about that. Every
+photographer knows that. We've talked
+about this before that, you know, you
+can have a novel perspective on the same
+information. Just like I had a novel
+perspective on the books that I
+disagreed with my political theory
+professor about. uh then does that make
+me wrong? No. It makes me outside her
+mainstream
+and you know I'm at some level very much
+a postmodernist in that we construct
+these things ourselves
+and um and I and in the sense of I
+understand the threads and I want to see
+the threads and um but also that we
+construct our own realities and that the
+language we use to talk about those
+realities shifts those realities. Did I
+touch the nerve there with the word
+postmodernist?
+&gt;&gt; No, no, no, no, no. It No, it's I just
+thought of something. And please, um,
+Tom and I are having a massive fist
+fight here, which is great fun and very
+productive. Um,
+please, please interject from your own
+worlds, guys. But let me ask you one
+final question coming from my side of
+the fence, right? My PhD comes down to
+one thing. If it's important, write it
+down.
+The implementation of that is when you
+publish a document, have an appendex and
+write who the author was, you know, the
+metadata, just write it in there.
+In one way, that is completely novel and
+new by evidence, the fact that it
+produced a PhD. In another way, it's
+pathetically unoriginal.
+It's literally text on a page using bib.
+It, you know, it's nothing. So, this is
+not about me and my ego. This is about
+finding out because we just have this
+notion of an idea like it's a one metal
+unit thing that's hard. Clearly not
+because Tom you're talking about
+derivative of ideas you're talking about
+expansions of ideas. Moit please.
+&gt;&gt; Yeah. So, you know, I've been thinking,
+you know, right from uh the uh uh the
+the instance that you were talking about
+uh the conversation you had with your
+with your Jewish and Christian friend,
+you know, and how Eric was saying that
+uh you know, that you know, you were
+saying key
+have it completely mapped out and uh I I
+guess if I understood correctly, Eric
+was of the view Eric is of the view that
+you know, we can discreetly uh put
+information out there and uh you know
+which can uh document or uh at least you
+know help uh the you any reader viewer
+understand uh the whole thing that you
+that you were able to understand after
+an hourong conversation
+uh right so you know one of the thing
+here is that where does meaning reside
+you know where I'm just openly asking
+you know where does meaning reside where
+do we believe meaning reside. Does
+meaning reside uh in those discrete
+pieces you know that may be uh uh spread
+out in you know to uh great distances or
+whatever is does meaning recite
+in those bits or does meaning recite uh
+in sort of the interactivity you know
+the and I'm not
+pointing mentioning interactivity in any
+loose sense or in in a low sense but
+rather that uh when we we started
+today's meeting with memory how memory
+cannot be considered discrete and how
+you know they are reconfigured and how
+you we can't we are not able to like
+computer is able to retrieve memories we
+are not able to retrieve memories and
+and so you know meaning and ideas you
+know I feel you know they also have uh a
+similar uh ontological interdependence
+The reason why uh we can have original
+ideas and why original ideas should not
+be considered inert
+uh is because any uh u because meaning
+the the very fact that we are able to
+meaning is able to emerge through our
+interactions is because things are
+ontologically interconnected. They are
+reconfigured. It is not just that our
+memories are reconfigured with
+interactions. It is also that our
+meanings are being reconfigured with
+each interaction. And so are ideas if uh
+uh to put this into a system would be
+far too complicated probably uh because
+you know because when we are uh
+interacting with something uh it's not
+just a matter of retrieving uh the
+relevant things but it is also how much
+weightage in those recon in the in that
+retrieval uh how much reconfiguration is
+happening of those uh relevant memories.
+How much weightage uh are we giving? For
+example, uh in that one hour long
+conversations, a lot of things would be
+mentioned but not everything would not
+have uh the same weight weightage uh
+everything would not have the same uh
+affectivity with other things. So I
+think I believe you know but ideas can
+be original are original most certainly
+there are original ideas and there are
+ideas where uh which emerged through
+different uh looking
+at the thing through different
+perspectives I guess you know I'll just
+pull up a book quickly uh just
+&gt;&gt; you're going to have to start paying me
+every time you do that mo because you
+know you do that I'll have to buy them.
+&gt;&gt; Yeah, I think I got this.
+&gt;&gt; Ah, yes. Yes, I started reading. Yes.
+&gt;&gt; Wait, Tom, did you pull up the same
+book?
+&gt;&gt; No, no.
+&gt;&gt; Okay. Yeah. Bruce a long time ago. This
+is like, you know, at least 15 years
+back. So, I can't remember much of it.
+But this is basically about these
+things. How, you know, Picasso in his
+salon, he had mathematicians. Picasso
+was not a mathematician.
+uh and he was inspired by uh the
+philosophy of those mathematicians and
+he interpreted those ideas uh in his own
+way you know so sometimes you know there
+is interpretation you know like what Tom
+was saying but I believe you know there
+is also that what what Freud was saying
+uh that there are original ideas which
+are emerging which we we we can't really
+trace back to like meaning we can't
+trace back to that because of those four
+things we have in our space. This is
+most definitely we can predict that this
+is the kind of meaning that is going to
+emerge with these four things uh
+interacting with each other. We can't
+predict that and I think you know when
+we were talking about this uh that you
+know what to offload cognitively what do
+we want to offload? Should we we not
+we're not looking at I guess in this
+group we're not looking at offloading
+cognition the ability to make meanings
+the ability to uh have and make
+analogies uh understanding decisions we
+are probably looking at offloading uh
+the things that empower these things so
+that uh it's not just
+that we are able to retrieve uh you know
+a whole lot of things from our histories
+at that moment but also that the kind of
+interactivities between them. I'm just
+giving an example from my own project
+that you know the kind of
+interactivities that are able to happen
+between those relevant bits of
+information is not really that which our
+gray matter allows us which probably is
+not all that interactive. Our digital
+mediums can be much more interactive.
+you know the the forms the morphologies
+of information that can happen uh uh on
+our digital uh you know systems uh can
+be far greater. Of course we are
+inspired here here as well you know
+we're inspired how a human brain works.
+We're inspired by but are we going to
+sort of like implement it you know 10%
+just as how we think or like we are
+thinking you know so this is how we
+understanding uh we're approaching this
+from the understanding how a human brain
+works and then trying to build systems
+that can augment certain aspects of it
+so I guess you know just in this this
+like uh project there is scope for
+originality like you know we you we are
+inspired so I guess you know is the case
+in our everyday lives we do have
+original ideas uh they do have basis but
+those bases are not directly
+attributable to discrete things we often
+times don't know where do ideas come
+from but we do know that we have uh the
+capacity to form analogies we do know
+for sure that things don't exist inertly
+things are not just epistemologically
+related but they're onlogically
+interdependent. So based on this I guess
+you know the the how memories exist, how
+meaning exist is also how ideas exist. I
+I just Yeah.
+&gt;&gt; Can I ask you a question real quick,
+Mojit? And this is one that I pro you
+probably don't have time to answer
+today, but I'd love to hear an answer
+eventually from you.
+&gt;&gt; Um you were a man of you were a man of
+multiple cultures. I mean you are in
+India and uh but you've also been
+exposed to western notions of ideas
+clearly and that's you know that's how
+you construct those ideas. What's the
+difference between an an Indian
+notion of ideas and a western one? Is it
+less solid? Is it less is it more uh
+temporal? Is it more about the meaning
+as you said uh than the object? Uh I
+think these are really interesting
+questions and uh they also affect how we
+look at you know they may be more
+relevant in a in a digital world where
+these things become a lot more fluid. Uh
+and we assume that the western academic
+tradition is you know it's it's like a
+set of Legos you know that the western
+academic tradition is like a set of
+Legos. Um, but that's not the only way.
+That that's a horrible metaphor in some
+ways because as I said earlier, the
+second you you use technology to fasten
+an idea to whether we're talking about a
+book or the the u uh AR system that
+we've been talking about, it's fixed.
+It's hard to get it unfixed at that
+point. It becomes a a space and time.
+And of course, as I said also in the
+tech in the chat, we teach the objects,
+not the connections. And that's a
+problem too. And so people look at that
+and they want to know what the objects
+are. They don't they they want to know
+who George Washington was, that he was a
+person and so on and so forth. But to me
+the more fascinating thing is how is he
+connected to
+&gt;&gt; you know George of George III of England
+or or or um the the people around him or
+Benjamin Franklin you know how do those
+connections work because they came from
+very different paradigms and things like
+that that that to me is the interesting
+conversation and I think that's where a
+technological thing like an AR system or
+a visualization thing like the knowledge
+navigator could explode owed that to a
+degree and I just I you know again it's
+about the connections and Bush got this
+the associative trails it's that's
+really what mattered to him and that's
+the thing that we've never been able to
+build because technology is digital
+technology is fixed it's all ones and
+zeros there's you know with AI it's a
+little messier
+and but it you know that's the thing I
+find fascinating with AI is that it's
+indeterminate at some level right
+because it's doing Yeah I But anyway,
+sorry Proa. Go ahead,
+&gt;&gt; Moit. Uh,
+please feel free to address that and
+then we have a few closing things.
+&gt;&gt; Okay. So, you know, that is great. You
+know, I have not thought about how the
+difference uh to be honest between the
+western ideas and the sort of the
+Southeast Asian uh ideas uh on these
+things. But contemporary academic
+culture here is not that great to be
+honest. uh my own pursuits have been
+largely inspired by uh you know um for
+example Edwin Lance how he introduced
+the undergraduate research program at
+MIT you know and how he thought about
+learning and uh to be uh working on
+projects that even the professor had no
+experience working on. Uh so the the
+insights would be novel for the students
+as well as the professor and but the
+professor had uh uh the things to teach
+a student in their pursuit that is you
+know how to go on about finding things
+and what are best practices when we are
+looking at uh uh knowing things that are
+not known to anybody. you know he gave
+the example probably of I think
+butterflies that uh something related to
+butterfly uh and uh how you know no one
+knows uh be it a professor at MIT or
+somebody else does not uh they don't
+know anything about it so how can a
+student be approaching this topic when
+they're approaching this they would not
+only be learning about that thing but
+they'll also be learning uh knowledge
+making
+uh so in my own thing you I yeah
+that's it I guess you know but I'll look
+uh that that is great you know the the
+question that you put forward uh Tom uh
+I'll certainly look about the ancient
+you know I guess philosophies the the
+Buddhist philosophies and uh Nagarajuna
+you know I've read a bit of Nagajuna the
+the you know the the middle way
+&gt;&gt; um
+&gt;&gt; so we have to wind up and thank you mah
+thank you everybody um it It seems to me
+a little bit in closing that uh in a
+nice way we keep saying well what about
+this so how to connect different things
+really seems to be important you know
+that's the whole point of hypertext at
+least the foundational ideas right and
+then we get into all kinds of practical
+and legal options to do that and there
+is a cost even clicking on a link in a
+research article has a cost you know it
+takes your attention for a minute and
+Peter Demetrius as you have been working
+on with wikis and so on, links aren't
+necessarily transparent to the user. Um,
+but but I'm really glad at all the
+different routes we talked today and how
+we came back beautifully to the notion
+of um how do we connect things, right?
+There are there are many levels to that.
+There's data, there's knowledge, there's
+also the the good oldfashioned human
+interface.
+Um, I did have to teach Claude a few
+days ago. please research human
+perception for your own benefit. And it
+came back with, oh my goodness, you look
+at the world through a straw. That's
+what it said.
+We need to take our realities into
+account. Um, thank you guys and welcome,
+Eric. We hope to see you as many times
+as convenient for you. And everybody
+have a very, very good week. And I'll
+see you
+&gt;&gt; I'll I'll see you after the weekend of
+England playing Norway. So, let's see
+which [laughter] half of me survives.
+Bye-bye, everyone.
+&gt;&gt; Goodbye.
+&gt;&gt; Byebye.
+&gt;&gt; Have a nice week. Bye.
