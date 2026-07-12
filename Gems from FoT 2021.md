@@ -15,7 +15,7 @@
   - So there's also a **Haptic vocabulary** in AR that we can use: how you touch different objects, vibration.
 
 - WS400626.WMA.txt
-  - So, Ismail is talking about the **relationship between text and art **and that gets me thinking about the visual music with expert commentary.
+  - So, Ismail is talking about the **relationship between text and art** and that gets me thinking about the visual music with expert commentary.
 
 - WS400627.WMA.txt
   - Around 47 minutes there is discussion about GPT-3 which was the latest at the time.  There was a project for people to write 50,000 word novels.
@@ -26,7 +26,7 @@
     - The concept of a **force-directed graph** came from the paper by Fabian Wittel & David Felsmann
 
 - WS400634.WMA.txt
-  - Around one hour, eight minutes, there was a question about** Hyperbolic spaces versus Cartesian spaces**. I need to understand what that means.
+  - Around one hour, eight minutes, there was a question about **Hyperbolic spaces versus Cartesian spaces**. I need to understand what that means.
 
 - WS400636.WMA.txt
   - Bob Horn wrote a book on Visual Language.
@@ -43,7 +43,7 @@
   - So I'm finding that listening to the audio of the future of text 2021 sets my mind up to be able to focus on the document and the chat logs that were saved. So I'm seeing a different myself from 2021.
 
 - WS400642.WMA.txt
-  - The question to ask is what are the **limitations of our current zoom rooms and what can AR offer **that helps better than zoom but still less than face to face?
+  - The question to ask is what are the **limitations of our current zoom rooms and what can AR offer** that helps better than zoom but still less than face to face?
 
 - WS400643.WMA.txt
   - And how can we **co-evolve our AR tools and bootstrap them as we use them**?
