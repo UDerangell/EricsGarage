@@ -3,7 +3,7 @@
 (Auto-transcribed from voice notes recorded while listening to the audio of the event, edited in Workflowy, exported to Markdown.)
 
 - WS400610.WMA.txt
-  - So now I'm interested in reading the comments that are in the Future of Text 2021 and putting them in context with the videos that I was watching at the time. That's the same idea I had of ==transcript and chat integration==, which AI sort of thought was cool with markdown and indentation.
+  - So now I'm interested in reading the comments that are in the Future of Text 2021 and putting them in context with the videos that I was watching at the time. That's the same idea I had of **transcript and chat integration**, which AI sort of thought was cool with markdown and indentation.
 
 - WS400620.WMA.txt
   - So, Frode mentioned Glossaries in the future of text 2021 and he mentioned that it's a personal opinion of definition of terms. So, I want to review that.
@@ -12,21 +12,21 @@
   - His comment is at 22 minutes into future of text 2021.
 
 - WS400624.WMA.txt
-  - So there's also a ==Haptic vocabulary== in AR that we can use: how you touch different objects, vibration.
+  - So there's also a **Haptic vocabulary** in AR that we can use: how you touch different objects, vibration.
 
 - WS400626.WMA.txt
-  - So, Ismail is talking about the ==relationship between text and art ==and that gets me thinking about the visual music with expert commentary.
+  - So, Ismail is talking about the **relationship between text and art **and that gets me thinking about the visual music with expert commentary.
 
 - WS400627.WMA.txt
   - Around 47 minutes there is discussion about GPT-3 which was the latest at the time.  There was a project for people to write 50,000 word novels.
 
 - WS400633.WMA.txt
-  - So I should look into a demo of ==Napkin== to see how similar it is to what I do.
+  - So I should look into a demo of **Napkin** to see how similar it is to what I do.
     - The link shared by Mark C no longer works
-    - The concept of a ==force-directed graph== came from the paper by Fabian Wittel & David Felsmann
+    - The concept of a **force-directed graph** came from the paper by Fabian Wittel & David Felsmann
 
 - WS400634.WMA.txt
-  - Around one hour, eight minutes, there was a question about== Hyperbolic spaces versus Cartesian spaces==. I need to understand what that means.
+  - Around one hour, eight minutes, there was a question about** Hyperbolic spaces versus Cartesian spaces**. I need to understand what that means.
 
 - WS400636.WMA.txt
   - Bob Horn wrote a book on Visual Language.
@@ -43,10 +43,10 @@
   - So I'm finding that listening to the audio of the future of text 2021 sets my mind up to be able to focus on the document and the chat logs that were saved. So I'm seeing a different myself from 2021.
 
 - WS400642.WMA.txt
-  - The question to ask is what are the ==limitations of our current zoom rooms and what can AR offer ==that helps better than zoom but still less than face to face?
+  - The question to ask is what are the **limitations of our current zoom rooms and what can AR offer **that helps better than zoom but still less than face to face?
 
 - WS400643.WMA.txt
-  - And how can we ==co-evolve our AR tools and bootstrap them as we use them==?
+  - And how can we **co-evolve our AR tools and bootstrap them as we use them**?
 
 - WS400644.WMA.txt
   - At 1 hour 26 min, Frode talks about Doug's route map.
@@ -60,7 +60,7 @@
         - [https://cogaffarchive.org/evol-devol.html](https://cogaffarchive.org/evol-devol.html)
       - This looks like the intended paper:
         - [https://cogaffarchive.org/evo-creativity.pdf](https://cogaffarchive.org/evo-creativity.pdf)
-      - ==This paper was referenced in the comment and looks very interesting==
+      - **This paper was referenced in the comment and looks very interesting**
         - [https://cogaffarchive.org/sloman.diagbook.pdf](https://cogaffarchive.org/sloman.diagbook.pdf)
 
 - WS400647.WMA.txt
@@ -73,7 +73,7 @@
   - There are other visualizations besides a graph and that's important for AR.
 
 - WS400649.WMA.txt
-  - So I'm thinking about break out rooms in augmented reality. ==How can people be comfortable enough with the security and privacy, where they can have an intimate conversation in a private break out room==, like coming out of a meeting if they felt triggered.
+  - So I'm thinking about break out rooms in augmented reality. **How can people be comfortable enough with the security and privacy, where they can have an intimate conversation in a private break out room**, like coming out of a meeting if they felt triggered.
 
 - WS400651.WMA.txt
   - And Frode is making good comments about VR, how people view it, what's needed. The is the discussion about it. This is around one hour, 35 minutes. [not just a murder wall]
@@ -82,7 +82,7 @@
   - So around one hour 38 minutes, there is talk about large murals, and that would be good for AR. On large screens.
 
 - WS400655.WMA.txt
-  - There's a fascinating discussion around one hour 39 minutes that we don't have the language to say "don't touch this for 10,000 years". So what do you do about that? But it's triggering something in me. So just even understanding the city where I am. Where is the documentation of the underground pipelines and all that? Yeah, you have to call someone to get it marked on your street. But how is that preserved? ==I'm concerned about information permanence==. Is it on paper and a library and an office and a locked cabinet? And yeah, there's IP restrictions and all that.
+  - There's a fascinating discussion around one hour 39 minutes that we don't have the language to say "don't touch this for 10,000 years". So what do you do about that? But it's triggering something in me. So just even understanding the city where I am. Where is the documentation of the underground pipelines and all that? Yeah, you have to call someone to get it marked on your street. But how is that preserved? **I'm concerned about information permanence**. Is it on paper and a library and an office and a locked cabinet? And yeah, there's IP restrictions and all that.
 
 - WS400656.WMA.txt
   - So the long now aspect of local first software is important in this context.
@@ -91,7 +91,7 @@
   - So around one hour, 41 minutes, there was a comment about view specs and I'm thinking something important around that.
 
 - WS400658.WMA.txt
-  - Okay, the discussion was that ==the same data needs multiple presentations== and that's exactly what local first delivers.
+  - Okay, the discussion was that **the same data needs multiple presentations** and that's exactly what local first delivers.
 
 - WS400659.WMA.txt
   - The example is given of how do you publish a document with a hundred meanings of arrows? Well, he could self-publish it in his own hyperdrive and then transclude it. Anyone can transclude from it and give him credit for it.
