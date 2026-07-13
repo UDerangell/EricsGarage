@@ -1,6 +1,6 @@
 A demonstration of using the Pears.com stack to implement specific use cases for distributed file sharing:
 
-Prompt: 
+Prompt to Claude Sonnet 5: 
 - Please code a terminal application named FTLBOX that uses [Pears.com](http://pears.com/) to give the user a command line interface that supports the following use cases:
   - Alice creates a new hyperdrive and gets a public key
   - Alice adds the contents of a specified directory to her hyperdrive
