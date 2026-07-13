@@ -38,15 +38,13 @@ Usage:
   ftlbox info <name>                         show a drive's public key / version
   ftlbox list                                list all drives FTLBOX knows about
 
-ericrangell@Erics-MacBook-Air-2 ftlbox % node bin/ftlbox.js create ericdrv
+node bin/ftlbox.js create ericdrv
 Created drive "ericdrv"
 Public key: dc53426b9f5e3a1a55f7609921c7002292f7998e79ecf51337f999c1939700be
 Share this key with your peer so they can pull this drive.
-ericrangell@Erics-MacBook-Air-2 ftlbox % 
 
 node bin/ftlbox.js add ericdrv ~/Downloads/git/4FTL
 Added contents of "/Users/ericrangell/Downloads/git/4FTL" to "ericdrv" -> version 2 (1 file(s) written/updated)
-ericrangell@Erics-MacBook-Air-2 ftlbox % 
 
 node bin/ftlbox.js list               
 ericdrv  [own]  key=dc53426b9f5e3a1a55f7609921c7002292f7998e79ecf51337f999c1939700be  
@@ -74,4 +72,3 @@ total 32
 
 ```
 
-```
