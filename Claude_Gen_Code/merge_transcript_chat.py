@@ -9,6 +9,23 @@ that speaker's utterance (before the next speaker begins).
 
 Usage:
     python merge_transcript_chat.py <transcript.vtt> <chat.txt> <output.md>
+        [-include-private-msgs] [-chat-subtract-time HH:MM:SS]
+
+Options:
+    -include-private-msgs
+        By default, chat messages that Zoom marks as private (direct
+        messages between two participants, rather than messages sent to
+        Everyone) are excluded from the output. Pass this flag to include
+        them instead.
+
+    -chat-subtract-time HH:MM:SS
+        Subtract this amount of time from every chat message timestamp
+        before merging. Useful when the host started the recording some
+        time after the meeting (and therefore the chat log) began, so the
+        chat timestamps are otherwise ahead of the transcript timestamps.
+        Example: -chat-subtract-time 06:30 subtracts 6 minutes 30 seconds
+        from every chat timestamp. Resulting negative timestamps are
+        clamped to 00:00:00.
 
 Rules implemented:
   - Consecutive VTT cues from the same speaker are grouped into one
@@ -25,8 +42,11 @@ Rules implemented:
   - Chat messages are rendered as indented blockquotes with a distinct
     "💬" marker and bold sender name, so they're easy to visually
     distinguish from spoken content.
+  - Private (direct message) chat messages are excluded by default; pass
+    -include-private-msgs to include them.
 """
 
+import argparse
 import re
 import sys
 from dataclasses import dataclass, field
@@ -39,10 +59,11 @@ from typing import List, Optional
 
 @dataclass
 class ChatMessage:
-    time_str: str          # "HH:MM:SS" as it appeared in the chat log
-    seconds: float         # normalized seconds-from-start
+    time_str: str          # "HH:MM:SS" (possibly time-shifted for display)
+    seconds: float         # normalized seconds-from-start (possibly shifted)
     sender: str
     text: str              # may be multi-line
+    is_private: bool = False   # True if Zoom marked this as a private/DM
 
 
 @dataclass
@@ -79,6 +100,25 @@ def parse_chat_timestamp(ts: str) -> float:
         return hms_to_seconds(int(h), int(m), float(s))
     else:
         raise ValueError(f"Unrecognized timestamp format: {ts}")
+
+
+def parse_offset_to_seconds(offset_str: str) -> float:
+    """Parse a command-line time offset given as HH:MM:SS (or MM:SS) into
+    seconds."""
+    parts = offset_str.split(":")
+    if len(parts) == 3:
+        h, m, s = parts
+        return hms_to_seconds(int(h), int(m), float(s))
+    elif len(parts) == 2:
+        m, s = parts
+        return hms_to_seconds(0, int(m), float(s))
+    elif len(parts) == 1:
+        return float(parts[0])
+    else:
+        raise ValueError(
+            f"Invalid -chat-subtract-time value: {offset_str!r}. "
+            "Expected HH:MM:SS."
+        )
 
 
 def seconds_to_hms(total_seconds: float) -> str:
@@ -178,7 +218,17 @@ CHAT_MSG_START_RE = re.compile(
     r"^(\d{1,2}:\d{2}(?::\d{2})?)\t([^\t]+):\t(.*)$"
 )
 
-def parse_chat(path: str) -> List[ChatMessage]:
+# Zoom marks a chat message as a private/direct message by rendering the
+# sender field as "Sender Name to Recipient Name (Direct Message)" or, in
+# older exports, "Sender Name to Recipient Name(Privately)". Public
+# messages sent to everyone just show the plain sender name.
+PRIVATE_SENDER_RE = re.compile(
+    r"^(?P<sender>.+?)\s+to\s+(?P<recipient>.+?)\s*\((?:Direct Message|Privately)\)\s*$",
+    re.IGNORECASE,
+)
+
+
+def parse_chat(path: str, subtract_seconds: float = 0.0) -> List[ChatMessage]:
     with open(path, "r", encoding="utf-8") as f:
         content = f.read()
 
@@ -194,13 +244,24 @@ def parse_chat(path: str) -> List[ChatMessage]:
             # Flush previous message
             if current is not None:
                 messages.append(current)
-            time_str, sender, text = m.groups()
+            time_str, sender_field, text = m.groups()
             seconds = parse_chat_timestamp(time_str)
+            seconds = max(0.0, seconds - subtract_seconds)
+            display_time_str = seconds_to_hms(seconds)
+
+            is_private = False
+            sender = sender_field.strip()
+            priv_match = PRIVATE_SENDER_RE.match(sender)
+            if priv_match:
+                is_private = True
+                sender = priv_match.group("sender").strip()
+
             current = ChatMessage(
-                time_str=time_str,
+                time_str=display_time_str,
                 seconds=seconds,
-                sender=sender.strip(),
+                sender=sender,
                 text=text.rstrip(),
+                is_private=is_private,
             )
         else:
             # Continuation of the previous message (e.g. blank line inside
@@ -305,29 +366,74 @@ def render_chat_message(chat: ChatMessage) -> str:
 # Main
 # --------------------------------------------------------------------------
 
+def build_arg_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description=(
+            "Interleave a Zoom chat log with a Zoom VTT transcript into a "
+            "single Markdown file."
+        ),
+        prefix_chars="-",
+    )
+    parser.add_argument("vtt_path", help="Path to the .vtt transcript file")
+    parser.add_argument("chat_path", help="Path to the Zoom chat .txt file")
+    parser.add_argument("out_path", help="Path to write the output .md file")
+    parser.add_argument(
+        "-include-private-msgs",
+        dest="include_private_msgs",
+        action="store_true",
+        default=False,
+        help=(
+            "Include chat messages Zoom marked as private/direct "
+            "messages. By default these are excluded."
+        ),
+    )
+    parser.add_argument(
+        "-chat-subtract-time",
+        dest="chat_subtract_time",
+        default=None,
+        metavar="HH:MM:SS",
+        help=(
+            "Subtract this amount of time from every chat message "
+            "timestamp before merging, to correct for the host starting "
+            "the recording after the meeting/chat began."
+        ),
+    )
+    return parser
+
+
 def main():
-    if len(sys.argv) != 4:
-        print(
-            "Usage: python merge_transcript_chat.py <transcript.vtt> "
-            "<chat.txt> <output.md>"
-        )
-        sys.exit(1)
+    parser = build_arg_parser()
+    args = parser.parse_args()
 
-    vtt_path, chat_path, out_path = sys.argv[1:4]
+    subtract_seconds = 0.0
+    if args.chat_subtract_time:
+        try:
+            subtract_seconds = parse_offset_to_seconds(args.chat_subtract_time)
+        except ValueError as e:
+            parser.error(str(e))
 
-    utterances = parse_vtt(vtt_path)
-    chats = parse_chat(chat_path)
+    utterances = parse_vtt(args.vtt_path)
+    chats = parse_chat(args.chat_path, subtract_seconds=subtract_seconds)
+
+    total_chat_count = len(chats)
+    private_count = sum(1 for c in chats if c.is_private)
+
+    if not args.include_private_msgs:
+        chats = [c for c in chats if not c.is_private]
 
     leftover = assign_chats_to_utterances(utterances, chats)
     markdown = build_markdown(utterances, leftover)
 
-    with open(out_path, "w", encoding="utf-8") as f:
+    with open(args.out_path, "w", encoding="utf-8") as f:
         f.write(markdown)
 
-    print(f"Wrote {out_path}")
+    print(f"Wrote {args.out_path}")
     print(f"  {len(utterances)} speaker utterances")
-    print(f"  {len(chats)} chat messages")
+    print(f"  {total_chat_count} chat messages found ({private_count} private)")
+    print(f"  {len(chats)} chat messages included in output")
     print(f"  {len(leftover)} leftover chat messages after final utterance")
+    if subtract_seconds:
+        print(f"  chat timestamps shifted back by {subtract_seconds:.0f}s")
 
 
 if __name__ == "__main__":
