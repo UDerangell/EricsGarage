@@ -1,7 +1,9 @@
-Chat session: https://claude.ai/share/e0ec794b-3e0c-4832-b32b-014373de81dd
-Prompt: Thank you very much for your hard work!  This application may be useful for a small community.  What recommendations do you have if I want to do future maintenance of this application in Claude Code?
+- Chat session: https://claude.ai/share/e0ec794b-3e0c-4832-b32b-014373de81dd
+- Prompt: Thank you very much for your hard work!  This application may be useful for a small community.  What recommendations do you have if I want to do future maintenance of this application in Claude Code?
 
-Let me check current documentation on Claude Code project-context conventions before recommending specifics, since that's exactly the kind of product detail I should verify rather than assume.Glad it's useful — a few concrete recommendations, based specifically on what we ran into building this.## 1. Put it in git before anything else
+Let me check current documentation on Claude Code project-context conventions before recommending specifics, since that's exactly the kind of product detail I should verify rather than assume.Glad it's useful — a few concrete recommendations, based specifically on what we ran into building this.
+
+## 1. Put it in git before anything else
 
 There's no version control yet — everything's been flat files in a folder. That's the single highest-leverage thing to fix first: Claude Code works far better (and far more safely) with a real repo, since it can diff its own changes, and you can review/revert anything before trusting it. `git init`, commit what you have now as a clean v0.02 baseline, then treat every future change as its own commit.
 
