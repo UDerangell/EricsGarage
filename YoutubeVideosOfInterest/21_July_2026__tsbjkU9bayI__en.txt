@@ -1,0 +1,3441 @@
+Kind: captions
+Language: en
+Right. Hi guys.
+&gt;&gt; Hi George.
+&gt;&gt; Hi. Okay. Uh Moit uh going to do five
+minutes of this and then we're going to
+go into your presentation and onto the
+the normal scheduled day. Um, so,
+&gt;&gt; okay,
+&gt;&gt; I know you I know you've seen Mark, but
+the reason I'm being all Let me show
+Mark is Mark is one of my closest
+friends and we have almost nothing in
+common except for an interest in
+hypertext, which is where a lot of our
+very interesting discussions come from.
+Would you agree, Mark?
+And and I speak heap minds, so that's a
+difference. And
+&gt;&gt; uh, sorry, I just said yes, absolutely.
+[laughter]
+&gt;&gt; Right. So, here's the thing. Um, and
+this is important and relevant. Uh, I
+I've been texting Mark today to come and
+he is overloaded with ACM work right now
+and he sent a message saying it's like I
+have a religious fervor and I kind of
+shot back, but it's true. I do. So, I'm
+going to show you guys um cuz the rest
+of you have already seen
+um the well the both of you. You both
+already seen the the Atlas and things,
+right? So, you know this is production
+proper code. Eric is running it. Um, so
+now I'm going to show you how I do it uh
+very specifically. So
+the window on the left with the green
+stuff is for people who is not me. I am
+not that kind of a person, right? Mark
+went through the PhD program with me is
+much more technically acute than I am
+even though he doesn't do programming
+these days though he has done. Um, so
+today I was lucky enough to have an hour
+with our former professor and now friend
+and collaborator Dave Millard. So I'm
+going to read the prompt that I wrote
+into this program here. So this is the
+liquid view that Eric has running
+and this is how while I was sitting I
+had 15 minutes. I was early for the
+meeting. So I wrote to Claude and and
+and Mark just to really simplify clarify
+the central column is the entire
+interaction I have with Claude.
+You can see it with a blue bit on top,
+right?
+&gt;&gt; Yes. Sure. Sure.
+&gt;&gt; Everything else for our intents and
+purposes is irrelevant.
+So I wrote, I'm about to have a meeting
+with my former professor Dave Millard
+who was a leading figure in the field of
+hypertext. Please research all you can
+about him and his work. Tell me if you
+think of a relevant view to add to
+origami text for Mac OS to enable
+something he's been working on or
+writing about. If I agree with you and
+please suggest more than one view if you
+want to, we'll build it to show him. So
+already this ain't coding. I told it to
+go do research and it did.
+Right? So he he says, you know, that
+this is who he is. And then he suggests
+these things and he says, this is based
+on I'll skip down here. This is based on
+something he wrote eight weeks ago.
+&gt;&gt; Oh,
+&gt;&gt; I mean, holy moly, right?
+&gt;&gt; Yeah.
+&gt;&gt; So, and then I said, okay, fine. I mean,
+it's saying lots of other cool stuff.
+And I said, yeah, implement this thing.
+So, okay, fine. I'll do that.
+So, I'm just going to add this up. So
+down here, the way this is structured,
+and it's going to change
+because it's been overloaded because
+this is me in a candy shop. Uh we have
+dialogue, outgoing, message, income, all
+of that stuff. But down here we have a
+category of views and this mark is where
+I think the hypertext ideas really come
+into it and which is why Eric has
+created a ZZ structure interaction for
+it. So this is what um
+this is what uh Dave Millard wrote eight
+weeks ago and Claude implemented with
+one prompt.
+&gt;&gt; It takes a while because it's locally
+going through all the documents. Oh, I
+haven't pressed the button yet. There we
+go.
+So this is encapsulating essentially
+what the AI does if you use it in any
+other prompt and ask it to give basic
+give an argumentation structure of
+&gt;&gt; I'm not this is not this not I'm just
+trying to understand what's genuinely
+new as opposed to what's reboxing of
+stuff the latter is not the latter is
+not without worth at all
+&gt;&gt; but it's important to understand sort of
+where you know
+&gt;&gt; I don't Just trying to get my head
+around what's what's actually genuinely
+new as opposed to unexpected.
+&gt;&gt; Right. So what is genuinely new for me
+is that when I'm in here
+because it is exactly like I'm sitting
+next to a worldclass programmer who's
+read as you said last week all the all
+the manuals
+and who it doesn't get bored with um
+refactoring and things like that. That's
+what's new because I gave it and
+remember the Tom we're doing stuff you
+already know. We started a bit early
+because Mark has a lot of on his plate
+today. So the thing is when it went out
+and made this stuff the result doesn't
+necessarily need to have any AI in it.
+So I'm not making an AI thing now.
+&gt;&gt; Yeah. Yeah.
+&gt;&gt; Okay. So this happened to be exactly
+what Dave wrote about. I showed it to
+him over lunch and said yeah that's
+right. And I did two more. Here is a
+trails thing which is very you know in
+our field and also geometries. This is
+the exactly the workspace that he talked
+about. I could
+&gt;&gt; Yeah. And I mean this is interesting. I
+mean this because very similar to
+something I saw back in about when was
+about January February someone would did
+a similar basically they'd use the
+tinderbox MCP to do something similar.
+Um, so it's interesting in the con to
+put it in the wider context. So the
+exciting part is yes that anyone can do
+in Xcode. What's interesting is you
+don't actually have to use Xcode. It's
+just a convenient way to do it.
+&gt;&gt; It's different. Mark, I have to have to
+pause you on that because
+my friends who are technically adapt who
+live and do coding in a browser with
+code or whatever, they do really
+powerful stuff, but they are
+programmers. I have
+&gt;&gt; no these weren't programmers. So that's
+why I'm saying just just just trust me
+that in in something you haven't seen
+that. So again, don't misread this. I'm
+just trying to contextualize here. So
+this is interesting because it's
+actually confirmation of something I've
+already seen elsewhere.
+That doesn't that doesn't in any way
+sort of devalue it. Um the interesting
+thing is is um and it's something a
+conversation I'm involved in in other
+contexts is is um h is is this thing of
+being able to move quickly from having
+some information to exploration of it.
+Um and this is another instance of
+reducing the friction of that. Um we
+still have the challenge of whether we
+understand what we see. um which is also
+&gt;&gt; Mark it isn't that what what what I'm
+presenting here is not my piece of
+software which I'm very proud of what I
+am presenting is the process
+of how now revolutionarily simple it is
+you know I have gotten several app store
+apps out of this speaking assistant the
+interatlas
+um this origami text this origami text
+can export and import to eub origami
+textile. I've gone through several ways
+of doing it. So the the program I would
+love to discuss with you at some point
+all of you because I have to change it a
+lot. But the fact I mean I could
+literally now say
+you know um
+okay do any of you have an idea for way
+you would like to see this kind of
+letter and things view? I could write it
+in and because this is aggressively open
+source there's two things that are
+really important. one
+if you click on this and open this
+document which is just a markdown
+document
+what I'm structuring it almost works is
+that you can go to any AI you want give
+it this document and say I would like a
+view that does this stuff according to
+this document it'll spit it out in a
+format that can then easily be put into
+this piece of software
+right so the it is layers of super easy
+prompting
+So the thing is once it's built so um
+you have the interaction whilst it's
+being built but you don't necessarily
+have the reaction beyond. So, one of the
+interesting one of the interesting
+things about this is the when I've been
+watching and I'm sorry it's a
+conversation that's been going elsewhere
+but already using this sort of thing and
+then thinking about well it's the
+researching because often we we can
+imagine things and we can imagine
+something that looks interesting and
+it's exciting and interesting but it's
+it turns out to be less informative than
+we imagine simply because what it tends
+to do is reveal another layering to the
+information the knowledge we're trying
+to explore.
+&gt;&gt; That's that still isn't it that what I'm
+in terms of what you're right. You're
+not I'm not arguing against you, but
+what I'm really quote unquote selling
+here is the fact that if if you this
+source code is available, you can open
+up this and say I want the view that is
+like tinderbox in this way and you just
+describe it in normal pros and it will
+build.
+&gt;&gt; Yeah, we know this but we know this
+works. That's not new. So,
+&gt;&gt; okay. you know that I as I say I that's
+that's entirely possible and that
+doesn't in any way take away from this
+but it's not it's probably less than you
+imagine it to be
+&gt;&gt; I have spent £250,000 to build author
+over the years I've spent £1,000 on this
+over the last week I gotten better
+results
+&gt;&gt; this scale that's fine in terms of but
+hang on in terms of cost of production
+&gt;&gt; this is at least 100 times cheaper and
+it is instant So, as a designer, if I
+think for one of the last things that
+came up was um the file format naming
+wasn't right, not only will it change
+it, it'll refactor to everything that
+needs to be done to change it. Hi,
+Brandle.
+Uh we're going over to uh Mo in a
+second. I'm very glad you're back. I
+just want to say you're at the tail end
+of a um discussion that I know is a bit
+out of your wheelhouse, but it is um
+clawed inside Xcode
+because I'm just making the point that
+I've now done several apps including
+textual apps like this to experiment
+with views of the information we have
+purely by writing prompts
+and and I do think that is like having a
+worldclass couldn't be tired programmer
+camera is sitting next to you um all
+day, all night. And maybe one of the
+most important things refactoring it
+doesn't mind doing so. The code is
+always as clean as it could be. And I
+think it changes what information is
+because it means that the cost of making
+a piece of software that interacts with
+your letters, your emails, your
+hypertext, whatever, is lower than a
+normal off-the-shelf piece of software.
+It's almost like pen and paper.
+Anyway, how was China?
+&gt;&gt; Uh, good. There were I went to lots of
+it. I got within
+uh
+80 miles of the border uh
+with uh North Korea and Russia. Was um
+80 miles from Vladivosto and then up to
+just by Inner Mongolia uh over and the
+Tibetan plateau in the Hashi corridor.
+&gt;&gt; [snorts]
+&gt;&gt; Uh yeah, it was a really really
+interesting uh way to get around and see
+the country and see where everything is.
+&gt;&gt; That is super cool. That's amazing. I
+hope you took a few photographs that you
+will share later.
+&gt;&gt; I did. I took many photographs.
+&gt;&gt; Good.
+Um so we're going to go over to Mahit in
+a minute, but Mark, I think I've done
+the the pitch. I think you get it.
+Whether it's useful for you or not is
+entirely something else.
+&gt;&gt; No, I I think it's very interesting. I I
+think I I'll try and make a quick
+observation because it's real a shame
+I'm going to drop off. My apologies my I
+mean just ran with stuff is that okay I
+think something that I I would I would
+say at this point is well an interesting
+observation that came to me somewhat
+unexpectedly is that uh the cool bit is
+we can make all these visualizations.
+The experience of people watching people
+do this quite recently is that it merely
+shows that you move the thing forward a
+bit. So, uh, it's great that an app can
+make this. What you actually want is is
+then the next stage is the app that lets
+you ask the secondary question. So, it
+shows you view X or view Y, but you
+realize that actually doesn't show you
+um something you want. Now, the
+interesting thing is if you're just
+using somebody else's data or database,
+you're stuffed because you can only use
+what's there. The interesting thing that
+is happening I've seen doing where they
+people actually have the information
+themselves is to then be able to
+basically resection the information do
+the abstraction necessary to give you
+the building blocks to make the thing
+that you now understand you want. Um and
+those people are doing it by MCP but I
+think it's terribly easy to get uh
+overblown about which AI and what thing.
+The AI is very capable. It's really
+good. Um it's big it's one big thing and
+I'll leave I'll leave this point for you
+to consider the one thing that it's
+really quite articulate about it
+inability to do is to hold multiple
+contexts at once which is seems still a
+human skill we haven't uh we haven't yet
+managed and that's really interesting
+for not for when you're doing sort of
+work with textual knowledge and you're
+trying to actually uh uh take structure
+from it.
+&gt;&gt; This is not about the AI. It truly
+isn't. This is about having an entity
+that can build you a nonAI app like the
+globe just
+&gt;&gt; Yeah, but but it is a the AI is building
+the app. That's the only AI you need.
+&gt;&gt; But the thing is so far having built
+several apps, robust code, it works. The
+data formats are solid, right?
+&gt;&gt; Yeah. I'm not saying No, no, I agree.
+I'm not saying it doesn't.
+&gt;&gt; It is. My point is just that
+the the limitations of what an AI can do
+and stuff is interesting and something
+to discuss. But the centrality of it is
+if you now mark download Xcode, open it
+up and just allow cloud to be there. You
+can type in uh I'm a fan of Ted Nelson.
+Build me something cool that he would
+like. It will effing do that.
+Mindblowing. Will it do it the right
+way? Of course not. Then you enter it
+like you would do with a team of human
+programmers. Yeah, but you also the
+thing very important there. You just
+iterate. Well, the reality is of course
+you can iterate an awful lot. Um,
+&gt;&gt; different people have different
+experiences. I'm just I'm just being I'm
+just being practical about about that.
+So, one of the really interesting things
+you find people writing about this is
+the time shift. So, the time you used to
+spend something else, you now spend
+boting, I think is anyway. So, you're
+you're basically having to do this
+resection.
+&gt;&gt; I'm sorry. No.
+&gt;&gt; Yes. Absolutely. And there are people
+who are have the expertise to know that
+writing about it.
+&gt;&gt; No, Mark.
+&gt;&gt; I facto.
+&gt;&gt; I have built these things. They work.
+&gt;&gt; Yes, I understand that. I'm trying to
+say that I'm not saying you haven't
+built something or any of that. It's it
+actually works. Try it someday. Anyway,
+um it's fair enough that you have a
+concern about the AI, but the thing is I
+write I want this and I get it. That's
+the
+&gt;&gt; No, no, no. Cuz I finished cuz Moit
+needs to speak. I'll just say that.
+Yeah, I get it. It's less new than I
+thought it was. Uh, it's great that one
+can do it. I'm not I'm not convinced
+it's quite as re revolutionary as as
+perhaps proposed, but it's useful if it
+gets people to where they need to go.
+Right. I have absolutely no idea what's
+going on there. Right. Um, we will get
+back to this um after your presentation.
+Mar uh I'm going to go briefly through
+the app. So then most of the time after
+that will be Eric going through his
+experiments with uh ZZ space structures.
+Uh Brandle, I don't know if you can hear
+me, but currently um today Moit's going
+to be talking about what he's building.
+Then Eric and I will talk about a Mac
+native app. And I know you're not a Mac
+native guy, but the structures within
+that should definitely be both XR and
+opensource um web XR and so on. So it is
+going from A to B. Uh Maria, please go
+ahead.
+&gt;&gt; Okay. So, I'll uh start uh with sharing
+my screen.
+Okay.
+Is screen okay?
+&gt;&gt; Yes. Thank you.
+Okay.
+Okay. So, uh uh thank you fruit for uh
+for this.
+It's amazing to have an audience like
+you guys and I'm looking forward to uh
+you know your comments and ideas as
+well. This is uh this is something that
+I've been working on thinking and uh uh
+you know trying to give it a form that
+uh other people are able to uh
+understand and uh so that uh you know we
+can make something out of this.
+So uh
+you so transforming uh the medium of
+interaction into a medium of cognition.
+Uh so this you know the project uh this
+project is about uh is about building a
+new category of uh information tools
+interfaces that can augment how we
+connect things. Uh we already have tools
+for searching, recommending and
+answering. Uh but I think there is still
+an unressed category
+uh which we can refer to as navigational
+systems. I'll I'll open up about you
+know why I'm calling this navigational
+systems later. A system of tools that
+during one's encounter with things in
+the world can bring one's past resources
+in life contact with the things one is
+interacting with that present so that
+the connecting work that normally
+happens only in our head can take place
+on the screen during our act of
+navigating through the world. So that's
+why you know I'm calling this uh
+transforming the medium of interaction
+into a medium of cognition.
+uh so you know starting off you know we
+focus on I think you know I don't need
+to um tell a whole lot where everyone uh
+is I think much aware about this uh
+uh yeah so
+every day we are interacting with a lot
+of things and the processes uh so this
+is you know the distribution I'm using
+uh the theories of distributed cognition
+to uh to ground this
+the the whole
+the whole project that uh the cognitive
+activities they are not just uh in our
+brains inside but rather spread out
+through the mediums through our
+activities in the world.
+uh
+yeah so you know in my work I try to
+move beyond this idea of independent
+things co coexisting so you know we
+currently are understanding that you
+know everything is connected things
+depend on each other but there this uh
+interdependence is uh sort of uh still
+even in this conception we generally do
+consider things to be
+to be existing as in earth but in
+relationship with other things. In my
+project, I'm considering them to be
+onlogically connected with each other.
+So there is no uh independent existence
+possible. So neither do things exist in
+inertly uh and uh the onlogical
+independent of other things nor does so
+sorry I'm sorry I'm sorry guys.
+Yeah. So a different you know a
+different conception of cognition of
+understanding the world can in turn
+generate new imaginaries about the
+pursuit of augmenting human cognition.
+It is through the cartisian conception
+of cognition as an innate process
+existing entirely inside human brain
+that we arrive at ambitions of creating
+a digital oracle oracle so powerful as
+to solve all our problems ranging from
+the existential to the million. you know
+Tom often uh tells you know how uh he's
+having a hard time making his students
+understand uh that you know there is
+there are more capabilities with these
+AI LM models than just asking them for
+answers and uh you know he as he shares
+he has discovered through the chat logs
+how uh that the students are treating it
+as art or articles so you know part of
+the I think you know it's not just
+marketing thing, but it is also that how
+we have understood cognition
+traditionally. Even though
+scientifically our conceptions have
+changed, but the cartisian model of
+cognition still prevails and in building
+these tools, the imaginations
+of the of a lot of the it is around
+building systems that can predict your
+next moves, that can predict correct
+answers, that can tell you what to do.
+Uh that's all the thing
+and so
+this is
+so you know throughout history um we
+have had different sort of mediums I I
+spoke about this uh the last time I was
+presenting so I won't go over this much
+Yeah, I really want to know um more
+about what you're building. So I look
+forward to that.
+&gt;&gt; Yeah. Okay. Yeah, just so you know
+meaning doesn't emerge uh from a thing
+in isolation and uh it arises from the
+interplay between what one is currently
+encountering and what one has already
+contracted with or past readings, things
+one may have said, half remembered
+references etc. So one's understanding
+depends on which one of one's prior
+encounters one is able to assemble
+during one's present interactions. This
+assembling is mostly biological and done
+manually. Therefore the limitations of
+our working and core memories also limit
+our understandings and decisions.
+uh the kind of uh access and
+interactivity that a medium affords
+between these known and unknown elements
+shapes the meaning that arises through
+our interactions.
+So uh you know we have uh
+uh
+currently you know uh we have tools that
+uh
+yeah so
+yeah
+so there are access limitations. So you
+know we have two limitations. One is uh
+the kind of things that we able to
+retrieve and the kind of entanglements
+that we are able to engage uh between
+the re things. So uh for the access
+limitation we can only connect uh uh
+what we happen to recall in the moment
+of our encounter. The vast majority of
+what one has saved uh bookmarks,
+playlist, reading list, photos, notes
+and you know these are all on different
+services uh which uh are not at almost
+at all communicating with each other.
+uh still latent scattered across
+different services that don't talk to
+each other and during our encounters we
+don't have access to most of them in a
+form that could help us in connection
+forming work. Uh and the second
+limitation is the bandwidth limitation
+that is our working memories can hold
+only a few things at a time. So only a
+limited proportion of the sporadically
+recalled things are able to interact
+with one another and even the
+interactions aren't as rich as possible
+in other mediums. These limitations also
+force us to fall back on our habits and
+be guided by random engagement
+maximizing and optimized algorithms. The
+result is a quiet and constant underuse
+of everything we have encountered and
+saved before. Our resources are
+fragmented across services and
+underutilized even with the various
+platforms.
+So you know we can't go on encountering
+things and searching stuff like an
+amnesiac. We all have had rich histories
+of beings in the world and we ought to
+have a medium of interaction that can
+enable the dynamic entanglement of those
+histories in the present moment. Search
+recommendation systems and AI systems
+are
+you know are useful for the specific
+functions but they do not meaningfully
+address this the problem highlighted.
+None of these tools bring our nent
+resources in contact with our present
+encounter in a form that enables greater
+interactivity between them and assist in
+the emergence of understanding and
+decision making process. you know, we
+could be scrolling through YouTube, uh,
+you know, and we it's a great discovery
+platform. Uh, Instagram, great discovery
+platform, uh, optimized for engagement,
+search, you know, Google, Dr. the book.
+We can search things but nowhere do we
+have a tool that you that uh is that
+helps you you know for for one thing
+helps you build a library so that uh you
+know whatever thing that you're
+interacting in your life you are
+listening to a podcast you really like
+these two minutes and you want to mark
+them you went into a bookstore uh
+physically and uh you uh you want to
+snap page photo yeah
+&gt;&gt; this is Great to hear right now because
+this is exactly one of the things I'm
+trying to build. I believe it is exactly
+the thing that Eric is trying to build.
+I believe it is exactly the thing that
+Tom is trying to build. So it's very
+nice to hear this perspective and then
+um what I hope we can do is talk about
+the interchange and the knowledge
+objects afterwards because nobody should
+have to use the other person's knowledge
+space but we desperately need to do what
+you are such an advocate for
+&gt;&gt; exchange the stuff so brilliant very
+happy to hear that please please
+continue
+&gt;&gt; so you know so so the three um you know
+I'll just keep going on on this uh over
+the slides.
+So I've highlighted the access and the
+bandwidth. So you know currently our
+access it's just uh uh because you know
+you might have something very relevant
+saved in your YouTube playlist but uh
+currently you are in a bookstore and uh
+browsing through something. You may have
+stuff from your saved libraries across
+different platforms that could be
+relevant to your present encounter but
+there is no way that you can access
+those things meaningfully. So
+theoretically you do have access to your
+resources you do have access to your
+YouTube playlist. you do have access to
+your Instagram saves but even for
+example you know even on these uh uh you
+know bookmarks used to mean although we
+call them bookmarks but bookmarks in a
+physical world used to mean very
+different thing you know you you had a
+bookmark you just you know this and you
+flip it and you know you're right there
+&gt;&gt; in the in these
+&gt;&gt; no no continue this bit I want to ask
+you after I'm sorry I'm too enthusiastic
+&gt;&gt; no it's okay you can interrupt So you
+know in the in the in the digital medium
+and especially you know in the services
+that we have uh bookmarks
+you know they reside in the background
+they
+are not we are not actively engaging
+with those things and they are just
+considered for you know a sort of uh
+going back to later but that going back
+to later never comes and we're not just
+concerned with that part that we are
+underutilizing those resources but you
+know for my work I'm also a lot more
+concerned about uh uh the kind of
+engagements that those legend resources
+can have uh during my present uh
+encounter.
+So uh you know even if we were able to
+access for example we are able to access
+all the things that uh are relevant to
+you know you're shopping for a shirt and
+you remember just four brands uh but you
+know there are maybe you know another
+four that you have right but you're just
+not able to remember those. So even if
+you are somehow able to surface all
+those eight brands then too uh you know
+there comes a magic limitation of our
+working memories of how this information
+is presented currently in our mediums.
+Uh that does not enable a whole lot of
+uh interactive engagement between you
+know those various things that I'm
+calling the bandwidth [clears throat]
+limitation here.
+Uh, so moving ahead.
+&gt;&gt; No, no, no. Can I just
+&gt;&gt; Yeah. Yes. Yes.
+&gt;&gt; Bookmarks.
+So, in this thing that I've been playing
+with the origami text, um, we made some
+bots. Obviously, the bots are stored in
+the same way that anything else. So, a
+bot is inside an origami text. JSON.
+The reason I'm saying that is there's no
+reason a bookmark, because it was very
+evocative what you said, shouldn't be an
+object. rather hi Jamie
+um glad you're here um Mojit is
+presenting and um it's very very
+interesting but we're also talking about
+how to ch interchange information so how
+we can have many different kinds of
+things in a really simple JSON like
+format such as he was talking about
+bookmarks maybe an entire specification
+of a bot maybe a view for how you deal
+with your information all if these
+things are clearly labeled as what they
+are we should be able to exchange them
+like a physical bookmark. So I was just
+riffing on what it was saying. So thank
+you.
+Yeah, that that is great. Yeah.
+Yeah. Because the social Yeah. The
+social aspect is is really important.
+Although, you know, currently because
+I'm just laying the ground uh you know,
+so to speak. uh but the social aspect of
+how uh other people's uh information of
+u connects with yours and uh those stuff
+that's especially more important because
+we can't have uh interesting ideas
+interesting things uh just uh being uh
+you know heads down looking into just
+our libraries and just you know the
+things that we interact with.
+&gt;&gt; Yeah.
+So yeah this is just that you know the
+thing that uh all these services and uh
+so therefore our resources in them they
+are they live like islands they uh there
+is really just no interconnection
+between them
+uh
+uh so you know this I think you know key
+I have uh talked a little about
+uh how search and uh
+recommendation and AI assistance are not
+able to do this. Although I um you know
+all these uh systems they would be of uh
+a great help uh in building this and in
+uh as properties incorporated in the
+proposed system.
+Uh one of the things that I have
+encountered is uh uh yeah before also
+when I had presented uh um at uh at
+Telcom company uh to a telecom company
+executive was that context is merely
+considered as you know this uh whole
+intercon uh this whole connection
+enterprise is considered as
+contextualization exercise that you're
+just uh you know broadening the context
+but you Uh I guess you know if we look
+back to those things to the first uh how
+Karen Bard thinks of uh you know onic
+epistemic relationships and how uh
+distributed cognition and extended mind
+hypothesis thinks of uh objects of
+interaction and how we are processing
+things then we wouldn't really be able
+to say uh you know keep about concept
+that our context as something merely
+just broadening of a uh of a field. It's
+Yeah. Yeah.
+&gt;&gt; kind of in winding down. Do you have um
+do do you want to talk about something
+um kind of feature related because I
+think we very strongly agree with your
+premise.
+&gt;&gt; Okay. Great. Good. So, I'll just skip
+ahead. Okay. Um so, by
+just a moment
+uh so you know if uh I um so I'll just
+read through some of the the things that
+I've written I think uh uh could be good
+if context were merely decorative for a
+fixed object then one could compute the
+single most relevant things and present
+them in a rank list form but since con
+context is constitutive as the object
+emerges through the relationships it
+enters. So ranked lists are a wrong
+primitive. Instead, presenting many
+ambiguous, non-ranked, navigable
+connections and letting the user move
+through them could be assisted in
+augmenting both the capacity for
+assembling relevant things and the kind
+of interactions possible between them.
+Following one connection would reshape
+what else comes into interview. So, I
+I'll stop, I guess, and Jamie wants to
+say something.
+&gt;&gt; Oh, thank you. I'm sorry I I had to join
+late, so I I that's why I don't know
+everything that's going on, but this
+reminds me so much of other work that's
+that's been done. All it sounds good.
+Um, we, you know, Jean Tutcliffe years
+ago wrote an award-winning book about
+people finding information and saying
+that when information is provided, it
+has to be provided in the right order
+for information. She was an information.
+She was one of the big three in
+information retrieval. So, she said you
+can't just find the number one most most
+relevant thing. you have to provide it
+in in a sequence to prepare the the user
+the reader to
+understand
+what they um what they're reading.
+Secondly, this sounds a lot like answer
+garden, that old hypertext system by um
+was it a
+AC acknowledg
+um a block of text, a chunk, and then it
+would say if you're interested in this
+then read this one. If you're interested
+in that, then read that. And it would it
+would organize uh trying to find related
+links.
+Um also I we know from lots of other
+work that when people read the same text
+chunk a second or third or nth time,
+the meaning of it has changed.
+&gt;&gt; Yeah. So, I mean, as I said, I joined
+late today, so maybe you've you've
+already covered all of this or it's it's
+only um tangental to what what the
+discussion is today. But I think it's
+important to keep this in mind because
+we sometimes in hypertext the the the
+community around the conference go off
+in directions that have already been
+looked at extensively. Not that we've
+solved any of these problems, but we
+know things about this. And I believe
+that I I believe context is absolutely
+essential for explaining why something's
+relevant, explaining the bias that's
+inherent in whatever we're reading
+because of course there's always going
+to be some there has to be some bias
+otherwise there's no there's no content
+at all.
+&gt;&gt; Yeah.
+So on that moit, uh, is it okay if I
+move on while we mull?
+&gt;&gt; Yeah. Yeah, I'm just going to mute
+myself again.
+&gt;&gt; Okay. Um, as we mull over and if you
+want to give me further information to
+put on the website for today, I'll be
+very happy to do so. Uh, it's very
+important that we build up the record.
+Also, Mo, remind me, are you a Mac user
+or not?
+&gt;&gt; Uh, Mac.
+&gt;&gt; Okay.
+&gt;&gt; Yeah. I'll try to get you a build of
+what Eric and I have been working on so
+that some of this you can experiment
+with putting there to extract the ideas.
+So, thank you very much.
+&gt;&gt; I'm going to take over the sharing for a
+bit. So, uh Jamie,
+&gt;&gt; I have discovered um computing with uh
+Claude in Xcode. That's the big thing.
+Do you use Xcode yourself?
+Uh, no I don't.
+&gt;&gt; Okay. I didn't until a week ago. I did
+no coding. So, okay.
+&gt;&gt; I mean, I I have the program. I
+occasionally upload something into it,
+but I've never used it for anything
+serious.
+&gt;&gt; Okay. No, that's cool. That's
+appropriate. So, I'm going to show you
+briefly all of you this app that was
+made there. Then I'm going to show you
+which is more interesting how it was
+done. and then Eric's going to talk
+about a major thing inside it. But I
+want to start by saying that a key
+thing. Okay, hang on. I'll just go right
+over here actually. So this mess of
+Windows is um Xcode. I'll just find the
+right one for us to to play around with.
+One second.
+There. There's a good one.
+So you can all see my screen, right?
+So this um column here in this center
+that is all I use
+and I write in here as some of you saw
+in the beginning of the call this is
+something I wrote before a meeting today
+and I say please research this person
+tell me if there's a feature he has
+written about that we can implement in
+the software and it said yes and it did
+it okay so it it is exactly like
+coding in a web browser with AI, but
+because it has to do it in here, it
+can't just write a long list of code. It
+has to use the right libraries,
+procedures, all of that stuff. So, it
+becomes a lot more robust. And as I said
+many times, and I still can't believe
+it, it even refactors automatically when
+it needs to. So, it'll do a lot of the
+boring stuff that even a top level
+programmer just really wouldn't want to
+do.
+So I'm just going to make sure I can see
+you guys. So this is an example
+&gt;&gt; uh that was made that way. And what is
+really really important I think for the
+community is if you look here at the um
+settings
+there is a tab called open source.
+You can click these two buttons. One of
+them we'll just talk about the JSON
+format we use which is also very open.
+The other one describes this whole
+software to the point where you can give
+it to an AI in a web browser and say
+this is the system can you design this
+thing and then you describe it and it'll
+give it to you and chances are it will
+run
+also and this is what Eric has actually
+been doing. There is a setting for
+modules for views
+and it actually has uh swift code
+already. So you can put it in your own
+Xcode or
+&gt;&gt; different ways where
+you can easily create a view. So I I'll
+show you a few views of this. It does
+two things now. One is notes and one is
+letters because this all started because
+Eric said outside of email in the
+sessions, how do you guys communicate?
+So I said, "Well, I'll just have to
+invent it because now we can." So this
+is an application that is completely
+robust and solid, but also probably
+wrong. And that's really, really key and
+really, really weird. All of this can be
+changed. And by the time you see it next
+week, it will have changed. So it's easy
+for the community to change. It is not
+I've built it. It's brittle. Go away.
+It's the opposite. So here we have um
+some stuff uh more stuff. And here you
+have on the right you have the Ted
+Nelson B agreeing or disagreeing with
+things. All kinds of fun things below
+here. It automatically does a connection
+thing.
+We have this called the weave. Uh this
+was expressly made last week to show
+off. I literally wrote
+in here I said to Claude, "We're Okay,
+hang on. I'll do it now. Uh, I am in a
+meeting with a team. It would be good if
+I can spell
+I need I would like to
+press.
+&gt;&gt; Jamie, what's the name of your
+university again?
+Um, hold on.
+&gt;&gt; Delhauszy. D like delta. A L H like
+house. O U S I like India. E like echo.
+&gt;&gt; Okay.
+&gt;&gt; My lab's high coup. That's shorter.
+Okay. So, uh, you probably can't read
+this, Jamie, because you're on your
+phone, but I said, I'm in a meeting with
+the team again. I would like to impress
+them with a new view. Jamie Bluestein of
+Hypertext Knowledge is here at Delhausy
+University based on his work. What
+really cool view can you make right now?
+So, it's going to go out, try to find
+you, try to find your recent work,
+try to find out how it relates to this
+kind of hypertext, look at the
+functionality we already have, and then
+it's going to favor visual
+impressiveness, not functionality or
+usefulness or anything boring.
+And then it's going to give it to us.
+This could be built. Now it's being
+built just because I happen to have the
+whole codebase installed but it is on
+git. Uh okay so this is what it's
+starting. I'll read it out to you. Jamie
+Bluestein let me quickly verify his
+research themes. I recall wayfinding
+navigation and hypertext annotation and
+active reading and link quality
+evaluation and didn't build the
+strongest match fast since you're a
+meeting now. In a meeting now.
+&gt;&gt; Yep. Sounds good.
+It's just I go by um something
+non-gendered like they them not he him
+or she her.
+&gt;&gt; Okay.
+So the thing here is I think we should
+try to ignore the term AI because it it
+kind of confuses the thing this in the
+production it's literally having a top
+programmer
+and then the result is a normal piece of
+software that may have AI in it. I mean,
+right now I'm going to show you the bots
+one cuz I made a I'm going to make a new
+bot. Should we make an angle bot?
+&gt;&gt; Yes.
+&gt;&gt; Doug
+Doug Angel. Boom. Right. So, it searches
+for What would I possibly mean? Why? Why
+did it not do anything?
+That's not cool.
+&gt;&gt; Did you spell the name wrong like I so
+often do?
+doing a demo.
+&gt;&gt; It definitely is something. [laughter]
+&gt;&gt; Yeah,
+&gt;&gt; that's where Okay. Well, let's just
+let's I have to just run through it
+again. But here's a Ted Nelson bot.
+&gt;&gt; So, please note that the contents here
+is mostly rubbish because we're just
+testing and only Eric and I have started
+sending a few actual messages.
+So, here is Eric's plan for Tuesday
+demo. So, Ted Nelson bot would disagree.
+I've long advocated for the preservation
+of human create creative works across
+time, not for the technical
+implementation of proprietary data
+structures.
+So this is what you would expect a
+normal modern AI to do, right? And of
+course you click through to that and
+then you get the the document in
+question. So bots can be here. Nothing
+inherently wrong with them.
+Um
+okay. Okay. So what it's doing now
+having researched to Jamie
+&gt;&gt; and it's confirmed APIs writing new
+local first uh with published to
+community using the format checking the
+glossery and all of that stuff. So what
+while that's happening I can also tell
+you that um
+the thing that has been discussed a lot
+the origami text format for EPUB is now
+live in this. So this can publish to
+EPUB in a very very simple um so if I
+show you here in finder
+uh no that's draft
+uh published here
+uh on the sorry I've been really messing
+things up here. Okay here's an epub.
+it'll just open in um
+in Apple books, right? I'm getting a
+request.
+Sometimes when you do this kind of
+coding, it needs your express permission
+to do something in the terminal, which
+is nice, bit of a safety.
+So, so this is a book produced by the
+system that opens in a normal EPUB
+reader, nothing special, but it contains
+the full metadata on the same level,
+visual meta. So that means that um you
+have still have paragraph level
+addressibility.
+Uh all that stuff is there
+and that is only possible because of
+this you know a few weeks ago this was
+something that Vince surf and I wrote to
+the ACM communications magazine an
+article about as a theoretical maybe and
+now I've done two different
+implementations to test it. Here we go.
+Um so what it's done is made something
+called glossery in the sidebar. Press
+run and demo it. Why this view for blue
+steam? His haiku group at Delhausy is
+built on reader controlled meaning
+making annotation with textual glosses
+personal glosseries. His 2004 ACM paper
+with Mona and explicitly not
+autogenerated links. The reader makes
+the connections. So this view generates
+nothing. I think it is the reader's
+glossery projected across the community.
+This is very similar to my work, Jamie.
+I'm very happy to to hear that.
+&gt;&gt; Mhm.
+&gt;&gt; So, I'm going to go full screen.
+&gt;&gt; This is so much easier than than working
+with WordPress.
+&gt;&gt; So, here we go. Um, choose a term.
+What do I do here?
+How? Okay, I'm just Okay, here you go.
+Bottom left. Uh, give me a term, please.
+Anybody?
+&gt;&gt; Hypertext.
+&gt;&gt; I knew you were going to say that.
+And then we have u give me a sentence
+description.
+&gt;&gt; Uh, text that branches at various points
+allowing the reader to be in control.
+&gt;&gt; Yeah, I'm just going to do it that
+simple. Right there.
+&gt;&gt; There we have this. Um, let's just see
+what it says we can do with it. We click
+the term uh the adopt menu.
+Oh, well,
+hang on. Let's just check this.
+No, that doesn't work.
+I'm just going to do chocolate
+food.
+Oh, that's weird. The it found instantly
+where I have used that term and in an
+article.
+So, this is about defining stuff and
+finding it in the um
+Well, you could try something you know
+is in there like you could try Word or
+Origami.
+Yeah. Boom. Right there it is.
+Would you like to see these glossery
+terms connected visually?
+&gt;&gt; Sure.
+By the way, um when this kind of coding,
+it's not just sent off to Claude. My
+computer, which is an M4, what is it?
+&gt;&gt; M4 Max with 128 gigs of RAM is now
+running the fan. It's really boiling
+over.
+So after this little thing, we will go
+over to Eric talking about the um
+implementation he's working on for Ted's
+um side of things. But this was
+basically me showing you that coding,
+it's not really coding, is it? Telling
+our friend Claude while Claude is
+inside. And what I mean by inside is
+literally this. This is the settings
+in Xcode intelligence.
+Just allow it to run. You could also use
+codeex from OpenAI or Gemini, but just
+allow it and it does this stuff.
+&gt;&gt; It is so frustrating because we got a
+big warning about not being allowed to
+use anything except
+uh our dumbed down version of Copilot.
+That's frustrating.
+&gt;&gt; Oh, yes.
+&gt;&gt; We need to work outside of
+organizational boundaries. So, on your
+home computer, you can do this.
+&gt;&gt; Yeah. I mean, I I use Kaggi for a for a
+project. Um, but it wasn't
+I I guess if I don't involve any any
+student or or school information, I
+might be able to get away with it. I
+have to double check. That's where
+&gt;&gt; the warnings were the morning were
+really severe.
+&gt;&gt; What institution are you with Jamie?
+&gt;&gt; Dhousy.
+&gt;&gt; Oh, that's right. You said that, right?
+&gt;&gt; Yeah. They they actually demoed for us
+stuff you can do with all kinds of other
+systems and said, "But you're not
+allowed to do this."
+&gt;&gt; So,
+&gt;&gt; I I have I have I have I have a coffee
+date with the chief technology officer
+very soon. We'll be bringing it up
+again.
+Yeah, I'm I'm I'm definitely skating
+outside the lines at my institution at
+Houston City College, but uh they're not
+they're not really paying attention. So,
+I when when asked recently what was the
+biggest thing that HCC ever did to me
+did to support my work with AI, I said,
+"He's sitting over there. It's my chair
+and he leaves me alone."
+[laughter]
+&gt;&gt; Tom, are you gonna install Xcode?
+Probably not. I just don't have time to
+mess with this.
+&gt;&gt; No, I think you should because it'll
+give you a lot of more time back because
+your knowledge navigator.
+&gt;&gt; I mean, I I I'm going to work another
+week on this and cleaning it up because
+I'm going if you guys agree, I'm going
+to separate that letters thing that Eric
+initially talked about away from the
+knowledge of the notes. Once I have
+those two apps, then Tom, you can so
+easily and I'm very happy to have a
+Skype call to a Skype. There you go. A
+Zoom call.
+&gt;&gt; You just aged yourself
+&gt;&gt; to go through the initial stuff because
+even though we're all technologists
+here, we are in very different areas
+&gt;&gt; and this can look complicated and it is
+bloody not the the only
+&gt;&gt; Oh, no. It's not that. it the reason I
+the reason I probably not is because not
+because of its complexity because it's
+no more complex than working with Python
+or other things like that a lot less
+&gt;&gt; it's it but it's it's very uh
+unidirectional because it only pushes
+you out into Mac world and I need
+something a little more broad-based than
+that
+&gt;&gt; like what
+&gt;&gt; well I mean I I don't want to be
+restricted in any way at this point uh
+because there's a a lot of different
+ways that the well once I get to the
+knowledge navigator thing I've kind of
+the actual coding stuff right now I've
+kind of back burned a little bit because
+I'm doing a lot of work on the logic and
+uh so you know that may not happen and
+and I'm doing a lot of testing uh of um
+of the logic side of things uh so the
+coding itself is probably not gonna I'm
+not probably not going to do a major
+code sprint until uh after Christmas at
+this point
+&gt;&gt; I would uh two things Tom. First thing
+is
+um the only thing I know you you said
+you use Python but I have to say because
+I think it's such a cool sentence. The
+Where are you guys? I can't see you.
+Hang on. I'm trying to get you back.
+There you are. The only thing hard about
+this kind of programming is not talking
+about it all the time.
+&gt;&gt; It it's that overwhelming. And if you
+Here's the really key thing. If you make
+a perfect Mac version or iOS version or
+vision OS version,
+&gt;&gt; you can then tell the system to export
+the exact specification so another AI in
+another platform can ingest it and
+rebuild it. That's part of the magic.
+&gt;&gt; Now, does that actually work? Because I
+was coding with Kaggy. what whatever
+special version of of somebody else's AI
+Kaggy has. And I kept saying for this
+visualization export exactly the
+specification so when I start again I
+can get the same visualization. It never
+worked. There were always things that
+left out or things that because they
+were in natural language were somehow
+ambiguous to it. The closest I got was
+importing an image and saying scan this
+image and change all the labels and all
+the arrows but use the same style.
+Have you tried have you tried it to
+verify that the export works? um not for
+that but what I have done is I built the
+EPUB export into author and to this
+&gt;&gt; I did test both versions so there were
+issues with both and then we revised
+both so we can do round trips but I'm
+going to do one more thing and then
+we're going to go over to Eric I know
+we're running out of time but if you
+guys are I'm certainly happy to to be
+here longer so um I'm just going to it's
+not alphabetical for some reason so I'm
+just going to do Um,
+yeah. By the way, here's here's Eric
+&gt;&gt; lot of letters I could send you.
+&gt;&gt; I'm going to do new author and um I'm
+going to do
+Jamie. Can you easily text me or send me
+your um orchid ID?
+&gt;&gt; Um if you go to my homepage, you can
+find it.
+Is it in your email signature by any
+chance?
+&gt;&gt; No, I think it's in my um it's on my
+homepage then it's one page down from my
+homepage.
+Um
+let me see if I can find it in my
+contacts.
+&gt;&gt; So So this is a bit mind expanding guys.
+I'm not trying to slow things down,
+trust me. So here's uh your page here.
+&gt;&gt; Um Here it is. Okay. So, I copy that
+and then I go I'm making a new um a new
+contact entry. So, I just add
+orchid ID here.
+Search. Oh, I didn't didn't like the way
+it was done. Hang on. I'm going to click
+on the link and copy from here.
+That's weird.
+Will it allow me to search now? Now it
+can search because it has it can do a
+match. Uh, okay. Whatever. It didn't
+work. But then I can do this. Um, find a
+photo of you.
+[clears throat]
+&gt;&gt; There shouldn't be very many.
+&gt;&gt; Okay. Put your head back a little bit.
+I'm going to take a picture of you from
+uh our chat here. I need your full head,
+please, sir.
+Okay. And don't move cuz the bandwidth's
+bad. Going to do it. One, two. Okay.
+So, this what I'm showing you now took
+literally 10 15 minutes to add. Okay.
+So, now I do choose a photo.
+Go to the desktop. There it is.
+So, it adds a little bit of a gray frame
+about it because I wanted uniform
+pictures of humans.
+It then renders it in a cartoon style
+that I have specified. There you go. Got
+the hat and everything.
+So, I can save that and um now you're
+listed here somewhere.
+Why is this not uh Yeah, there you are.
+Right. So it it's a little bit of eye
+candy, but it's also useful because, you
+know, profile pictures are always weird,
+right? So if you do something like
+&gt;&gt; author,
+&gt;&gt; yeah, this is,
+&gt;&gt; you know, you can actually tell who
+people are.
+Um, yeah. So, so that was that. Now what
+um Eric's going to talk about is these
+views. So he's been working on a view
+similar to this that is easily for
+anybody, not just a coder, plug in and
+plug outable. Any questions before we
+hand over to Eric.
+&gt;&gt; So before I
+&gt;&gt; Yeah, thank you. So before I share my
+screen, I just want to frame a question
+for us to think about. We've seen demos
+where Doug Engelbart had his emails in
+NLS journal entries. Well, why don't we
+have that today? And what could we build
+for ourselves? How could we organize our
+documents and our ideas for dimensional
+navigation in XR that leverages Ted
+Nelson's Zezy structure concepts? So,
+that's what I want to show. Um, desktop
+two.
+Okay. Can you see my screen? Yes.
+&gt;&gt; Okay. So, here's a bunch of emails that
+I've been sending to Frod and the team
+and I decided to put them into this app.
+So, the this is Xcode and this is the
+app the origami text running and these
+are all in my drafts folder and I want
+to point you to one of the emails that I
+sent which is the prompt that we gave
+Claude for generating a ZZ structure
+view in this app. So we told it to read
+this paper which is um if anybody knows
+MC Shaffle from Southampton let me know.
+Uh but uh this is
+&gt;&gt; Monica's not there anymore but yeah
+&gt;&gt; I don't I don't think she is but
+&gt;&gt; All right. Well well this is a very
+interesting paper because it uh
+&gt;&gt; it it put Ted Nelson's ideas in graph
+theory.
+Okay. So we told it to read the paper
+and then design a data structure to
+enable dimensional navigation of a Zezy
+structure and gave it some technical
+details of what we wanted and what
+dimensions I wanted and then Frod said I
+discussed this with Claude and then he
+sent this brief that Claude generated
+and this is and see it mentions Eric's
+tpple verbatim so it it understood what
+I was saying and it created a brief
+which was used as input to clawed code
+and then Frod let it run for a while and
+uh eventually it created this view ZZ
+structure and um let me just just walk
+you around it a little. So what I want
+to do is go to user person and change
+the xaxis to user person. And I've
+recreated Ted Nelson's family tree demo.
+So let's start at Elizabeth II. Now
+we're on a person dimension and X. But
+what's new about this? It's showing
+which dimensions are connected with. So
+Elizabeth has a marriage connection. So
+let's put that on X. So she's married to
+Phillip. And now let's uh go back to
+Elizabeth and let's put her children on
+Y. And she has a child named Charles who
+married Diana who had William and Harry.
+So we can continue expanding this family
+tree. Now, so um so this is what it um
+generated and um there are some things
+we have to work on with cloning because
+Charles has another marriage that we'd
+have to represent in the system, but
+this is a proof of concept. That's all I
+really want to show there. Okay, so um
+now
+let's see. Um, so it's easy enough. Uh,
+just I just want to show you what I
+would do. So, say we wanted to add um,
+William's wife, Katherine. Well, this is
+a draft document. And you could say
+anything in a document. You could say
+who their children are. But what we want
+to do is publish this draft. So, if I
+controlclick it, I have to do an export.
+And, um, it asks me some questions. is
+is this a letter, RFC, personal,
+whatever. Um, and you could say if it
+was produced by AI, but all we're doing
+is saving it as a letter. And now it is
+in the publish directory. So, these are
+all the things that are published. Now,
+I could go to back to ZZ structure and
+get back to where I was. So, but
+remember this is just a first draft, but
+we could do anything we want with this
+now. So, let's put um the person on X
+and go back down. Put the uh children,
+the marriage on X and children on Y. And
+there's even a Z-axis, too, which we
+could use. Um you can actually navigate
+it with the option and the arrows. So,
+what we want to do is add William. We
+want to add So, we have X has marriage
+and there's an a plus sign here. So,
+that's for adding. Okay. Now, look at
+that. It showed my documents and we can
+just find Katherine in here. Uh, let's
+see. I don't see her in there, but um,
+oh, there's also this linking. So, we
+have to figure out how to use this. And
+it has the H and I views that Ted Nelson
+demonstrated.
+But the point is we have defined a data
+structure now which can be taken out of
+this app and done in a web XR view as
+well. And let me just show you um what
+before I get to that I I wanted to show
+you another document um that I have um
+that yeah here it is.
+Okay, so it's JSON data and it has an ID
+for each cell. It has a slug for the
+document ID and then I was able to walk
+through look up the gooids and see the
+contents of a document and uh then it
+has the visual meta and uh then it's
+really defining a zigzag data structure
+with negative and positive ids and um
+cells. it it enforces the rule of uh
+only one connection between a positive
+and a negative on any specific
+dimension. So people can read this and
+get an example exactly how to build this
+kind of structure and many different
+views can be designed against the same
+data structure. If you remember the GZZ
+team that built the demo that Ted
+demonstrated, they had different views
+of the same data and they were morphing
+between them. So um yeah, so this needs
+some work and uh but the next thing I
+want to talk about is decentralized data
+because uh right now these documents are
+on Freud's machine and my machine and
+we're emailing that back and forth. But
+what if we could build our own
+decentralized file sharing system? Well,
+with Claude, I was able to build a
+NodeJS application, which I call FTL
+box, and it's on GitHub. I'm just going
+to copy that and I'll put it in chat.
+Um, so anybody can read this and to
+download it, try it out. So, it's a
+proof of concept for peer-to-peer file
+sharing for our community, and it's
+using hyper uh hyperdrives, which uh
+whole punch is the company that
+maintains that code now. It used to be
+the DAT project a while ago, but I have
+a link to the code the the chat that
+generated all this code and I asked it a
+lot of questions about local first
+architecture because you have to think
+about your threat model if you're if
+where you're going to use this between
+our community is not much of a threat
+model. I run a uh server. It I I have a
+pier that you could connect to or I
+could put it on a Raspberry Pi and we
+could share with each other. Okay. So,
+um yeah, just some recommendations
+technically, but uh and you could add
+issues to this repo if you have
+questions or anything. But here's a
+sample session. Now, I just want to show
+you the commands. This is a a command
+line application. And if you learn these
+commands, you can use this. And here's
+just a sample session that I want to
+show you what it can do. So I start it
+up and the list command is showing me
+which hyperdrives I have. Well, I start
+with nothing. So I decide to create one
+and it's on my living room Mac. So it
+created a drive called from LR and it
+gave me a public key. And this is the
+key that I would share with my Mac
+upstairs or someone else who wants to
+see the files in this drive. So um then
+I had a file in it uh a zip file and
+then I added the contents. Okay, I had a
+directory and then I added the contents
+of that directory to the hyperdrive. So
+the hyperdrive is versioned. So it's now
+at version two. And then I told it to
+seed it. So um seeding it means that it
+puts it on announces it on the network
+which is using a distributed hash table
+and uh it's saying leave this running so
+peers can connect. So while this is
+acting like a server then I can go to
+another machine and I could say okay I
+want to register that key which just
+makes it easier for me to use it in the
+future. Rather than typing that key I
+could give it a name. Okay. And now I
+could ls to list what's in that
+hyperdrive. And it tells me it's a
+remote hyperdrive. That's the key. It's
+at version two. One file, 34K, and it's
+a zip file. Okay. So, now I can ask it
+what versions exist. Well, there's
+versions one and two. So, I could keep
+adding to that drive, and I could go
+back and pull a specific version if I
+want to go back to an older version of a
+document because it's an appendon log.
+Okay. So, then I pull the the the
+um name and I put it in my own name. So
+like if Frod was pulling this he may say
+from Eric and but it's so that he can
+keep track of where this came from and
+uh now this is what's in it like I
+received that file and then I went back
+to the server machine which is in the
+living room and it's just a pier. Um, so
+I stopped the seed and I added another
+file and this is one of the documents
+that Frod sent me an origami text file
+and I uh put it in that from yeah I edit
+it to um this from living room um
+hyperdrive and I seated it again. So now
+it's at version three. It announces it
+on the DHT.
+So anyone on the world can actually get
+to my Mac or I could put this on a
+Raspberry Pi because hole punch can get
+through firewalls. Yeah. Go ahead.
+&gt;&gt; Are you saying that we should build this
+into the app? I think we should.
+&gt;&gt; Well, I asked it about that. Um, see
+this is NodeJS
+and um it there are ways of integrating
+it. We really just have to understand
+how that integration would work because
+you're at Mac versus it's possible. just
+keep it in mind for the future. But I
+think we can play with this and get a
+workflow down and eventually it the app
+can probably automate copying the files
+to these directories and initiating a
+seeding or or say you just use a
+Raspberry Pi and we could automate that
+in the future, but I'm just showing you
+what's possible here. So now you could
+check the versions you have now versions
+one through three and uh I could do a
+diff now and it could tell me exactly
+what was changed. So I added this
+document from fraud and I pull it and
+now I have it in my directory and um
+yeah now the diff shows I'm up to date
+and just has information. So this is
+very powerful if if we understand the
+the the threat model that uh yeah you're
+it's really peer-to-peer
+sharing with each other but uh if it's
+just for a small community like ours
+it's possible. So you'll take questions
+now. I'm going to stop share.
+&gt;&gt; Sorry, I had to step to the side. I
+could hear that. And yes, for a small
+community like us,
+I think this is definitely something we
+should try because um for the first time
+in history, we can
+&gt;&gt; we can build stuff, throw it away. we
+can share stuff, change how we share
+stuff. Uh, I'm all for that. I I have a
+question based on stepping back to the
+previous kind of architecture. So,
+in origami text, we have letters and
+notes really. What I think we should do
+is keep those two separate, two separate
+apps. So, we have one where we message
+each other and then we have the notes as
+kind of a thinking space. Now that the
+thinking space, knowledge space,
+whatever should be able to read all of
+the other things, but having just
+designed the interface and gone through
+it, it gets a bit messy having too much
+in the same thing. You want to do a
+thing in a thing, not have a mess of
+menus. Eric, what do you think of that?
+&gt;&gt; Yeah, I mean, you can probably add some
+attributes to the data structure to
+create folders or things like that.
+Yeah, it's like a flat list of files
+right now. Um, but I'm also thinking
+zigzag can help us organize connections
+between our documents. So, like with all
+those emails, how many of them were
+prompts to Claude that we shared with
+each other, things like that.
+&gt;&gt; So, you have a dimension of Claude.
+Yeah.
+&gt;&gt; So, here's the thing. This is kind of
+fun. If I post a transcript,
+&gt;&gt; then I tag it as a transcript. It's a
+transcript, but it finds all your names.
+But also, sometimes I want Claude to
+write on my behalf, like we all do.
+&gt;&gt; So then I post it as
+&gt;&gt; by Claude posted by Frogland.
+&gt;&gt; Yeah, I saw that.
+&gt;&gt; So it has both attributions. So you can
+sort it up either, but as a claude
+statement, but I'm the reason it's here
+because also Tom, some of the things you
+wrote in emails while testing. I posted
+it as a letter to the community as Tom
+by Frod Hegeland as in it's clear that I
+did it. So if I'm lying, everybody knows
+I'm lying. It's just that we can get
+content in there.
+Or or maybe you want to put Socrates in
+there or whatever. So yeah, that makes
+sense, Eric.
+&gt;&gt; Yeah. Yeah. So I think we just need to
+dream about this a little bit like what
+could be done here and then how could
+this be taken into XR.
+&gt;&gt; Yeah. Uh yeah I mean as you're talking
+now I just uh asked uh my dear friend
+Xcode to uh build a new this is a really
+important example. So I asked it to
+build a new app called knowledge space.
+Mhm.
+&gt;&gt; Nothing existed other than an entry in
+the app store which is empty. I said
+take the code from origami text that
+deals with notes because I'm going to
+leave the letters. So again talking like
+a human to it. So now it's going to give
+me that infrastructure. So that means
+that uh Tom if you ever do want to do
+Xcode stuff you may want to take this
+I'll put it on git. uh you walk through
+Xcode and you say steal all of code for
+this, but I want it to be called the um
+I want it to be called knowledge
+navigator.
+&gt;&gt; Absolutely appropriate to do.
+&gt;&gt; The only thing I hope we can do together
+is, you know, I've designed a format
+origami text.json.
+I'm not a genius in that space. I expect
+in our community it may be changed so
+much it'll be completely different in a
+short while. Fine. But at some point we
+have to settle on something to
+interchange. So Moheit's context, Eric's
+distributed list, Tom's knowledge
+navigator and so on. We can send stuff
+to each other,
+right? I mean, it is absurd how little
+we can send to each other now.
+&gt;&gt; Yeah. And go back to Engelbart's vision
+where you had all your emails in a
+journal. you could reference them, point
+out a paragraph and yeah, [laughter]
+&gt;&gt; yeah, I mean, this is exactly the kind
+of stuff I've been doing. So, it it's
+really wild because it only came
+together today. So, I had this meeting
+with Dave Millard in Southampton and let
+me just show you the simplicity of it
+here on my phone. So, I have a little
+app that is supposed to be for voice
+notes. When I open this, right, super
+simple. I just press the microphone
+So now I am No, I pressed the wrong
+button.
+&gt;&gt; Is this a standard Apple thing? Because
+I use that sometimes.
+&gt;&gt; Uh, it's not. It's similar to a standard
+Apple thing, but I built it so it
+produces two outputs. One output is what
+I'm saying now goes in my normal Apple
+calendar under this minute. So I can go
+through my calendar and see the notes.
+For instance, now I'm talking about how
+great this meeting is. It also attaches
+the location and it goes into my origami
+text tool.
+So I'm going to change it so it goes
+into my knowledgebased tool. But the
+fact that it tags it by location and
+time properly, the stuff we in our
+community have talked about timelines
+for decades now,
+&gt;&gt; technically trivial interface r still a
+challenge. So now we can do it. Mhm. I'm
+just ju just an idea occurred to me when
+you're talking about the location, it's
+going to be your your geographical
+location. It's not going to be I'm in
+this meeting. I'm in this seminar. It's
+going to be I'm in this room in this of
+my house.
+&gt;&gt; That is a challenge, Jamie.
+Well, as I said, it only to it only
+occurred to me just this instant, but
+it's it's something we should think
+about. I don't know how much of a
+priority though,
+&gt;&gt; Jamie. That's my revolutionary thought.
+Sorry, I just took a dropped it. The
+fact that we don't know
+now,
+let's find out what would it mean. How
+would we be able to tell it
+that we're on a Zoom call? Maybe
+it has to check our calendar already.
+&gt;&gt; If we're on a scheduled Zoom call, tag
+that in. But if you see the um my
+screenshot here that I just put in the
+chat.
+&gt;&gt; Even though I was on my iPhone, it's
+already bloody there. Come on. How
+insane is that?
+And what's going to be really scary is
+if you can search for the things that
+the FBI record that when the FBI was
+eased dropping.
+&gt;&gt; Yeah. And others. Um, hang on.
+&gt;&gt; Well, no, you need to filter out which
+organization was listening to which
+parts.
+&gt;&gt; That's funny. I just asked this to
+Wait, wait, wait.
+I'm building an app that hasn't been
+Oh, this is exciting. Uh, hang on.
+Origami text open. See if it works.
+&gt;&gt; All right, check this out.
+&gt;&gt; So, you see the on the left here, right?
+That's the origami text icon, which is a
+square, but it almost looks like a
+folded envelope or folded. I put it 90°
+45 90 45 degrees or whatever. I made it
+knowledge base icon. Here it is.
+&gt;&gt; Great.
+&gt;&gt; I just This was just happening in the
+background. Simple prompt. Here are all
+my notes. Same folder. Still works. This
+is what I just said.
+Oh, or is this what I just said? I don't
+even know how it's listed it.
+But but it goes here. And for some
+reason it has back links to Nelson bots.
+I don't know if we want that. So we we
+can deal with this. This is completely
+empty beginning.
+&gt;&gt; Kind of wild, right?
+&gt;&gt; Yes.
+&gt;&gt; If you looked here, you see it says the
+address for the city. This is Norway a
+few days ago. Yesterday.
+&gt;&gt; Mhm. So when I was driving up from um
+Southampton now in the car,
+I can see on the map what village I was
+closest to.
+So look at all this metadata that you
+can collect and then think about how
+Zigzag can organize that metadata as you
+navigate.
+&gt;&gt; Exactly. Exactly. The the opportunities
+now are amazing. And
+&gt;&gt; why is she
+&gt;&gt; Eric? I'm very very grateful that you
+joined us to prod us and also product
+us.
+&gt;&gt; Mhm.
+&gt;&gt; Um
+obviously we're a little bit over time
+just a touch. Uh Tom
+just going to detour to you for a
+minute.
+Uh obviously you would like your
+knowledge navigator to be available not
+just in the closed Apple ecosystem
+&gt;&gt; and you want it to have incredibly
+strong capabilities. Now one of the
+things Mojit has been really pushing on
+if I understand you Moheit and this has
+been my realization over the last few
+days I think I've basically it took me a
+while to understand your first
+presentation Mo point is we would like
+relevant information to come to us
+&gt;&gt; not to have to go to it
+&gt;&gt; right
+it sounds like an easy thing to say but
+when you are dealing with a piece of
+information through easy action you
+should be able to see other things in
+your like other things in the world pro
+and con you should be able to navigate
+around it right would you like to talk a
+little bit about how your dreams are for
+this Tom and then see how it fits with
+Eric and Mo
+&gt;&gt; and of course you'll be part of this too
+so also in relation to you sorry please
+go on top
+&gt;&gt; no I mean uh I actually found Moheit's
+talk very much in alignment with the
+kind of thinking I'm I'm doing in terms
+of this Um
+the term relevant information is not a
+fixed concept. You know what's relevant
+today may not be relevant tomorrow or or
+you know and and what's important is
+constantly shifting. And this is this is
+the fundamental problem we have with
+information management is knowing what's
+important, what's not. We spend an
+incredible amount of time hunting uh
+through data sources to trying to find
+that nugget of important information.
+Um
+I'm pretty good at it myself. Uh but
+even there I feel like I'm missing so so
+much in terms of just anything I'm
+looking at. You know, there's always
+another layer. There's always more
+stuff.
+So the idea behind the knowledge
+navigator is to provide you with a
+picture of information that shows you
+patterns that um help you figure out
+what's relevant and what's not or what's
+important and what's not and where those
+connections are and you know so um
+recently I worked with I was working
+with Claude and it kind of reframed the
+the priority and and basically it said
+for the clustering aspect of it so the
+idea would be you'd feed in the docu the
+information the documents and it would
+look for clusters of information that's
+a strong connection
+uh issue right so those connection it's
+looking for stronger connections there
+but if I also want to say okay I have
+this body of work or this project that
+I'm working on and I'd like to see if
+anybody else is working on this and so
+maybe it reaches out and it says oh look
+Moheit's done this thing or this thing
+or so on and so forth uh that it will
+then find that. Now, that's a weak
+connection issue, right? So, that's a
+that's a that's kind of the opposite. I
+may actually end up putting a switch in.
+Uh although I I'm still thinking through
+the logic on this a bit. Um
+and the idea is that the AI is
+generating the chat the the the language
+model is the one that's generating the
+connections and presenting me with
+options.
+Uh, it's not that I'm putting my, you
+know, I can do this already in terms of
+mind mapping and stuff like that, but
+then I'm putting my finger on it and I'm
+the one who's determining what's
+important and what's not. And if I have
+a blind spot, I'm going to miss
+something. And uh, you know, there are a
+lot of people with a lot of blind spots
+in this world. [laughter]
+And um, there are a lot of companies
+with a lot of blind spots. And education
+and learning is all about overcoming
+your blind spots and understanding that
+you have them in the first place. Uh if
+you ever want someone who is
+intellectually very confident of
+themselves, talk to a three-year-old. Uh
+they, you know, but they have no
+conception of what their blind spots
+are, you know, because they're like, I
+know everything, you know, at this
+point. So um
+and some people remain that way for the
+[laughter]
+I wasn't going to go there. especially
+since this is recorded. Um but uh uh but
+yeah, I mean that's sort of the idea is
+that um you have the the complexity of
+the truth thrown in your face
+&gt;&gt; and you have to come up with the
+reasoning to do that.
+&gt;&gt; You in a way are at exactly the same
+spot in our lives because on this side
+of the fence I just made an empty shell
+called knowledge space.
+working on your knowledge navigator.
+Right now, we're at the point where
+&gt;&gt; when you open up the app,
+&gt;&gt; stuff can be there. So, if you actually
+do the Xcode and whatever AI you want,
+&gt;&gt; you know, I can give you this original
+code or not, whatever you want, but you
+can actually say what you just said, but
+in fact, this is recorded. There will be
+a transcript.
+&gt;&gt; I can send you the quote via this format
+to you. You can give that to an AI
+inside
+&gt;&gt; and it will build you what you just
+said. It, as I've said many times, it
+may do it wrong. Then you tell it what
+you want to change.
+Once it works, whether or not it can be
+given to another AI like Jamie was
+talking about earlier, might not work to
+a degree. It doesn't matter because this
+becomes an very very affordable, not
+free, affordable, incredible prototyping
+tool for ideas. Sure.
+Sure. I you know and that and that's
+great. Um
+my big thing right now is that
+I have come to the realization that the
+questions that the AI essentially or the
+model asks itself andor the questions
+that the humans ask of the model are an
+extremely important part of the process
+and that they can't simply be factually
+based. They have to be uh reasoning
+based. And so what I'm trying to build
+right now is um what I call the
+reasoning loop where you you can
+basically check your own thinking. Uh
+and the idea being that you would upload
+a chat log for instance. And that my my
+one of the things I'm going to do with
+my students next semester is I'm going
+to have them upload a chat log into this
+reasoning loop and then have it give
+them an analysis of the level of
+thinking that they're doing. Uh but you
+could see anybody doing that, right? And
+so the question is to the extent that
+I'm looking at maybe folding that into
+the knowledge navigator.
+It's also given me an idea for another
+product altogether which is to build a
+custom reasoning LLM that's basically
+something you could sell to schools that
+would that all it would do is
+essentially work at reasoning levels,
+right? And um so uh I don't I don't know
+which way that's going to go yet. So, I
+I'm trying to, you know, I I I have kind
+of backed off on the pressure on myself
+to complete the knowledge navigator uh
+uh quick and dirty um and and said, you
+know, I I want to think this through
+because it could really change a lot of
+things, not just learning, but also just
+in general people's ability to do
+self-reflection and to be able to work
+in an AI environment because this is
+what sets us apart from the AIS is that
+higher level thinking. And if we can do
+that, then we're in we'll be much better
+shape than if we can't. And the problem
+is that most of our education is very
+much on the um the uh uh the know the
+information slot machine model. You
+know, give you tell me a question, I
+give you a piece of information. And
+that's how we treat the AIS. You know,
+you know, tell me tell me what the
+tallest building in the world is. So, an
+ironic question to you, Tom, would be
+what you just talked about now, have you
+discussed it with your AI?
+&gt;&gt; Yes.
+&gt;&gt; Have you have you gotten to the point
+where Okay, what you use Claude as well,
+right?
+&gt;&gt; Yes, I use Claude and Gemini. I go back
+and forth.
+&gt;&gt; Why don't we do this right now?
+&gt;&gt; Mhm.
+Go to your Dare Claude or Shannon as I
+like to call it and say um you know your
+friend is bugging you to build a tool
+based on our discussions. What would the
+spec be for another AI to build my
+dream?
+Okay,
+&gt;&gt; these meetings used to be two hours, by
+the way, which is what we're up against
+now.
+&gt;&gt; Uh that do you guys started at 10:30?
+&gt;&gt; Half an hour earlier. That's probably
+better for Mojit.
+&gt;&gt; Yeah. What time is it where you are
+Mojit?
+&gt;&gt; At 10:30. It's okay, guys. It's okay.
+&gt;&gt; Oh, that's not too
+&gt;&gt; We can continue. Yeah. Yeah.
+&gt;&gt; Yeah.
+Um,
+it it's funny because uh when I go out
+and walk early in the mo morning, we
+have a lot of uh of South Asians in the
+uh in in the neighborhood now and
+they're all out on their phones because
+it's like the perfect time to call
+India. [laughter]
+Anyway, so say that again, Froto, what
+you said in terms of the prompt. My
+friend is bugging me to
+&gt;&gt; actually build this. actually build the
+knowledge
+navigator.
+&gt;&gt; As far as you understand from our
+discussions,
+could you present me with a spec I can
+give to an AI template?
+AI chatbot. Is that what you said?
+&gt;&gt; No, just an an AI to implement.
+&gt;&gt; Oh, to implement
+&gt;&gt; if you want to with the result share a
+screen. That could be fun. Or whatever
+you prefer.
+&gt;&gt; No, it's fine.
+Problem is I have multiple um chats
+going on at the same time.
+&gt;&gt; [laughter]
+&gt;&gt; So hopefully I picked the right one.
+This is exciting.
+[laughter]
+It's kind of weird, isn't it? Do Do you
+guys also use Clone the rest of you?
+&gt;&gt; No.
+&gt;&gt; Yeah, I have it installed, but I'm not
+using that.
+&gt;&gt; Okay.
+&gt;&gt; But I should Yeah. Yeah. A a very weird
+thing is to see that little spinner and
+the text in someone else's world. It's
+almost like an intimacy intrusion. You
+know, this is how we now some of us see
+our intimate thoughts back and forth.
+And now I'm like staring into Tom's
+brain and you know, he's not sure what's
+going to be spat out. And it's all very
+very exciting. [laughter]
+&gt;&gt; Well, I'm I'm not sure about that even
+when I'm not using a large language
+model,
+[laughter]
+but that makes it fun.
+I'm not at all.
+&gt;&gt; So you're on. I see.
+&gt;&gt; Yeah, I'm well I I'm I'm running Sonnet
+just because the level of thing that I'm
+working with right now it it it it does
+just fine for that. And if I run Opus, I
+start running out of tokens too fast
+before I can finish the conversation. To
+me, having the longer conversation is
+worth it.
+&gt;&gt; I think you should um
+[laughter]
+Okay, let's see what it says.
+&gt;&gt; [snorts]
+&gt;&gt; Interesting.
+[laughter]
+See, it is my head.
+Um,
+&gt;&gt; yeah. I mean it it's just um so so this
+coding in Xcode with an AI makes me feel
+like I'm 20 years old.
+&gt;&gt; It means the future.
+&gt;&gt; No, I know. I can tell.
+&gt;&gt; Yeah. And and honestly, playing with AI
+makes me feel like I'm 20 years old in
+college and I have a faculty of of uh
+professors that I can go bug at any
+time, you know, and uh because I I
+treated college very differently than
+most people do. I will I will say that
+very clearly in the sense that uh
+&gt;&gt; I I looked at it as a learning adventure
+and uh not not as something that I had
+to get past me to get a degree or
+anything like that. And that's I have
+learned to much to my sugarin that
+almost no one else thinks about it that
+way.
+My mother my mother it's my mother's
+fault. She went to college for the hell
+of it when she was 40. And uh she
+actually graduated better than I did
+because she wasn't partying with her
+friends in the same way, although she
+did have young children. Um
+yeah, I'm also thinking about uh sorry
+I'm just putting Mo's slideshow on
+there. Where's the copy? He got anyway.
+I'll do that after. It's also that
+since we can build now, it's a great
+ detector.
+You know, are we just ruminating or or
+are we doing something? So, why don't
+you have a skim through that, Tom, and
+see if it reflects your situation.
+&gt;&gt; I was just going to share it here if you
+guys want to see.
+&gt;&gt; Yeah, it's the same as on the side.
+Yeah. Yeah, this is perfect.
+by just sharing the markdown.
+&gt;&gt; Yeah.
+&gt;&gt; Uh yeah, I know.
+&gt;&gt; Uh
+H yeah I mean this is giving me a
+completely different viewpoint on it
+again it isn't looking at the code that
+we've already built either although I
+would say the code that we've already
+built is largely
+uh functional in the sense of just
+taking uh documents and turning them
+into the um
+into a graphic and um but also in theory
+doing it randomly.
+&gt;&gt; Yeah,
+I think there is a need for some slow
+thinking when you're looking at projects
+of this scope. Like take this think
+about it for a day. And then you'll come
+back in the morning. You may want to
+modify what it wrote before you submit
+it. Yeah,
+&gt;&gt; I think a day is still not slow enough.
+[laughter]
+&gt;&gt; Yeah, I agree.
+&gt;&gt; Sometimes this takes months to
+percolate.
+&gt;&gt; Yeah.
+&gt;&gt; And and I'm kind of in the in the um
+verification mode because I'm learning
+new things about how other people think,
+which is something that's always been
+kind of a a black box for me. And so,
+um, which is a real liability as a
+teacher. Um, but, uh, the the being able
+to read other people's thinking through
+their chat logs is really an interesting
+experience and something that I, you
+know, I it's it's a it's something that
+I've wanted for 20 years in a sense
+because I see the end product of what
+they build, but I'm never I'm like, how
+the hell did you get here? You know, I
+was like, [laughter] you know, and that
+happens all the time. But now I can look
+at the chat logs and also but the now
+the next step is can I get them to
+create their own loop where they're
+looking at the chat logs in a critical
+way and thinking about their thinking
+and learning how to think better. And
+that I think is how many times can I use
+think in one sentence? um h that I think
+is really absolutely critical not only
+for students learning to operate in the
+world that we live in today but also for
+current professionals who've been handed
+an AI and told hey use this right like
+Jaime's institution you know or don't
+use this and and and without you know
+the people who are making the policies
+clearly haven't thought through the
+reasoning behind those policies and I
+see this all the time and um and but you
+know it there's so many different layers
+to this. I mean it's everything from uh
+but we've got to get at that high level
+that creative level of thinking in order
+to be able to move the ball forward. And
+this group is a very operates at that
+level a lot. Uh and uh but most groups
+don't you know [laughter] I will say
+that with a with a high degree of
+certainty. Most of the other meetings I
+participate in are not that
+self-reflective in terms of well, we're
+doing this because we've always done
+this.
+Well, it's not a good reason.
+&gt;&gt; Yeah. [laughter] I think there's a need
+to structure the environment and
+situations that you're giving these
+students so that they're motivated to
+want to think at a higher level certain.
+Yeah, it's a tricky,
+&gt;&gt; right? The real challenge is that
+especially in the online anytime classes
+is I don't I I don't have that time with
+them.
+&gt;&gt; Yeah, I know.
+&gt;&gt; Because they're I never actually see
+them. And so, um I've noticed a a
+divergence in success rate between my
+online anytime and my the classes where
+I actually have interactive sessions.
+There's there's a significant it's like
+50% you have a 50% higher chance of
+passing if you're if you're in in
+something that has either the Zoom class
+or an inerson class than if you take an
+online anytime class. It's that much.
+And so what I'm trying to do and the
+other thing is as a manager if you're
+dealing with a large company and you're
+like okay I got to get everybody up to
+speed on this. You can't tell them to
+think. You have to have a mechanism for
+showing them, training them to think,
+right?
+&gt;&gt; And so that's kind of what the objective
+of of of this part of the project is.
+The knowledge navigator is a tool for
+thinking to show you these connections
+in a way that um you know that that
+Nelson and Angelbart were talking about.
+And so um the
+that's just that's a visualization tool.
+Um, but now I'm thinking also about as a
+thinking a much more clear a much more
+targeted thinking tool. Then you can use
+the knowledge navigator once you've
+figured out what to do with it. Yes,
+&gt;&gt; I'm just certainly I I saw you back.
+Hang on.
+Boom. Okay. Um,
+my train of thought was as follows
+because obviously I'm living in my
+world. If your students had to
+communicate using letters as in the
+digital JSON letters that we have
+what might be interesting is because
+they the way it's set up right now is
+it's mostly based on replies.
+&gt;&gt; So if I pick up one of Eric's letters
+&gt;&gt; I can just reply but it's just as easy
+to say agree disagree a few basic link
+types. Right?
+What if at the point of sending the
+system looks at the original what I
+wrote and gives it a bit of an analysis
+and says spot on or what are you on
+about
+&gt;&gt; that doesn't have to be adhered to but
+it may help the student privately
+reflect it's rubbish not publicly so
+they can go back and edit the letter and
+then send it like a pre-flight logical
+pre-flight
+Yeah, except that I think uh certainly
+for the student perspective, but I I
+think anybody who's trying to learn, you
+want to do a post-flight in a sense
+because if you do a pre-flight, they
+don't understand why it's telling them
+to do.
+&gt;&gt; No, no, they write the reply, but as it
+as they send it, the citizens say, "Hang
+on, let me have a look at this."
+&gt;&gt; And then they say, "Yeah, this is
+brilliant. I'll send it to the teacher
+or whatever." Well, hello, Jamie. That
+is the coolest background. Hi, I'm in my
+office.
+&gt;&gt; Hi. We usually don't go on this late, so
+I'm glad you came back.
+Um
+yeah, I mean I don't again I part of
+part of the objective here is to get
+people uh to think at this level. You
+know maybe maybe down the road as a tool
+I could see that but at this point I'm
+trying to get people to think uh outside
+themselves to think critically in a way
+that we always talk about in education
+but never actually accomplish.
+Um because at the end of the day it's
+only a question of what do you want me
+to say? [laughter] Like I want you to
+think for yourself please. I'm always
+reminded one of my favorite scene in all
+the movies is that scene from Life of
+Brian where he's standing out over the
+crowd and you know he's trying to
+convince them that he's not the Messiah
+and uh he says you're all different. And
+one guy goes I'm not.
+just like
+um
+&gt;&gt; yeah and so uh and that really kind of
+makes your head spin a little bit but I
+get that right I'm trying to say tell to
+my students you're all different and
+they're all saying no we're not
+[laughter]
+just just give us the grade and pass us
+on our way leave me alone and um and
+that's that's very common because
+they've been trained into that and but I
+also think that the most the workers in
+the world today have gone through that
+educational system and some of us break
+out of that doom loop and a lot but most
+people don't and so they are much more
+willing to accept the orthodoxy whether
+that's coming from a political leader or
+from their manager. You know, it makes
+sense in an industrial environment that
+everybody is walking in lock step. And
+it makes sense that the that that uh
+movements like Nazism and and communism
+as it existed under the Soviet Union
+came out of an industrial mindset
+because everybody's moving in lock step.
+I mean, that's really the point uh
+politically. And so um uh but we do it
+here too. I mean, management theory in
+the United States, in the a lot of parts
+of most of the world, comes from Ford.
+And Ford based their management theory
+on their assembly line. And so, it
+should come as no shock that instead of
+producing Model T's, we're producing
+memos. But it's the same goddamn thing
+most of the time, right? And so that's
+that's the part where I'm trying to
+break the training because school is
+very much education is also we produce
+students in the way that we used to
+produce that we produce cars and uh and
+that's
+students aren't cars people aren't cars
+and we you know and and if if you can if
+they're all automated all the time those
+are the jobs that AI is going to eat for
+lunch because AI can do that too you
+know if they're only ever operating at
+those low levels of thinking. So really
+what I'm the goal here is not so much
+the work itself but it's the mechanism
+of the work to get their brains to
+operate at a different level. And this
+is true whether I'm talking about
+training industrial people who are in
+you know companies and stuff. It's also
+true though about uh training students
+and I also realize how incredibly
+disruptive that is to the system and um
+how much resistance from a systemic
+perspective that's going to engender
+which is another reason why I want to
+automate and I'll say to people here
+here's a tool you want to be successful
+in this world use this tool don't listen
+to your boss don't listen to your other
+professors use this tool and when you
+can think for yourself then you're going
+to have a much better shot at it uh if
+if you if you just sort of blindly
+follow along, I can't help you. And
+that's that's that's why
+uh I mean again, I study a lot of
+systems theory, too, but that's also why
+this this is designed to work in the way
+that it does. Um
+and I initially started with the
+knowledge navigator as a tool for
+visualizing information in a creative
+way. it built, you know, it's it's built
+for me [laughter] in many ways because
+I'm like, I want to see these worlds in
+a different way. And I've done it
+myself, but it's very labor intensive to
+make a concept map uh of all of the
+things. And you're always going to miss
+stuff and you're always going to bias it
+because of who you are. And so you're
+going to immediately go and when I've
+done this for other people, I have to
+make judgment calls about this is
+important and this isn't. and and that
+may not may may be perfectly logical to
+me but not necessarily logical to them
+and uh so that's you know that's where
+this all came from where the knowledge
+navigator all came from but what I've
+realized in the interim I mean I've
+already got a knowledge navigator it's
+just textbased this is my knowledge
+navigator it has its flaws it's
+difficult to keep track of all the
+threads but I can literally sit down
+here and say tell me how this relates to
+&gt;&gt; augmenting human intellect and it
+Right. And or or
+&gt;&gt; zigzag.
+&gt;&gt; So here's the exciting bit.
+&gt;&gt; There is a difference between tell me
+and show me.
+&gt;&gt; Yeah.
+&gt;&gt; So
+&gt;&gt; I agree.
+&gt;&gt; Yeah, I know you agree because I've seen
+your visualizations. There's a lot of
+stuff. It's not it's certainly not a
+chatbot thing, right? So um I'm going to
+try to build it now.
+[laughter]
+&gt;&gt; Okay.
+&gt;&gt; I'm gonna try to build it as a view.
+Um,
+&gt;&gt; as a what?
+&gt;&gt; As a view.
+&gt;&gt; A view. Okay. I understood as a beer.
+&gt;&gt; So, let's have because there's a few
+things going on here. So, I I've created
+knowledge space
+have to allow based on what was in
+origami text, but I'm removing things,
+adding things, blah blah blah. Here I am
+um I just added to origami text
+uh to change. Hang on. I just want to be
+able to see you guys. Okay, there you
+are.
+Um yeah, I'm it's changing a lot of
+stuff based on very simple prompts. So I
+hope that uh within not too many
+seconds.
+Okay, let me just as an example of how
+this works.
+I have told the
+system that
+the iOS version of Origami text should
+no longer take notes. All it should do
+is show incoming letters and let you
+reply to them.
+So, it's doing all of that by itself
+now, right? Crazy. Once that's done,
+because I wasn't very clever with
+timing, going to click a button. And I
+said, can you make a view based on this?
+It's from Tom in the group. It should be
+called K Navigator or Kav. I just don't
+want it to be your name because it isn't
+yours in the sense that I am just
+stealing your idea right now. I don't
+want to pretend that
+&gt;&gt; but this is all going on YouTube.
+[laughter]
+&gt;&gt; Yeah, but what I mean is, you know, if
+you like it, take it. But I'm not going
+to pretend that this is the real Tom H.
+&gt;&gt; So
+&gt;&gt; I I don't know what that is. I don't
+know what the real Tom H is anymore
+either. So, you know,
+&gt;&gt; I think I know. We can run a diff.
+[laughter]
+&gt;&gt; There you go.
+&gt;&gt; Yeah. So, while we're waiting, I just
+wanted to comment on what you said about
+how important it is to show and yeah,
+the visual aspect of it.
+&gt;&gt; Well, one day headsets will be really
+cheap and everyone will have one. And
+why are we in Zoom in boxes? What could
+that become if it was 3D XR and we could
+see each other in a 3D space and show
+our knowledge sculptures to each other
+and then point out well this is what
+where my thinking comes from. You point
+out where your thinking comes from and
+we have a conversation.
+&gt;&gt; That's what that's the potential of
+this.
+&gt;&gt; Oh, absolutely. Yeah,
+&gt;&gt; I know. I I'm trying to get it to work
+in 2D and then I I'll give it to Frodo
+and he can make it work in 3D. Mhm.
+&gt;&gt; No, no, but that's that's the insane
+magic of this. I mean, Eric, what you
+talked about there is partly uh we had
+two years of Sloan supported work.
+Sorry. Sure. Hey,
+&gt;&gt; what? Sorry, I'm getting a piece of
+chocolate. Come say hi.
+&gt;&gt; Hi.
+&gt;&gt; Hi, Edgar.
+&gt;&gt; Wow. So much bigger.
+&gt;&gt; That's crazy, isn't it?
+&gt;&gt; Yes.
+I'm just um going to show you this.
+So, I've just um changed the whole thing
+and uh what's going on?
+&gt;&gt; Do you have any idea how many tokens
+this is munching?
+&gt;&gt; No, I don't. But I may very well get a
+receipt for £50 more of money spent.
+&gt;&gt; Oh, goodness.
+&gt;&gt; Yeah. I mean, right now, um I've decided
+need your cash flow or something. I
+don't know. I I I'm very cheap when it
+comes to my AI usage.
+[laughter]
+&gt;&gt; Well, that's because we are in different
+stages. I mean, right now,
+&gt;&gt; yeah,
+&gt;&gt; I have I've just decided that um
+I just have to invest, right? By the
+way, so here this the app that you saw
+earlier doing notes now just shows
+letters,
+right? And the notes is going over to
+the other thing. So, click on one
+reply. Yeah, basically the functionality
+is here madness, right? Because the
+compon we somebody Tom [clears throat]
+last week said um talked about systems
+thinking.
+&gt;&gt; Mhm.
+&gt;&gt; That is of course what this is right
+when anybody in you know when I as so
+I'm just moving my phone tip somewhere.
+I make the point that with a modern
+camera, you can make a 24 million pixel
+image at, you know, moving your finger
+just a little bit. So what you still
+have to choose the right camera, the
+lens, the perspective, the processing,
+the subject, the lighting, all of that
+stuff. Same with this.
+You know, you can move the code all
+around, but you have to understand what
+code meaning code as in a block you
+have, what kind of data you have. Still
+need to know all of that stuff.
+other otherwise and that's totally
+legit. There's nothing wrong with making
+a personal app for the individual that
+is absolutely rubbish for anyone else.
+Totally fine.
+But if you're trying to have a
+community, you need to figure out the
+system both technical social networking
+and so on that makes it go together. So
+this is still hypertext as far as far as
+I'm concerned.
+&gt;&gt; Key is that those personal apps have to
+share the same data.
+&gt;&gt; If we Yeah. So if you can make that
+happen and you have your local first
+technology for replicating data to each
+other, we could all plug in our own
+specific views of it however we need.
+&gt;&gt; Well, the thing I find really
+&gt;&gt; a lot of files. Do you mind sending me a
+lot of files?
+&gt;&gt; Who me?
+&gt;&gt; No, no, Eric.
+&gt;&gt; Oh, of the ones you already have so we
+can populate. So when we open your view,
+Tom, we got more stuff.
+&gt;&gt; All right, hold on.
+&gt;&gt; Thanks. So, I was going to say in
+response to what Eric just said, though,
+is that I think file types are
+going to disappear over time because
+they're a legacy of uh um of linear
+binary digital thinking as opposed to
+squishy thinking which the AI is much
+more likely to to digest because I can
+throw any kind of fi file into an AI, it
+doesn't care. you know, I can't do that
+with Microsoft Word or anything else.
+And I see you shaking your head, Frod,
+but I
+&gt;&gt; I think it's really important
+to be able to own a piece of knowledge
+that you can literally stick on the
+wall.
+&gt;&gt; Oh, no. I'm not saying that. I'm saying
+files in the sense of incompatible file
+types. I mean, I think it's what we're
+talking about is going to be code is
+code and text is text. Not, you know,
+we've gotten so used to you have to
+format things in a certain way in order
+to get them into this application and
+not have it mess it up, right? That uh
+that that I think that world is going
+away. It's already gone away to a
+certain degree because of the
+universality of, you know, XML and
+things like that. And uh you know, I can
+dump a word file into claude. It doesn't
+care. It reads the XML and you know
+and Bill Gates can't lock it out.
+&gt;&gt; No, I agree. And and this is why I'm so
+fighting for Jason. Um the only thing
+that I want to contribute to Jason is at
+the end of it, please just put the
+metadata down and tell us what it is.
+That's it. You know, translators are
+easy if the data is clear. So
+uh
+&gt;&gt; so here we go.
+This is what it built. Do you want it to
+be changed to be something different
+like maybe more graphical or anything
+like that?
+&gt;&gt; Are you asking me?
+&gt;&gt; Yes, because this is yours.
+&gt;&gt; Oh,
+&gt;&gt; well, I mean, so what are you going This
+is This is going to convert this into a
+U. Just hit go. See what it does.
+Well, that's that's what it does. So,
+uh I'll just read it a bit of it. Kab is
+in the sidebar. It implements on spec
+faithfully within the app's constraints.
+Everything on device, nothing generated,
+every result carrying its reasoning
+trace as a first class output.
+&gt;&gt; Mhm.
+&gt;&gt; So, the unit of content, the library
+decibel paragraph, the formats answer
+this one. Substantial paragraphs only
+kept at 30 per document.
+relationship space Apple's ondevice NLE
+embedding NL embedding sentence
+embedding the truncation threshold is a
+live slider pairs at or above whatever
+form of cluster does such thing bridge
+detection sketch reasoning okay uh I'm
+going to ask can you
+also make this
+an interaction
+More like hang on
+more like uh
+oops
+I think there may be another thing
+building there. Let me just check.
+What is this? Lisa. Okay. Yeah, Lisa was
+having some problems. We don't need to
+worry about this.
+Uh okay. This is good.
+knowledge space.
+So while that is working on that we can
+see
+I've told it to build
+that's building installing installing
+build product
+loading.
+Now you should see that kind of
+microphoney type interface.
+There it is. So I have to allow
+location.
+I have to give it my name to be used for
+tagging. I'm sure we can do something
+more elegant with that.
+Set to my first name lowerase. That's
+not useful.
+Right. Done.
+So upload um augmenting human intellect
+and see how it intersects with all of
+the interchanges you and Eric have had.
+&gt;&gt; That's
+&gt;&gt; Can you show that visually?
+&gt;&gt; Uh hang on. Let me just I'm just going
+to find a folder here. So this is all
+synced together.
+Uh how do I I'm in the open dialogue
+box. Okay. iCloud
+&gt;&gt; or you can just go to it at
+douglart.org.
+[laughter]
+&gt;&gt; Yeah. So, I just sent a bunch of emails
+to Fro. Yeah, the email has all the
+origami documents for my emails that
+I've sent over the past week or two.
+&gt;&gt; This is a quick test of the knowledge
+space on iOS recording and notes.
+&gt;&gt; Right. Uh, let's take that.
+&gt;&gt; So, for Tom's question, like anytime I
+reference the concept of angelbart, it
+might match it to something in augmented
+human intellect. Is that what you're
+trying to see? Yeah, I'm putting these
+that you just sent into origami text
+directly.
+&gt;&gt; Right.
+&gt;&gt; And um I'm going to open origami text so
+inbox. I got these from you.
+&gt;&gt; Yep.
+&gt;&gt; Here they are. Uh so this is now the
+thing about augmenting human intellect
+is
+that is a a document not a letter. And I
+don't mean that to be correcting you
+because uncertainly that's not what I
+mean. What I mean is in the environment
+of what this is
+something that is a like an academic
+paper or something you're done with is
+an EPUB origami epo
+something brief because it has more
+metadata. It can have images. It can
+have all kinds of goodies inside it. The
+letters between Eric and me right now
+are just plain text and JSON. So I can
+do what you said.
+I'm also dang I misspelled that. I saw
+something is asking. There we go.
+So let's just say um
+okay I'll just copy the whole thing
+and uh I don't know how this is going to
+go.
+gonna go.
+&gt;&gt; Like if you downloaded a PDF of that,
+could it get the text out of that PDF?
+&gt;&gt; It could, but it would be horrible.
+&gt;&gt; Yeah.
+&gt;&gt; Make a U. Can I still do? Yeah. Okay.
+I'll do notes secretly up here.
+I'm just going to delete some uh
+&gt;&gt; yeah even get the
+&gt;&gt; Okay, so the whole thing this is not an
+editor
+yet. So sometimes it deletes the wrong
+thing and stuff but I here we have
+&gt;&gt; some of it.
+Okay, that's a lot of stuff. So, I'll
+just
+export that. So, that means it's now
+still going to be in the origami text.
+And I'm going to call it a note because
+it is a note.
+And we'll go back here.
+I'm going to go to um
+I'm just going to see what's being built
+right now. Done. Kab as a wave
+presentation.
+All
+right. So, I'm going to run it on the
+same set of information now that we have
+the new Eric messages. Sorry. And we
+have um that document with a lot of good
+dev stuff.
+I'm getting all these pop-ups now,
+right? So, that's kind of cool. But
+then,
+um I'm going to click on weave. I have
+no idea what's going to happen. And are
+you all as excited as I am? I hope so.
+Here it is.
+So, here's augmenting human intellect.
+How it relates to all these other
+things.
+And of course, you can double click on
+any one of them
+maybe. I mean right now this is
+completely useless obviously
+that this is deterable. So maybe we want
+to be able to have something in the
+middle right.
+&gt;&gt; Yeah. I mean the idea would be now that
+you have the weak link you cluster.
+&gt;&gt; Yeah. And the
+K nav
+uh puts a um
+text entry field in the where where
+should it be? at the top
+at the top
+before
+All right, for the record. So I said in
+the K now nav put a text entry field at
+the top for the list weave option and on
+enter put the text in the middle of the
+weave and show connections to that. Now
+from that to the documents and the
+weave,
+right? This is just let's see what
+happens kind of stuff, right?
+Are you guys reading the description of
+the um weave and cape? It's all here if
+you want to read it.
+&gt;&gt; Is weave something you created?
+&gt;&gt; Yeah.
+&gt;&gt; Okay.
+&gt;&gt; So, it's using the it's using the
+paragraph level of the document to weave
+concepts. Is that right?
+&gt;&gt; I think so. But um how did I create the
+weave? In a meeting recently with some
+of you guys, I said um I'm in a meeting
+now. God impressed the guys. Make
+something [laughter] really
+spectacularly visual. It doesn't have to
+be useful.
+And it did that. Now we're trying to
+make it useful. Ruining the whole point.
+Not necessarily.
+You have to have a pile of wood before
+you can start building a table. Right.
+&gt;&gt; True. I mean, you guys have um
+so in terms of visual power,
+check check this out. I don't think
+Jamie has seen it. So, I I built this. I
+had an iPad app many years ago that was
+just a globe. You move it across and
+there's nothing. But if you tap on
+something, it'll show you the border.
+It's to help you learn a bit of
+geography because you can't really learn
+when it's already labeled, right?
+So uh I redid that. Here you get uh
+borders within you get cities and you
+know you click to hide it.
+Click to bring it back. That was the
+original. This took a very short time. I
+mean the texture I created based on
+actual data. The ocean was too detailed.
+So I just spent some time in Photoshop
+manual work. It was fun evening it out a
+bit. Right. So you can see these places.
+So this was done very easily. Okay. So
+now it runs on iOS, Mac OS, and Vision.
+So when you open this on the headset,
+it's a meter and a half wide
+in front of you, right? So cool. But
+then I added this little dot lower left.
+So show countries by, I don't know,
+coffee consumption.
+The blue thing means it's trying to get
+that data.
+doesn't always work.
+But let's see if we have a cached one.
+Population, right? Population. Here you
+go.
+We've all seen these kinds of graphs.
+So, I'm not in any way an inventor of
+it. But it this was actually doable from
+within Xcode with code. I didn't have to
+go outside to get other stuff and feed
+it. It found the data. The World Bank is
+the source for these things. And I've
+told it what kind of caching it should
+do. It hasn't finished with that. Uh,
+and because these are a bit hard to
+read, I added the color gradation at the
+very highest, whatever it is should be
+orange, so it really sticks out. So, not
+only is a is it shape based, and you
+guys have talked about color a lot.
+Here's an example of useful color
+and heights
+combined.
+You can do something like this. You can
+speak Singapore
+There's Singapore. In the headset, you
+just say Atlas Singapore and it'll show
+it to you. Right?
+When you go in the headset with this,
+you can pull out and have the entire
+solar system in the space. The Earth
+becomes tiny.
+You can pull out further to have the
+local cluster of stars in the Milky Way.
+&gt;&gt; What are the population levels on Mars?
+&gt;&gt; Uh, currently, well, there was one
+recently, wasn't it, Matt Damon?
+[laughter]
+But my po my point of showing you this
+now is just to not to show off my toys.
+Of course I want to do that. But it's
+also to show that for our work graphic
+stuff of this quality is now entirely
+achievable.
+Right. I think that's a bit mad.
+All right. Let's build the real thing
+again.
+Going to make the window a bit bigger.
+I have to see you guys. There you are.
+So, I'm going to go to uh Kav.
+Going to run it
+and u
+let it do its normal thing. All the
+thoughts. Okay. I'm going to do weave.
+So, I'm going to do hypertext. Right.
+Jamie agree. Yes.
+&gt;&gt; Text. Hit enter.
+Is that useful right now? No. The others
+should fade, shouldn't they?
+&gt;&gt; But if you had a dimension called
+dimension.hypertext,
+you can see the articles that are
+classified that way. Have it in their
+paragraph.
+And
+that's why I think the zigzag view can
+reduce a lot of the clutter.
+Yeah. I mean, one of the things that
+gets me excited about AI is that that
+the difficulty of these tasks drops so
+much that, you know, we don't spend all
+of our time coding and spend most of our
+time thinking and uh to be able to
+because this this kind of thinking is
+not easy. [laughter]
+&gt;&gt; Yep. And I'll give you an example. While
+I was developing that FTL box app, Yeah.
+it came up with a way of doing
+something, but I found a better way
+after I watched it uh code its way
+through the wrong direction and I said,
+"Okay, well, what what if we created
+this register command? Wouldn't that
+simplify the interface to these other
+commands?" And it it agre it it agreed
+and then it implemented it.
+&gt;&gt; Yeah, exactly. And I do this in I mean I
+don't have your coding expertise Eric
+but um I have a coding library in
+notebook LM which has you know good
+known good uh coding reference works and
+so whenever I get stuck on the on the AI
+side of things I'll go into notebook LM
+and I'll say I'm having this problem and
+it'll and it'll literally go and find
+the book and say on page 435
+this is the error you're getting tell it
+to do this and then I go back and then
+it unsticks itself. Right.
+&gt;&gt; Very nice.
+&gt;&gt; That's the
+&gt;&gt; right. But even thinking between us, so
+like I know that Tom and I share some
+interest like Apple computers.
+&gt;&gt; If if we had our own Yeah. documents,
+you have a whole Ted Nelson library
+which I might be interested in. And so
+just to find connections between us,
+it's this surface them as well.
+&gt;&gt; Sure. Absolutely. Yeah. I mean my
+original inspiration is actually Vanavar
+Bush and the associative trails you know
+the fact that I could pick up all those
+trails and hand them to you and then the
+information's out there. So that's
+really not the important the information
+nodes are less important. It's not a
+question of finding. I mean, it is a
+question of finding stuff, but it's a
+question of recognizing the significance
+of what you found or lack thereof. And
+and that that that is, you know, that's
+the most important part of thinking. And
+again, that's the part of Bush that
+we've never been able to create.
+So, and of course, it's going to take a
+while for my uh processor to process
+through what we've been talking about
+today. So, um for I don't mean to be
+dismissive at all. Uh I've I'm just
+trying to wrap my head around exactly
+where I go with this because I've been
+I'm deep in the weeds and that's part of
+my partially my fault. I am deep in the
+weeds of trying to figure out this from
+a cognitive perspective at the moment.
+Um, and uh, trying to translate that
+into a application layer is something
+that's making my head hurt right now.
+[laughter]
+Um, and so, uh, you know, I've got two
+different levels of problems going on at
+the same time. Uh, and, uh, but it is
+good to step outside that and say, okay,
+what's possible? I mean, I'm working
+with another group now that uh is trying
+to reform to figure out how to reform
+education. It's not, but they're not
+education people. I'm I'm pretty much
+the the main education person. The rest
+of them are startup people. I'm trying
+to figure out ways of of reforming the
+systems of education, higher education,
+and K12. uh and so I've been thinking
+through the problems related to that and
+then how do I get this reasoning loop
+that I've come up with to scale
+and uh that you know is actually very
+fun too uh uh the idea of actually
+making a customized LLM model that could
+you know and these the really cool thing
+about it is it doesn't need a lot of
+horsepower you know you're not you're
+basically going through the data that
+you are feeding it in a sense You're not
+having to go and research the misty
+dusty libraries of the world. You're
+trying to, you know, think through the,
+you know, you you need a certain data
+set to train it. But other than that,
+it's not, you know, you can run this on
+a on a on a local machine, which I think
+would again be very attractive to, uh,
+school districts and to uh, Jaime's
+college, which doesn't want anything to
+go outside the walls of the college. uh
+as a as a mechanism for for for doing
+this, you know, um depending on the you
+if you wanted the entire college to
+access it, you probably need to run it
+on a server. But if you're just doing it
+for yourself, you know, and you're the
+only one hitting it, I mean, the
+limitation there is how many people are
+hitting it. Uh and in terms of, you
+know, how much the model glows
+[laughter]
+&gt;&gt; Yeah.
+&gt;&gt; Do you remember the game Oregon Trail
+for the Apple 2?
+&gt;&gt; Yes. and the history of how it just made
+its way into classrooms and how it just
+uh
+&gt;&gt; I don't know all the details of the
+history because Yeah. Right. but yeah.
+Well, it's like uh Minnesota has a
+company that uh a whole consortium of
+teachers put it together and uh but the
+impact it had a certain generation of
+students grew up uh learning how you
+interacting with each other as they
+tried to play this game. So, what was so
+special that captivated their attention
+there and let them learn through the
+game? And then what's the next one?
+Yeah.
+I don't know.
+&gt;&gt; It's funny that you mentioned Oregon
+Trail because it actually came up this
+week.
+&gt;&gt; Guys, we have to finish and I'm
+extremely glad your time today.
+&gt;&gt; I love it. [laughter]
+So, so what it what it's done here is
+that when you type in a keyword because
+look this is without right.
+&gt;&gt; Yeah.
+&gt;&gt; So if I type in Jamie give me a keyword
+please. Not hypertext we used it
+&gt;&gt; augmentation
+augmentation glossery
+annotation.
+&gt;&gt; So this is what it does. It grays out
+the other lines and leaves that. I've
+asked it to do a little bit of sentiment
+analysis to color the lines, but it's
+still trying to figure that out.
+&gt;&gt; Point is, maybe we should have more of
+these kind of um sessions together to
+play with some live stuff and send it
+back and forth.
+&gt;&gt; Uh give it some ideas. Um it's a bit
+different from our normal Mondays and I
+think a lot of people would not be
+interested in this even though that
+would be weird.
+What was the other thing you said,
+Jenny?
+glossery or annotation.
+&gt;&gt; There you go. Glossery.
+We could even look for making meaning if
+you want a phrase.
+&gt;&gt; Oh, I don't know if I can.
+Oh, it's found it or something.
+&gt;&gt; Jamie, do you have a link for that
+conference just for more information?
+&gt;&gt; Um, I can probably f Yeah, I'll try to
+find it.
+&gt;&gt; Okay, cool.
+This is a conference that's like at the
+end of September, correct? Or
+&gt;&gt; I think it's midepptember. It's right
+between Rashon and Yumipur. Here we go.
+Monday the 14th to Friday the 18th.
+&gt;&gt; I am going to be traveling then and not
+in London unfortunately.
+&gt;&gt; Well, again, it might it might be
+remote.
+&gt;&gt; London is a good place to travel, too.
+&gt;&gt; I think it's right [laughter] I think
+it's British Library or right near it.
+Yeah. Where
+&gt;&gt; what are you talking about, Jamie?
+&gt;&gt; The I put in a plug in the chat for
+narrative hyper media narrative uh
+hypermedia.
+They're look they asked a couple of days
+ago for single page submissions
+and since there was talk about Oregon
+Trail, it seemed like that kind of
+thing. Here we go. Short 500 word
+extended abstract to participate in the
+workshops through talks and panels.
+intend to explore how generative AI is
+changing narrative but to broaden
+participation. It's open to other new
+technological frontiers as well.
+&gt;&gt; Provocations and so on.
+&gt;&gt; Oh, you did put a link in here.
+&gt;&gt; Yeah, just now.
+&gt;&gt; Oh, okay. Yeah, this is Miller.
+&gt;&gt; This is Charlie's and um Dave, one of
+the Daves.
+&gt;&gt; Yep. Cool. Well, big Dave. Yeah.
+I hope that doesn't get into the
+YouTube.
+[laughter]
+&gt;&gt; Okay, the witch.
+Thank you guys. And um I really would
+think it would be amazing if you all
+install Xcode and then just I mean the
+thing is none of us are idiots, but we
+can all feel like idiots. At least I
+can. So if you come across
+&gt;&gt; feel like it constantly
+&gt;&gt; well well that's the thing because these
+things don't judge us, right?
+today because I've been trying to ship
+some of these basic apps.
+&gt;&gt; I have to say, but where do I click,
+&gt;&gt; right? Really basic stuff.
+&gt;&gt; Yeah.
+&gt;&gt; And it just tells you, you know, it's
+it's also that human thing of not
+wanting to feel stupid. Here, it's okay
+to feel stupid. No one's looking. You
+know what I mean? And then we slowly get
+it.
+&gt;&gt; It's
+&gt;&gt; Yeah. No, I agree. And it's it right now
+my problem is that just have so much I
+have so many interesting things to do
+that uh it's hard to uh prioritize.
+&gt;&gt; So
+&gt;&gt; once I have the letters one properly
+done I'll try to make normal test
+flight. So if you guys want to install
+it as a simple thing you can do that too
+&gt;&gt; because then we can try just sending a
+few things back and forth without a huge
+massive thing. But I mean Jamie, I'm
+very glad you're here because one of the
+opportunities now is a lot of the ideas
+in Hypertext. We can just build them,
+[laughter]
+&gt;&gt; right?
+&gt;&gt; I just saw Tom's picture in the chat.
+What's Tom's picture?
+&gt;&gt; An image,
+&gt;&gt; the Oregon Trail reference.
+[laughter]
+&gt;&gt; Yeah, that's a that's Yeah, that's
+classic. But yeah, I mean a lot of the
+hypertext stuff we do know. I mean a
+transclusion was one of the first things
+this thing just implemented. I didn't
+even tell it to do transclusion. I said
+look at Ted's work. Anything we should
+do? Say it to do transclusion. It didn't
+do it by the book completely how Ted
+would want it. No, it's functionally
+there.
+&gt;&gt; So yeah,
+&gt;&gt; just don't show it to Ted for you.
+&gt;&gt; That's a very rule. Just don't show it
+to Ted 100%. [laughter]
+&gt;&gt; We can improve on his ideas now. You saw
+how it
+&gt;&gt; No, I don't think that's possible. But
+[laughter] I I I think again you've got
+to start somewhere and yeah maybe
+&gt;&gt; maybe there's some there could be
+there's a fatal flaw in it that can't be
+corrected the way it started but
+&gt;&gt; we don't know yet.
+&gt;&gt; Right.
+&gt;&gt; You you're going to get nine wrong
+answers before you get one right answer.
+And the problem is the wrong answers
+have been so expensive up to this point
+that you really may need need to make
+sure you're investing properly. Now, who
+cares?
+&gt;&gt; Yeah. Right.
+&gt;&gt; I mean, Mark did make the point that
+when I said I spent a,000 pounds over
+the last few days, you know, not
+everybody can throw that around and I'm
+not throwing it around. That is my
+research budget, right?
+But it means that because that is my
+investment right now, we can all use
+that, you know, ideas sharing. And
+hopefully we'll get to a point soon
+that's a bit more stable. So it won't be
+that absolute madness. But that's where
+we Eric and I have been working on the
+views. You know, you make a view and you
+share it with someone else and the view
+can be made in the same way and then you
+basically get the cost down to zero. You
+know, you can do it with a very basic um
+LLM subscription
+and then everybody can do it.
+&gt;&gt; Yeah.
+&gt;&gt; I look at it like rapid prototyping.
+That's what we're able to do now.
+&gt;&gt; Exactly.
+&gt;&gt; It's rapid prototyping, but you are
+making the real thing.
+&gt;&gt; Yeah. It's a working code. Yeah.
+&gt;&gt; Yeah.
+&gt;&gt; It's kunea form, right? It's y
+&gt;&gt; moldable,
+&gt;&gt; but it's always the actual thing. Oh my
+god. It's just amazing,
+&gt;&gt; right? Thank you. Thank you. I look
+forward to
+&gt;&gt; All right, guys. Um, I will not be here
+next Monday, though, because I'm
+traveling to visit my mother. So, I'll
+be actually sitting on an airplane at on
+Monday morning. So, I'll be back the
+following Monday, though.
+&gt;&gt; Don't they have Starlink on those
+planes? [laughter]
+&gt;&gt; You don't want You don't want me to do
+Zoom that way?
+&gt;&gt; No, I have tried it. It doesn't work
+very well.
+&gt;&gt; Yeah.
+&gt;&gt; Yeah. No, that's fine. and we're going
+to go back to more normal um things, but
+coding is text. This is definitely part
+of the future of text as far as I'm
+concerned.
+&gt;&gt; I will chew on this.
+&gt;&gt; Chew on this
+&gt;&gt; as I'm chewing on lunch.
+&gt;&gt; Anybody if you have a specific idea for
+a view, send it to me. Eric did. Um send
+me if you send me an email and say turn
+this into a letter, I will do that on
+your behalf so we can play with it. It's
+it's a fantastic playground. And Jamie,
+you may not be aware, all of these are
+obviously coming up online, the videos,
+also the transcript with analysis and
+the song.
+&gt;&gt; They're all the transcripts are all
+turned into song.
+&gt;&gt; Oh, I I think you remember that from a
+long time ago.
+&gt;&gt; Yeah, that that gotten kind of
+interesting lately. So, uh
+&gt;&gt; if I if I had realized before, I
+wouldn't have I wouldn't have named some
+of the people I named or certainly not
+the way I did. They tend uh they tend
+not to the song shouldn't really name
+that. It may name you, but it's being a
+bit careful. And now that you've said
+that, I will be extra careful to make
+sure I don't mention all the um Epstein
+related Oh, no. I said the keyword CIA
+is going to get us.
+&gt;&gt; Love you guys. I'll be careful. And as
+always, if there's something in the
+transcript you don't like or disagree
+with or that was wrong, tell me and I'll
+happily delete it in every possible way.
+Yeah, you just let me uh know when I can
+look when I can look over the
+transcript.
+&gt;&gt; Tomorrow. I tend to do this in the same
+day.
+&gt;&gt; Okay. I'll try to remember to look at
+it. There's a name or two I want to just
+put in a mumble or something for
+&gt;&gt; Okay. I can I can look into mumbles.
+Thanks again uploading.
+&gt;&gt; You can bleep it like it's a cuss word.
+&gt;&gt; Yeah.
+&gt;&gt; Bye. Bye.
+&gt;&gt; Bye. Okay. Bye.
