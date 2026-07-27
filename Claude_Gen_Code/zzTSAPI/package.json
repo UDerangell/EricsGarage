@@ -1,0 +1,26 @@
+{
+  "name": "zzstructure-poc",
+  "version": "1.0.0",
+  "description": "Proof-of-concept REST API for two zzStructures (Alice/Bob), per zzstructure-poc-spec.md",
+  "private": true,
+  "type": "commonjs",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "node dist/server.js",
+    "dev": "tsx watch src/server.ts",
+    "reset-data": "rm -f data/alice.json data/bob.json",
+    "test": "bash scripts/run-tests.sh"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "uuid": "^11.1.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.9",
+    "@types/uuid": "^10.0.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
+  }
+}
