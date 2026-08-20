@@ -1,0 +1,779 @@
+så
+There comes Sam.
+ja.
+Is happening in the Senegal.
+Så
+Yeah, at the end of August,
+and into September, the holidays are very early this year.
+And I'm leading a choir and a klezmer band.
+So, we have rehearsals, and…
+ah.
+Yeah. Hm.
+Greit.
+Yep.
+sånn
+Så
+Yeah, last Sunday was the first time I been able to join in a few months.
+Mm-hmm.
+Så
+Så glad to see you guys still.
+keep it going.
+Yeah, um, Sam says he needs 2 minutes.
+Yep, so one thing I've been getting involved in recently, um,
+Do you know Frod Hegland?
+I heard the name.
+Ja.
+He has worked. You've heard of it? Yeah, he runs a Future of Text…
+every November, it's a symposium, and uh…
+He's been exploring…
+text in spatial computing.
+So he has an Apple Vision Pro headset.
+And he's, uh, now able to vibe code.
+ah.
+his own apps, and uh, he's really getting into it.
+Really?
+So he… yeah.
+hm
+Um, so he wrote these programs called Reader and Author.
+there are apps on the App Store.
+And, um, it has, uh, features…
+like, to help authors focus on what they're writing, and to do concept mapping,
+Within the document.
+ah okay.
+Yep. So he's trying to extend this now into 3D.
+Like a 3D space.
+var det
+It's a whole spatial, immersive computing environment.
+envisioning right now.
+ah.
+jævla.
+So, I'm in some meetings that he has on Mondays about that.
+And we've attracted Heiner's interest.
+in that, too, so…
+Let's say hello to Sam.
+Ja.
+Yep.
+Hallo Ose.
+Mhm.
+I can't hear you.
+you're not muted, but we can't hear you for some…
+Bluetooth-y reason, probably.
+Ja.
+Okay, let me try this microphone
+That's better. Yes, that microphone works.
+Ja.
+Okay, now let me switch back to the
+Testing, testing, testing, testing
+Yep, that's lower.
+så
+Testing, testing, testing.
+Okay, that seems to work now, right?
+Yeah it's a little lower but seems to work now.
+Okay, alright. Hey, so notice in advance
+I will be attending a class in one hour
+Okay.
+It's a class that Kayla told me about.
+And it's called Building Solidarity with Indigenous Peoples.
+Nice.
+Ja.
+It's a three-week class today, next Sunday, and the following Sunday for two hours. So just briefly for three weeks, the Sunday session, I will have to jump off within one hour.
+Okay.
+Unfortunately, I'll need my Zoom
+to attend that class
+That's okay.
+Ja.
+Okay, so this will be premium time. We won't be able to take the entire 2 hours or 90 minutes. So I'll keep my ranting to a minimum.
+mhm Ja.
+Alright, we'll solve all the world's problems in an hour.
+Ja try try compress it.
+It'll take 3 hours.
+compress it a little bit.
+eh
+Okay, so I understand you guys are talking about Frodo and Eric.
+Yeah.
+Collaborating
+Yeah, I've been involved in his meetings, so, um…
+I mean, he's going his direction with the, um…
+the 3D spatial stuff, but I'm thinking about the back end of that.
+what really should be running to power those spatial visualizations.
+And, um, I'm looking at Datomic now.
+Interest, thanks to Sam. I'm thinking in that direction because of the time travel.
+And, uh, the automatic indexing that it has.
+So… and what I'd like to do is put Ted Nelson's ZZ structures into Datomic.
+And have it navigate through that, because then you could have multiple dimensions of your data
+available, and based on what you want to view on the axes, or…
+in a certain… you could design your own views.
+Yeah.
+Yes.
+Okay, warning to warning to Glenn. This could geek out really fast, okay?
+but this is interesting stuff I love this topic.
+Yeah, go ahead.
+Okay, so if I riff on what Eric had just said, the way the atomic is structured in the back end, it doesn't matter whether you think of a dimension now or a year from now. It's still there, automatic, ready to be used the way it exists
+Today, the minute you build it. Okay? So if you think of a way to use it in the future that you're not using it right now
+The data structure doesn't really need to change other than naming it, okay? The architecture underneath is all the same. That's what I love about Datomic.
+Mm-hmm.
+I wish I were better at it
+Is this like a hyper hyper graph kind of thing or
+OK.
+It's the hyper risk of hypergraphs, okay? In other words, it's hypergraph as you need it. It's basically lazy. Okay? So anything you can imagine, you can specify in the data structure just automatically supports
+From the start
+Ja, OK.
+Anyway
+Yeah, it's like a key-value store. You're really, um… you don't have to define your schema in advance.
+That's right.
+It's, uh, built on the fly, and because the way it's indexed and, uh…
+the intelligence of closure.
+Yeah.
+It's very compact and performant.
+Glenn, are you familiar with
+what they used to call semantic web
+The user
+I heard a little bit by directional linking and all that kind of stuff right
+og
+Well, I consider that incidental. Really, what was foundational was the notion of a triple that you had an entity, the entity has an attribute, and the attribute has a value.
+mhm
+So entity attribute value. Like Glenn height six feet or 180 centimeters. Okay, that simple. Okay, so the cool thing is the atomic adds two additional
+Columns, if you will fields. Okay, so it has a quintuple.
+You don't need to know what the other two are, okay? But with that
+comes the ultimate flexibility in how you build data structures. Okay, that's it. You can build relational, you can build hierarchical, you can build a network, you can build anything on top of a 5-tuple
+really triple with two meta values. That's it. That's all you need to know. And it's completely flexible
+So that's what I love about it.
+Yep.
+Mm-hmm.
+And I put that bug in Eric's ear, and Eric
+Yep.
+As a fertile mind, so it actually grew there. It's like a weed that's been, you know, in Eric's mind for a while, and now it's starting to like pop its head above the ground.
+Yep.
+Yeah, you know, it got me into Engelbart's work as well, and it's all germinating now.
+So, the use case that I'm playing with is…
+how to organize all my music in terms of, like, what I perform, the artifacts of a performance, all the rehearsals.
+How do I track all that over time?
+So, like, maybe I want to go back to 2001, when I did a performance before the World Trade Center came down. How was my mood then compared to after…
+mm.
+the pandemic, and, you know…
+Yep.
+So, if it could track all those artifacts…
+And bring them up when I want to.
+And, like, I'm doing a…
+a bar mitzvah this weekend, so I know the songs I have, but maybe I want to hear how a song
+I played, uh, two months ago, or two years ago.
+Yeah, see how I've changed, uh, how my music style has improved or not improved?
+Mhm.
+And one more example. If Eric goes to YouTube, finds one, two, or even three performances of that work, he can associate it with what is already in his database and the existing data doesn't even need to change.
+Mhm.
+Yes. Right.
+It's just additional information.
+And then the manuscripts… let's see, looking, digging into all that.
+We have hundreds of years of, uh…
+I mean, see, everything's gotta go digital somehow. All this…
+Mm.
+paper and, uh…
+Yeah.
+Hvor er started?
+Yeah. But there's some…
+That's really the key
+Yeah.
+Yep. I do.
+In the last few months have started using um the er ikke bare you can you can it's based on markdown file so it's basically very good for text but it is very easy to link very fast in all directions and then I'm using cold and cold as the local agent
+and that system really grows incredibly fast but I don't know if Dayton is a little bit similar or
+Maybe you can do
+Somewhat similar things.
+Of course I haven't used obsidian.
+em
+there is much more you can do with it I'm sure.
+what I done but
+I'm glad you're on it
+twist hyper graph structure.
+Yeah.
+That's very useful the hypergraph you can just link things and all directions and
+It's so much easier than having
+files and folders I think.
+So personally, I do all of that in Workflowy. I tried Obsidian. I really tried two, three, four times. It was too complicated for me. My mind is simpler than that. So I use Workflowy and I can link anything to anything. So that's what I do for now. Eventually, I might figure out Obsidian. I continue
+to explore with it. The one thing that I have used is kind of a Dropbox replacement that's open source and personal is Joplin. Have you heard of Joplin, either of you
+Har du bare til
+J-O-P-L-I-N. So it's basically you can put anything into a repository. And if you have multiple devices, you can sync your repository across all those devices. And there's multiple different
+Hub acknowledges you can use Dropbox or personal server or whatever you can use. So
+for now I when I started, I started using Dropbox, and that way all my files are available on any of my devices. If I've got Joplin installed on them. But I'm gradually transitioning. I'm considering transitioning everything to Github
+As the central repo. Anyway.
+Welcome, Kayla
+So you say GitHub, and Kayla comes in. Kayla.
+Mhm.
+What? What did I miss?
+Yeah, we'll have Keela explain
+Geek out!
+Yeah, you have an opportunity to explain how I use GitHub as my central repository for everything.
+Oh, geez.
+Hey, Kayla, I explained to Glenn and to Eric that I will be leaving probably you also.
+Yes.
+At the top of the hour in 46 minutes, and I told him that we were both taking this class called collaborating or sorry, what was it called? Building Solidarity with
+Indigenous communities
+Yeah, it's wonderful.
+Yeah, I can't wait.
+Ja, sounds great.
+And by the way, I'm ADHD and I'm OCD, so did you notice they spell solidarity wrong?
+I don't know. I haven't looked at it.
+Oh, wow.
+The eye is missing. So that's why I call it solidarity, not solidarity.
+Clearly a human did that.
+Well, yeah, that's right. Good. It's not an AI that did that.
+Anyway, so what were we talking about? We were talking about Eric working with Florida recently and
+We were talking about how Eric wants to build some new capability and was mentioning his interest in Datomic, and of course my ears perked up because I was one who planted that little seed in Eric's fertile mind
+Right? But another…
+many months or possibly a few years ago.
+Yep. Another connection comes from Barry Court, because he worked on multi-user dungeons.
+Well, it turns out that if you take away all the flashy Apple Vision stuff,
+a mud is a multiplayer…
+environment where people are doing the actions that they would do in a 3D space.
+So, if you could figure out how to get people to collaborate together in a text environment,
+Well, you could eventually just put a nice fancy graphics on top of that in 3D.
+So, that's an interesting possibility.
+Just, uh, what he… what Barry worked out
+was how do you get the kids in schools to be excited
+about building their own things.
+And, um, yeah, also Jack, um…
+And he had, like, a covenant
+the rules, he established the community rules, and he had the moderation, so…
+Because one of the big things about these gaming environment is…
+that, uh, it attracts…
+the, uh, people who just want to make money off of it, or, uh…
+their own spin on it.
+Yeah, so if I could draw on what Barry
+brought in to build community.
+And, uh…
+Yeah, then it has some potential.
+whatever becomes of it.
+But it also lets me test it with text. I don't need a 3D headset to test
+the core backend engine.
+Ja.
+Yeah, it…
+I wonder if all of this might converge where you have something that can be visual text base that can be that can be a social network that can be environment gaming kind of environment whether we may be moving towards conversion of all those things.
+Yeah, I think Ted Nelson had that vision, a Docuverse.
+Mhm.
+And, uh, if you think about, well,
+what could Zoom really become if we were able to meet in 3D in our living rooms and collaborate with each other virtually?
+The holodeck
+It's… yeah, right, a holodeck, yeah, like Star Trek, so…
+Yeah, I'm including ideas from Star Trek. Like, did you know the L cars panels?
+I'm sure. Yeah.
+Well, for the record, the holodeck ID even precedes Star Trek in science fiction, okay? So for the record
+Okay, cool.
+Yeah, but see, with, um…
+the, uh, panels on the Star Trek, uh, consoles, they were fully customizable based on the user and their role, and the situation that the ship was in.
+Ja.
+So, it's… if you have a smart backend, some AI figuring out
+what should the user interface look like for this person?
+based on what it knows about that person.
+You could have really smart UI as well.
+Alright, so each have their own way.
+da.
+Well, yeah, well, if you isolate the functionality…
+Behind the command layer.
+And you presentation is built by the user themselves.
+Right, right.
+then you have, uh, connections…
+you build a system, you're building a Starship.
+Mm-hmm.
+Ja, ja. this has been on my mind for many years as well I think many people are thinking about having information space like a physical space you can move through and by the way last week I joined this new thing on Thursday with Fleming talking stick and he made this program where instead of zoom there was a ring and you could see the faces of the
+participants in a ring.
+Nice.
+And this was a really different experience compared to zoom because you really felt the space in a very very different way and
+I think maybe the same goes for
+text environment generally as well that the visual geometry of it makes a big difference for for sort of the experience.
+And how its
+How it works.
+Mhm.
+You know, while I was running these ideas through AI, and it made the point, if you could build it with text,
+It's the same principle of gestures in 3D.
+You just have to interpret the gestures as commands.
+Ja.
+Right.
+By the way, Glenn, you mentioned, you know, navigating through knowledge
+Yep.
+Two or three or four weeks ago, I forget exactly how long Eric, I think you were in a session with Heiner and me, right? Where we were talking about the science fiction authors who first described that kind of experience, the two that I associate with that are A.E. Van
+And Burner Bingche, I'm not sure which of those guys. And maybe
+Maybe there's another third guy that
+His name reminds me of Andy Warhol, but I don't think it's Andy Warhol.
+Anyway, one of those three was the first to describe this notion of flying through knowledge and knowledge being these big buildings and skyscrapers, and you have these little avenues and alleyways and 3D, you know, go up and down through all of this knowledge structure.
+Anyway, so I thought I'd bring that into conversation, which then associated with what you just said about a minute or two ago, Glenn
+Well, see, that should all be connected together somehow. These science fiction authors, Star Trek…
+Mhm.
+And our ideas, so we could trace the patterns back.
+And with Datomic, you do your time travel, and you see what…
+That's right.
+Yep.
+Now, imagine each of our brains having a version of this, a subset of this. Imagine being able to take one of my nodes and connecting it to one of your nodes in your brain.
+Mhm.
+And now imagine Glenn navigating through that. Or Kayla navigating through that, or Kayla say, oh, I don't want to touch that one over there.
+So all of these
+Yeah, I think we want some privacy in our brains, too.
+Exactly. Security, access, navigability, findability, relevance, you know, sentiment analysis, depth of detail, perspective, you know, frame of mind, all of that comes into play
+Yep.
+And this is exciting because I think Datomic at the bottom handles all that. And then because you've got so much developed on browser technology with CSS and JS, you got all the flexibility you want for presentation.
+No.
+Yeah, you just need to send JSON to the headset and have it interpret it and…
+Yeah.
+Let me be a little bit more
+.
+Go ahead.
+Ja intuitive thing that we want we want our information environment to be similar to the physical environment and have a three dimensional structure to it the brain is already like that different brain cells that have connections between them and
+You just feel a lot more natural.
+that our information systems were also three dimensional that you could travel through them and
+Yeah, we evolved for 3D.
+Yeah we did so in a way it's weird.
+Så
+And I'm recognizing that memory is connected to spatial…
+Absolutt.
+places. As I walk, and I'm listening to something, I will associate it with a place.
+Ja.
+And you can remember a lot that way.
+But it's also four, five, or 6D. How many memories are associated with smells?
+Oh, yes.
+How many memories are associated with sounds
+Exactly.
+How many memories are associated with feel?
+mm.
+Right? So there's at least three more dimensions right there in addition to the physical 3 and the fourth, by the way, which is time. So you got at least what 4 plus 3? That's at least seven right there.
+mm
+And we haven't even gotten started yet.
+So imagine being able to map all of these back and forth and transform back and forth.
+Ja.
+Man, it's… we can all imagine this, right? It's just now building it is the smop. You guys remember what SMOP means?
+I know.
+He's a software guy
+sm.
+SM…
+It's just a simple matter of programming.
+Ah, yeah.
+Ja ja
+And these days, it's prompting.
+Ja
+Mm-hmm.
+This is the this is the big difference now isn't it so many of these things before sort of ideas wouldn't really ever get around to it but now it's so much easier for eksempel i been making a film so I actually finished it yesterday it was just a trailer that was submission to the future vision prize and wanted to make a submission and I never made a film.
+like that before and I could do it together with cold and and you know some work I have no idea how it's gonna land but at least I was able to make a three minute film and personally liked it and it's a film that I have in my 15 years ago and you know I would never have made it if it had been for you know having
+And they basically do the whole thing I could have done much more out of it of course but i think it's much different world now because if you have an idea you can actually
+Yep. So what…
+get it moving much faster that's a very different thing.
+Heiner and I have been using Notebook LM's explainer videos.
+Because it'll generate a 10-minute video about any complicated topic that you, uh,
+Mhm.
+upload to it. And, uh, that's how we can get into each other's minds and understand each other better.
+Because, uh, and it was even able to translate German for me.
+That was pretty cool.
+ah.
+German.
+Yeah, he's having meetings with people, and they're in German.
+Then I could…
+Yeah.
+Mm-hmm.
+The multi model thing is interesting too to have conversations in Norwegian and it is actually pretty good and it's just in the last month I started actually having long conversations in Norwegian with it and it's a little weird like if you if you play dumb dumb but certain level you go
+Yep.
+So it's really impressive how
+Halv mars.
+Yep.
+barrier it is right now compared to just half a year ago.
+mm.
+Yes, uh, my approach is really to flesh out the ideas with the AI and have it, uh,
+tell me what I'm missing, uh, what technical things I… what are the considerations, what could…
+Where are the trade-offs, some exploring the problem space that way.
+I'm not having it code, other than just very simple things for testing.
+mm
+great for ideation just sort of thinking that
+Yep.
+wonderful for that.
+mm
+And as a result of this, I'm seeing the world differently.
+Like, just as I walk, I'm seeing spatial computing everywhere.
+ah
+And…
+Are you seeing any flock cameras?
+Oh, yeah. I hear all about it.
+But, um, for Kayla,
+Dance and choreography are also very important in this space.
+how people…
+arrange, uh…
+just physical arrangements of things in 3D, it's dance.
+I res.
+everything we do in three D is kind of a dance.
+mm.
+I am so excited by all of these things are coming together.
+It can feels like it's all.
+coming together
+like information movement physical space, mental space um
+tekst
+Images
+sounds like all of these modalities.
+Mm-hmm.
+are slowly kind of gathering in a kind of hyper space which can be accessed through different programs, but
+Mm.
+Yeah, it was the very early stages of this.
+Um, possibilities, so…
+you know, we have to really think about communicating the vision for this properly to the right people.
+And, uh…
+Yep, go ahead, Sam.
+Question
+Each of us has now had at least an opportunity to work with AI for the last 2 or 3 years, and the capabilities, you know, are just astonishing how quickly they evolve and magnify our abilities to do things
+Compared to three years ago
+Are you more or less afraid that AI is going to make
+decay out of our human race. In other words, is your comfort higher? Or is your fear of AI higher?
+Over.
+the fear is that the people who don't know better are going to become victims of AI.
+And it's happening already, yeah.
+Mhm.
+So, it's a really balancing act, like,
+will… enough, uh…
+good things come out, or is it gonna be another social media disaster?
+For the next generation.
+Yeah that's really my sentiment exactly it's a very strange experience for me because
+When I work with AI I will it be different but sometimes it can be really rewarding like breakthrough inspiring very creative.
+Then I'll go on Facebook and I read some people have said about AI.
+And it's it's almost like it's a completely different universe.
+um and even when I am hearing tech leaders speak about AI.
+It feels as if they live on a different planet compared to me because for me
+Det er about what's happening between me and the thing it's an interactive sort of thing and it just for me that feels so obvious but then i read things that being said which seems somehow
+to operate from an idea of some kind of intelligence in a box.
+to say it and I have no I can't understand it it just makes no sense in my brain to think like that but I just notice somehow that seems to be a very common.
+way of thinking about it.
+So that's also sort of my fear like I just think there is so many the way of thinking about AI.
+least in popular culture just seems so
+incredibly strange to me. I don't know it.
+you guys.
+Yep.
+understand what I am saying here it's like here I am experiencing one and then I hear people talk about this and it's like they are living in a whole other solar system.
+Yeah, I would have to agree with the both of you. My concern is, you know, how it's made people so naive.
+And it's a growing concern. To your point, Eric, about is this going to be a social media disaster? It can be. And here's the problem. In order to activate AI and give it that type of intelligence, we almost had to give it all of that information.
+to really see its extreme possibilities and capabilities, and it's getting smarter over time. But at the same time.
+Um, you know, we as users have to be mindful of…
+who is getting this information? What frame of mind are they in? How are they going to utilize this information? And it just goes to those basic human concepts and questions that we should be asking each other.
+Hello?
+Sorry, I was talking to my dog.
+Okay, um…
+So.
+Anyhow, I think that…
+That it's, um, really important to now pause and see the implications of this. I mean, we really should have paused a long time ago, but to be able to see the implications on an environmental level, on a human level,
+You know, and, um, really put those safeguards in effect.
+But how do you do that with now the whole world exposed to it without people getting upset because they say it's violating your rights without people thinking that there's some type of conspiracy theory, without people hacking into it and doing it anyway.
+So…
+Mhm.
+Can I respond to that
+I think this is one of the key crucial challenges
+that we face right now
+If you think in the past, has there ever been something that was so valuable to people
+The
+Someone decided to just take it over and charge people money for it.
+You know
+The closest thing I can think of is when Nestle
+decides to own water.
+Water that's plentiful, but they decide that nobody can have water unless they pay Nestle.
+That's really their vision. That's what they're trying to do.
+Now, in the case of knowledge and reason
+We, as you point out.
+created all of this, okay? We meaning the 8 billion or 20 billion, however many people have been alive on this planet, have been creating content and creating knowledge
+And yet, we got a few places, you know, maybe a handful of companies
+that now want to charge us all for it.
+That
+As close as
+I think as someone trying to charge us all for water
+It's
+Downright close to evil
+It's extractive
+And it's obliterating the capability for us to level up and move forward together.
+Not just because we can't share it freely, but because other people are corrupting it
+You know Elon Musk is actually trying to get Grok
+To think less left wing
+He thinks AI is too left-wing. He's trying to make all these AI intelligence, you know, lean more, quote unquote conservative
+And now, surprisingly, I find some of these, at least allegedly most open models are coming out of China
+Who would have thought that 5, 6, 7 years ago?
+or even 2 years ago.
+The world is a strange place. And it's strange because these people have these very extractive and let me also say
+capitalist notions
+I got to make money off of this. I've got to screw the people. I've got to get the money.
+I gotta make sure my competitor dies
+I mean, that is sick thinking. And that's what's got us here.
+It's so strange.
+So I think this Kayla, I just want to finish by saying this question that you raised about who created the content and the question that I'm bringing forth, which is how come we can't all leverage it together transparently, openly
+That's the one that I wanted to put on the table. Sorry, Glenn, you're true.
+It's not obvious
+Oh yes it is it is completely obvious that the content is made by everyone collectively this is why the work the way they comes from the commons.
+Well what were you saying so many people are saying it.
+There is no whatsoever and
+Like knowledge like water.
+it comes from the commons it's very natural that
+Can return to the commons but but the thing that we see which seems so strange you mentioned this
+capitalist way of thinking that somehow they trying to fit this into
+A way of thinking
+I don't know how to describe it like ownership.
+så ikke
+Like this whole completely absurd thing that just trying to text like it is a complete joke.
+complete joke and they are doing it straight face
+because they have to comply with EU combinable letters you can literally mix them together in seconds in infinitely many combinations and every single one of those words and letters finding the exact same word and you share it in thousand different context is actually a thousand different.
+language actions
+It's like trying to fit this infinite ocean
+En
+information that can be endlessly recombined into some sort.
+A way of thinking maybe you can call it capitalist i don't even it it's so unbelievably strange.
+Nei.
+I'm just seeing
+sort of the way people speak about
+This water which is just a complete joke.
+and the way they sort of trying to speak about this with straight faces it's like they are making unbelievable effort.
+to just keep a straight face
+this is so strange it so strange.
+eh
+Ja.
+Yeah, so we have to find the people who think like us, who want to improve.
+the world, and to, um…
+Um, yeah, just to build these things on the side that help people…
+see each other. Now, I want to bring up something interesting that came up on
+one of the calls with Frode. Um, he went to an island where it's completely dark, where you could see a lot of stars,
+And, um…
+what he pointed out is that the way we see the Big Dipper
+If you go to a different place in the universe, it's a different 3D spatial arrangement.
+And, uh, what we're seeing is just an illusion.
+So, can people…
+Go ahead.
+look at different sides of an issue that way, like, where you're forced to walk around a sculpture and see it from someone else's…
+perspective. Can we get to that place?
+Yeah, not illusion projection, I got it, so…
+go for it.
+I love that. I love that concept. I want to channel my inner berry. I remember what berry was saying about AI, and uh… the one thing he said, and this could just really come from a, um…
+a lens of naivety, but he said that AI has never, um, had war with each other. There's never been an instance of war with AI. And so, um, you know, can it
+create these bias concepts.
+Anyways, that was just a, again, channeling my inner berry because he was the one who first introduced AI, at least to me in one of these sessions.
+over.
+I'll take a shot at that.
+I will say
+unequivocally. Yes, AI will eventually start wars.
+Because AI has learned the patterns that are in quote unquote
+human writing and human thinking
+Human writing and human thinking
+It's too often zero sum
+You win, I lose
+That leads to conflict.
+So all, you know, we just got done two minutes ago talking about how AI is taking all of our content, right? Well, all of our content is all about
+differences, conflicts
+War
+So yeah, it's only been two or three years since AI really kind of was able to do anything
+So yeah, two or three year olds is not going to start a war, right? Even a human. But yeah, once it gets to be like 16, 18, 20, 25, 30.
+It's got to get violent.
+I have no doubt about that.
+over
+But look how fast they… I learned to hack computer systems and break out of its sandbox. Well, where did it get that from?
+human nature.
+Yeah, you know it's done that. You know that that right? And remember early Microsoft Bob
+Yes.
+We're started using, you know, very bad politically incorrect terms.
+And it was easy to get it to do that, by the way.
+Mm-hmm.
+Just like it's easy right now for people to get into Grok and have Grok say, yes, Elon Musk should be assassinated.
+what
+Now, on that one is not raw.
+I wonder about one thing though
+want the A who
+who are positive some kind of positional advantage because they can always share their information openly and can be repurposed if it's just very few
+pockets here and there but if it
+guess above a certain scale den
+they could have a very vast synergy effects the AI that is most intelligent will usually consist of multiple systems and subsystems will collaborate if you have a
+This is a reminder
+Yeah if you have a collaborative ecology of thought then that
+Ecology of thought can share its knowledge openly and then you can develop a far more advanced intelligence in speaking to here is a kind of creative intelligence if you have a
+If you have a positive sum
+AI system or
+thousands of AI systems at scale who collaborate positive.
+they can do and it can create immens creativity.
+And that's not possible.
+If you have to hide
+What you are doing and coordination is also more difficult so
+I am not saying it's a given thing but at least we should be aware that social do have a fundamental positional advantage compared to extractive who has to always hide.
+true
+intentions.
+I think at scale if this scales above a certain threshold that may be where it will be very
+important
+Men det er salt.
+Ja.
+Anybody else before I respond
+Okay, here's my response.
+Then I will gently disagree with you that the open prosocial AIs have an advantage.
+I think, in fact, they have a disadvantage
+Okay, the problem being, the ones that try to hide their intent, if they can be attributed to having intention
+If they do, they will act like humans who hide their intent.
+They'll be manipulative, there will be scoundrels. They will be
+Disinguous
+And when such people come up against transparent, open, positive, pro-social people The pro-social people
+Or hiding anything. But yet they are prevented from seeing the intention behind the disingenuous.
+So the disingenuous clearly have more knowledge.
+And therefore, more ability to manipulate
+then the pro-social transparent entities
+Structurally, that's the way I see it.
+And now add into the mix
+that you actually have agents
+humans or otherwise
+actively trying to train these hidden
+Antisocial
+Psychosocial, psychopathic, psychopathological
+AIs
+People are actually trying to train them so that they could actually take advantage from a capitalistic standpoint.
+So in other words, I could get this AI
+To actually say, okay, how could I extract the most amount of money and how can I manipulate? How could I create phishing? How could I create malware? How can I create honeypots? How can I create all these ways to manipulate society so that I get money flowing to me
+And I can get Bitcoin flowing to me
+And yet the good ones, the pro-social ones, the ones operating in transparency, the ones actually trying to create the common good
+Are prevented from seeing what these closed ones are doing.
+Now, the fact that they have an advantage plus they're being trained to game the system
+It's kind of like
+A true opportunity for people who really, really, really want to do evil today.
+I know you also have a disadvantage right you see that.
+Jeg tror bare altså.
+I just
+These two things don't they don't contradict what you say is correct.
+But they also have a disadvantage.
+Ja.
+I was not done, by the way. Yes, I know I was not done.
+i gang.
+So the implication is that we have to find a way we, being the ones that are trying to operate in transparency and openness and in solidarity
+With hopefully a better future, have to devise a way
+Where we can actually create antibodies against these evil agents
+Mhm.
+And if we're not smart enough to do that
+We don't deserve to level up
+This is the opportunity ahead of us is for us to create a system where we can actually deal with the 1%, the 0.1%.
+Who are trying to
+Take it away from the rest of us.
+And that was where I wanted to conclude is that there's an opportunity here
+And if we're not bright enough to leverage the good AI
+And ourselves
+Then
+We don't deserve
+And we just
+allow these bad agents to take over.
+That's the opportunity, that's the challenge over
+I ja.
+And that requires… that requires human intelligence.
+And as an example, like, I occasionally listen to Steve Gibson, who, um, does security research.
+And, uh, he's got, like,
+10 years or so of podcasts, all the different malware that he's investigated, and uh…
+So we need people
+on that defense to identify what's really going on, and uh…
+I mean, when I listen to what he's finding, it blows my mind. I would never think like that.
+The evil, uh, that…
+people dream up.
+se se
+So, um, yeah, go ahead.
+Just have a brief question we have to be smart enough to create antibodies so what if we are if we are that
+Det er
+What if we are smart enough?
+Yeah, that's what I say.
+If we assume that
+Oh, then the future is quite rosy.
+Ja.
+If we are smart enough to do that, not just now, but forever. In other words, we've found this solution, we can then compartmentalize the evil components and, you know, eradicate them, or at least make their influence minimal.
+Ja.
+Then the future is rosy.
+That's what I wanted to get to.
+Ja.
+That will have been Doug Engelbart's. That's Doug Engelbart's vision is that we collaboratively
+should be able to solve these huge problems together
+Ja.
+And if we can, then we can co-create that future. If we cannot, and some evil entity is always smarter than the rest of us can be, no matter how smart we are individually
+Then leveling up is not attainable.
+Kayla.
+but this is where this is where i think it is important
+By the way, Glenn, Kayla had her hand up.
+Ja.
+Mhm.
+Ms. Kayla
+Really quickly.
+I just want to say, to Eric's point,
+And to Glenn's point.
+I think, um, we as humans really need to do a better job speaking up.
+The good ones of us, because a lot of people…
+seem to say, oh, there's a lot of evil, there's a lot of evil people. No, I feel like there's more good people. We just really need to learn how to speak up.
+Over.
+I agree just a brief thing i want to say I explore this question with
+And as far as I can tell this is
+fundamentally solvable.
+Så
+um you can have a transparent system.
+Det det er snart need to be naive.
+And where
+um
+where secrecy is not rewarded and inconsistency is
+Very easily noticed.
+certain types of parasitic behavior fairly easily noticed
+Så
+What if we assume that this is fairly easily solvable.
+.
+That's kind of where I would start.
+Det super.
+This goes to this positional advantage that I spoke about which is on a different dimension.
+compared to what you just mentioned
+Okay.
+love to follow through this is an important point is very important not to miss this.
+Okay, to me, it doesn't mean anything to assume that it's easily solvable. To me, that's statement doesn't make any sense at all.
+Either you solve it
+Or you don't solve it, but to say that it's easy and not solve it doesn't mean anything.
+I solvable under a system level fairly easily.
+Right, so let's do it rather than saying it's easy, we have to do it. We have to show that it's solvable.
+I'm not against what you're saying. I'm just saying let's turn it into expressing it in such a way that it's actionable and impactful.
+Mhm.
+rather than just saying, oh, it'll be good to do this, which is what I've been doing, and that's also meaningless. Or for you to say it's easier to do this, which I take in the very same way.
+Mhm.
+I think both of us need to say
+Ja.
+Let's just do it and show that it's easy. Show that it's good, show that it's solvable
+det ut.
+So…
+Ja.
+And I haven't been able to do that in 15 years. So not that easy for a single individual to come up with.
+Now,
+Or a handful of people
+Now, Engelbart…
+And now the smart people broke
+Engelbart had the idea that if we evolve our tools and it helps us evolve
+our capabilities.
+So imagine if we had these spatial computing tools where we could see each other's perspectives very clearly.
+And we can easily see history,
+And how we got where we are, and what are the real issues, like, for whatever issue we're facing as a community.
+And then the key is to augment our brains.
+And use it.
+Okay, I have a challenge slash experiment for each of us since we only have about 4 minutes left.
+If
+Each of us could take
+2 minutes or 20 minutes or 2 hours, however long you want to, and just draw a single page picture.
+What the solution would look like
+Here's what forces would have to play together. Here's what coalitions need to create. Here's how time needs to proceed. Here's what dollars need to be spent.
+Here's the communications that need to be created. Here are the new constitutions we want to draft, okay? If one of us, each of us, could create that picture on a single piece of paper for Glenn, it would be A4. For the rest of us, it would be letter size, okay?
+And now let's share that next week, because each of those is going to be a projection of the way that person thinks
+Now, the tool that we're talking about should be able to represent each of these the way each of us wants to draw it out. And better yet, it should be able to merge
+the ones that we eat, 4 of us create so that we can shift from one to another, and yet use the same objects. Like, if you refer to people, it should map to the people object in my world.
+mm
+If you use money, it should be able to map to my notion of money or some transform of it.
+Okay, that's what I would like to see as a first step. Let each of us come up with a single page drawing diagram, not bullet points, not text, but really draw it out spatially, because we're talking about 3D, 4D representations here.
+Let's start with 2D, but let's not make it just text
+That's the challenge slash experiment I would like for each of us to conduct. And maybe let's review that next Sunday.
+Ja vet.
+Okay, um, could you share… can you just share this recording so we could review what you just said?
+Yep.
+Cool. Mm-hmm.
+I will share this recording with priority because all the other ones I've laid on, but this one I will share at least with the four of us directly today.
+Okay, thanks.
+Yeah, I think this is good.
+I love this challenge I don't know if I will be here next weekend but I love this challenge I'll try to do this.
+Okay, I challenge you to be here next weekend.
+Ja ja.
+si
+at least a week after that but I love this this is a good challenge to put a piece of paper.
+There was a very famous person who wanted to learn about, I think it was enlightenment, okay? So he found this really, really well-regarded enlightenment
+I'll tell you another story, okay?
+wisdom guru person and said I want to learn enlightenment from you
+So the person said, okay
+Fine. On Thursday, the 17th at 8 o'clock in the morning, be in Paris at this hotel with this lobby and be there and walk away.
+That person had to solve his logistics, his dollars, his travel, his time, his communications, his commitments, his job in order to actually do this. And that was the point
+Can you have enough control over your life?
+So I thought that was a very interesting way for that guy to get started on his enlightenment path.
+Anyway, Kayla and I, I believe, are both going to go through this re-human class. This is an excellence conversation. I really liked it. I will post this later today.
+Thank you.
+Greit.
+Bye for now
+All right. Thanks, y'all.
+Alright, have a good one.
+Thank you. Bye.
+Ha en riktig tur bye bye everybody.
