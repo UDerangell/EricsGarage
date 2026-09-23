@@ -1,0 +1,17 @@
+{:paths ["src"]
+
+ :deps {org.clojure/clojure       {:mvn/version "1.11.1"}
+        com.datomic/datomic-free  {:mvn/version "0.9.5697"} ; public, no license key needed for :mem
+        compojure                 {:mvn/version "1.7.0"}
+        ring/ring-core            {:mvn/version "1.10.0"}
+        ring/ring-jetty-adapter   {:mvn/version "1.10.0"}
+        ring/ring-json            {:mvn/version "0.5.1"}
+        cheshire                  {:mvn/version "5.11.0"}}
+
+ :aliases
+ {:run  {:main-opts ["-m" "collection.core"]}
+
+  :test {:extra-paths ["test"]
+         :extra-deps  {midje/midje       {:mvn/version "1.10.9"}
+                        ring/ring-mock   {:mvn/version "0.4.0"}}
+         :main-opts   ["-m" "midje.repl"]}}}
