@@ -1,1 +1,1380 @@
+# Building a collection inventory system with Datomic
+
+**Exported with:** [AI Chat Exporter](https://ai-chat-exporter.covai.org)  
+**Source:** Claude  
+**Date:** 9/23/2026, 7:00:30 PM  
+**Link:** [https://claude.ai/chat/d49e2350-e03a-4b2e-b0df-9171a00509a6](https://claude.ai/chat/d49e2350-e03a-4b2e-b0df-9171a00509a6)  
+**Model:** claude-sonnet-5  
+**Method:** API  
+
+## Prompt:
+How can Datomic be used to build a personal collection inventory system which would keep track of the physical locations of objects and connect them to digital photos of the objects in a flexible manner where movements of the physical objects can be like a library checkout?
+
+## Response:
+Datomic is a strong fit for this because two of its core properties map directly onto what you need: everything is stored as immutable time-stamped facts (datoms), and the schema is flexible/additive rather than rigid tables. That gets you "checkout history" almost for free, and lets photos attach to objects in loose, evolving ways instead of a fixed one-to-one column.
+
+Here's how I'd design it.
+
+## Why Datomic's model fits
+
+- **Datoms are `[entity attribute value tx added?]`** — every fact is timestamped and never overwritten, only retracted-and-asserted. So "location" isn't just a field you update; each update leaves a permanent trail.
+- **`d/history`, `d/as-of`, `d/since`** let you query "where was this vase on March 1st?" or "show every place this item has ever lived" without you building any of that bookkeeping yourself.
+- **Flexible, additive schema** means an item can have zero, one, or many photos, tags, or provenance documents without schema migrations — you just add datoms.
+- **Datalog** makes "many-to-many, evolving relationships" (item ↔ photo, item ↔ location history) easy to query in ways SQL joins get awkward for.
+
+## Core schema
+
+```clojure
+;; Items
+{:db/ident :item/id
+ :db/valueType :db.type/uuid
+ :db/cardinality :db.cardinality/one
+ :db/unique :db.unique/identity}
+
+{:db/ident :item/name
+ :db/valueType :db.type/string
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :item/category
+ :db/valueType :db.type/ref
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :item/current-location
+ :db/valueType :db.type/ref
+ :db/cardinality :db.cardinality/one}
+ ;; kept as a "current pointer" for cheap lookups;
+ ;; full history comes from Datomic's log, not from this alone
+
+;; Locations (self-referential hierarchy: room > shelf > box)
+{:db/ident :location/id
+ :db/valueType :db.type/uuid
+ :db/cardinality :db.cardinality/one
+ :db/unique :db.unique/identity}
+
+{:db/ident :location/name
+ :db/valueType :db.type/string
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :location/parent
+ :db/valueType :db.type/ref
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :location/type
+ :db/valueType :db.type/keyword
+ :db/cardinality :db.cardinality/one}
+ ;; :room :shelf :box :person :external :in-transit
+
+;; Photos
+{:db/ident :photo/id
+ :db/valueType :db.type/uuid
+ :db/cardinality :db.cardinality/one
+ :db/unique :db.unique/identity}
+
+{:db/ident :photo/uri
+ :db/valueType :db.type/string
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :photo/items
+ :db/valueType :db.type/ref
+ :db/cardinality :db.cardinality/many}
+ ;; many-to-many: one photo can show several items (e.g. a shelf shot),
+ ;; one item can have several photos
+
+{:db/ident :photo/role
+ :db/valueType :db.type/keyword
+ :db/cardinality :db.cardinality/one}
+ ;; :primary :detail :damage :provenance :packaging
+
+;; Movement / checkout events — this is your "library circulation" record
+{:db/ident :movement/item
+ :db/valueType :db.type/ref
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :movement/from
+ :db/valueType :db.type/ref
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :movement/to
+ :db/valueType :db.type/ref
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :movement/reason
+ :db/valueType :db.type/keyword
+ :db/cardinality :db.cardinality/one}
+ ;; :relocated :loaned-out :returned :sold :disposed
+
+{:db/ident :movement/due-date
+ :db/valueType :db.type/instant
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :movement/notes
+ :db/valueType :db.type/string
+ :db/cardinality :db.cardinality/one}
+```
+
+Notice `:photo/items` is card-many on **both** sides implicitly — an item can be reached from many photo entities, and one photo can list many items. That's the "flexible" connection you asked for: no rigid one-photo-per-object assumption.
+
+## Modeling "checkout" like a library
+
+Two complementary layers:
+
+1. **`:item/current-location`** — a plain ref you update on every move, so "where is X right now" is a single lookup, not a history scan.
+2. **A `:movement` entity per event** — this is your circulation record. A "checkout" is just a movement where `:movement/to` points at a Location of `:location/type :person` or `:external`, with a `:movement/due-date`. A "check-in" is a movement back to a `:room`/`:shelf` location.
+
+Example transaction for lending a camera to a friend:
+
+```clojure
+[{:db/id "movement"
+  :movement/item [:item/id item-uuid]
+  :movement/from [:location/id shelf-uuid]
+  :movement/to [:location/id friend-loc-uuid]
+  :movement/reason :loaned-out
+  :movement/due-date #inst "2026-10-15"}
+ {:db/id [:item/id item-uuid]
+  :item/current-location [:location/id friend-loc-uuid]}]
+```
+
+Because this is one transaction, the transaction's own `:db/txInstant` timestamps the event — you don't even need a separate `:movement/timestamp` attribute unless you want a human-editable date distinct from when it was entered.
+
+## Useful queries this gives you
+
+**What's currently checked out and overdue:**
+```clojure
+[:find ?name ?due
+ :where
+ [?m :movement/reason :loaned-out]
+ [?m :movement/item ?i]
+ [?m :movement/due-date ?due]
+ [?i :item/name ?name]
+ ;; no later movement of this item back to a non-person location
+ (not-join [?i]
+   [?m2 :movement/item ?i]
+   [?m2 :movement/reason :returned]
+   [?m2 :db/txInstant ?t2]
+   [?m :db/txInstant ?t1]
+   [(> ?t2 ?t1)])]
+```
+
+**Full movement history of one item (using the log/history, not app-level bookkeeping):**
+```clojure
+(d/q '[:find ?loc-name ?tx-time
+       :in $ ?item
+       :where
+       [$ ?item :item/current-location ?loc ?tx true]
+       [$ ?tx :db/txInstant ?tx-time]
+       [$ ?loc :location/name ?loc-name]]
+     (d/history db) item-eid)
+```
+This walks every assert/retract ever made to `:item/current-location` — the audit trail is a byproduct of Datomic's architecture, not something you built.
+
+**"Where was everything on a given date" (time travel):**
+```clojure
+(d/q '[:find ?item-name ?loc-name
+       :where
+       [?i :item/current-location ?l]
+       [?i :item/name ?item-name]
+       [?l :location/name ?loc-name]]
+     (d/as-of db #inst "2026-01-01"))
+```
+
+**All photos for an item, including group shots:**
+```clojure
+[:find ?uri ?role
+ :in $ ?item
+ :where
+ [?p :photo/items ?item]
+ [?p :photo/uri ?uri]
+ [?p :photo/role ?role]]
+```
+
+## Practical notes
+
+- Use **Datomic's log API** (`d/tx-range`) if you ever want a raw chronological feed of everything that happened, independent of entity structure — handy for an "activity feed" UI.
+- Keep photos as **references to files/URIs** (local path, S3 key, etc.), not blobs in Datomic — Datomic isn't a blob store.
+- If you want richer checkout semantics (renewals, multiple borrowers over time, reservations), model `:loan` as its own entity type separate from generic `:movement`, with `:loan/checkout-date`, `:loan/return-date` (nil = still out), `:loan/borrower` — then a movement to/from a person location can just trigger loan creation/closure in the same transaction.
+- Datomic Cloud + a small web/CLI frontend (e.g., a simple Clojure app or even a lightweight script) is enough for personal use; you don't need the full peer-server topology unless multiple people/apps need concurrent write access.
+
+Want me to sketch the `:loan` entity variant in more detail, or write example transactor functions (e.g., a `checkout!`/`checkin!` pair that enforces "can't loan something already loaned out")?
+
+## Prompt:
+How can containers be modeled, for example a box of magazines, articles in magazines?
+
+## Response:
+Containers are the perfect stress-test for the schema I sketched — and the good insight is that in Datomic, **a container doesn't need to be a new kind of thing**. A box is just an item that other items can point to as their location. That single move (relaxing "location" to mean "any entity, fixed or portable") gives you arbitrary nesting for free. Articles-in-magazines is a *different* relationship though — not physical containment but bibliographic composition — so it deserves its own pattern. Let me cover both.
+
+## Key decision: containers are items, not a separate type
+
+Instead of keeping `:location` (fixed infrastructure: rooms, shelves) and `:item` (things you own) as separate worlds, let `:item/current-location` be a ref to **either**. A box is an item with a category of `:box`; other items point to it the same way they'd point to a shelf.
+
+```clojure
+{:db/ident :item/current-location
+ :db/valueType :db.type/ref
+ :db/cardinality :db.cardinality/one}
+ ;; value may be a Location entity (room/shelf/building)
+ ;; OR another Item entity (a box, a folder, a crate)
+
+{:db/ident :item/category
+ :db/valueType :db.type/keyword
+ :db/cardinality :db.cardinality/one}
+ ;; :magazine :box :figurine :book :folder ...
+```
+
+No schema-level type-checking is needed — Datomic refs don't care what's on the other end. You just need a convention (`:location/type` present = "this is fixed infrastructure"; absent = "this is a portable item that happens to hold things").
+
+**Why this matters:** moving the box moves everything inside it *implicitly*. You only write one movement datom for the box; the magazines' `:item/current-location` still points at the box, which is now elsewhere. You never have to cascade-update contents.
+
+## Resolving "where is this, really?"
+
+Since a magazine's `:item/current-location` might point to a box, which points to a shelf, which points to a room, you need a recursive walk to find the physical place. Datalog rules handle this cleanly:
+
+```clojure
+[[(contained-in ?item ?place)
+  [?item :item/current-location ?place]]
+ [(contained-in ?item ?place)
+  [?item :item/current-location ?mid]
+  (contained-in ?mid ?place)]
+
+ [(fixed-location ?item ?loc)
+  (contained-in ?item ?loc)
+  [?loc :location/type _]]]  ;; stop once we hit real infrastructure
+```
+
+```clojure
+(d/q '[:find ?item-name ?room-name
+       :in $ %
+       :where
+       [?item :item/name ?item-name]
+       (fixed-location ?item ?loc)
+       [?loc :location/name ?room-name]]
+     db rules)
+```
+
+This tells you "the *Life* magazine is, transitively, on the office bookshelf" even though its direct pointer is to a box.
+
+## Listing contents recursively
+
+```clojure
+[[(contents ?container ?thing)
+  [?thing :item/current-location ?container]]
+ [(contents ?container ?thing)
+  [?mid :item/current-location ?container]
+  (contents ?mid ?thing)]]
+```
+
+```clojure
+(d/q '[:find ?name
+       :in $ % ?box
+       :where
+       (contents ?box ?thing)
+       [?thing :item/name ?name]]
+     db rules box-eid)
+```
+
+Gives you every magazine (or nested sub-box) inside a box, at any depth.
+
+## Preventing cycles
+
+Because containment is just refs, nothing stops you from accidentally putting box A inside box B inside box A. Enforce this with a **transaction function** rather than app-level checking, so it's atomic and can't be bypassed:
+
+```clojure
+{:db/ident :fns/set-location
+ :db/fn (d/function
+         '{:lang :clojure
+           :params [db item new-loc]
+           :code (let [rules '[[(contains? ?c ?x) [?x :item/current-location ?c]]
+                                [(contains? ?c ?x) [?y :item/current-location ?c]
+                                                    (contains? ?y ?x)]]]
+                   (if (seq (d/q '[:find ?item :in $ % ?item ?loc
+                                    :where (contains? ?item ?loc)]
+                                  db rules item new-loc))
+                     (throw (ex-info "Cycle: item already contains destination" {}))
+                     [[:db/add item :item/current-location new-loc]]))})}
+```
+
+Then all moves go through `[:fns/set-location item-id new-loc-id]` instead of a raw `:db/add`.
+
+## Magazines and articles: composition, not containment
+
+An article isn't a separately-movable physical object — it never has its own location, it just *is part of* a magazine. That's a different relationship, closer to a **component** than a container:
+
+```clojure
+{:db/ident :article/magazine
+ :db/valueType :db.type/ref
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :article/title
+ :db/valueType :db.type/string
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :article/page-start
+ :db/valueType :db.type/long
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :article/page-end
+ :db/valueType :db.type/long
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :article/authors
+ :db/valueType :db.type/string
+ :db/cardinality :db.cardinality/many}
+
+{:db/ident :article/topics
+ :db/valueType :db.type/keyword
+ :db/cardinality :db.cardinality/many}
+```
+
+Optionally mark the reverse side as a component so retracting a magazine cleans up its articles automatically:
+
+```clojure
+{:db/ident :magazine/articles
+ :db/valueType :db.type/ref
+ :db/cardinality :db.cardinality/many
+ :db/isComponent true}
+```
+
+`:db/isComponent` is the right tool specifically because an article has no independent existence or location — it's owned by exactly one magazine and should vanish with it. (Don't do this for box-contents refs — a magazine still exists conceptually if you empty the box, so that relationship should *not* be a component.)
+
+## Photos at any granularity
+
+Since `:photo/items` is just `:db.type/ref` with no type constraint, it can point at a box, a magazine, or a specific article — a photo of one page:
+
+```clojure
+[{:db/id "photo1"
+  :photo/uri "s3://collection/img4471.jpg"
+  :photo/role :detail
+  :photo/items [[:article/id article-uuid]]}]
+```
+
+or a photo showing the whole box's contents:
+
+```clojure
+{:photo/items [[:item/id box-uuid] [:item/id mag1-uuid] [:item/id mag2-uuid]]}
+```
+
+## Checking out a whole box
+
+Because contents point to the container rather than a resolved location, "loan out the whole box" is one movement — no per-item updates:
+
+```clojure
+[{:db/id "movement"
+  :movement/item [:item/id box-uuid]
+  :movement/from [:location/id shelf-uuid]
+  :movement/to [:location/id friend-loc-uuid]
+  :movement/reason :loaned-out
+  :movement/due-date #inst "2026-10-20"}
+ {:db/id [:item/id box-uuid]
+  :item/current-location [:location/id friend-loc-uuid]}]
+```
+
+Query "what's currently at my friend's house" via the `contents` rule against the box, and it correctly reports every magazine inside — their own `:item/current-location` datoms never had to change.
+
+## Summary of the pattern
+
+| Relationship | Mechanism | Why |
+|---|---|---|
+| Box → shelf/room | ref via `:item/current-location` to a `Location` | fixed infrastructure |
+| Magazine → box | ref via `:item/current-location` to another `Item` | portable containment, recursive |
+| Article → magazine | `:article/magazine` ref, `:db/isComponent` | bibliographic composition, no independent location |
+| Photo → box/magazine/article | `:photo/items` ref, untyped | flexible many-to-many at any granularity |
+
+Want me to extend the `checkout!`/`checkin!` transaction functions from before so that checking out a container also validates (and reports) everything nested inside it at the time of the loan?
+
+## Prompt:
+How can connections between information be modeled, for example, a relationship between a book chapter and a magazine article?
+
+## Response:
+This is a different problem than containment. A box *owns* what's inside it, and an article *belongs to* one magazine — those are ownership/composition relationships, cleanly expressed as plain refs. But "this book chapter cites that magazine article" is a **peer-to-peer relationship between two independent things**, and it needs its own attributes (what kind of relationship? when did you notice it? how confident are you?). A plain `:db/valueType :db.type/ref` can't carry that extra information — so you reify the relationship itself as an entity.
+
+## Why you can't just add a ref attribute
+
+You could write:
+
+```clojure
+{:db/ident :chapter/references
+ :db/valueType :db.type/ref
+ :db/cardinality :db.cardinality/many}
+```
+
+This works for one relationship type but breaks down fast: you can't say *why* two things are related, you can't add a note, you can't distinguish "quotes directly" from "covers the same topic," and every new relationship type needs a new attribute. For a personal collection where you'll constantly discover new kinds of connections, you want the type of connection to be **data**, not schema.
+
+## The pattern: a reified `Connection` entity
+
+Same trick as `:movement` for physical location — turn the relationship into its own first-class entity so it can carry arbitrary attributes:
+
+```clojure
+{:db/ident :connection/id
+ :db/valueType :db.type/uuid
+ :db/cardinality :db.cardinality/one
+ :db/unique :db.unique/identity}
+
+{:db/ident :connection/from
+ :db/valueType :db.type/ref
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :connection/to
+ :db/valueType :db.type/ref
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :connection/type
+ :db/valueType :db.type/ref     ;; ref to a relation-type entity, not a bare keyword — see below
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :connection/note
+ :db/valueType :db.type/string
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :connection/confidence
+ :db/valueType :db.type/keyword
+ :db/cardinality :db.cardinality/one}
+ ;; :certain :probable :speculative
+
+{:db/ident :connection/page-ref
+ :db/valueType :db.type/string
+ :db/cardinality :db.cardinality/one}
+ ;; "ch. 3, p. 47" — where in ?from the connection is made
+```
+
+Because `:connection/from` and `:connection/to` are untyped refs, they can point at *any* entity regardless of kind — a book chapter, a magazine article, a photo, even another connection if you want meta-relationships later. This is the same flexibility win as `:photo/items`.
+
+## Making relation types data, not keywords
+
+Rather than hardcoding `:references`/`:inspired-by`/`:contradicts` as raw keywords scattered through your app, model them as entities. This lets you add new relationship types at runtime, attach a human-readable description, and mark whether a type is symmetric:
+
+```clojure
+{:db/ident :relation-type/id
+ :db/valueType :db.type/keyword
+ :db/cardinality :db.cardinality/one
+ :db/unique :db.unique/identity}
+
+{:db/ident :relation-type/label
+ :db/valueType :db.type/string
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :relation-type/symmetric?
+ :db/valueType :db.type/boolean
+ :db/cardinality :db.cardinality/one}
+```
+
+Seed data:
+
+```clojure
+[{:relation-type/id :references
+  :relation-type/label "References / cites"
+  :relation-type/symmetric? false}
+ {:relation-type/id :quotes
+  :relation-type/label "Quotes directly"
+  :relation-type/symmetric? false}
+ {:relation-type/id :inspired-by
+  :relation-type/label "Inspired by"
+  :relation-type/symmetric? false}
+ {:relation-type/id :same-topic
+  :relation-type/label "Covers the same topic"
+  :relation-type/symmetric? true}
+ {:relation-type/id :contradicts
+  :relation-type/label "Contradicts"
+  :relation-type/symmetric? true}]
+```
+
+## Book chapters (mirroring the article/magazine pattern)
+
+```clojure
+{:db/ident :chapter/book
+ :db/valueType :db.type/ref
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :chapter/title
+ :db/valueType :db.type/string
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :chapter/number
+ :db/valueType :db.type/long
+ :db/cardinality :db.cardinality/one}
+
+{:db/ident :book/chapters
+ :db/valueType :db.type/ref
+ :db/cardinality :db.cardinality/many
+ :db/isComponent true}
+```
+
+Same reasoning as `:magazine/articles` — a chapter has no independent existence outside its book, so it's a component.
+
+## Creating a connection
+
+```clojure
+[{:db/id "conn1"
+  :connection/id #uuid "..."
+  :connection/from [:chapter/id chapter-uuid]
+  :connection/to [:article/id article-uuid]
+  :connection/type :references
+  :connection/note "Chapter's footnote 12 cites this article's survey data"
+  :connection/confidence :certain
+  :connection/page-ref "p. 203"}]
+```
+
+The transaction's `:db/txInstant` already gives you "when I recorded this connection" for free, same as with movements — no need for a separate timestamp attribute unless the user wants to backdate it.
+
+## Querying: outgoing, incoming, and direction-agnostic
+
+Because `from`/`to` is directional, "what connects to X" needs a rule that checks both sides:
+
+```clojure
+[[(connected ?a ?b)
+  [?c :connection/from ?a]
+  [?c :connection/to ?b]]
+ [(connected ?a ?b)
+  [?c :connection/from ?b]
+  [?c :connection/to ?a]]]
+```
+
+```clojure
+(d/q '[:find ?title ?type-label
+       :in $ % ?chapter
+       :where
+       (connected ?chapter ?other)
+       [?c :connection/from ?chapter]
+       [?c :connection/to ?other]
+       [?c :connection/type ?type]
+       [?type :relation-type/label ?type-label]
+       [?other :article/title ?title]]
+     db rules chapter-eid)
+```
+
+Filter by type (e.g., only contradictions):
+
+```clojure
+(d/q '[:find ?from-name ?to-name
+       :where
+       [?c :connection/type :contradicts]
+       [?c :connection/from ?f]
+       [?c :connection/to ?t]
+       (or [?f :article/title ?from-name] [?f :chapter/title ?from-name])
+       (or [?t :article/title ?to-name] [?t :chapter/title ?to-name])]
+     db)
+```
+
+`or` clauses like this are exactly where the flexible, untyped-entity approach pays off — the query doesn't care whether `?f` resolves to a chapter or an article, it just asks each possible attribute.
+
+## Graph traversal: multi-hop connections
+
+Since connections form a graph, you can walk transitively — e.g., "everything within 2 hops of this article":
+
+```clojure
+[[(reachable ?a ?b 1)
+  (connected ?a ?b)]
+ [(reachable ?a ?b ?n)
+  (connected ?a ?mid)
+  (reachable ?mid ?b ?n2)
+  [(dec ?n) ?n2]]]  ;; simplified — Datomic rules don't do arithmetic guards natively,
+                     ;; typically you'd just write reachable/2 without depth-limiting
+                     ;; or bound it procedurally in application code
+```
+
+In practice, unbounded transitive closure in Datalog can be expensive/unwieldy for depth-limited graph walks; it's often simpler to do a **breadth-first walk in application code**, calling `d/q` for direct neighbors at each hop and stopping at your desired depth. Datomic is good at "give me all direct connections of X repeatedly" — orchestrating the hop limit in Clojure/whatever host language is usually cleaner than encoding depth counting in Datalog rules.
+
+## Tying it back to physical objects
+
+A connection isn't restricted to "informational" entities — you can link a book chapter to the physical magazine item too, not just an abstract `:article` entity, if what you care about is "I own the physical copy this chapter refers to":
+
+```clojure
+{:connection/from [:chapter/id chapter-uuid]
+ :connection/to [:item/id physical-magazine-uuid]
+ :connection/type :references}
+```
+
+Because every entity in Datomic — physical item, location, photo, article, chapter, connection — lives in the same undifferentiated entity space and refs don't care what they point to, this whole system (physical tracking, containment, checkout, informational cross-references) is really **one graph**, just queried with different rule sets depending on what question you're asking. That uniformity is the main payoff of using Datomic here rather than a schema-per-relationship relational design.
+
+Want me to sketch a small UI/query helper that renders "everything connected to this item" — photos, containment, checkout history, and informational cross-references — as a single unified graph view?
+
+## Prompt:
+Please generate a proof-of-concept REST API based on all the functions specified above which will mutate the atoms for the collections described, with Midge test cases that exercise the API operations.
+
+## Response:
+This POC reifies everything we've discussed — items, locations, photos, movements (checkout/checkin), and typed connections — as a small Clojure/Ring REST API backed by an in-memory Datomic database, with Midje tests exercising each operation end-to-end through the HTTP layer.
+
+One heads-up before the code: this sandbox's network allowlist covers npm/pip/crates but not Clojars/Maven Central, so I can't actually download Datomic/Midje here to run the tests. The code is complete and structurally correct Clojure — I'll note in the README exactly how to run it locally where those deps are reachable.
+
+Now the main API handlers — the largest file:
+
+## Response:
+> **Artifact: deps**
+```plaintext
+{:paths ["src"]
+
+ :deps {org.clojure/clojure       {:mvn/version "1.11.1"}
+        com.datomic/datomic-free  {:mvn/version "0.9.5697"} ; public, no license key needed for :mem
+        compojure                 {:mvn/version "1.7.0"}
+        ring/ring-core            {:mvn/version "1.10.0"}
+        ring/ring-jetty-adapter   {:mvn/version "1.10.0"}
+        ring/ring-json            {:mvn/version "0.5.1"}
+        cheshire                  {:mvn/version "5.11.0"}}
+
+ :aliases
+ {:run  {:main-opts ["-m" "collection.core"]}
+
+  :test {:extra-paths ["test"]
+         :extra-deps  {midje/midje       {:mvn/version "1.10.9"}
+                        ring/ring-mock   {:mvn/version "0.4.0"}}
+         :main-opts   ["-m" "midje.repl"]}}}
+```
+
+## Response:
+> **Artifact: schema**
+```plaintext
+(ns collection.schema
+  "Schema for the personal collection inventory.
+
+   Design notes (see conversation for full rationale):
+   - :item/current-location is an untyped ref: it may point at a Location
+     entity (a room/shelf - fixed infrastructure) OR at another Item
+     (a box, a folder - a portable container). This is what lets containers
+     fall out of the model for free, with no separate 'container' type.
+   - :photo/items is card-many on the item side, so one photo can depict
+     several items (a shelf shot) and one item can have several photos.
+   - :movement/* entities are the 'library circulation' record: every
+     change of :item/current-location is paired with a :movement fact,
+     so the full checkout/relocation history is queryable via d/history
+     even though we also keep a fast 'current location' pointer.
+   - :connection/* entities reify a typed, notable relationship between
+     any two entities (e.g. a book chapter and a magazine article) --
+     a plain ref attribute can't carry a relationship type or a note,
+     so the relationship itself becomes a first-class entity.
+   - :connection/type is kept as a plain keyword in this POC for
+     simplicity. A production version should make it a ref to a
+     :relation-type entity (label + symmetric? flag) so new relationship
+     kinds can be added as data instead of schema changes."
+  )
+
+(def schema-txn
+  [;; --- Items: physical objects, containers, and informational units ---
+   {:db/ident       :item/id
+    :db/valueType   :db.type/uuid
+    :db/cardinality :db.cardinality/one
+    :db/unique      :db.unique/identity
+    :db/doc         "Stable external identifier for an item."}
+
+   {:db/ident       :item/name
+    :db/valueType   :db.type/string
+    :db/cardinality :db.cardinality/one}
+
+   {:db/ident       :item/category
+    :db/valueType   :db.type/keyword
+    :db/cardinality :db.cardinality/one
+    :db/doc         "e.g. :magazine :box :camera :book :chapter :article"}
+
+   {:db/ident       :item/current-location
+    :db/valueType   :db.type/ref
+    :db/cardinality :db.cardinality/one
+    :db/doc         "Points at either a Location entity or another Item (a container)."}
+
+   ;; --- Locations: fixed infrastructure, or transient holders (a person, in-transit) ---
+   {:db/ident       :location/id
+    :db/valueType   :db.type/uuid
+    :db/cardinality :db.cardinality/one
+    :db/unique      :db.unique/identity}
+
+   {:db/ident       :location/name
+    :db/valueType   :db.type/string
+    :db/cardinality :db.cardinality/one}
+
+   {:db/ident       :location/type
+    :db/valueType   :db.type/keyword
+    :db/cardinality :db.cardinality/one
+    :db/doc         ":room :shelf :person :external :in-transit"}
+
+   {:db/ident       :location/parent
+    :db/valueType   :db.type/ref
+    :db/cardinality :db.cardinality/one}
+
+   ;; --- Photos: flexible many-to-many with items ---
+   {:db/ident       :photo/id
+    :db/valueType   :db.type/uuid
+    :db/cardinality :db.cardinality/one
+    :db/unique      :db.unique/identity}
+
+   {:db/ident       :photo/uri
+    :db/valueType   :db.type/string
+    :db/cardinality :db.cardinality/one}
+
+   {:db/ident       :photo/role
+    :db/valueType   :db.type/keyword
+    :db/cardinality :db.cardinality/one
+    :db/doc         ":primary :detail :damage :provenance :packaging"}
+
+   {:db/ident       :photo/items
+    :db/valueType   :db.type/ref
+    :db/cardinality :db.cardinality/many}
+
+   ;; --- Movements: the checkout / relocation circulation record ---
+   {:db/ident       :movement/item
+    :db/valueType   :db.type/ref
+    :db/cardinality :db.cardinality/one}
+
+   {:db/ident       :movement/from
+    :db/valueType   :db.type/ref
+    :db/cardinality :db.cardinality/one}
+
+   {:db/ident       :movement/to
+    :db/valueType   :db.type/ref
+    :db/cardinality :db.cardinality/one}
+
+   {:db/ident       :movement/reason
+    :db/valueType   :db.type/keyword
+    :db/cardinality :db.cardinality/one
+    :db/doc         ":relocated :loaned-out :returned :sold :disposed"}
+
+   {:db/ident       :movement/due-date
+    :db/valueType   :db.type/instant
+    :db/cardinality :db.cardinality/one}
+
+   {:db/ident       :movement/notes
+    :db/valueType   :db.type/string
+    :db/cardinality :db.cardinality/one}
+
+   ;; --- Connections: reified, typed relationships between any two entities ---
+   {:db/ident       :connection/id
+    :db/valueType   :db.type/uuid
+    :db/cardinality :db.cardinality/one
+    :db/unique      :db.unique/identity}
+
+   {:db/ident       :connection/from
+    :db/valueType   :db.type/ref
+    :db/cardinality :db.cardinality/one}
+
+   {:db/ident       :connection/to
+    :db/valueType   :db.type/ref
+    :db/cardinality :db.cardinality/one}
+
+   {:db/ident       :connection/type
+    :db/valueType   :db.type/keyword
+    :db/cardinality :db.cardinality/one
+    :db/doc         "e.g. :references :quotes :inspired-by :same-topic :contradicts"}
+
+   {:db/ident       :connection/note
+    :db/valueType   :db.type/string
+    :db/cardinality :db.cardinality/one}
+
+   {:db/ident       :connection/confidence
+    :db/valueType   :db.type/keyword
+    :db/cardinality :db.cardinality/one
+    :db/doc         ":certain :probable :speculative"}])
+```
+
+## Response:
+> **Artifact: db**
+```plaintext
+(ns collection.db
+  "Owns the Datomic connection. `conn` is itself an atom (that's Datomic's
+   own concurrency mechanism) -- every `transact!` call below mutates it,
+   which is what advances the database value returned by `(db)`."
+  (:require [datomic.api :as d]))
+
+(def db-uri "datomic:mem://collection")
+
+(defonce conn (atom nil))
+
+(defn init!
+  "Creates the in-memory database (idempotent), connects, and (re)loads
+   the schema. Call once at startup, or once per test namespace for a
+   clean fixture."
+  [schema-txn]
+  (d/delete-database db-uri)
+  (d/create-database db-uri)
+  (reset! conn (d/connect db-uri))
+  @(d/transact @conn schema-txn)
+  @conn)
+
+(defn transact!
+  "Runs a transaction and returns the full Datomic transaction result map
+   (:db-before :db-after :tx-data :tempids)."
+  [txn-data]
+  @(d/transact @conn txn-data))
+
+(defn db
+  "The current database value (an immutable snapshot)."
+  []
+  (d/db @conn))
+```
+
+## Response:
+> **Artifact: api**
+```plaintext
+(ns collection.api
+  (:require [collection.db :as db]
+            [datomic.api :as d]
+            [compojure.core :refer [defroutes GET POST PUT]]
+            [compojure.route :as route]
+            [ring.middleware.json :refer [wrap-json-body wrap-json-response]]
+            [ring.middleware.params :refer [wrap-params]]))
+
+;; ---------------------------------------------------------------------
+;; Helpers
+;; ---------------------------------------------------------------------
+
+(defn response [status body]
+  {:status status :headers {} :body body})
+
+(defn uuid [s]
+  (try
+    (java.util.UUID/fromString s)
+    (catch IllegalArgumentException _
+      (throw (ex-info (str "Not a valid id: " s) {:id s})))))
+
+(defn parse-instant [s]
+  (when s (java.util.Date/from (java.time.Instant/parse s))))
+
+(defn resolve-item
+  "Item ids always resolve as items (used for movement subjects, photo
+   subjects, and connection endpoints)."
+  [id-str]
+  [:item/id (uuid id-str)])
+
+(defn eid-exists? [db lookup-ref]
+  (try
+    (some? (:db/id (d/pull db '[:db/id] lookup-ref)))
+    (catch Exception _ false)))
+
+(defn resolve-ref
+  "A 'location-id' in a request may name either a Location (fixed
+   infrastructure) or an Item acting as a container (a box). Try both
+   unique-identity namespaces and use whichever exists."
+  [id-str]
+  (let [u (uuid id-str)
+        as-item [:item/id u]
+        as-loc  [:location/id u]]
+    (cond
+      (eid-exists? (db/db) as-item) as-item
+      (eid-exists? (db/db) as-loc)  as-loc
+      :else (throw (ex-info "No item or location with that id" {:id id-str})))))
+
+(defn entity-eid [lookup-ref]
+  (:db/id (d/pull (db/db) '[:db/id] lookup-ref)))
+
+;; ---------------------------------------------------------------------
+;; Pull patterns
+;; ---------------------------------------------------------------------
+
+(def item-pull-pattern
+  '[:item/id :item/name :item/category
+    {:item/current-location [:item/id :item/name :location/id :location/name]}])
+
+(defn pull-item [db lookup-ref]
+  (d/pull db item-pull-pattern lookup-ref))
+
+;; ---------------------------------------------------------------------
+;; Items
+;; ---------------------------------------------------------------------
+
+(defn create-item! [req]
+  (let [{:keys [name category location-id]} (:body req)
+        item-uuid (java.util.UUID/randomUUID)
+        loc-ref   (when location-id (resolve-ref location-id))
+        item-data (cond-> {:db/id "new-item"
+                            :item/id item-uuid
+                            :item/name name
+                            :item/category (keyword category)}
+                    loc-ref (assoc :item/current-location loc-ref))
+        {:keys [db-after]} (db/transact! [item-data])]
+    (response 201 (pull-item db-after [:item/id item-uuid]))))
+
+(defn get-item [req]
+  (let [item-ref (resolve-item (get-in req [:params :id]))]
+    (if (eid-exists? (db/db) item-ref)
+      (response 200 (pull-item (db/db) item-ref))
+      (response 404 {:error "item not found"}))))
+
+;; ---------------------------------------------------------------------
+;; Locations
+;; ---------------------------------------------------------------------
+
+(defn create-location! [req]
+  (let [{:keys [name type parent-id]} (:body req)
+        loc-uuid   (java.util.UUID/randomUUID)
+        parent-ref (when parent-id (resolve-ref parent-id))
+        data       (cond-> {:db/id "new-loc"
+                             :location/id loc-uuid
+                             :location/name name
+                             :location/type (keyword type)}
+                     parent-ref (assoc :location/parent parent-ref))
+        {:keys [db-after]} (db/transact! [data])]
+    (response 201 (d/pull db-after '[:location/id :location/name :location/type]
+                           [:location/id loc-uuid]))))
+
+;; ---------------------------------------------------------------------
+;; Movements (relocate / checkout / checkin)
+;; ---------------------------------------------------------------------
+
+(defn move-item!
+  "Core movement primitive: records a :movement fact and advances
+   :item/current-location, in a single transaction. `reason` defaults to
+   :relocated; checkout/checkin below are thin wrappers that fix the reason."
+  [item-id {:keys [to-location-id reason due-date notes]}]
+  (let [item-ref  (resolve-item item-id)
+        to-ref    (resolve-ref to-location-id)
+        cur       (:item/current-location (d/pull (db/db) '[:item/current-location] item-ref))
+        movement  (cond-> {:db/id "movement"
+                            :movement/item item-ref
+                            :movement/to to-ref
+                            :movement/reason (keyword (or reason "relocated"))}
+                    cur       (assoc :movement/from (:db/id cur))
+                    due-date  (assoc :movement/due-date (parse-instant due-date))
+                    notes     (assoc :movement/notes notes))
+        update-loc {:db/id item-ref :item/current-location to-ref}
+        {:keys [db-after]} (db/transact! [movement update-loc])]
+    (pull-item db-after item-ref)))
+
+(defn move-item-handler [req]
+  (let [item-id (get-in req [:params :id])]
+    (response 200 (move-item! item-id (:body req)))))
+
+(defn checkout-item! [req]
+  (let [item-id (get-in req [:params :id])
+        body    (assoc (:body req) :reason "loaned-out")]
+    (response 200 (move-item! item-id body))))
+
+(defn checkin-item! [req]
+  (let [item-id (get-in req [:params :id])
+        body    (assoc (:body req) :reason "returned")]
+    (response 200 (move-item! item-id body))))
+
+(defn entity-name [db eid]
+  (let [e (d/pull db '[:item/name :location/name] eid)]
+    (or (:item/name e) (:location/name e))))
+
+(defn item-history [req]
+  (let [item-ref (resolve-item (get-in req [:params :id]))
+        eid      (entity-eid item-ref)
+        hist     (d/history (db/db))
+        rows     (d/q '[:find ?loc ?inst
+                         :in $ ?item
+                         :where
+                         [$ ?item :item/current-location ?loc ?tx true]
+                         [$ ?tx :db/txInstant ?inst]]
+                       hist eid)]
+    (response 200
+              (->> rows
+                   (map (fn [[loc inst]]
+                          {:location (entity-name (db/db) loc)
+                           :at (str inst)}))
+                   (sort-by :at)))))
+
+;; ---------------------------------------------------------------------
+;; Containers: recursive contents listing
+;; ---------------------------------------------------------------------
+
+(def contents-rules
+  '[[(contents ?container ?thing)
+     [?thing :item/current-location ?container]]
+    [(contents ?container ?thing)
+     [?mid :item/current-location ?container]
+     (contents ?mid ?thing)]])
+
+(defn item-contents [req]
+  (let [item-ref (resolve-item (get-in req [:params :id]))
+        eid      (entity-eid item-ref)
+        db       (db/db)
+        things   (d/q '[:find [?thing ...]
+                         :in $ % ?c
+                         :where (contents ?c ?thing)]
+                       db contents-rules eid)]
+    (response 200 (map #(d/pull db '[:item/id :item/name :item/category] %) things))))
+
+;; ---------------------------------------------------------------------
+;; Photos
+;; ---------------------------------------------------------------------
+
+(defn create-photo! [req]
+  (let [{:keys [uri role item-ids]} (:body req)
+        photo-uuid (java.util.UUID/randomUUID)
+        item-refs  (mapv resolve-item item-ids)
+        data       {:db/id "new-photo"
+                    :photo/id photo-uuid
+                    :photo/uri uri
+                    :photo/role (keyword role)
+                    :photo/items item-refs}
+        {:keys [db-after]} (db/transact! [data])]
+    (response 201 (d/pull db-after '[:photo/id :photo/uri :photo/role]
+                           [:photo/id photo-uuid]))))
+
+(defn item-photos [req]
+  (let [item-ref  (resolve-item (get-in req [:params :id]))
+        eid       (entity-eid item-ref)
+        db        (db/db)
+        photo-ids (d/q '[:find [?p ...] :in $ ?item :where [?p :photo/items ?item]]
+                        db eid)]
+    (response 200 (map #(d/pull db '[:photo/id :photo/uri :photo/role] %) photo-ids))))
+
+;; ---------------------------------------------------------------------
+;; Connections
+;; ---------------------------------------------------------------------
+
+(defn create-connection! [req]
+  (let [{:keys [from-id to-id type note confidence]} (:body req)
+        conn-uuid (java.util.UUID/randomUUID)
+        from-ref  (resolve-item from-id)
+        to-ref    (resolve-item to-id)
+        data      (cond-> {:db/id "new-conn"
+                            :connection/id conn-uuid
+                            :connection/from from-ref
+                            :connection/to to-ref
+                            :connection/type (keyword type)}
+                    note       (assoc :connection/note note)
+                    confidence (assoc :connection/confidence (keyword confidence)))
+        {:keys [db-after]} (db/transact! [data])]
+    (response 201 (d/pull db-after '[:connection/id :connection/type :connection/note]
+                           [:connection/id conn-uuid]))))
+
+(def connected-rules
+  '[[(connected ?a ?b ?type)
+     [?c :connection/from ?a]
+     [?c :connection/to ?b]
+     [?c :connection/type ?type]]
+    [(connected ?a ?b ?type)
+     [?c :connection/from ?b]
+     [?c :connection/to ?a]
+     [?c :connection/type ?type]]])
+
+(defn item-connections [req]
+  (let [item-ref (resolve-item (get-in req [:params :id]))
+        eid      (entity-eid item-ref)
+        db       (db/db)
+        rows     (d/q '[:find ?other ?type
+                         :in $ % ?item
+                         :where (connected ?item ?other ?type)]
+                       db connected-rules eid)]
+    (response 200 (map (fn [[other type]]
+                          {:item (d/pull db '[:item/id :item/name] other)
+                           :type type})
+                        rows))))
+
+;; ---------------------------------------------------------------------
+;; Routes
+;; ---------------------------------------------------------------------
+
+(defroutes app-routes
+  (POST "/items" req (create-item! req))
+  (GET  "/items/:id" req (get-item req))
+  (PUT  "/items/:id/location" req (move-item-handler req))
+  (POST "/items/:id/checkout" req (checkout-item! req))
+  (POST "/items/:id/checkin" req (checkin-item! req))
+  (GET  "/items/:id/history" req (item-history req))
+  (GET  "/items/:id/contents" req (item-contents req))
+  (GET  "/items/:id/photos" req (item-photos req))
+  (GET  "/items/:id/connections" req (item-connections req))
+
+  (POST "/locations" req (create-location! req))
+  (POST "/photos" req (create-photo! req))
+  (POST "/connections" req (create-connection! req))
+
+  (route/not-found (response 404 {:error "not found"})))
+
+(defn wrap-errors [handler]
+  (fn [req]
+    (try
+      (handler req)
+      (catch clojure.lang.ExceptionInfo e
+        (response 400 {:error (.getMessage e) :data (ex-data e)}))
+      (catch Exception e
+        (response 500 {:error (.getMessage e)})))))
+
+(def app
+  (-> app-routes
+      wrap-errors
+      (wrap-json-body {:keywords? true})
+      wrap-json-response
+      wrap-params))
+```
+
+## Prompt:
+continue
+
+## Response:
+Now the Midje test suite, exercising every operation through the HTTP layer:
+
+The project's below. It's a Ring/Compojure API over an in-memory Datomic DB, covering items (containers included), locations, photo linkage, checkout-style movements, and typed connections — each backed by the schema and Datalog rules from earlier in the conversation, with Midje tests driving every endpoint through `ring-mock`.
+
+Two things worth flagging: I couldn't actually run this here (this sandbox can reach npm/pip/crates but not Clojars/Maven, where Datomic and Midje live) — `clj -M:run` and `clj -M:test` should work wherever those are reachable. And `:connection/type` is a plain keyword rather than a ref to a `:relation-type` entity, as a deliberate simplification for the POC — the README notes how to extend it back to the fuller design if you want new relationship kinds addable as data.
+
+## Response:
+> **Artifact: core**
+```plaintext
+(ns collection.core
+  (:require [collection.db :as db]
+            [collection.schema :refer [schema-txn]]
+            [collection.api :refer [app]]
+            [ring.adapter.jetty :refer [run-jetty]])
+  (:gen-class))
+
+(defn -main [& _args]
+  (db/init! schema-txn)
+  (println "Collection API listening on http://localhost:3000")
+  (run-jetty app {:port 3000 :join? true}))
+```
+
+## Response:
+> **Artifact: api_test**
+```plaintext
+(ns collection.api-test
+  (:require [midje.sweet :refer :all]
+            [ring.mock.request :as mock]
+            [cheshire.core :as json]
+            [collection.db :as db]
+            [collection.schema :refer [schema-txn]]
+            [collection.api :refer [app]]))
+
+;; Fresh in-memory database for this test namespace.
+(db/init! schema-txn)
+
+(defn json-req [method url data]
+  (-> (mock/request method url)
+      (mock/content-type "application/json")
+      (mock/body (json/generate-string data))))
+
+(defn call [req]
+  (let [resp (app req)]
+    (update resp :body #(when % (json/parse-string (slurp %) true)))))
+
+;; -----------------------------------------------------------------------
+;; Items
+;; -----------------------------------------------------------------------
+
+(fact "creating an item returns 201 with the new item's data"
+  (let [resp (call (json-req :post "/items"
+                              {:name "Amazing Spider-Man #1"
+                               :category "magazine"}))]
+    (:status resp) => 201
+    (get-in resp [:body :item/name]) => "Amazing Spider-Man #1"
+    (get-in resp [:body :item/category]) => "magazine"))
+
+(fact "an item can be created directly inside a location"
+  (let [loc  (call (json-req :post "/locations" {:name "Office Shelf" :type "shelf"}))
+        loc-id (get-in loc [:body :location/id])
+        item (call (json-req :post "/items"
+                              {:name "Box of Magazines"
+                               :category "box"
+                               :location-id loc-id}))]
+    (:status item) => 201
+    (get-in item [:body :item/current-location :location/name]) => "Office Shelf"))
+
+(fact "fetching an unknown item returns 404"
+  (let [resp (call (mock/request :get (str "/items/" (java.util.UUID/randomUUID))))]
+    (:status resp) => 404))
+
+;; -----------------------------------------------------------------------
+;; Containers: an item can live inside another item (a box)
+;; -----------------------------------------------------------------------
+
+(fact "an item can be placed inside a box, which is itself just an item"
+  (let [box (call (json-req :post "/items" {:name "Comic Box A" :category "box"}))
+        box-id (get-in box [:body :item/id])
+        mag (call (json-req :post "/items"
+                             {:name "X-Men #1"
+                              :category "magazine"
+                              :location-id box-id}))]
+    (get-in mag [:body :item/current-location :item/name]) => "Comic Box A"))
+
+(fact "contents are resolved recursively through nested boxes"
+  (let [big   (call (json-req :post "/items" {:name "Big Box" :category "box"}))
+        big-id (get-in big [:body :item/id])
+        small (call (json-req :post "/items"
+                               {:name "Small Box" :category "box" :location-id big-id}))
+        small-id (get-in small [:body :item/id])
+        _mag  (call (json-req :post "/items"
+                               {:name "Old Comic" :category "magazine" :location-id small-id}))
+        contents (call (mock/request :get (str "/items/" big-id "/contents")))]
+    (:status contents) => 200
+    (count (:body contents)) => 2 ; the small box, and the comic inside it
+    (set (map :item/name (:body contents))) => #{"Small Box" "Old Comic"}))
+
+;; -----------------------------------------------------------------------
+;; Movements: relocate, checkout, checkin
+;; -----------------------------------------------------------------------
+
+(fact "checking out an item updates its current location and logs a movement"
+  (let [item (call (json-req :post "/items" {:name "Vintage Camera" :category "camera"}))
+        item-id (get-in item [:body :item/id])
+        friend (call (json-req :post "/locations" {:name "Alex's House" :type "person"}))
+        friend-id (get-in friend [:body :location/id])
+        checkout (call (json-req :post (str "/items/" item-id "/checkout")
+                                  {:to-location-id friend-id
+                                   :due-date "2026-10-15T00:00:00Z"
+                                   :notes "lending for a photo project"}))]
+    (:status checkout) => 200
+    (get-in checkout [:body :item/current-location :location/name]) => "Alex's House"
+    (let [hist (call (mock/request :get (str "/items/" item-id "/history")))]
+      (:status hist) => 200
+      (count (:body hist)) => 1)))
+
+(fact "checking an item back in records a second movement and restores its location"
+  (let [item (call (json-req :post "/items" {:name "Record Player" :category "electronics"}))
+        item-id (get-in item [:body :item/id])
+        shelf (call (json-req :post "/locations" {:name "Living Room" :type "room"}))
+        shelf-id (get-in shelf [:body :location/id])
+        loanee (call (json-req :post "/locations" {:name "Jamie's House" :type "person"}))
+        loanee-id (get-in loanee [:body :location/id])]
+    ;; put it on the shelf, then loan it out, then bring it back
+    (call (json-req :put (str "/items/" item-id "/location") {:to-location-id shelf-id}))
+    (call (json-req :post (str "/items/" item-id "/checkout") {:to-location-id loanee-id}))
+    (let [checkin (call (json-req :post (str "/items/" item-id "/checkin")
+                                   {:to-location-id shelf-id}))]
+      (:status checkin) => 200
+      (get-in checkin [:body :item/current-location :location/name]) => "Living Room")
+    (let [hist (call (mock/request :get (str "/items/" item-id "/history")))]
+      (count (:body hist)) => 3)))
+
+(fact "moving to an unknown location returns 400, not a server error"
+  (let [item (call (json-req :post "/items" {:name "Lonely Vase" :category "misc"}))
+        item-id (get-in item [:body :item/id])
+        resp (call (json-req :put (str "/items/" item-id "/location")
+                              {:to-location-id (str (java.util.UUID/randomUUID))}))]
+    (:status resp) => 400))
+
+;; -----------------------------------------------------------------------
+;; Photos
+;; -----------------------------------------------------------------------
+
+(fact "a single photo can be linked to more than one item"
+  (let [i1 (call (json-req :post "/items" {:name "Item A" :category "misc"}))
+        i1-id (get-in i1 [:body :item/id])
+        i2 (call (json-req :post "/items" {:name "Item B" :category "misc"}))
+        i2-id (get-in i2 [:body :item/id])
+        photo (call (json-req :post "/photos"
+                               {:uri "s3://bucket/img1.jpg"
+                                :role "primary"
+                                :item-ids [i1-id i2-id]}))]
+    (:status photo) => 201
+    (let [p1 (call (mock/request :get (str "/items/" i1-id "/photos")))
+          p2 (call (mock/request :get (str "/items/" i2-id "/photos")))]
+      (count (:body p1)) => 1
+      (count (:body p2)) => 1
+      (get-in p1 [:body 0 :photo/uri]) => "s3://bucket/img1.jpg")))
+
+;; -----------------------------------------------------------------------
+;; Connections
+;; -----------------------------------------------------------------------
+
+(fact "a typed connection links two independent items (e.g. a chapter and an article)"
+  (let [chap (call (json-req :post "/items" {:name "Ch. 3: Origins" :category "chapter"}))
+        chap-id (get-in chap [:body :item/id])
+        art (call (json-req :post "/items" {:name "1978 Interview" :category "article"}))
+        art-id (get-in art [:body :item/id])
+        conn (call (json-req :post "/connections"
+                              {:from-id chap-id
+                               :to-id art-id
+                               :type "references"
+                               :note "footnote 12"
+                               :confidence "certain"}))]
+    (:status conn) => 201
+    (get-in conn [:body :connection/type]) => "references"
+    (let [rel-from-chapter (call (mock/request :get (str "/items/" chap-id "/connections")))
+          rel-from-article (call (mock/request :get (str "/items/" art-id "/connections")))]
+      (count (:body rel-from-chapter)) => 1
+      (get-in rel-from-chapter [:body 0 :type]) => "references"
+      ;; connections are discoverable from either side, not just the "from" entity
+      (count (:body rel-from-article)) => 1)))
+```
+
+## Response:
+> **Artifact: README**
+
+> # Collection Inventory API (Proof of Concept)
+> 
+> A small Ring/Compojure REST API on top of an in-memory Datomic database,
+> implementing the object model from our design discussion: items (including
+> containers), locations, photo linkage, checkout-style movements, and typed
+> connections between informational entities.
+> 
+> **This was written but not executed in the sandbox it was generated in** —
+> that environment's network allowlist covers npm/pip/crates but not
+> Clojars/Maven Central, so `com.datomic/datomic-free` and `midje` couldn't be
+> downloaded to run it. The code is complete and internally consistent; run it
+> locally with the steps below.
+> 
+> ## Running it
+> 
+> Requires the Clojure CLI (`clj`) and internet access to Maven Central /
+> Clojars.
+> 
+> ```bash
+> # start the server on :3000
+> clj -M:run
+> 
+> # run the Midje test suite
+> clj -M:test
+> ```
+> 
+> ## Design choices carried over from the discussion
+> 
+> - **Containers are items, not a separate type.** `:item/current-location` is
+>   an untyped ref — it can point at a `Location` (a shelf, a room) or at
+>   another `Item` acting as a container (a box). Moving a box implicitly moves
+>   everything inside it; `GET /items/:id/contents` walks that recursively via
+>   a Datalog rule.
+> - **Movements are the checkout ledger.** Every location change writes a
+>   `:movement` fact (item, from, to, reason, optional due-date/notes) *and*
+>   advances the fast `:item/current-location` pointer, in one transaction.
+>   `POST .../checkout` and `POST .../checkin` are just `move-item!` with a
+>   fixed `:reason`; `PUT .../location` is the general-purpose relocate.
+>   `GET .../history` replays `d/history` rather than maintaining its own log.
+> - **Photos are many-to-many.** `:photo/items` is `cardinality/many`, so one
+>   photo (a shelf shot) can tag several items, and one item can have several
+>   photos.
+> - **Connections are reified.** A plain ref can't carry "why are these two
+>   things related," so `:connection/*` is its own entity with `:from`, `:to`,
+>   `:type`, `:note`, `:confidence`. `GET /items/:id/connections` checks both
+>   directions via a rule, so a connection is discoverable from either side.
+> - **Simplification vs. the full design:** `:connection/type` is stored as a
+>   plain keyword here rather than a ref to a `:relation-type` entity. The
+>   fuller version (letting new relationship kinds be added as data, with a
+>   human label and a `symmetric?` flag) is a straightforward extension —
+>   add the `:relation-type` schema from the earlier design and swap the
+>   keyword for a lookup ref.
+> 
+> ## Endpoints
+> 
+> | Method | Path                        | Purpose                                      |
+> |--------|-----------------------------|-----------------------------------------------|
+> | POST   | `/items`                    | create an item (optionally placed at a location or inside a container item) |
+> | GET    | `/items/:id`                | fetch an item, with current location resolved |
+> | PUT    | `/items/:id/location`       | relocate an item (`to-location-id`, `reason`) |
+> | POST   | `/items/:id/checkout`       | move item to a person/external location, with optional `due-date` |
+> | POST   | `/items/:id/checkin`        | move item back, recorded with reason `returned` |
+> | GET    | `/items/:id/history`        | full movement history, derived from `d/history` |
+> | GET    | `/items/:id/contents`       | recursive contents, if this item is a container |
+> | POST   | `/locations`                | create a location (room/shelf/person/etc.) |
+> | POST   | `/photos`                   | create a photo and link it to one or more items |
+> | GET    | `/items/:id/photos`         | photos linked to an item |
+> | POST   | `/connections`              | create a typed connection between two items |
+> | GET    | `/items/:id/connections`    | connections involving an item, from either side |
+> 
+> All bodies/responses are JSON; ids are UUID strings.
+> 
+> ### Example: checking out a camera
+> 
+> ```bash
+> curl -s -X POST localhost:3000/items \
+>   -H 'Content-Type: application/json' \
+>   -d '{"name":"Vintage Camera","category":"camera"}'
+> # => {"item/id":"...", "item/name":"Vintage Camera", ...}
+> 
+> curl -s -X POST localhost:3000/locations \
+>   -H 'Content-Type: application/json' \
+>   -d '{"name":"Alex'"'"'s House","type":"person"}'
+> # => {"location/id":"...", ...}
+> 
+> curl -s -X POST localhost:3000/items/<item-id>/checkout \
+>   -H 'Content-Type: application/json' \
+>   -d '{"to-location-id":"<location-id>","due-date":"2026-10-15T00:00:00Z"}'
+> ```
+> 
+> ## Files
+> 
+> ```
+> deps.edn
+> src/collection/schema.clj   ; Datomic attribute definitions
+> src/collection/db.clj       ; connection lifecycle (init!, transact!, db)
+> src/collection/api.clj      ; handlers, Datalog rules, routes, middleware
+> src/collection/core.clj     ; -main, boots Jetty on :3000
+> test/collection/api_test.clj ; Midje tests, driven through the HTTP layer via ring-mock
+> ```
+
 
