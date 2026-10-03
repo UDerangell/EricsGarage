@@ -1,0 +1,51 @@
+[  0.000s] STEP 1: Session start
+            · date: 2026-10-03T19:55:29Z
+            · gateway: hyper.media
+            · followed spaces: none
+
+[  0.008s] STEP 2: openHypermediaURL called
+            · input: https://hyper.media/hm/z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/ftl_usecases/doug-engelbart-interviews-from-frode
+[  0.009s] STEP 3: Parse the address (HypermediaAddress.parse)
+            · uid:         z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA
+            · path:        ftl_usecases/doug-engelbart-interviews-from-frode
+            · version:     none (latest)
+            · block ref:   none
+            · origin:      https://hyper.media
+            · canonicalID: hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/ftl_usecases/doug-engelbart-interviews-from-frode
+            · resourceID:  hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/ftl_usecases/doug-engelbart-interviews-from-frode
+[  0.009s] STEP 4: Check the document cache by canonical ID
+            · MISS (cache holds 0 document(s))
+[  0.009s] STEP 5: Choose the label for the "Fetching from …" note
+            · source: the address's own origin
+            · showNote("Fetching from hyper.media…") — cosmetic; the real order is decided in the next step
+[  0.009s] STEP 6: HypermediaFetcher.fetch(urlString:spaces:)
+            · address carries its own origin (https://hyper.media); asking only that server
+            · → GET https://hyper.media/api/Resource?id=hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/ftl_usecases/doug-engelbart-interviews-from-frode
+            · ← HTTP 200, 108880 bytes, 216 ms
+            ·   header content-type: application/json; charset=utf-8
+            · resource type: "document"
+            · author: looking up 1 of 1 author uid(s)
+            · → GET https://hyper.media/api/Account?id=z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA
+            · ← HTTP 200, 544 bytes, 34 ms
+            ·   header content-type: application/json; charset=utf-8
+            · FetchResult: title="Doug Engelbart Interviews from Frode", author="Eric Rangell"
+            · canonicalID=hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/ftl_usecases/doug-engelbart-interviews-from-frode, origin=hyper.media, version=bafyreihak5rnfb6ih72e4cftbi5gcgqqiddopeqmylconolvg635wn56t4
+            · created: 2026-09-30T10:18:55.345Z
+            · 57 block(s) → 57 paragraph(s)
+            ·   paragraph id 5vu3G9MD  (Heading)
+            ·   paragraph id w7Im2vp1  (Paragraph)
+            ·   paragraph id aPAHMQah  (Paragraph)
+            ·   paragraph id tUsI37zt  (Paragraph)
+            ·   paragraph id TIzbcwCJ  (Paragraph)
+            ·   paragraph id XMP770NX  (Paragraph)
+            ·   paragraph id fIOFHpx1  (Paragraph)
+            ·   paragraph id 0rYlV3ag  (Paragraph)
+            ·   … 49 more
+[  0.272s] STEP 7: Work out the fragment to land on
+            · fragment: nil (open at top)
+[  0.272s] STEP 8: presentHypermedia
+            · second cache check MISS
+            · would build LiquidDoc: sourceURL=hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/ftl_usecases/doug-engelbart-interviews-from-frode, fileURL=<temp>/Hypermedia/<id>.origamitext (never written)
+            · unique document ID via LiquidAddress.makeID is not reproduced here
+            · cache now holds 1 document(s)
+            · open(doc, fragment: nil)

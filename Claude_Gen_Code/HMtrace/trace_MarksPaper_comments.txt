@@ -1,0 +1,57 @@
+[  0.000s] STEP 1: Session start
+            · date: 2026-10-03T19:52:20Z
+            · gateway: hyper.media
+            · followed spaces: none
+
+[  0.011s] STEP 2: openHypermediaURL called
+            · input: hm://z6MkjtdhPwB2jbdp6V8mn8oobZycbqqEuP6nXouN12EZN4Wa/papers/2026/3800935.3830850?v=bafyreig4s7l7eqacdelztolsd7cin2wx33fvrzgrr57pj2b6ai6h25cxam#a8wKX-X_
+[  0.011s] STEP 3: Parse the address (HypermediaAddress.parse)
+            · uid:         z6MkjtdhPwB2jbdp6V8mn8oobZycbqqEuP6nXouN12EZN4Wa
+            · path:        papers/2026/3800935.3830850
+            · version:     bafyreig4s7l7eqacdelztolsd7cin2wx33fvrzgrr57pj2b6ai6h25cxam
+            · block ref:   a8wKX-X_
+            · origin:      none (bare hm:// address)
+            · canonicalID: hm://z6MkjtdhPwB2jbdp6V8mn8oobZycbqqEuP6nXouN12EZN4Wa/papers/2026/3800935.3830850
+            · resourceID:  hm://z6MkjtdhPwB2jbdp6V8mn8oobZycbqqEuP6nXouN12EZN4Wa/papers/2026/3800935.3830850?v=bafyreig4s7l7eqacdelztolsd7cin2wx33fvrzgrr57pj2b6ai6h25cxam
+[  0.012s] STEP 4: Check the document cache by canonical ID
+            · MISS (cache holds 0 document(s))
+[  0.012s] STEP 5: Choose the label for the "Fetching from …" note
+            · source: gateway domain
+            · showNote("Fetching from hyper.media…") — cosmetic; the real order is decided in the next step
+[  0.012s] STEP 6: HypermediaFetcher.fetch(urlString:spaces:)
+            · bare hm:// address: 0 followed space(s) match the uid
+            · origins to try, in order: hyper.media
+            · attempt 1/1: hyper.media
+            · → GET https://hyper.media/api/Resource?id=hm://z6MkjtdhPwB2jbdp6V8mn8oobZycbqqEuP6nXouN12EZN4Wa/papers/2026/3800935.3830850?v%3Dbafyreig4s7l7eqacdelztolsd7cin2wx33fvrzgrr57pj2b6ai6h25cxam
+            · ← HTTP 200, 243743 bytes, 1005 ms
+            ·   header content-type: application/json; charset=utf-8
+            · resource type: "document"
+            · author: metadata.displayAuthor = "Mark W R Anderson" (no lookup needed)
+            · FetchResult: title="The Future Is Not What It Used To Be: Hypertext, Note-Taking, And Tools for Thought", author="Mark W R Anderson"
+            · canonicalID=hm://z6MkjtdhPwB2jbdp6V8mn8oobZycbqqEuP6nXouN12EZN4Wa/papers/2026/3800935.3830850, origin=hyper.media, version=bafyreig4s7l7eqacdelztolsd7cin2wx33fvrzgrr57pj2b6ai6h25cxam
+            · created: 2026-09-15T22:51:45.381Z
+            · 364 block(s) → 364 paragraph(s)
+            ·   paragraph id OFuWVEe1  (Heading)
+            ·   paragraph id wXg8jCfR  (Paragraph)
+            ·   paragraph id Vl1nr-Jl  (Heading)
+            ·   paragraph id -3B3iASN  (Paragraph)
+            ·   paragraph id 4ziQWf27  (Paragraph)
+            ·   paragraph id nIV0aHRc  (Paragraph)
+            ·   paragraph id lS5vgZsp  (Paragraph)
+            ·   paragraph id qJ8m35AC  (Paragraph)
+            ·   … 356 more
+[  1.036s] STEP 7: Work out the fragment to land on
+            · fragment: a8wKX-X_
+            · paragraph a8wKX-X_ exists in the fetched document
+[  1.036s] STEP 8: presentHypermedia
+            · second cache check MISS
+            · would build LiquidDoc: sourceURL=hm://z6MkjtdhPwB2jbdp6V8mn8oobZycbqqEuP6nXouN12EZN4Wa/papers/2026/3800935.3830850, fileURL=<temp>/Hypermedia/<id>.origamitext (never written)
+            · unique document ID via LiquidAddress.makeID is not reproduced here
+            · cache now holds 1 document(s)
+            · open(doc, fragment: a8wKX-X_)
+[  1.036s] STEP 9: Comments: loadCommentsIfNeeded → refreshComments
+            · origin: documentOrigins[id] = hyper.media
+            · → GET https://hyper.media/api/ListComments?targetId=%7B%22id%22:%22hm://z6MkjtdhPwB2jbdp6V8mn8oobZycbqqEuP6nXouN12EZN4Wa/papers/2026/3800935.3830850%22,%22uid%22:%22z6MkjtdhPwB2jbdp6V8mn8oobZycbqqEuP6nXouN12EZN4Wa%22,%22path%22:%5B%22papers%22,%222026%22,%223800935.3830850%22%5D,%22version%22:null,%22blockRef%22:null,%22blockRange%22:null,%22hostname%22:null,%22scheme%22:%22hm%22,%22latest%22:true%7D
+            · ← HTTP 200, 37 bytes, 862 ms
+            ·   header content-type: application/json; charset=utf-8
+            · 0 comment(s): 0 top-level, 0 replies

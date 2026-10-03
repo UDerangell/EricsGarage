@@ -1,0 +1,47 @@
+[  0.000s] STEP 1: Session start
+            · date: 2026-10-03T19:37:43Z
+            · gateway: hyper.media
+            · followed spaces: none
+
+[  0.007s] STEP 2: openHypermediaURL called
+            · input: hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/newsbytes-news-network-archive
+[  0.007s] STEP 3: Parse the address (HypermediaAddress.parse)
+            · uid:         z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA
+            · path:        newsbytes-news-network-archive
+            · version:     none (latest)
+            · block ref:   none
+            · origin:      none (bare hm:// address)
+            · canonicalID: hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/newsbytes-news-network-archive
+            · resourceID:  hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/newsbytes-news-network-archive
+[  0.007s] STEP 4: Check the document cache by canonical ID
+            · MISS (cache holds 0 document(s))
+[  0.007s] STEP 5: Choose the label for the "Fetching from …" note
+            · source: gateway domain
+            · showNote("Fetching from hyper.media…") — cosmetic; the real order is decided in the next step
+[  0.007s] STEP 6: HypermediaFetcher.fetch(urlString:spaces:)
+            · bare hm:// address: 0 followed space(s) match the uid
+            · origins to try, in order: hyper.media
+            · attempt 1/1: hyper.media
+            · → GET https://hyper.media/api/Resource?id=hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/newsbytes-news-network-archive
+            · ← HTTP 200, 2152 bytes, 466 ms
+            ·   header content-type: application/json; charset=utf-8
+            · resource type: "document"
+            · author: looking up 1 of 1 author uid(s)
+            · → GET https://hyper.media/api/Account?id=z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA
+            · ← HTTP 200, 544 bytes, 33 ms
+            ·   header content-type: application/json; charset=utf-8
+            · FetchResult: title="Newsbytes News Network Archive", author="Eric Rangell"
+            · canonicalID=hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/newsbytes-news-network-archive, origin=hyper.media, version=bafyreigbitcsskda4iucdtwwswjf6qdxrf7mjesj7etfv3cn47k575g6ze
+            · created: 2026-09-17T10:06:24.032Z
+            · 3 block(s) → 3 paragraph(s)
+            ·   paragraph id lloEEKcA  (Paragraph)
+            ·   paragraph id 4VL0EdS8  (Paragraph)
+            ·   paragraph id ebqm8Nb_  (Paragraph)
+[  0.512s] STEP 7: Work out the fragment to land on
+            · fragment: nil (open at top)
+[  0.513s] STEP 8: presentHypermedia
+            · second cache check MISS
+            · would build LiquidDoc: sourceURL=hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/newsbytes-news-network-archive, fileURL=<temp>/Hypermedia/<id>.origamitext (never written)
+            · unique document ID via LiquidAddress.makeID is not reproduced here
+            · cache now holds 1 document(s)
+            · open(doc, fragment: nil)

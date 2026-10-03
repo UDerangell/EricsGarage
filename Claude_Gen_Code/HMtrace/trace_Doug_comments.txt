@@ -1,0 +1,66 @@
+[  0.000s] STEP 1: Session start
+            · date: 2026-10-03T19:56:04Z
+            · gateway: hyper.media
+            · followed spaces: none
+
+[  0.005s] STEP 2: openHypermediaURL called
+            · input: https://hyper.media/hm/z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/ftl_usecases/doug-engelbart-interviews-from-frode
+[  0.005s] STEP 3: Parse the address (HypermediaAddress.parse)
+            · uid:         z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA
+            · path:        ftl_usecases/doug-engelbart-interviews-from-frode
+            · version:     none (latest)
+            · block ref:   none
+            · origin:      https://hyper.media
+            · canonicalID: hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/ftl_usecases/doug-engelbart-interviews-from-frode
+            · resourceID:  hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/ftl_usecases/doug-engelbart-interviews-from-frode
+[  0.005s] STEP 4: Check the document cache by canonical ID
+            · MISS (cache holds 0 document(s))
+[  0.005s] STEP 5: Choose the label for the "Fetching from …" note
+            · source: the address's own origin
+            · showNote("Fetching from hyper.media…") — cosmetic; the real order is decided in the next step
+[  0.005s] STEP 6: HypermediaFetcher.fetch(urlString:spaces:)
+            · address carries its own origin (https://hyper.media); asking only that server
+            · → GET https://hyper.media/api/Resource?id=hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/ftl_usecases/doug-engelbart-interviews-from-frode
+            · ← HTTP 200, 108880 bytes, 362 ms
+            ·   header content-type: application/json; charset=utf-8
+            · resource type: "document"
+            · author: looking up 1 of 1 author uid(s)
+            · → GET https://hyper.media/api/Account?id=z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA
+            · ← HTTP 200, 544 bytes, 27 ms
+            ·   header content-type: application/json; charset=utf-8
+            · FetchResult: title="Doug Engelbart Interviews from Frode", author="Eric Rangell"
+            · canonicalID=hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/ftl_usecases/doug-engelbart-interviews-from-frode, origin=hyper.media, version=bafyreihak5rnfb6ih72e4cftbi5gcgqqiddopeqmylconolvg635wn56t4
+            · created: 2026-09-30T10:18:55.345Z
+            · 57 block(s) → 57 paragraph(s)
+            ·   paragraph id 5vu3G9MD  (Heading)
+            ·   paragraph id w7Im2vp1  (Paragraph)
+            ·   paragraph id aPAHMQah  (Paragraph)
+            ·   paragraph id tUsI37zt  (Paragraph)
+            ·   paragraph id TIzbcwCJ  (Paragraph)
+            ·   paragraph id XMP770NX  (Paragraph)
+            ·   paragraph id fIOFHpx1  (Paragraph)
+            ·   paragraph id 0rYlV3ag  (Paragraph)
+            ·   … 49 more
+[  0.401s] STEP 7: Work out the fragment to land on
+            · fragment: nil (open at top)
+[  0.402s] STEP 8: presentHypermedia
+            · second cache check MISS
+            · would build LiquidDoc: sourceURL=hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/ftl_usecases/doug-engelbart-interviews-from-frode, fileURL=<temp>/Hypermedia/<id>.origamitext (never written)
+            · unique document ID via LiquidAddress.makeID is not reproduced here
+            · cache now holds 1 document(s)
+            · open(doc, fragment: nil)
+[  0.402s] STEP 9: Comments: loadCommentsIfNeeded → refreshComments
+            · origin: documentOrigins[id] = hyper.media
+            · → GET https://hyper.media/api/ListComments?targetId=%7B%22id%22:%22hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/ftl_usecases/doug-engelbart-interviews-from-frode%22,%22uid%22:%22z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA%22,%22path%22:%5B%22ftl_usecases%22,%22doug-engelbart-interviews-from-frode%22%5D,%22version%22:null,%22blockRef%22:null,%22blockRange%22:null,%22hostname%22:null,%22scheme%22:%22hm%22,%22latest%22:true%7D
+            · ← HTTP 200, 12592 bytes, 705 ms
+            ·   header content-type: application/json; charset=utf-8
+            · 9 comment(s): 4 top-level, 5 replies
+            ·   comment by Eric Rangell, 2026-09-30T10:22:16.689Z, 1 paragraph(s)
+            ·   comment by Eric Rangell, 2026-09-30T10:24:01.050Z, 1 paragraph(s)
+            ·   comment by Eric Rangell, 2026-09-30T10:26:51.379Z, 1 paragraph(s)
+            ·   ↳ reply by Eric Rangell, 2026-09-30T11:56:42.074Z, 2 paragraph(s)
+            ·   ↳ reply by Eric Rangell, 2026-09-30T12:03:07.684Z, 2 paragraph(s)
+            ·   ↳ reply by Eric Rangell, 2026-09-30T14:07:02.820Z, 1 paragraph(s)
+            ·   ↳ reply by Eric Rangell, 2026-09-30T14:20:25.363Z, 1 paragraph(s)
+            ·   ↳ reply by Gabo Beaumont, 2026-09-30T15:45:47.568Z, 1 paragraph(s)
+            ·   comment by Eric Rangell, 2026-10-01T13:40:20.977Z, 1 paragraph(s)

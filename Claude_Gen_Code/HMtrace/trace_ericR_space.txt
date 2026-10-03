@@ -1,0 +1,64 @@
+[  0.000s] STEP 1: Session start
+            · date: 2026-10-03T19:48:48Z
+            · gateway: hyper.media
+[  0.009s] STEP 2: Follow spaces (HypermediaFetcher.resolveSpace)
+            · → OPTIONS https://hyper.media/
+            · ← HTTP 200, 0 bytes, 1208 ms
+            ·   header x-hypermedia-authors: hm://z6MkfzKMhF9k1oPaQsShWAg8xJzbWf5kaZgn1MkeZvhcAsmB,hm://z6MkgisVMELvqnsCo3dYmtVpy8PiqPGMVwfAyBWFn84vebq4,hm://z6MkhDLZmbzy5wyWeCa4hY2GqGXDckZdXs3C2wTGnz3KC7ic,hm://z6MkrbYsRzKb1VABdvhsDSAk6JK8fAszKsyHhcaZigYeWCou
+            ·   header x-hypermedia-id: hm://z6MkfzKMhF9k1oPaQsShWAg8xJzbWf5kaZgn1MkeZvhcAsmB
+            ·   header x-hypermedia-title: Seed Hypermedia
+            ·   header x-hypermedia-type: Document
+            ·   header x-hypermedia-version: bafyreignzot4ewcv2mn32y54u4def7d7cfejgwd7l67csfnmq7fuy3khpq
+            · followed hyper.media: uid=z6MkfzKMhF9k1oPaQsShWAg8xJzbWf5kaZgn1MkeZvhcAsmB, title="Seed Hypermedia"
+
+[  1.228s] STEP 3: openHypermediaURL called
+            · input: hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA
+[  1.228s] STEP 4: Parse the address (HypermediaAddress.parse)
+            · uid:         z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA
+            · path:        (root document)
+            · version:     none (latest)
+            · block ref:   none
+            · origin:      none (bare hm:// address)
+            · canonicalID: hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA
+            · resourceID:  hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA
+[  1.228s] STEP 5: Check the document cache by canonical ID
+            · MISS (cache holds 0 document(s))
+[  1.228s] STEP 6: Choose the label for the "Fetching from …" note
+            · source: first followed space
+            · showNote("Fetching from hyper.media…") — cosmetic; the real order is decided in the next step
+[  1.228s] STEP 7: HypermediaFetcher.fetch(urlString:spaces:)
+            · bare hm:// address: 0 followed space(s) match the uid
+            · origins to try, in order: hyper.media
+            · attempt 1/1: hyper.media
+            · → GET https://hyper.media/api/Resource?id=hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA
+            · ← HTTP 200, 4034 bytes, 52 ms
+            ·   header content-type: application/json; charset=utf-8
+            · resource type: "document"
+            · author: looking up 2 of 2 author uid(s)
+            · → GET https://hyper.media/api/Account?id=z6MkpawvDNdV9dhdf2QnD59wM6RYseXzCjwo7LvnLM3y5cn7
+            · ← HTTP 200, 544 bytes, 33 ms
+            ·   header content-type: application/json; charset=utf-8
+            · → GET https://hyper.media/api/Account?id=z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA
+            · ← HTTP 200, 544 bytes, 80 ms
+            ·   header content-type: application/json; charset=utf-8
+            · FetchResult: title="Eric Rangell", author="Eric Rangell and Eric Rangell"
+            · canonicalID=hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA, origin=hyper.media, version=bafyreid7qxx2x3gzllrisfutxet3xavdphuc2zfawkxzwa3eft6qgu773q
+            · created: 1970-01-01T00:00:00Z
+            · 11 block(s) → 11 paragraph(s)
+            ·   paragraph id gFBxdRwc  (Paragraph)
+            ·   paragraph id dunHr2Da  (Paragraph)
+            ·   paragraph id yoFabo29  (Paragraph)
+            ·   paragraph id o_Pr9Wde  (Paragraph)
+            ·   paragraph id 3btGAlxXqQ  (Embed)
+            ·   paragraph id 4KPiJ5FDfL  (Embed)
+            ·   paragraph id 1Cs4ZokIYa  (Embed)
+            ·   paragraph id S0eB-uHSW9  (Embed)
+            ·   … 3 more
+[  1.398s] STEP 8: Work out the fragment to land on
+            · fragment: nil (open at top)
+[  1.398s] STEP 9: presentHypermedia
+            · second cache check MISS
+            · would build LiquidDoc: sourceURL=hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA, fileURL=<temp>/Hypermedia/<id>.origamitext (never written)
+            · unique document ID via LiquidAddress.makeID is not reproduced here
+            · cache now holds 1 document(s)
+            · open(doc, fragment: nil)
