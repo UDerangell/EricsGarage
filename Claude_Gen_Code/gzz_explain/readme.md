@@ -7,4 +7,29 @@ usage: gzz_explain.py [-h] [-o OUTPUT] [--content CONTENT] [--no-content]
                       [--max-cells-per-rank MAX_CELLS_PER_RANK]
                       [--max-texts MAX_TEXTS] [--text-width TEXT_WIDTH]
                       input
+
+Explain a GZigZag GZZ0 dimension (or CONTENT) file in plain English.
+
+positional arguments:
+  input                 dimension file such as d.1, d.cursor, d.masterdim (or
+                        CONTENT)
+
+options:
+  -h, --help            show this help message and exit
+  -o, --output OUTPUT   output text file (default: <input name>.explained.txt
+                        in the current directory; '-' prints to the screen)
+  --content CONTENT     path to the CONTENT file (default: the file called
+                        CONTENT next to the input)
+  --no-content          do not look up cell texts; show bare cell IDs
+  --name NAME           dimension name (default: the file name)
+  --full                do not truncate any listing
+  --max-ops MAX_OPS     operations listed per block (default 12)
+  --max-ranks MAX_RANKS
+                        ranks listed in the current state (default 30)
+  --max-cells-per-rank MAX_CELLS_PER_RANK
+                        cells shown per rank before abbreviating (default 20)
+  --max-texts MAX_TEXTS
+                        cell texts listed for CONTENT (default 60)
+  --text-width TEXT_WIDTH
+                        maximum characters of a cell's text shown (default 40)
 ```
