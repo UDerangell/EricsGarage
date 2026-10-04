@@ -1,0 +1,132 @@
+GZigZag file report
+----------------------------------------------------------------------------------------------------
+
+====================================================================================================
+1. WHAT THIS FILE IS
+====================================================================================================
+File        : d.date
+Size        : 520 bytes
+Signature   : GZZ0 (GZigZag journal)
+Header      : format tag 42, reserved value 0  (meaning unknown; the sample files use 42 for dimension files and 43 for CONTENT)
+Blocks      : 1  (stamps 15 to 15)
+Operations  : connect=45
+
+This file stores the dimension 'd.date'. A dimension arranges cells into ranks: each cell has at
+most one neighbour in the positive (+) direction and one in the negative (-) direction, so cells
+form chains (or loops). The file is an append-only journal of 'connect' and 'disconnect' records;
+replaying it from the top gives the current links.
+
+What 'd.date' is for:
+  Application-specific (meaning inferred from the name only): links a cell to a date or year.
+
+Cell texts come from /Users/ericrangell/Desktop/Adam'sRoyals/CONTENT (809 records), so cells are
+shown as  #ID "text".
+
+====================================================================================================
+2. HISTORY (one block per timestamp, in file order)
+====================================================================================================
+Each block is one saved change set, tagged with a stamp number. The stamp is shared by all files of
+a space, so the same stamp in different files belongs to the same user action. The first block of a
+file normally holds the whole initial state; later blocks are small incremental changes.
+
+Stamp 15  -  45 operation(s): 45 link
+   first save recorded at or after this stamp: 2004-02-16 01:52:43 UTC
+   Link #810 "George V"  →  #951 "1936"
+   Link #748 "Anne"  →  #930 "1759"
+   Link #779 "Beatrice"  →  #936 "1944"
+   Link #778 "Alexandra"  →  #919 "1925"
+   Link #776 "Victoria"  →  #956 "1901"
+   Link #939 "1743"  →  #801 "Caroline"
+   Link #938 "1938"  →  #765 "Beatrix"
+   Link #937 "1857"  →  #779 "Beatrice"
+   Link #934 "1930"  →  #852 "Baudouin"
+   Link #932 "1905"  →  #854 "Astrid"
+   Link #931 "1950"  →  #874 "Anne"
+   Link #805 "Alexander"  →  #917 "1885"
+   … and 33 more (use --full to list every operation)
+
+
+====================================================================================================
+3. CURRENT STATE OF 'd.date' (after replaying every block)
+====================================================================================================
+Linked cells  : 72
+Ranks         : 27  (27 linear, 0 circular)
+Link records  : 45 (each is one 'A → B' link)
+Consistent    : yes
+Rank lengths : 9 rank(s) of 2 cells, 18 rank(s) of 3 cells
+
+A rank is a chain of cells; '→' points in the positive (+) direction. Ranks are listed longest
+first.
+
+Rank 1 (3 cells):
+   #911 "1848"  →  #723 "Albert I"  →  #912 "1922"
+Rank 2 (3 cells):
+   #916 "1804"  →  #805 "Alexander"  →  #917 "1885"
+Rank 3 (3 cells):
+   #918 "1844"  →  #778 "Alexandra"  →  #919 "1925"
+Rank 4 (3 cells):
+   #920 "1886"  →  #824 "Alfonso XIII"  →  #921 "1941"
+Rank 5 (3 cells):
+   #922 "1843"  →  #882 "Alice"  →  #923 "1878"
+Rank 6 (3 cells):
+   #924 "1885"  →  #883 "Alice"  →  #925 "1969"
+Rank 7 (3 cells):
+   #927 "1710"  →  #701 "Anna Charlotte"  →  #928 "1777"
+Rank 8 (3 cells):
+   #929 "1709"  →  #748 "Anne"  →  #930 "1759"
+Rank 9 (3 cells):
+   #932 "1905"  →  #854 "Astrid"  →  #933 "1935"
+Rank 10 (3 cells):
+   #934 "1930"  →  #852 "Baudouin"  →  #935 "1993"
+Rank 11 (3 cells):
+   #937 "1857"  →  #779 "Beatrice"  →  #936 "1944"
+Rank 12 (3 cells):
+   #939 "1743"  →  #801 "Caroline"  →  #940 "1787"
+Rank 13 (3 cells):
+   #943 "1841"  →  #780 "Edward VII"  →  #944 "1910"
+Rank 14 (3 cells):
+   #945 "1894"  →  #866 "Edward VIII"  →  #946 "1972"
+Rank 15 (3 cells):
+   #948 "1900"  →  #868 "Elizabeth Bowes-Lyon"  →  #949 "2002"
+Rank 16 (3 cells):
+   #950 "1865"  →  #810 "George V"  →  #951 "1936"
+Rank 17 (3 cells):
+   #952 "1895"  →  #812 "George VI"  →  #953 "1952"
+Rank 18 (3 cells):
+   #955 "1819"  →  #776 "Victoria"  →  #956 "1901"
+Rank 19 (2 cells):
+   #893 "Albert"  →  #910 "1861"
+Rank 20 (2 cells):
+   #915 "1934"  →  #855 "Albert II"
+Rank 21 (2 cells):
+   #926 "1960"  →  #875 "Andrew"
+Rank 22 (2 cells):
+   #931 "1950"  →  #874 "Anne"
+Rank 23 (2 cells):
+   #938 "1938"  →  #765 "Beatrix"
+Rank 24 (2 cells):
+   #941 "1948"  →  #870 "Charles"
+Rank 25 (2 cells):
+   #942 "1964"  →  #872 "Edward"
+Rank 26 (2 cells):
+   #947 "1926"  →  #814 "Elisabeth II"
+Rank 27 (2 cells):
+   #954 "1921"  →  #878 "Philip"
+
+====================================================================================================
+NOTES ON HOW TO TRUST THIS REPORT
+====================================================================================================
+  - The file format is not documented. It was reverse-engineered from sample data and the GZigZag
+    Java sources, then checked by replaying a complete sample space (every dimension file replayed
+    without inconsistencies, and with identical results whichever order the records of a block are
+    applied in). Treat the explanations as well-founded inference, not specification.
+  - Inside a block the records are stored in hash-table order, not in the order the user made them.
+    This script applies the disconnections of a block first and its connections second.
+  - A note such as 'its old + neighbour X was detached' describes one replay step; X may be linked
+    elsewhere again later in the same block (this is how an insertion into a rank looks).
+  - 'Positive' (+) is the direction of 'A → B'. For a circular rank the start is the cell with the
+    lexically greatest ID, which matches how the Java code picks a loop's 'head'.
+  - Dimension meanings come from how the Java code uses each name; application-specific dimensions
+    are guessed from their names.
+  - Save times are matched to stamps heuristically: the first 'savetime' record at or after a
+    block's stamp.

@@ -1,0 +1,187 @@
+GZigZag file report
+----------------------------------------------------------------------------------------------------
+
+====================================================================================================
+1. WHAT THIS FILE IS
+====================================================================================================
+File        : d.marriage
+Size        : 756 bytes
+Signature   : GZZ0 (GZigZag journal)
+Header      : format tag 42, reserved value 0  (meaning unknown; the sample files use 42 for dimension files and 43 for CONTENT)
+Blocks      : 4  (stamps 5 to 13)
+Operations  : connect=64
+
+This file stores the dimension 'd.marriage'. A dimension arranges cells into ranks: each cell has at
+most one neighbour in the positive (+) direction and one in the negative (-) direction, so cells
+form chains (or loops). The file is an append-only journal of 'connect' and 'disconnect' records;
+replaying it from the top gives the current links.
+
+What 'd.marriage' is for:
+  Application-specific (meaning inferred from the name only): marriage relations.
+
+Cell texts come from /Users/ericrangell/Desktop/Adam'sRoyals/CONTENT (809 records), so cells are
+shown as  #ID "text".
+
+====================================================================================================
+2. HISTORY (one block per timestamp, in file order)
+====================================================================================================
+Each block is one saved change set, tagged with a stamp number. The stamp is shared by all files of
+a space, so the same stamp in different files belongs to the same user action. The first block of a
+file normally holds the whole initial state; later blocks are small incremental changes.
+
+Stamp 5  -  13 operation(s): 13 link
+   first save recorded at or after this stamp: 2004-02-15 15:31:27 UTC
+   Link #701 "Anna Charlotte"  →  #740 "+"
+   Link #728 "Charlotte"  →  #747 "+"
+   Link #725 "Louis II"  →  #746 "+"
+   Link #722 "Mary"  →  #745 "+"
+   Link #699 "Jan Wiilem"  →  #735 "+"
+   Link #719 "Marie"  →  #744 "+"
+   Link #747 "+"  →  #729 "Pierre"
+   Link #745 "+"  →  #723 "Albert I"
+   Link #744 "+"  →  #720 "William Douglas-Hamilton"
+   Link #740 "+"  →  #702 "Friedrich"
+   Link #709 "Karl"  →  #743 "+"
+   Link #706 "Karl"  →  #742 "+"
+   … and 1 more (use --full to list every operation)
+
+Stamp 9  -  24 operation(s): 24 link
+   first save recorded at or after this stamp: 2004-02-15 22:36:24 UTC
+   Link #772 "Christian IX"  →  #790 "+"
+   Link #806 "Francis"  →  #819 "+"
+   Link #805 "Alexander"  →  #818 "+"
+   Link #802 "Henriette"  →  #817 "+"
+   Link #789 "+"  →  #774 "Frederik VIII"
+   Link #801 "Caroline"  →  #816 "+"
+   Link #757 "Willem II"  →  #786 "+"
+   Link #788 "+"  →  #770 "Carl XV"
+   Link #755 "Willem I"  →  #784 "+"
+   Link #753 "Willem V"  →  #783 "+"
+   Link #782 "+"  →  #748 "Anne"
+   Link #750 "Willem IV"  →  #782 "+"
+   … and 12 more (use --full to list every operation)
+
+Stamp 11  -  15 operation(s): 15 link
+   first save recorded at or after this stamp: 2004-02-16 00:16:05 UTC
+   Link #863 "+"  →  #824 "Alfonso XIII"
+   Link #862 "+"  →  #823 "Henry of Battenburg"
+   Link #832 "Haakon VII"  →  #858 "+"
+   Link #859 "+"  →  #843 "Olav V"
+   Link #861 "+"  →  #850 "Jean"
+   Link #831 "Ingeborg"  →  #857 "+"
+   Link #858 "+"  →  #822 "Maud"
+   Link #860 "+"  →  #847 "Leopold III"
+   Link #857 "+"  →  #834 "Carl"
+   Link #779 "Beatrice"  →  #862 "+"
+   Link #830 "Victoria Eugenia"  →  #863 "+"
+   Link #826 "Juan"  →  #864 "+"
+   … and 3 more (use --full to list every operation)
+
+Stamp 13  -  12 operation(s): 12 link
+   first save recorded at or after this stamp: 2004-02-16 00:55:56 UTC
+   Link #866 "Edward VIII"  →  #896 "+"
+   Link #892 "+"  →  #878 "Philip"
+   Link #889 "+"  →  #880 "Louis"
+   Link #891 "+"  →  #884 "Andrew"
+   Link #888 "Victoria"  →  #890 "+"
+   Link #890 "+"  →  #887 "Marquess of Milford Haven"
+   Link #883 "Alice"  →  #891 "+"
+   Link #882 "Alice"  →  #889 "+"
+   Link #821 "+"  →  #868 "Elizabeth Bowes-Lyon"
+   Link #814 "Elisabeth II"  →  #892 "+"
+   Link #792 "+"  →  #893 "Albert"
+   Link #896 "+"  →  #895 "Wallis Simpson"
+
+
+====================================================================================================
+3. CURRENT STATE OF 'd.marriage' (after replaying every block)
+====================================================================================================
+Linked cells  : 102
+Ranks         : 38  (38 linear, 0 circular)
+Link records  : 64 (each is one 'A → B' link)
+Consistent    : yes
+Rank lengths : 12 rank(s) of 2 cells, 26 rank(s) of 3 cells
+
+A rank is a chain of cells; '→' points in the positive (+) direction. Ranks are listed longest
+first.
+
+Rank 1 (3 cells):
+   #701 "Anna Charlotte"  →  #740 "+"  →  #702 "Friedrich"
+Rank 2 (3 cells):
+   #719 "Marie"  →  #744 "+"  →  #720 "William Douglas-Hamilton"
+Rank 3 (3 cells):
+   #722 "Mary"  →  #745 "+"  →  #723 "Albert I"
+Rank 4 (3 cells):
+   #728 "Charlotte"  →  #747 "+"  →  #729 "Pierre"
+Rank 5 (3 cells):
+   #750 "Willem IV"  →  #782 "+"  →  #748 "Anne"
+Rank 6 (3 cells):
+   #768 "Louise"  →  #788 "+"  →  #770 "Carl XV"
+Rank 7 (3 cells):
+   #769 "Louise"  →  #789 "+"  →  #774 "Frederik VIII"
+Rank 8 (3 cells):
+   #776 "Victoria"  →  #792 "+"  →  #893 "Albert"
+Rank 9 (3 cells):
+   #778 "Alexandra"  →  #791 "+"  →  #780 "Edward VII"
+Rank 10 (3 cells):
+   #779 "Beatrice"  →  #862 "+"  →  #823 "Henry of Battenburg"
+Rank 11 (3 cells):
+   #801 "Caroline"  →  #816 "+"  →  #799 "Karl"
+Rank 12 (3 cells):
+   #802 "Henriette"  →  #817 "+"  →  #803 "Ludwig"
+Rank 13 (3 cells):
+   #806 "Francis"  →  #819 "+"  →  #808 "Mary Adelaide"
+Rank 14 (3 cells):
+   #810 "George V"  →  #820 "+"  →  #809 "Mary of Teck"
+Rank 15 (3 cells):
+   #812 "George VI"  →  #821 "+"  →  #868 "Elizabeth Bowes-Lyon"
+Rank 16 (3 cells):
+   #814 "Elisabeth II"  →  #892 "+"  →  #878 "Philip"
+Rank 17 (3 cells):
+   #830 "Victoria Eugenia"  →  #863 "+"  →  #824 "Alfonso XIII"
+Rank 18 (3 cells):
+   #831 "Ingeborg"  →  #857 "+"  →  #834 "Carl"
+Rank 19 (3 cells):
+   #832 "Haakon VII"  →  #858 "+"  →  #822 "Maud"
+Rank 20 (3 cells):
+   #842 "Martha"  →  #859 "+"  →  #843 "Olav V"
+Rank 21 (3 cells):
+   #849 "Josephine-Charlotte"  →  #861 "+"  →  #850 "Jean"
+Rank 22 (3 cells):
+   #854 "Astrid"  →  #860 "+"  →  #847 "Leopold III"
+Rank 23 (3 cells):
+   #866 "Edward VIII"  →  #896 "+"  →  #895 "Wallis Simpson"
+Rank 24 (3 cells):
+   #882 "Alice"  →  #889 "+"  →  #880 "Louis"
+Rank 25 (3 cells):
+   #883 "Alice"  →  #891 "+"  →  #884 "Andrew"
+Rank 26 (3 cells):
+   #888 "Victoria"  →  #890 "+"  →  #887 "Marquess of Milford Haven"
+Rank 27 (2 cells):
+   #699 "Jan Wiilem"  →  #735 "+"
+Rank 28 (2 cells):
+   #704 "Karl Friedrcih"  →  #741 "+"
+Rank 29 (2 cells):
+   #706 "Karl"  →  #742 "+"
+Rank 30 (2 cells):
+   #709 "Karl"  →  #743 "+"
+
+… 8 more rank(s) not shown (use --max-ranks N or --full)
+
+====================================================================================================
+NOTES ON HOW TO TRUST THIS REPORT
+====================================================================================================
+  - The file format is not documented. It was reverse-engineered from sample data and the GZigZag
+    Java sources, then checked by replaying a complete sample space (every dimension file replayed
+    without inconsistencies, and with identical results whichever order the records of a block are
+    applied in). Treat the explanations as well-founded inference, not specification.
+  - Inside a block the records are stored in hash-table order, not in the order the user made them.
+    This script applies the disconnections of a block first and its connections second.
+  - A note such as 'its old + neighbour X was detached' describes one replay step; X may be linked
+    elsewhere again later in the same block (this is how an insertion into a rank looks).
+  - 'Positive' (+) is the direction of 'A → B'. For a circular rank the start is the cell with the
+    lexically greatest ID, which matches how the Java code picks a loop's 'head'.
+  - Dimension meanings come from how the Java code uses each name; application-specific dimensions
+    are guessed from their names.
+  - Save times are matched to stamps heuristically: the first 'savetime' record at or after a
+    block's stamp.
