@@ -19,3 +19,4 @@ ericrangell@Erics-MacBook-Air Gentle_Introduction % python3 ../wml2txt.py gi.wml
 coverage: 3534 words out / 3514 words in (101%)
 gi.wml -> gi.txt: 88 blocks
 ```
+The 2 output txt files are included in this repository as samples.
