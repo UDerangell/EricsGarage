@@ -1,0 +1,8 @@
+Questions to resolve with Ted
+
+- master dimension list
+
+- should we have a mechanism in the views to step through 
+tree structures so that left -> right takes us back where we were?
+In essence, storing in the structure the information about where
+this client was (d.prevcursor)?

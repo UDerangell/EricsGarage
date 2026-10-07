@@ -1,0 +1,26 @@
+A XML pointer-like scheme for addressing elements in a ZZ space.
+
+Neighbours of a cell
+
+	(cell).n(d.2,+).n(d.1,-)
+
+Headcell of a cell
+
+	(cell).negcell(d.2).poscell(d.1)
+
+Searching for an intersection of two ranks (the cell itself won't count
+so you can repeat it and get all crossings)
+
+	(cell).intersect(d.2,+, (cell), d.1,-)
+
+this is useful e.g. for searching clones:
+
+	(cell).intersect(d.1,+, Color, d.clone, +).n(d.2,+)
+
+to find the next cell giving the color through a clone.
+
+XXX textual searching?
+
+There should be a way to detect changes not only to cells but also 
+expressions like this. Implementing settings would suddenly be a lot
+easier.

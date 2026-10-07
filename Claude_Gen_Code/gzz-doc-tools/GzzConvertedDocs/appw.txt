@@ -1,0 +1,47 @@
+[Plain-text extraction of appw.wml (Website META Language source). WML
+directives and HTML tags were removed; headings, lists, tables and figures
+were re-laid out as text. Figures appear as [Figure (file): caption]. The
+<toc> and <warn> tags, which the WML build expands into generated text, are
+omitted.]
+
+Applitude Writer's Guide
+========================
+
+    $Id: appw.wml,v 1.1 2000/08/17 12:56:45 tjl Exp $
+
+  Tuomas Lukka
+
+Abstract
+--------
+
+Applitudes are the preferred way of including more functionality into GZigZag.
+This document explains how they are written.
+
+Introduction
+------------
+
+An applitude is basically a view and related actions.
+
+ZZModule
+--------
+
+The ZZModule abstract class provides the basic mechanism for including Java
+code into GZigZag without having to modify and/or recompile GZigZag. GZigZag
+uses the Java reflection API to connect to new modules.
+
+The ZZModule architecture is slightly different than one might expect: instead
+of directly inheriting from the class, modules use a static member which is a
+ZZModule: for example,
+
+    public class TextCloud implements ... {
+        ...
+        static public ZZModule module = new ZZModule() {
+            public void action(String id, ...) {
+                ... execute action id
+            }
+            public ZOb newZOb(String id) {
+                ... return a new ZOb instance with the given
+                    name
+            }
+        };
+    }

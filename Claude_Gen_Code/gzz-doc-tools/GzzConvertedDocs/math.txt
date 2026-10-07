@@ -1,0 +1,90 @@
+MATHEMATICS OF ZIGZAG
+By Tuomas J. Lukka
+Rev.1.3 2000/07/18
+
+[Plain-text extraction of math.ptex (pic+LaTeX source). LaTeX markup removed;
+ sections, figures, tables and equations numbered and cross-references
+ resolved. Unrecognized commands (name dropped, argument text kept): \colon
+ (in math), \longrightarrow (in math).]
+
+1  Introduction
+===============
+
+The purpose of this document is to look at ZigZag from a
+mathematical perspective.
+
+It is slowly becoming more and more obvious that this type of analysis
+can help us understand some of the conceptually less clear parts of ZigZag
+and why they are conceptually less clear.
+
+2  Tumblers
+===========
+
+3  Definition of a ZigZag space
+===============================
+
+Definition 1.
+
+A ZigZag space Z is the tuple (C, d, t) of the set of cells C, a
+mapping d from strings to the set D := { f C′
+C′′ | f is bijective and C′, C′′
+⊂ C } and a mapping t from cells to the set of all
+possible cell content (permascroll spans as tumbler addresses or
+strings).
+
+Now, special dimensions can be defined simply as restrictions on
+the space; for instance, as predicates:
+
+Definition 2.
+The ZZspace Z has a clone-dimension d₀ iff
+for all cells c for which d(d₀)(c) exists, t(d(d₀)(c)) = t(c).
+
+Likewise, we can define a versioning operation:
+
+Definition 3.
+A ZZ operation o: Z → Z′ is versioning
+if ... XXX
+
+4  Solving real problems
+========================
+
+4.1  Slice spaces
+-----------------
+
+It is possible to highlight some problems related to defining operations
+and combinations of spaces with this type of analysis. One observation
+made early on in the coding was that encapsulation makes it complicated
+to define operations on e.g. slice spaces (spaces that consist of a
+combination of several spaces). For example, in C = f(A,B) the ZZspace
+is C a slice space if it contains cells corresponding to most cells
+of A and B (excluding preflets, i.e. cells whose meaning is to
+specify for f which cells are to be connected between A and B).
+
+The forwards transform is simple: C = f(A,B) as above.
+However, problems begin to appear when we consider that normally
+performing an operation functionally: A′ = Ω(A) causes A′ to be
+saved on the disk to replace A. C′ = Ω(C) cannot do the same
+as simply because we would like to trace the chain to change A and B,
+obtaining (A′, B′) = f⁻¹(Ω(f(A,B))). This can naturally be quite
+complicated. Most combination functions f used in reality are nice but still
+this causes a pronounced difficulty in coding the usual operations
+(new cell, etc) on slice spaces if starting from this perspective.
+
+Thus, the conceptually simplest way forwards might be defining a whole
+new kind of mathematical object, a slice space, which has its own
+operations that naturally distribute to the next level.
+After this it is simple to define performance enhancements by caching parts
+of the next level space but the conceptual simplicity of directly modifying
+only the underlying representation (instead of e.g. the representation and
+a cache) is appealing.
+
+Definition 4.
+A Slice space S is a
+tuple (Z₀, s) where Z₀ is the slice 0, i.e. the root space,
+and s is a mapping from strings to ZigZag spaces
+
+Definition 5.
+A slice composition function
+f_c is a mapping
+S → Z
+from a slice space to a ZigZag space (the composition function).

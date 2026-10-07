@@ -1,0 +1,100 @@
+INTERFACING ZIGZAG WITH "NORMAL" PROGRAMS
+By Tuomas J. Lukka
+Rev.1.3 1999/12/23
+
+[Plain-text extraction of int.ptex (pic+LaTeX source). LaTeX markup removed;
+ sections, figures, tables and equations numbered and cross-references
+ resolved. Embedded pic/gpic drawing code was removed. Figure captions are
+ kept as [Figure N: ...]; the drawings themselves are not included. Unresolved
+ references shown as "?": fig-enc.]
+
+1  Introduction
+===============
+
+ZigZag defines a coherent universe of cells and things that happen
+when cells are modified and connected to each other.
+However, since the computer and windowing system underneath don't know
+anything about ZigZag, there is a level on which the ZigZag abstraction
+and "normal" programs in e.g. Java meet, so that ZigZag can be implemented
+in e.g. Java.
+Because ZigZag is so different from our usual programming concepts,
+an interface like this is not trivial to design correctly and
+efficiently.
+
+While the basic operations are simple, i.e. get neighbour, connect,
+create new cell etc., the handling of the interface in a coherent way
+on both sides is not simple.
+As an example of the difficulty, consider
+keeping a list of some attributes that you want the screen to show.
+It doesn't matter what these are attributes of, or how they are shown.
+We are concerned with the list itself.
+
+2  Model-View-Controller
+========================
+
+When programming with ZigZag, the MVC (Model-View-Controller) representation
+is a useful abstraction, the point being that all the relevant information
+is kept inside the ZigZag space with many different views of the same
+data being then possible.
+
+Let us then expand on the list-of-attributes problem.
+The natural representation for a list of attributes
+is rank along some dimension
+in the ZigZag space, beginning at some designated cell.
+Having the list in the ZigZag space gives the system the kind of
+programmability and coherence which you won't find anywhere else.
+However, this programmability and coherence does not come entirely
+free. The trouble is when your e.g. Java code which actually handles
+the drawing on screen wants to use the list.
+
+Just reading the list with the above operations is easy, you just
+start at the designated cell and work your way through the list.
+The trouble starts when the user modifies the list. At that point,
+the user's expectation is that the display will change accordingly.
+So your program should realize that the list changed.
+
+This can be handled through callback routines but the problem is
+keeping the callbacks up to date as well and handling the overzealous
+callbacking with grace (e.g. if the user makes many modifications and
+some while the system is busy rerendering the graph).
+
+3  Synchronization
+==================
+
+When several concurrent processes or threads are active on the
+same ZigZag space, care is necessary to avoid race conditions (as
+in all other programming with concurrent streams of execution).
+
+4  A proposed solution: d.watchers and d..watching
+==================================================
+
+As seems to happen often with ZigZag, the problems can be partially
+solved by moving the system to ZigZag space.
+So, why not have two dimensions (see the section on relcells
+in the Gentle Introduction) showing the relationship between
+nodes representing observers and nodes representing watchers?
+
+This simplifies things because there will be one cell on the ZigZag side
+representing the Java object which is observing a group of cells.
+The "A observes B" relation is encoded into the ZigZag structure
+as in Fig. ?
+and makes it possible visualize and debug what is going on.
+
+[Figure 1: Encoding watching relations in the ZigZag structure. Watcher A
+  watches both cells 1 and 2 and watcher A only watches cell 1.]
+
+Also, the relcells can be put to another use beyond just showing
+that there is a relation
+in this design: they show the kind of watching relation,
+i.e. contain a list
+of things that the other cell is observing about the observed cell,
+such as the content or the connections along some subset of dimensions.
+This makes it easier to avoid unnecessary work in the list example
+if someone wants to comment (along d.comment) on one of
+the cells in the list.
+
+Even more pleasantly, this design will fit in nicely with Clang:
+the cell which is observing can just as well be a Clang script.
+
+5  Designing ZigZag-code interfaces
+===================================

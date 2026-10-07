@@ -1,0 +1,192 @@
+Version 0.03 of the *active* ZZ protocol. To be used over short
+distances and reliable connections.
+
+Ascii pipe / file / ...
+
+Newlines: UNIX-style
+
+Initiation:
+
+SERV:
+	ZZ(protoversion)(uniqueservid)(serversessionid)
+CLI:
+	ZZ(protoversion)(uniqueclientid)(clientsessionid)
+
+
+Home cell is always cell id 1. id 0 does not exist. So a natural start
+would be
+
+	1 ref(1)(+1)
+
+Requests always made with reqno and may be answered out of order.
+Reqno is a simple integer.
+
+	<reqno> <reqname>(<par1>)(<par2>)...
+
+Reply:
+	<reqno> <repcode>(...
+
+E.g.
+
+CLI
+	50 getcell(24)(d.1)(+)
+SERV
+	50 cellno(40)
+
+or if no cell is there,
+	50 cellno(0)
+
+EXCEPTION:
+for get text and set text, the last parameter is a number, then newline
+and then number bytes of binary data, not followed by newline.
+
+The requests are
+
+	get(<cell from>)(<dim>)(<dir>)(<ref>)(<lock>) ---> cellno
+	gethead(<cell from>)(<dim>)(<dir>)(<ref>)(<lock>)     ---> cellno
+	sethead(<cell from>)(<dim>)(<cell>)           ---> ok
+	new(<cell from>)(<dim>)(<dir>)(<ref>)(<lock>)         ---> cellno
+	delete(<cell>)                                ---> ok
+	connect(<cell from>)(<dim>)(<other cell>)     ---> ok
+	insert(<cell from>)(<dim>)(<dir>)(<other cell>) ---> ok
+	disconnect(<cell from>)(<dim>)(<dir>)         ---> ok
+	gettext(<cell>)                               ---> text
+	settext(<cell>)(<nbytes>)                     ---> ok
+	ref(<cell>)(<ref>)                            ---> ok
+	lock(<cell>)(<lock>)                 ---> locked
+	unlock(<cell>)(<lock>)               ---> ok
+	execute(<scriptcell>)(<objcell>)(<ctrlcell>)(<viewcell>) ---> ok
+	clearerr(errorid)	---> ok
+
+And the responses:
+
+	cellno(<cell>)
+	locked(<cell>)
+	wouldblock(<cell>) --- if requested non-waiting lock didn't work
+	ok    --- no parameter
+	text(<cell>)(<nbytes>)
+	error(errorid)(errorstring)
+
+REFERENCE COUNTING AND INFORMING:
+
+The client asks the server to hold in mind that the client has n references
+to a cell and wishes to be informed about any changes. The <ref> parameter
+of the requests if for this purpose: it contains the number of references
+this client will have to the cell. When the count goes to zero,
+the server need not inform the client about changes.
+
+The ref request can be used to create more references or unreference,
+via a negative <ref>.
+
+The informing happens through the special reqno code -1:
+
+	-1 changed(<cell>)
+
+The reason for the ref parameter for all the calls that return cells
+is to avoid race conditions: getting the cell first and then referring
+allows the cell to be changed in between: e.g.
+	
+	A --- B 
+
+we know cell A and get cell B through it but before we ref it, someone
+severs the link:
+
+        A     B
+
+but since our ref request is received only after this, we never find out
+about this and assume they are still connected. Therefore, to avoid
+race conditions, the immediate ref:ing is possible.
+
+Since the client can't otherwise behave correctly, there is a special
+code when the cell is deleted:
+
+	-1 deleted(<cell>)
+
+since otherwise the client might try to get neighbours of the deleted
+cell.
+
+LOCKING
+
+The <lock> parameter represents the number of locks this process
+wants on the cell - generally 1.
+The lock does NOT preclude any other client from doing anything but only
+stops others from locking the cell. Locks can be requested synchronously
+or asynchronously, in three different ways:
+
+	1. lock = "1" -> tries to lock, returns wouldblock if can't
+	2. lock = "1w" -> tries to lock, waits until can lock. DEADLOCK DANGER
+	3. lock = "1a" -> tries to lock, sends the locked command 
+	only once the lock is obtained - the other results of the request
+	will keep going.
+
+A server has the right not to support any locking --- it is possible
+to put a protocol filter on top of it that does.
+
+
+
+ERRORS
+
+If it is likely that two processes would modify the same cells, they should
+agree to lock the cells. In that case, the fastest processing times would
+be achieved through performing all these operations in one row:
+
+	lock(50)(1w)
+	new(50)... # operate
+	unlock(50)
+
+Because of this, there needs to be a way of performing a series of
+operations but only if all of them are successful. Therefore, after
+sending an error, the server will wait for the clearerr command and
+ignore all the commands before it. Since the error has the number of the
+request in front of the command, the client will be aware of what has happened.
+
+This way many useless context switches can be avoided.
+
+
+
+=======================================
+PROPOSAL: New change op.
+Idea from Benjamin Fallenstein.
+
+Instead of new, delete, connect, insert, disconnect, settext you would
+simply have one command to upload a fragment of zzspace, possibly identified
+with a current fragment.
+
+So 
+	uploadfrag
+	curcell(O<curid>)
+	delcell(<curid>)
+	newcell(N<id>)
+	connection(<ONid>)(<dim>)(<dir>)(<ONid>)
+	endupload
+
+where ONid is O<curid>, N<id> or 0.
+
+Thus, disconnect(15, d.1, +) would be
+
+	uploadfrag
+	curcell(Ocell)
+	connection(Ocell)(d.1)(+)(0)
+	endupload
+
+and insert(f, d.1, +, w) where the next cell after f is g, is
+
+	uploadfrag
+	curcell(Of)
+	curcell(Og)
+	curcell(Ow)
+	connection(Of)(d.1)(+)(Ow)
+	connection(Ow)(d.1)(+)(Og)
+	endupload
+
+By default, all the other connections remain.
+
+OTOH, insert is a nice primitive operation for many things, like cursors....
+On the other hand, an operation like jump is dangerous to synchronize
+otherwise, implemented using the above connect operation.
+
+An uploadfrag can be guaranteed to be atomic... this + locking begins
+sounding good.
+
+- keep insert and uploadfrag, discard others?
+

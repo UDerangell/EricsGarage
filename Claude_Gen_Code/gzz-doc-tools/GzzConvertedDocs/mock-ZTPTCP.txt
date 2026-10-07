@@ -1,0 +1,74 @@
+Generic command syntax:
+
+   command = ASCII word, args, crlf;
+   ASCII word = ASCII letter, ASCII word;
+   letter = 65 | 66 | 67 | 68 | 69 | 70 | 71 | 72 | 73
+          | 74 | 75 | 76 | 77 | 78 | 79 | 80 | 81 | 82 | 83
+          | 84 | 85 | 86 | 87 | 88 | 89 | 90 | 97 | 98 | 99
+          | 100 | 101 | 102 | 103 | 104 | 105 | 106 | 107
+          | 108 | 109 | 110 | 111 | 112 | 113 | 114 | 115
+          | 116 | 117 | 118 | 119 | 120 | 121 | 122;
+   whitespace = | 9 | 32;
+   crlf = 13, 10;
+   args = | whitespace, arg, args;
+   arg = ASCII word | ASCII number | UNICODE string;
+   ASCII number = 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57;
+   UNICODE string = 34, UNICODE string without quotes, 34;
+   UNICODE string without quotes = | quoted UNICODE char | UNICODE string without quotes;
+   quoted UNICODE char = UNICODE char (not 34) | 34, 34;
+
+Response code theory:
+
+  X.Y.Z:
+     X denotes success / failure:
+        1: Positive Preliminary response
+        2: Positive Completion response
+        3: Positive Intermediate response
+        4: Transient Negative Completion response
+        5: Permanent Negative Completion response
+
+     Y denotes response class:
+        0: Syntax
+        1: Information
+        2: Connections
+        3: Authentication
+        4: Subspaces
+
+     Z with X and Y specifies exact problem
+
+Initial greeting:
+  2.2.0 Hello there!
+
+Generic responses:
+  5.0.1 What?  (Syntax error)
+  4.2.1 Service unavailable, closing transmission channel
+
+
+QUIT
+
+Responses:
+  2.2.1 Bye
+
+AUTH/PRE & AUTH/PASS
+
+Responses
+  5.3.0 Access denied
+  5.3.1 User disabled
+  2.3.0 OK
+
+PUT
+  2.4.0 Subspace successfully put
+  3.4.0 Pleace proceed with subspace data
+  5.4.0 Aborted PUT
+  5.4.1 No such subspace
+  5.4.2 Cannot put cells lacking a space ID
+
+GET
+  2.4.1 Subspace successfully got
+  3.4.1 Proceeding with subspace data
+  5.4.1 No such subspace
+
+Subspace data:
+   C <cellid> <data>   -- content
+   R <dimid> <cellid> <cellid> ... <cellid>  -- rank
+   F -- finish

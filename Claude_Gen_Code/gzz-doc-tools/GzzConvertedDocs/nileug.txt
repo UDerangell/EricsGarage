@@ -1,0 +1,51 @@
+[Plain-text extraction of nileug.wml (Website META Language source). WML
+directives and HTML tags were removed; headings, lists, tables and figures
+were re-laid out as text. Figures appear as [Figure (file): caption].
+Headings follow catart.wml: <doctitle> is the title and <s1>..<s5> are
+numbered sections; the generated contents list is reproduced where the
+document places it.]
+
+Nile User's Guide
+=================
+
+    $Id: nileug.wml,v 1.1 2000/12/09 02:29:35 tjl Exp $
+
+  Tuomas J. Lukka
+  lukka@iki.fi
+
+A short introduction to using Nile, mostly for explaining the keybindings.
+
+1. Warning
+2. Keystrokes
+
+1. Warning
+----------
+
+This document may be out of date. If this seems to be the case, please contact
+the author.
+
+2. Keystrokes
+-------------
+
+Unlike most current word processors, Nile has several different modes. This
+may seem complicated but the modes are fairly natural. The most commonly used
+modes are the character, word and sentence modes, through which the user can
+move with the TAB key. In these modes, the following cursor keys apply:
+
+  Moving and hopping text
+  ----------------------------------------
+  Left/Right       | Move the cursor
+  Shift-Left/Right | Extend the cursor
+  Ctrl-Left/Right  | Shrink the cursor
+  Alt-Left/Right   | Hop the selected text
+
+  Deleting text
+  -------------------------------------
+  Backspace | Delete the previous unit.
+  Delete    | Delete the selected text.
+
+  Inserting text and changing modes
+  ------------------------------------------------------
+  [text] | Insert the letter and move to character mode.
+  Enter  | Break the paragraph.
+  Tab    | Move to the next mode.

@@ -1,0 +1,83 @@
+[Plain-text extraction of keybindings.wml (Website META Language source). WML
+directives and HTML tags were removed; headings, lists, tables and figures
+were re-laid out as text. Figures appear as [Figure (file): caption]. The
+<toc> and <warn> tags, which the WML build expands into generated text, are
+omitted.]
+
+Default bindings for the orthogonal rasters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    $Id: keybindings.wml,v 1.4 2001/03/02 07:13:37 ajk Exp $
+
+These are still being discussed and are not yet frozen. Note that there is a
+panic button: if there is no binding for ESC, it invokes undo.
+
+  Key(s)        | Binding
+  Ctrl-S        | Commit the current changes to disk.
+  ijl,kK        | Up-left-right-down-Z+-Z- in view 1.
+  esfcdD        | Up-left-right-down-Z+-Z- in view 0.
+  n dir         | Create a new cell in given direction
+  b dir         | Break a connection in given direction
+  h dir         | Hop the accursed cell in the given direction. Hopping means simply switching the places of the accursed and the indicated cells in that rank, no other ranks are affected by the operation.
+  xyz           | Show next dimension on list on X/Y/Z in view 1
+  Alt-xyz       | Show previous dimension on list on X/Y/Z in view 1
+  XYZ           | Show next dimension on list on X/Y/Z in view 0
+  Alt-Shift-XYZ | Show previous dimension on list on X/Y/Z in view 0
+  / dir         | Connect the center cells of the right and left views in the given direction, if no connections will be broken by this.
+  ~             | Exchange the cursor positions of the two views (no other view parameters are changed).
+  Delete        | Delete the center cell of view 1 and move the cursor. Cursor move tries following directions in order: X-, X+, Y-, Y+, Z-, Z+ and finally goes to home cell.
+  m             | Mark or unmark the cell in view 1
+  Enter         | Execute cell in view 0, with the cell in view 1 as parameter
+  v             | Change raster in view 1.
+  V             | Change raster in view 0.
+  Alt-v         | Change raster in view 1 backwards.
+  Alt-V         | Change raster in view 0 backwards.
+  Home          | Go home: move view 1 cursor to homecell.
+  Esc           | Move both views to home and reset dimensions to first three dimensions on first dimlist.
+  0123456789    | Insert the given number into the number insert buffer for cell IDs.
+  g             | Move view 1 to cell whose ID number was in buffer
+  G             | Move view 0 to cell whose ID number was in buffer
+  Backspace     | Remove one number from the number insert buffer
+  t dir         | Clone the view 1 cursor to given direction (may be in either view).
+  T dir         | Clone the view 0 cursor to given direction (may be in either view).
+  %             | Exchange the X and Y connections of the two accursed cells with each other.
+  o             | Go to original (rootclone, cell from which accursed cell was cloned) in view 1.
+  O             | Go to original (rootclone, cell from which accursed cell was cloned) in view 0.
+  End dir       | Move to te end of the rank in the given direction.
+  <             | Set the cursor of the left-hand-view to the cell the right-hand view is pointing to.
+  >             | Set the cursor of the right-hand-view to the cell the left-hand view is pointing to.
+  - dir         | Connect the current view1 cursor into marked cells in given direction. Direction must be in view 1.
+  Alt-c         | Switch into "curseling" (cursor selection) mode (see below).
+  a dir dir     | Monochug: change one connection. See above.
+
+Text edit mode
+~~~~~~~~~~~~~~
+
+  Key(s)                                  | Binding
+  Esc or Tab                              | Switch off text edit mode
+  Delete                                  | Delete one character after cursor
+  Backspace                               | Delete one character before cursor
+  Left, Right                             | Move the cursor within the current cell
+  Home                                    | Move the cursor to the beginning of the text in the current cell
+  End                                     | Move the cursor to the end of the text in the current cell
+  Ctrl-A                                  | Move the cursor to the beginning of the current line in the text of the current cell
+  Ctrl-E                                  | Move the cursor to the end of the current line in the text of the current cell
+  Enter                                   | Insert a line separator in the text before the cursor
+  any key producing a printable character | Insert the character in the text before the cursor
+
+Curseling (Cursor selection)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As an intermediate for multiple cursors, there is a key binding mode for
+"curseling:" cursor selection. In the standard keybindings, Alt-c is used to
+go into this mode, which by default supports the following key bindings:
+
+  Key(s)                      | Binding
+  Tab, Spacebar, Alt-c or Esc | Select this cursor, quit curseling mode.
+  Left, Right, jl             | Select next/last cursor in system cursor list in view 1.
+  Up, Down, i,                | Select next/last cursor positioned on the same cell in view 1.
+  sfec                        | Like Left/Right/Up/Down, operating on view 0.
+
+Note that you can create four additional cursors through executing the
+CreateCursors command, found in the action list, by centering the left view on
+it and hitting Enter.

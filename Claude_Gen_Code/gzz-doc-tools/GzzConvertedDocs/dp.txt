@@ -1,0 +1,549 @@
+[Plain-text extraction of dp.wml (Website META Language source). WML directives
+and HTML tags were removed; headings, lists, tables and figures were re-laid
+out as text. Figures appear as [Figure (file): caption]. The <toc> and <warn>
+tags, which the WML build expands into generated text, are omitted. Source was
+ISO-8859-1; output is UTF-8.]
+
+The major internal design problems left in GZigZag
+==================================================
+
+    $Id: dp.wml,v 1.14 2000/08/15 05:19:18 tjl Exp $
+
+  Tuomas Lukka
+  lukka@iki.fi
+  Dept. of Mathematical Information Technology
+  University of Jyväskylä
+
+This is a short exposition of the design problems currently in ZigZag (as of
+June 2000). The intent is to eventually evolve this into an exposition of the
+internal design of GZigZag, after the problems are solved. But at the moment
+most of the problems still exist.
+
+Introduction
+------------
+
+This document is intended as an internal discussion document on the most
+difficult design problems for the GZigZag source code. This is work-in-
+progress: if there are any unclear parts, feel free to ask me to clarify
+things.
+
+Device-independent Floating Graphics
+------------------------------------
+
+FloatingWorld Graphics
+~~~~~~~~~~~~~~~~~~~~~~
+
+The FloatingWorld graphics model built on top of ZigZag is based on flexibly
+plotting objects defined by cells on the screen. ZigZag rasters are simply a
+special case of this: the coordinates are given by hopping along ZigZag ranks
+and the objects rendered are simply the cells and the texts inside them.
+
+Conceptually, there are two kinds of objects shown on the screen: flobs and
+relations. Also, there are three different processes in the background: where
+are flobs rendered, what kind of flobs are rendered and what relationships
+between them should be shown. All these are relatively independent of each
+other and should be clearly decoupled in the backend.
+
+Animation has been supported from very early on in GZigZag with excellent
+results: the human eye can use the motion to understand the relation of the
+different views in time much better than if the views are just switched
+without the intermediate frames. This feature should be global: if the same
+object is shown in two consequent views, it should animate from the previous
+view to the next to show the deep relationship between the two appearances.
+Even a simple linear interpolation, without any regard to the true structure
+of the transformation between the two views is astonishingly helpful. It is
+easy to see that animation mostly concerns the flobs which must interpolate
+their coordinates frame by frame between rasters. In fact, currently the links
+are not shown when animating; this does not appear to be a significant problem
+to the human observer: maintaining a high frame rate is much more important
+than giving a complete picture.
+
+In addition to animation, depth perception of the human eye is misused in the
+vanishing raster to a great advantage: cells further away from the cursor are
+shown smaller and grayer and are rendered behind the cells closer to the
+cursor. I term this a misuse since there is no 3D model behind: it's just an
+algorithm that lays out cells that happen to look smaller and grayer and thus
+further away.
+
+The desired level of generality
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We shall take four views as an example of the generality the system has to
+offer.
+
+  - Normal, box-and-stick view (loose-brick)
+
+  - Tight-brick view: the cells are drawn right next to each other. The line
+    drawn between the cells (or on edges) tells what kind of edge it is
+    (connected, no connection, connection underneath the other cell).
+
+  - Loose-brick view but with variable-sized content of cells: vstreams or
+    images.
+
+  - Email flobs: emails on a coordinate system, connected with lines
+    indicating reply-to relationships. The flobs may show the content,
+    diminished as the view moves away from the cursor.
+
+Problems
+~~~~~~~~
+
+[Figure (linkorder.png): A simple case where rendering a link in one go gives
+  suboptimal results.]
+
+[Figure (beamorder.png): A beam with cells is even more complicated: the beam
+  has to be between the text and the cell background but behind any other
+  cells on the way to avoid cluttering the screen. If the beams' borders
+  should float above the beams, then this gets even more difficult.]
+
+A fairly short-term goal in the expansion of GZigZag is to make it support 3D
+graphics using OpenGL, as well as retain the current functionality using pure
+Java graphics. Especially useful would be the ability to use the 2D views
+directly through the OpenGL layer, as well as 3D views, and the ability to
+animate between the two.
+
+Reusability of views
+Flexibility
+    As an example, using an existing raster but putting an image or a vstream
+    (somehow connected to the cell) instead of the text into the cell should
+    be simple.
+
+Simplicity
+    The system
+
+Performance
+If small factories are used for letting the rasters create cells, handling
+depth gets more complicated.
+
+There are also interesting problems in the rendering order of links: if there
+is a link between cells that are at different depths, then which cells should
+be in front. It is especially difficult to include something like beams into
+this framework, if a Z-buffer and a real third coordinate is not used. One
+possibility is to split all links and beams in the middle and render the two
+halves independently. However, as seen in the beam figure, that will not be
+enough.
+
+Potential solutions
+~~~~~~~~~~~~~~~~~~~
+
+Let us start from the obvious.
+
+For each raster, the locations and appearances (and the depths for rendering)
+of the flobs must be stored somewhere quickly accessible for the animation
+between rasters.
+
+The raster must ask the flob-producer what size and aspect ratio would be most
+suitable (given a shrinking factor). Being able to cache something that was
+calculated (such as a line breaking) would be most beneficial. Of course,
+depending on the form of the raster, it may or may not accept the size and
+aspect ratio given by the flob producer. The flobs are internally cached as
+objects that know how to render themselves and how to interpolate between two
+keyframes.
+
+The links are produced after rastering, from the coordinates of the flobs.
+This operation is thus well encapsulated from changing rasters. In fact, the
+links do not even need to be made into self-standing objects at all times: all
+that is needed is that the FlobSet knows to call a certain method of a certain
+object to plot links.
+
+These considerations produce a rather different picture from the current one.
+The classes Flob and FlobSet would be the natural starting point. A FlobSet,
+unlike the current ZZCanvas, would only store the flobs and not the
+connections. The connections could be drawn just as the flobset is being
+rendered from back to front.
+
+One interesting point regarding the identification of Flobs from the FlobSet
+is that the FlobSet may be hierarchical in nature. For example when doing the
+VStreams-in-Cells raster, the same vstream might be shown in two different
+cells (clones of each other). Now, if flobs were identified just by their
+cell, then the flobs for the spans of text would be identical and therefore
+interpolated animation could do very strange things. The trivial solution to
+this is to allow container flobs to exist, which exist just to identify that
+certain cells are accessed through a certain other cell. If the FlobSet has
+knowledge about this, it is easy to both treat the FlobSet as flat (for e.g.
+beams), or as the hierarchy (for identification of the corresponding flob in
+another FlobSet for animation).
+
+This solution is currently being tested as of 20000806.
+
+Problems with the hierarchy
+...........................
+
+The hierarchy does not solve all the problems and brings some new ones. Some
+operations use hierarchy, some don't.
+
+Depth-ordering
+    May be done with hierarchy (so the whole hierarchy branch has a depth -
+    effect like overlapping windows or without hierarchy - effect like a
+    three-dimensional cloud. Both effects are probably useful in different
+    situations.
+
+Animation
+    Hierarchy is taken into account: it informs which instances of a cell
+    animate to which other instances.
+
+Link / beam display
+    Hierarchy is not relevant to these except that sometimes links/beams
+    inside the same branch may be hidden.
+
+Because the hierarchy is kind of optional, the hierarchy in the current
+prototype is simply handled by identifying each flob with a string ("path")
+and a cell. This seems to give both enough detail and efficiency.
+
+Decorations
+...........
+
+Another interesting feature with the views are decorations: things that either
+connect flobs between each other or show some relationship in some other way
+(for example, the three-line thing that shows the directions of the coordinate
+axes).
+
+These decorations aren't considered first-class citizens like flobs in the
+current model. This may make it possible to find extremely efficient ways to
+implement them. One obstacle to efficiency, however, is that the decorations
+should be rendered at the same depth as the cells. If we have a Z-buffer like
+in OpenGL, this is of course not a problem.
+
+Now, there are several kinds of decorations:
+
+One-off
+    Decorations that occur once or twice in a display, such as the
+    abovementioned coordinate thingy.
+
+Global
+    Decorations that occur between most cells (at least, most cells at a given
+    path), such as links in the X direction.
+
+Overriding
+    Decorations that override global decorations for selected cells, for
+    example if we want to show a connection that is at the same time a clone
+    relation by a different visual.
+
+In order to trample over less memory, it would be nice to be able to render
+global decorations for a set of cells (at a given depth) at once.
+
+There is one situation where decorations present a problem, and that is when
+the decorations should move with the interpolation. This is generally
+desirable in complicated views (e.g. email-flob) to provide the user with
+additional visual cues about the structure. There is a slightly incorrect
+solution that get us close to where we want: a decoration that wants to
+interpolate is named a flob and it stores references to the flobs and uses
+their interpTo fields to calculate the interpolated coordinates. The only
+problem is the depth: this algorithm does not correctly alter the depth in
+interpolation. However, when using java.awt.Graphics none of the other flobs
+take care of their depths properly when interpolating so it is not a problem.
+And if using three-D graphics, the renderer can use the flobs' Z coordinates.
+
+Floating graphics in general.
+-----------------------------
+
+Handles and cursors
+~~~~~~~~~~~~~~~~~~~
+
+Problem
+.......
+
+One of the versions of Ted's specs specifies the following structure for flob.
+First of all, there is the central handle cell which is the center of the
+flob. The flob is referred through it and all the parts of the flob can be
+found through it. That version of the spec specifies d.handle as the dimension
+to reach the rest of the flob from the handle cell, and d.ref as the dimension
+to use to refer to that handle cell and thereby to the whole flob. (the spec
+has apparently changed now but the changes do not affect this problem).
+
+The cells on d.ref are basically stand-ins for the whole flob, kind of like
+clones are stand-ins for a cell. An email can be included in several mailboxes
+(lists of emails running on d.2) by including cells that are on d.ref from the
+original email's handle cell.
+
+The problem, then, is basically about what is getting shown: we'd like to be
+able to show
+
+  - The actual flob
+
+  - The fact that a cursor is on the referring cell
+
+  - Possibly, the contents of the referring cell
+
+This is a problem since in the current codebase, a flob is known by one cell,
+whereas the above obviously requires two cells: the referring cell and the
+handle cell. Even more important is that the FlobSet knows about the handle
+cell since otherwise connecting the flobs becomes a less efficient procedure,
+requiring the FlobSet to look at all referring cells to see whether they are
+included.
+
+So the question really becomes: is there any point in storing the referring
+cell in the flob structure, except as presentational info about the string and
+cursor colors to show.
+
+If ZZ is expanded to allow the user to place the text insertion cursor in a
+cell by a mouse click, then the referring cell is obviously needed if any of
+its text is rendered.
+
+Current solution
+................
+
+Well, currently this is solved by having the handle cell always be the Flob.c
+and if the flob has to give out other events, it can be given a different
+cell.
+
+Caching before saving - new file format
+---------------------------------------
+
+The slowest part of the current implementation, as witnessed by time testing,
+is writing to the file. Also, the current file format does not properly allow
+undo & branching backtracking.
+
+The goals for the system are
+
+Write-caching
+    Each cell change should not cause several system calls to occur. Rather,
+    cell changes should be held in memory and flushed to disk in larger chunks
+    every once in a while (as the user chooses).
+
+Undo
+    The list of operations in memory should be usable for low-level undo
+    operations, such as undoing writing letter by letter.
+
+Granularity
+    The user should be able to specify that when saved to disk, only larger
+    sets of changes are undoable. This may save a lot of space, e.g. if a
+    number of cursor moves are compressed to one undo set, many cells will not
+    have changed at all. This is especially important now that the character-
+    by-character editing of cell content is also done in the structure: each
+    insertion of a character currently saves two cell contents: the cell being
+    edited and the cursor cell (giving the offset).
+
+Notifications
+    It would be useful if the change list could also be used for change
+    notifications: after a set of operations is completed (or at prespecified
+    times) the list is examined for changes to cells under observation.
+
+List format
+~~~~~~~~~~~
+
+It is vital that the in-memory change list is compact in format and extremely
+light-weight for Java usage as it is going to be a hot spot.
+
+One relatively sparing implementation would be to have one long array of
+Object inside which every third element would be an operation, and the other
+two would be its parameters. This way, no separate Operation object would need
+to be created and the references to operations sequentially would stay memory-
+local: the cost of the typecast of Object to the Operation type is negligible
+compared to the cost of accessing two or three long arrays instead of one.
+
+There would likely be one to few Operation objects per dimension object, which
+is perfectly acceptable.
+
+The long array would have the sequence stamps and would be operable either for
+undo or for committing to disk.
+
+Problems
+~~~~~~~~
+
+There is one important problem with this approach: the operations are fairly
+low-level ops: this cell connected to this one, or disconnected, or whatever.
+The semantic information about an operation such as insertion is not saved.
+This could be a problem with synching later on.
+
+Notifications
+~~~~~~~~~~~~~
+
+In the following, N is the number of cells changed, B is the number of
+observers. Also, K is the number of cells one observer typically observes.
+
+It is important for the notification mechanism to be fast: specifying a set of
+cells that a particular entity is interested in and scrapping the whole set
+(when the entity is refreshed) will very likely be one of the most common
+operations. Not trampling through a lot of memory and being easily garbage
+collectible are vital considerations, as well as good scaling w.r.t. several
+things.
+
+Observer insertion is naturally O(K) and observer removal is either O(1) or
+O(K).
+
+If a separate hashtable is used for each observer, testing which observers to
+wake up is O(N*B) operation, which is not very nice.
+
+Slices
+------
+
+Slices are used for viewing a number of ZigZag spaces as one compound space,
+and for sending a group of cells over to another user. Slices are probably the
+most crucial aspect of the system for common use as they will enable
+collaboration and upgrading.
+
+Among the issues here are
+
+Permanent IDs for versions of cells
+Specifying a group of cells for slicing.
+    This is simple when the all the cells are ones edited by the user. This
+    gets very hairy when the user wants e.g. to send a view. Which control
+    cells are included?
+
+Reconciling differences: collaborative editing.
+    A mechanism for keeping two peoples' versions of a "document" in synch by
+    sending minimal groups of cells across.
+
+d.cursor and slices.
+    Having the cursors in the structure is both a blessing and a curse.
+    Cursors are used both for "variables" internal to the structure with Clang
+    and views' centers. Their interaction with slices and versioning is
+    unclear to say the least.
+
+Inclusion of a slice into multiple spaces
+    What a can of worms.
+
+Viewing a space remotely
+    Only the cells seen should be sent over. How does d.cursor work here?
+
+The identity of dimensions
+    If a dimension is just a string, we have a namespace problem. Dimension
+    being identified with a particular cell might be a solution but this is
+    again not without its own problems.
+
+Clones
+    Ted wants these to be used as a solution to many problems here. But is it
+    possible? Can all code be made to support the situation where suddenly one
+    of the cells is split into two clones when the script expected them to be
+    together.
+
+Transcluding
+    Taking a cell from another space with a permanent ID and connecting its
+    transclusion somewhere in the local space - this creates a new version of
+    the cell!
+
+d.ref and d.handle
+    Interaction of higher-level items with the slice code?
+
+And of course the really important question of what we're really after. Slices
+have distinct, but related functionalities:
+
+Part of personal space.
+    This is what Ted's example of bringing in months of the calendar from
+    slices is about. Each day connects to a weekday on one dimension, and the
+    months connect naturally in the right order by preflets. Here, the idea is
+    that the slice connects to the "main space".
+
+A fixed, distributed "package".
+    For example, the default space with the default bindings for keys, or
+    packages that demonstrate various features. These are less often modified
+    by the user and are brought in by the user and attached somewhere. Here,
+    the main space connects to the slice.
+
+Versioning.
+    This is rather similar to the abovementioned fixed, distributed packages:
+    the user can attach the old version of some slice somewhere, without
+    modifying it (causing a branch) just by looking and browsing it.
+    Naturally, if two versions of the same slice are brought in, the cells
+    should be connected along d.version or somesuch.
+
+Packages
+~~~~~~~~
+
+Of the above functions, the most critical one for GZigZag currently is the
+packages: distributing the main default space as a slice would be a great
+step: then it would be possible for users to start stable personal spaces
+which would not be needed to be brought forwards for every new version of the
+bindings.
+
+The most important problems here are cursors. Just about everything else can
+be resolved by explicit hook cells ("hook your own bindings negwards on d.3
+here"). Cursors are a different matter. They are used for several things, to
+name a few:
+
+Center of view
+Selecting dimensions from dimension lists
+Selecting rasters from raster lists
+Arbitrary selections for viewing operations
+Additionally, there is the cursor cargo dimension which allows cursors to
+piggyback on one another - for example, combining the cursors for one view and
+another view's X axis allows one to change the dimension list for the X axis
+by moving the other view's center.
+
+The default space and other packages which have views will most likely have
+cursors. In order for the spaces to be useful, these cursors should be movable
+when the package-slice is included and should be movable by changing the main
+space, not the package-slice. Also, cursor cargo should be changeable.
+
+There is a simple solution to these problems: the package slices' own d.cursor
+and d.cursor-cargo are mapped to some other dimensions, e.g. d.ps-cursor. When
+a slice is first incorporated into the system, the default cursors from the
+slice are copied to the global d.cursor. There then need to be operations on
+the slice cell to reload or commit the cursors of a slice, which simply copy
+the assignments of the cursors to the package-slice (provided all cursors lie
+on cells of that package-slice as they should) or copy the cursors from the
+package-slice to the main space.
+
+Most trivial slices
+~~~~~~~~~~~~~~~~~~~
+
+Because waiting for the full design to be finalized would have seriously
+slowed down development (as the main developers wouldn't be able to use GZZ
+for real work) there is now a primitive slice implementation in place. Even in
+its rudimentary form it is surprisingly complete. In addition, this experiment
+gives valuable experience in the complexities of implementing any types of
+slice systems.
+
+The system works by handling two dimensions, d.slices and (naturally) d.cursor
+specially. These are in fact the only dimensions that are allowed to connect
+between the slices; all others are constrained to be only among the cells of
+the same slice.
+
+The dimension d.slices simply connects the homecells of the slices in the
+slice order. There are no other connections along this dimension and it cannot
+be modified.
+
+d.cursor is a different matter. In order to be useful, even the most trivial
+slices must allow connections that transcend the slices on d.cursor. In this
+model, d.cursor is constrained so that the only operation allowed is insertion
+negwards (currently the cursor is obtained by going to the end of d.cursor
+poswards, which will change). Also, cells in slice 0 may be inserted to any
+other cell but not vice versa: cells (cursors) in other slices may only point
+to cells in the same slice.
+
+These semantics are fairly simple but still their correct implementation is
+not at all trivial, especially for d.cursor. The implementation uses preflets
+in slice 0 to connect to the other slices and when reading, the whole rank in
+slice 0 is placed before all the other cells in the non-zero slice accursing
+the same cell, so the cursors are not necessarily in the same order they were
+inserted in.
+
+Adapter slices
+~~~~~~~~~~~~~~
+
+One possible solution in the long term to the package-slice problem is simply
+having adapter-like slices for the external packages. These slices would have
+preflets pointing to s.0 as well as the external package - possibly even
+without intervening cells.
+
+Versioning
+----------
+
+Versioning is one of the most difficult problems in defining a ZZ space. This
+is because having a versioned space is not useful, unless cursors can point to
+past versions of cells using the normal mechanism, d.cursor. If views and
+pointing were handled outside the normal space, this would be no problem.
+
+This immediately suggests the trivial but unsatisfactory solution of simply
+not versioning d.cursor. This is unsatisfactory because d.cursor is used for
+an increasing number of things, e.g. Clang variables: what good would it be to
+have access to a previous state without being able to access the values of the
+variables.
+
+The other solution, simply allowing retroactive changes to d.cursor of past
+cells to point to the future is more attractive but not without its own
+downsides. Let's say the user, at time 100 looks at a cell A at time 5 and
+does some changes in the space, e.g. moves the other cursor or writes text
+somewhere else, until time 105 after which he moves the cursor away. In this
+case, the rank on d.cursor from cell A would contain the user's viewcell at
+times 100, 101, 102, 103, 104 and 105. This is not that great either, because
+the algorithm that displays the cursor moves through d.cursor to find the
+coloring of the cell to show the colors of the cursors on it. The number of
+cursors on past cells would be compounded.
+
+A potentially interesting solution, avoiding the preceding problem, is to
+rename d.cursor to d..cursor-past for the past cells: a connection on d.cursor
+would mean that a current cursor is on the cell. This solution is attractive,
+as it preserves the values of all Clang variables "pickled" using another
+dimension on which they can be browsed, but also does not grow the number of
+cursors on a cell too much.

@@ -1,0 +1,362 @@
+GZIGZAG MEDIASERVER (TO BE RENAMED!) DESIGN
+By Tuomas J. Lukka and Antti-Juhani Kaijanaho
+2001
+
+[Plain-text extraction of mediaserver.tex (LaTeX source). LaTeX markup
+ removed; sections, figures, tables and equations numbered and cross-
+ references resolved. Unrecognized commands (name dropped, argument text
+ kept): \ensuremath, \rightarrow.]
+
+Abstract
+--------
+
+The purpose of the mediaserver is to implement
+the Xanadu permascroll model
+in an easy-to-use encapsulated fashion.
+
+The mediaserver incorporates both peer-to-peer and
+client-server transfer of data.
+
+This ties in with Ted's other projects, and the intent
+is to produce a simple but powerful system completely independent
+of GZigZag (GZigZag is on a higher level and uses this as a library).
+(The source code is currently in the GZigZag repository but
+we might make a new project out of it at some point)
+
+    $Id: mediaserver.tex,v 1.12 2001/04/03 11:23:58 ajk Exp $
+
+1  Intro
+========
+
+The Xanadu media model is based on attaching a permanent identifier
+to each piece of fluid media (e.g. text, audio) entering the system.
+This arrangement adds a level of indirection to media access, allowing
+content linkage, version comparison of documents composited from
+spans of fluid media, and automatic sharing of data between copies.
+
+Additionally, the Xanadu media model incorporates micropayments:
+when requesting a
+
+The gzz mediaserver is an implementation of these ideas...
+
+Somewhat like freenet, but encryption is not the point here, point
+is media sharing, caching, replication and access.
+
+1.1  Digital Rights Management versus Fair Use
+----------------------------------------------
+
+  - support copying of cached content between the user's machines, but
+    no large-scale copying without repayment to content originator
+  - voluntary compliance
+  - testing of compliance by requests
+  - give people possibility of doing the right thing
+  - Asserting copyright revocation?
+    The infringer is the one granting access to the material, not the user!
+
+1.2  For Gzigzag
+----------------
+
+If we want to include a piece of audio into a ZZ space and then copy
+the space for experiment / backup, the audio will also be copied, taking
+up space. Creating a simple black-box stable media server will remove
+this problem.
+
+Also, mirroring data between machines is easier.
+
+Eventually, cells to be stored as change packets in the mediaserver.
+
+1.3  Local and Cached Material
+------------------------------
+
+All material is divided into local and cached material. Cached
+material may be removed from the system at any time without notice.
+Removing local material requires special procedures. Material may be
+changed from local to cached but not the other way around.
+
+1.4  Quality Levels
+-------------------
+
+It is quite simple to expand this approach to support different
+qualities for sounds and images; loading the given image at a lower
+quality may be more efficient especially over a slow network, likewise
+for sound.
+
+2  Functionality
+================
+
+  - communicate over network with other instances of mediaserver
+  - cache media locally
+  - manage local store, serve published portions over network
+  - return given span of media
+  - record media, tag addresses / spans
+  - append text, char by char, efficiently
+  - manage unique ids through prefix-for-each-server.
+  - ID conflict is a fatally serious issue - exchange CRCs
+    occasionally for random mutually shared pieces just to check.
+
+2.1  Basic interface
+--------------------
+
+Recorder / Player? See Modules/sound/*.java
+
+    interface MediaServer {
+        /** Load the media denoted by the span, or null if not loadable.
+         */
+        Media getMedia(Span s);
+
+        /** Load the media denoted by the span asynchronously
+         * and return
+         * an asynchronous object that holds the media when loaded.
+         */
+        MediaLoader getMediaAsync(Span s);
+
+        Span append(String s);
+
+    }
+
+    interface Media {
+        final int TEXT, IMAGE, AUDIO, VIDEO;
+        int getType();
+        ... ??? Casts?
+    }
+
+    interface MediaLoader {
+        /** Whether loading is complete.
+         */
+        boolean isReady();
+
+        /** Whether the media has been correctly, fully loaded
+         * without errors.
+         */
+        boolean isValid();
+        ... ???
+
+        /** Stop loading.
+         */
+        void close();
+
+        /** Get the final media.
+         * null = not yet here.
+         */
+        Media getMedia();
+    }
+
+3  Decentralized unique ID scheme proposal
+==========================================
+
+Let IDs be octet sequences of arbitrary nonzero length.
+
+An ID is always either assigned or unassigned.
+
+The ID x is inferior to ID y iff y is an initial subsequence of
+x. An ID is inferior to itself.
+
+Let A be a mediaserver and x be an ID. Now A has delegated x
+is a relation.
+
+Let A be a mediaserver and x be an ID. Now define that x
+available to A iff it is not inferior to an ID that A has
+delegated.
+
+Define the relation A has authority over x, where A is a
+mediaserver and x is an ID.
+
+The following invariants hold:
+
+  - For every ID there is a mediaserver that has authority over it.
+  - If a mediaserver has authority over an unassigned ID, it can
+    make it an assigned ID.
+  - If an ID is not available to a mediaserver, the mediaserver does
+    not have authority over it.
+  - If a mediaserver has authority over an ID x, then it has
+    authority over every ID that is both inferior to the ID x and is
+    available to the mediaserver.
+  - If a mediaserver has authority over an unassigned ID and if
+    there are no assigned IDs inferior to that ID, it can delegate
+    the ID.
+
+The idea is that when a mediaserver needs a fresh ID, it takes an ID
+it has authority over. If it has no such IDs, it requests that some
+other mediaserver delegates authority over some other ID to it.
+
+3.1  Advantages
+---------------
+
+I believe that this scheme guarantees network-wide unique IDs. It
+also requires no central agency that gives out valid IDs.
+
+3.2  Vulnerabilities
+--------------------
+
+If there are two distinct networks and data is shared between the
+networks, havoc occurs. The solution is to have one conceptual global
+network. The network can be disconnected; if every connected
+subnetwork is seeded with a distinct part of the ID space, then each
+operates autonomously after seeding.
+
+It is possible for a malicious mediaserver to take authority over lots
+of IDs. However, this will not have any fatal effects on the
+mediaserver network.
+
+A hostile mediaserver may also distribute invalid ids around that it has
+no authority over. This is probably the most serious attack.
+
+3.3  Crypto?
+------------
+
+It would be good to involve cryptographic signatures here so that
+assigning and delegating IDs requires a verifiable digital signature
+somehow. Needs work.
+
+3.3.1  A scheme
+~~~~~~~~~~~~~~~
+
+One possible - probably incomplete - scheme follows:
+
+Every mediaserver shall have an asymmetric key pair for cryptographic
+signing. Additionally, there shall be a key pair for the network
+distinct from the mediaserver keys. Now, a mediaserver having
+authority over an ID shall possess an authority certificate for that
+ID (or to an ID that ID is inferior to).
+
+When a mediaserver having authority over an ID wants to assign that ID
+to a datum, it generates a data packet containing both the datum and
+the authority certificate it has and signs that packet.
+
+When a mediaserver having authority over an ID wants to delegate that
+ID to another mediaserver, it generates a new certificate as follows:
+it generates a data packet containing the authority certificate of the
+delegator the ID being delegated and information that uniquely
+specifies the delegatee's public key (key ID, key size and fingerprint
+or something like that), and then signs that packet. This signed
+packet is the new certificate. The delegatee shall then broadcast the
+certificate to the whole network.
+
+(An attack deflector:) If a mediaserver has a valid authority
+certificate for an ID and it receives a conflicting valid authority
+certificate, then there is a rogue mediaserver that is delegating the
+same ID to several mediaserver. The identity of the rogue should be
+easy to determine and sanctions (such as removing from the network)
+doable.
+
+A valid certificate is defined recursively: a certificate signed by
+the network key is valid, and a certificate containing a valid
+certificate for the correct ID is valid.
+
+This scheme has at least the vulnerability that a rogue mediaserver
+that is in a good place in a network can prevent the network from
+realizing it's giving out conflicting certificates.
+
+3.3.2  Another scheme
+~~~~~~~~~~~~~~~~~~~~~
+
+  - There will be two kinds of authority certificates: root
+    certificate and delegation certificate.
+  - Authority certificates are a shared secret between its issuer
+    and its holder.
+  - An authority certificate gives its holder authority over one ID
+    (transitively giving authority over the whole subtree).
+  - The root certificate gives authority over the null ID. (Change
+    above description to allow it.)
+  - A mediaserver holding an authority certificate for a subtree can
+    generate a new authority certificate for a member of the subtree.
+  - A holder of a certificate must be able to verify that the
+    certificate has an authority path to the root.
+  - It must not be possible to generate an authority certificate
+
+This scheme has one problem: it does not revoke authority over a
+delegated subtree from the delegator.
+
+4  Architecture
+===============
+
+The mediaserver proposed architecture has several levels.
+
+4.1  Physical
+-------------
+
+The physical level takes care of retrieving and storing
+spans according to unique global ids.
+All policy decisions are made on higher levels: this level
+only opens network connections and stores the spans in files
+and removes them according to instructions from the higher level.
+
+No reference counting is done: that is also a problem of the higher
+levels.
+
+    FOO
+
+5  Implementation plan
+======================
+
+5.1  Phase I
+------------
+
+This is immediate: we need this yesterday.
+
+Unique IDs, at least a preliminary version that will remain unique
+even when better schemes taken into use.
+
+The physical layer, except for:
+Explicit synch by user. No interactive network fetches but
+code to synch up two repositories completely (copy everything
+in both to both).
+No digital signatures or crypto: all systems completely trusted.
+
+5.2  Phase II
+-------------
+
+Collections? Overriding? Signatures?
+
+6  HTTP Interface to Storage
+============================
+
+The storage module will listen on an IP-reachable host on an TCP port
+for incoming connections. The protocol used will be HTTP/1.0 or
+HTTP/1.1. It is recommended that the storage module root URL be
+http://localhost/mediaserver/. The root URL shall be configurable.
+
+The storage module uses the following ID format: first, an arbitrary
+octet sequence is encoded as a sequence of hexadecimal ASCII digits
+(with capital letters); then an ASCII dash is appended; finally, an
+MD5-hash of the octet sequence formed by concatenating the the
+arbitrary octet sequence above and the datum itself is appended as a
+sequence of hexadecimal ASCII digits (with capital letters).
+
+The following requests are supported:
+
+6.1  Request: GET root/data
+---------------------------
+
+A GET request of the base URL with the string data prepended
+will result in a listing of data in the storage module. Each line
+describes one datum; first comes the ID and then the
+length of the datum in base-10 ASCII representation. These two fields
+are separated by linear whitespace.
+
+6.2  Request: GET root/data/
+----------------------------
+
+This will result in a human-readable version of the above listing.
+
+6.3  Request: GET root/data/key
+-------------------------------
+
+A GET request of the base URL with the string data/ and the
+datum ID prepended will result in the datum requested.
+
+6.4  Request: PUT root/data/key
+-------------------------------
+
+Mutatis mutandis.
+
+6.5  Request: DELETE root/data/key
+----------------------------------
+
+Mutatis mutandis.
+
+7  Problems
+===========
+
+Word-sized gaps in published documents for deleted words guess
+confidential content, or damaging erased content?

@@ -1,0 +1,609 @@
+[Plain-text extraction of ztp.wml (Website META Language source). WML
+directives and HTML tags were removed; headings, lists, tables and figures
+were re-laid out as text. Figures appear as [Figure (file): caption]. The
+<toc> and <warn> tags, which the WML build expands into generated text, are
+omitted. Unrecognized tags (text kept, markup ignored): define-tag, keyword,
+mvar, ref, s1, s2, s3, s4]
+
+######### ## TODO # * scrolls # * ######### %body %body GZigZag networking:
+ZigZag Transfer Protocol
+
+GZigZag networking: ZigZag Transfer Protocol
+============================================
+
+    $Id: ztp.wml,v 1.3 2001/02/06 12:12:17 ajk Exp $
+
+Written by
+Antti-Juhani Kaijanaho
+(add your name here if you do any significant modification)
+
+{#MYTOC#} On naming
+
+The name of this protocol is the ZigZag Transfer Protocol, or ZTP, as
+suggested by Tuomas Lukka. Early versions of this protocol were called the
+Subspace Transfer Protocol, or STP, which we did not like.
+
+Note that the acronym ZTP stands also for Zangelding Transfer Protocol. Due to
+the different usages for the two protocols, we don't expect that serious
+confusion will result from this. On subspaces
+
+A subspace S' of a ZigZag space S is a ZigZag space with the following
+properties:
+
+  - The set of cells in S' is a subset of the set of cells in S
+
+  - The set of connections in S' is a subset of the set of connection in S
+
+A subspace selector is a function mapping ZigZag spaces into their subspaces.
+A subspace selector can be described by the triplet <C, H, S>, where
+
+C
+    is a set of cells,
+
+H
+    is a set of dimensions, and
+
+S
+    is a set of dimensions
+
+and where H and S are disjoint.
+
+Given a ZigZag space Z, a subspace selector chooses a subspace as follows: the
+set of cells is constructed as the set of cells reachable from the cells in C
+through connections along dimensions in H; and the set of connections is
+constructed as the set of those connections from Z whose both ends are in the
+subspace and whose dimension is in H or S. User access privilege management
+
+Once the user is authenticated, her actions are limited by her access
+privileges. There are four types of privileges:
+
+  - space administrator privileges (SAP)
+
+  - subspace operator privileges (SOP)
+
+  - subspace write privileges (SWP)
+
+  - subspace read privileges (SRP)
+
+All but SAP are associated with a subspace. The subspace privileges apply to
+the subspace itself and any subspaces of that subspace.
+
+If a user has SOP, SWP or SRP in a subspace S and the same privileges in a
+subspace T of S, and the privileges to T are revoked, the privilege to S is
+unaffected by the revocation. Space Administrator Privileges (SAP)
+
+A user having SAP is authorized to create, delete, suspend and resume users,
+and give and revoke users their SOP to any subspace, and give and revoke users
+their SAP. A user having SAP is also authorized to revoke any user's SOP, SWP
+or SRP to any subspace. Subspace Operator Privileges (SOP)
+
+A user having SOP on a subspace S is authorized to give or revoke any user
+their SOP, SWP or SRP to any subspace of S, including S itself. Subspace Write
+Privileges (SWP)
+
+A user having SWP on a subspace S is authorized to initiate transfer of any
+subspace of S, inclusing S itself, from the client to the server. Subspace
+Read Privileges (SRP)
+
+A user having SRP on a subspace S is authorized to initiate transfer of any
+subspace of S, including S itself, from the server to the client. Protocol
+overview
+
+ZTP is actually two similar protocols for the same purpose. One operates over
+a reliable stream; we call this ZTP/TCP. The other operates over a datagram
+service; we call this ZTP/UDP. Note that other underlying protocols than TCP
+or UDP are possible; the names are chosen for their mnemonic value, not for
+their accuracy.
+
+The datagram service used by ZTP/UDP is assumed to fail only in that sent
+datagrams may be lost en route and that datagrams may arrive out of order, and
+datagrams may be duplicated. In particular, it is assumed that any arriving
+datagrams are uncorrupted.
+
+All transfer protocols used by ZTP/TCP and ZTP/UDP are assumed to provide for
+confidentiality and integrity. However, the transfer protocols are not
+necessarily assumed to provide for authentication.
+
+Thus, good transfer protocols to use with ZTP/TCP are
+
+  - TLS over TCP over IP
+
+  - SSL over TCP over IP
+
+  - TCP over IPSec
+
+  - SSH protocol
+
+UDP over IPSec is a good protocol to use with ZTP/UDP.
+
+In a trusted environment, also TCP over IP with ZTP/TCP and UDP over IP in
+ZTP/TCP can be used. Hovewer, using ZTP/TCP over TCP over plain IP and using
+ZTP/UDP over UDP over plain IP on the global Internet is DANGEROUS.
+
+The ZTP protocol consists of several modules. The modules are:
+
+  - authentication
+
+  - user administration
+
+  - subspace administration
+
+  - subspace naming
+
+  - subspace transfer
+
+  - SEQ scheme
+
+The authentication module actually consists of several alternative modules.
+Pre-authentication is used when ZTP operates over authenticating underlying
+protocols. It is also useful for anonymous-access-only read-only servers,
+where there is no need for real authentication. Password authentication is
+used when the underlying protocol provides for data integrity and
+confidentiality but not authentication, and in trusted unencrypted
+environments. Cryptographic authentication will use cryptographic means to
+authenticate the user and is meant to be used in hostile environments. This
+specification will not define any cryptographic authentication methods.
+
+User administration module handles such things as adding, deleting, suspending
+and resuming users. It is all things that require SAP.
+
+Subspace administration module allows a user having SOP to a subspace S give
+and revoke SOP, SWP and SRP to any subspace of S, including S itself.
+
+Subspace naming module uses the SEQ scheme to define a subspace and then gives
+a name for it. All other subspace operations use that name.
+
+Subspace tranfer module uses the SEQ scheme to transfer a subspace from the
+client to the server (which requires SWP) and from the server to the client
+(which requires SRP).
+
+The SEQ scheme is a method for dumping a subspace content from the sender
+(either the client or the server) to the receiver (either the client or the
+server, the one which is not the sender). The scheme is simple in ZTP/TCP. In
+ZTP/UDP, the scheme is optimized for transmission paths with low packet loss,
+allowing for information to be used as the packets arrive, even if they come
+out of order. Protocol walkthrough
+
+An ZTP protocol instance starts by establishing a session. In ZTP/TCP, this is
+handled by the underlying protocol, so in ZTP/TCP this phase consists of no
+messages. In ZTP/UDP, a session is identified by an octet negotiated by the
+parties in a handshake roundtrip.
+
+After session has been established, user authentication is performed. This is
+initiated by the client who sends a request for authentication specifying
+which authentication method is desired. The rest of the exchange depends on
+the authentication method; the authentication phase is ended by an okaying or
+rejecting message from the server.
+
+After successful authentication, the client in the session is assumed to be
+controlled by the authenticated user. It can then initiate any process for
+which the user has sufficient privileges.
+
+XXX Use cases
+
+Connection can be closed at any time. It is preferred that the connection
+closure scheme is used. The closure can be initiated by either party at any
+time. In case connection is not properly closed, a connection shall have a
+timeout of at least ten minutes for forcibly closing the connection if no
+messages are exchanged in that time. Authentication schemes There are three
+schmes for authentication in ZTP. Preauthentication presupposes that the
+underlying protocol provides authentication in some implementation-defined
+manner. Password authentication uses a trivial shared secret protocol to
+establish the authenticity of the user. A slot for future amendment of the
+protocol is reserved; it is expected that cryptographic authentication will be
+preferred over password authentication in the future. This protocol
+specification does not define any cryptographic authentication methods.
+Preauthentication
+
+In preauthentication, the underlying protocol provides for enough information
+to determine the authencity of the user at the client end. The mechanism for
+that is beyond the scope of this specification.
+
+The client requesting preauthentication shall send an AUTH REQ/PRE message
+containing the user name for which authentication is desired. If the server
+determines that the client is sufficiently authenticated by the underlying
+protocol to be that user name, and the named user exists and is not suspended,
+it shall respond with the AUTH OK message. Otherwise it shall respond with an
+AUTH ERR message and initiate connection closure. Password authentication
+
+In password authentication the client provides the server with a user name /
+password pair, which the server compares with its own records. If the pair
+matches, the user is successfully authenticated. The password is a shared
+secret; however, the server may use one-way functions to store the information
+it needs of the password.
+
+The client requesting password authentication shall send an AUTH REQ/PASS
+message containing the user name for which authentication is desired and the
+related password. If the password is determined to be the same as the password
+for the user name stored in the server's records, and the user is not
+suspended, the server shall respond with the AUTH OK message. If there is no
+such user name, or the password does not match, or the user is suspended, the
+server MUST respond with an AUTH ERR message and initiate connection closure.
+AUTH message details Responses to AUTH REQ messages
+
+The server MUST respond to an AUTH REQ message with either the message AUTH OK
+or the message AUTH ERR, based on the following rules:
+
+  - If the server does not support the requested authentication type at all,
+    it MUST respond with AUTH ERR.
+
+  - If the username is the name of an nonexistent user, or it is an existing
+    user who is not properly authenticated, the server MUST respond with AUTH
+    ERR. The message sent MUST be identical between the different reasons in
+    this item for issuing the message. In other words, it MUST NOT be possible
+    for the client to determine based on the form of the message whether the
+    user name exists or not. An example of a proper explanation text for the
+    message is "Access denied".
+
+  - If the username is properly authenticated and the named user is disabled,
+    the server MUST respond with AUTH ERR. An example of a proper explanation
+    text for the message is "User disabled". Note that this kind of a message
+    MUST NOT be sent if the user is not properly authenticated.
+
+  - If the username exists and is properly authenticated and it is not
+    disabled, the server SHOULD respond with AUTH OK. However, the server MAY
+    also respond with AUTH ERR (for example, if there are local limits on the
+    number of simultaneous users and the limit is exceeded), in which case the
+    explanation text for the message SHOULD make it clear why the
+    authentication was rejected.
+
+AUTH REQ/PRE Synopsis
+
+AUTH REQ/PRE username
+
+  - username : string
+
+Description
+
+This message MUST be sent immediately after the connection has been
+established by a client wishing for preauthentication. The username is the
+name of the user for which the authentication is requested.
+
+The server responses to this message are defined in AUTH REQ/PASS Synopsis
+
+AUTH REQ/PASS username password
+
+  - username, password : string
+
+Description
+
+This message MUST be sent immediately after the connection has been
+established by a client wishing for password authentication. The username is
+the name of the user for which the authentication is requested.
+
+The server verifies the authenticity of the user by verifying that the
+password is the same as the valid password for the username according to the
+server's records. Note that the server MAY store only the result of a one-way
+hashing of the password instead of the password itself, if this information
+can be used to reliably ascertain the validity of a given password.
+
+The server responses to this message are defined in AUTH OK Synopsis
+
+AUTH OK Description
+
+This message indicates that the server has accepted the authenticity of the
+client as the username given in the earlier AUTH REQ message. This message
+concludes the authentication phase. AUTH ERR Synopsis
+
+AUTH ERR explanation
+
+  - explanation : string
+
+Description
+
+This message indicates that the server has not accepted the authenticity of
+the client as the username given in the earlier AUTH REQ message. The server,
+after sending this message, SHOULD immediately initiate connection closure.
+
+The explanation SHOULD be a human-readable description of the reason for the
+authenticity rejection. Note that the server SHOULD word the explanation so
+that the client cannot determine whether it was failed authentication or a
+nonexistent username that prompted the AUTH ERR message. User administration
+
+The purpose of the user administration module in ZTP is to allow the
+administrator to administrate users remotely without needing to resort to
+implementation-defined behaviour.
+
+Users have the following characteristics tunable using ZTP:
+
+  - User name (UNAME : string)
+
+  - Permission to be preauthenticated (AUTH/PRE : boolean)
+
+  - Permission to be password-authenticated (AUTH/PASS : boolean)
+
+  - Is suspended or not (SUSP : boolean)
+
+  - Permission to change password (CHPASS: boolean)
+
+  - Password (PASS : string)
+
+  - Has SAP or doesn't have SAP (SAP : boolean)
+
+The user administration module consists of one scheme for editing and one
+scheme for viewing all these user data. The edition scheme can be also used
+for adding and deleting new users.
+
+A user can view their own data regardless of permissions. The user can change
+the password if their CHPASS flag is set to true. The server side user
+management concept
+
+This section defines a conceptual model for the server side user management
+for ZTP. Server implementations MAY use other implementation strategies so
+long as the effects observable by the clients are the same as with this model.
+
+In the server, there is a table of users. The table consists of records
+containing the following information:
+
+  - username : string
+
+  - password : string
+
+  - status : userstatus
+
+A particular record may be written as a triplet <username, password, status>.
+
+The third element, status is an octet-length bit vector with the following
+structure:
+
+  Bit 7    | Bit 6    | Bit 5    | Bit 4     | Bit 3    | Bit 2 | Bit 1  | Bit 0
+  Reserved | Reserved | Reserved | AUTH/PASS | AUTH/PRE | SAP   | CHPASS | SUSP
+
+This data type is referred to in type definitions as userstatus. Note that the
+elements marked as Reserved MUST have the value false.
+
+The table of users is indexed by user names. There may be at most one record
+with a given username in the table.
+
+In the table, the following operations are allowed:
+
+  - insertion of a new user record;
+
+  - replacement of a user record;
+
+  - deletion of a user record; and
+
+  - accessing a complete user record.
+
+All of them are atomic. This means that, for the forementioned operations, the
+following are true:
+
+  - If an operation fails, the table will remain in the state it was before
+    the attempt.
+
+  - Operations never overlap; thus at most one operation is in progress at any
+    time.
+
+A user exists, if and only if there is a record with that username on the
+table. A user is disabled if and only if there is a record with that username
+on the table and the SUSP element of the status element of that record has the
+value true. A user has SAP if and only if there is a record with that username
+on the table and the SAP element of the status element of that record has the
+value true UADM message details UADM NEW Synopsis
+
+UADM NEW stat uname passwd
+
+  - stat : userstatus
+
+  - uname, passwd : string
+
+Description
+
+This message is sent by the client when it wants to create a new user.
+
+After receiving this message, the server MUST follow the following step-by-
+step algorithm (the term "client user" refers to the user authenticated to
+control the session where the message was sent):
+
+  - Check whether the client user has SAP. If not, the server MUST send in
+    response the UADM E/NOPERM message, and end the processing of the message
+    here.
+
+  - Check whether the user uname exists. If it does, the server MUST send in
+    response the UADM E/EXISTS message and end the processing of the message
+    here.
+
+  - The server SHOULD check that it has enough resources to handle this new
+    user (the criteria are implementation-defined and MAY include local
+    considerations). If it determines that it doesn't have the resources, the
+    server MUST send in response the UADM E/NORES message and end the
+    processing of the message here.
+
+  - The server MUST insert the record <uname, passwd, stat> into the user
+    table. If this fails, it MUST respond with the message UADM E/PROB,
+    otherwise it MUST respond with the message UADM OK.
+
+Payload transfer: the SEQ scheme
+
+The actual payload of the protocol, the subspace data, is transferred over by
+the SEQ scheme.
+
+The SEQ scheme consists of five SEQ data messages and four SEQ control
+messages. The data messages are
+
+SEQ CELL
+    Specifies a root cell for a subspace
+
+SEQ HARDDIM
+    Specifies a hard dimension for a subspace
+
+SEQ SOFTDIM
+    Specifies a soft dimension for a subspace
+
+SEQ CONTENT
+    Transfers over the content of a subspace
+
+SEQ RANK
+    Specifies a subrank in the subspace
+
+The SEQ control messages are listed below.
+
+SEQ FIN
+    Initiates finalization phase of the SEQ scheme
+
+SEQ REQ
+    Requests that a SEQ data message is resent
+
+SEQ ERR
+    Response for a broken SEQ REQ.
+
+SEQ END
+    Ends the SEQ scheme instance
+
+A SEQ scheme instance has a sending end and a receiving end. When the server
+is the sending end, the client is the receiving end and vice versa.
+
+In ZTP/TCP, the SEQ scheme consists of a number of SEQ data messages and is
+finished by a SEQ END message.
+
+In ZTP/UDP, the SEQ scheme consists of two phases: the data transfer phase and
+the finalization phase. The data transfer phase consists of a number of SEQ
+data messages and is ended by a SEQ FIN message which also starts the
+finalization phase. Then the receiver end of the SEQ scheme sends one or more
+SEQ REQ messages and the sender end responds with an appropriate SEQ data
+message. The finalization phase is ended by a SEQ END by both parties. SEQ
+message details SEQ/DATA message template SEQ/CTL message template SEQ CELL
+Synopsis
+
+SEQ/DATA CELL cellid
+
+  - cellid : string
+
+Description
+
+This message defines that the cell cellid is a root cell for the subspace
+being described. SEQ HARDDIM Synopsis
+
+SEQ/DATA HARDDIM dimid
+
+  - dimid: string
+
+Description
+
+This message defines that the dimension dimid is one of the defining
+dimensions for the subspace being described. In other words, this defines that
+any cell connected to any cell in the subspace along dimension dimid also is
+in the subspace.
+
+If in a SEQ scheme instance a dimension is specified using SEQ HARDDIM, it
+SHOULD NOT be specified in the same SEQ scheme instance using SEQ SOFTDIM. SEQ
+SOFTDIM Synopsis
+
+SEQ/DATA SOFTDIM dimid
+
+  - dimid: string
+
+Description
+
+This message defines that any connections along dimension dimid between cells
+that are in the subspace are included in the subspace. However, this dimension
+will not take part in the definition of the cell set of the subspace.
+
+If in a SEQ scheme instance a dimension is specified using SEQ SOFTDIM, it
+SHOULD NOT be specified in the same SEQ scheme instance using SEQ HARDDIM. SEQ
+CONTENT Synopsis
+
+SEQ/DATA CONTENT content-type cellid content
+
+  - content-type: octet
+
+  - cellid: string
+
+  - content: octet[]
+
+Description
+
+This command transfers the content of a cell, which this protocol treats as an
+octet stream with no underlying structure. The type of the content is
+indicated in this messages; the following content types are now established:
+
+  0 | Octet stream, ie. unknown format
+  1 | Unicode text in UTF-8 encoding
+  2 | A span
+
+SEQ RANK Synopsis
+
+SEQ/DATA RANK dimid cellarray
+
+  - dimid : string
+
+  - cellarray : string[]
+
+Description
+
+This message denotes a subrank along dimension dimid.
+
+The precise definition of this is as follows: cellarray[n] is connected
+posward to cellarray[n+1] for all n between zero, inclusive, and the length of
+cellarray minus one, exclusive. More than one SEQ RANK message MAY define the
+same connection. Two SEQ RANK messages MUST NOT define two conflicting
+connections (that is, a connection posward or negward from the same cell to
+two different cells). SEQ FIN Synopsis
+
+SEQ/CTL FIN dmcount
+
+  - dmcount: uint32
+
+Description
+
+This message closes the data transfer phase of a SEQ scheme instance and opens
+its finalization phase.
+
+The parameter dmcount MUST specify the number of unique SEQ data messages sent
+during the data transfer phase of the SEQ scheme instance.
+
+In ZTP/UDP, the sending end of the SEQ scheme instance MUST send this message
+repeatedly after sending the last SEQ data message in the data transfer phase,
+until it receives either a SEQ REQ or a SEQ END message.
+
+When the receiving end of the SEQ scheme instance first receives this message,
+it SHOULD check which data messages it did receive and issue SEQ REQ messages
+for each missing message. When it has received all data messages, it MUST send
+a SEQ END message. It should ignore all further SEQ FIN messages associated
+with that SEQ scheme instance.
+
+This message MUST NOT be sent in ZTP/TCP. SEQ REQ Synopsis
+
+SEQ/CTL REQ seq
+
+  - seq : uint32
+
+Description
+
+This message is sent by the receiving end of the SEQ scheme instance to
+request that the sending end resend the SEQ data message with the SEQ message
+identity number seq.
+
+The receiving end MUST repeatedly resend this message if it is sending it at
+all, until it receives the data message it's asking for or a corresponding SEQ
+ERR.
+
+The sending end MUST respond to each SEQ REQ message it receives (even
+duplicates) by resending the message being requested, or with a SEQ ERR
+message.
+
+This message MUST NOT be sent in ZTP/TCP SEQ ERR Synopsis
+
+SEQ/CTL ERR seq
+
+  - seq : uint32
+
+Description
+
+This message is a response to an invalid SEQ REQ message. It is to be sent in
+response to every received invalid SEQ REQ message, even to duplicates.
+
+This message MUST NOT be sent in ZTP/TCP. SEQ END Synopsis
+
+SEQ/CTL END Description
+
+This message ends the SEQ scheme instance.
+
+In ZTP/UDP, the receiving end MUST send this message repeatedly after
+receiving SEQ FIN and receiving all the data it needs, until it receives a SEQ
+END message. The sending end MUST respond to every SEQ END message, even
+duplicates, with a SEQ END message.
+
+In ZTP/TCP, the sending end MUST send a single SEQ END message after sending
+all the SEQ data messages it's going to send. The receiving end MUST NOT
+respond to the SEQ END message.

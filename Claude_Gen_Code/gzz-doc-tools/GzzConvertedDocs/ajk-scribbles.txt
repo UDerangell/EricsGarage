@@ -1,0 +1,33 @@
+[Plain-text extraction of ajk-scribbles.tex (LaTeX source). LaTeX markup
+ removed; sections, figures, tables and equations numbered and cross-
+ references resolved. Unrecognized commands (name dropped, argument text
+ kept): \Dom (in math).]
+
+Note: we assume here that dimensions are cells instead of strings.
+
+Definition 1 (space).
+A ZigZag space is the triplet Z = (X, c, C) where X is the set of
+cells, c : X → Σ^* is the cell content mapping
+and C ⊂ X³ is the set of connections, if the following hold:
+
+  1. If (d, e, f) ∈ C and (d, e′, f) ∈ C then e = e′.
+  2. If (d, e, f) ∈ C and (d, e, f′) ∈ C then f = f′.
+
+Definition 2 (subspace).
+A ZigZag space Z′ = (X′, c′, C′) is a subspace of another ZigZag
+space Z = (X, c, C) if the following hold:
+
+  1. X′ ⊂ X
+  2. c′(x) = c(x) for every x ∈ X′.
+  3. C′ ⊂ C
+
+Theorem 1.
+Let Z = (X, c, C) be a ZigZag space. For every d ∈ X, there
+exists a maximal X′ ⊂ X and a unique d̃ : X′
+→ X such that for every x ∈ X′ it holds that (d, x,
+d̃(x)) ∈ C. Additionally, d̃ is an injection.
+
+Definition 3 (clone dimension).
+Let Z = (X, c, C) be a ZigZag space. We say that d ∈ X is a
+clone dimension if, for every x ∈ d it holds that c(x) =
+c(d̃(x)).

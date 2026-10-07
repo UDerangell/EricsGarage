@@ -1,0 +1,42 @@
+DIMENSION-BASED THINKING FOR ZIGZAG
+By Tuomas J. Lukka
+Rev.1.1 2000/03/04
+
+[Plain-text extraction of dim.ptex (pic+LaTeX source). LaTeX markup removed;
+ sections, figures, tables and equations numbered and cross-references
+ resolved.]
+
+1  Introduction
+===============
+
+When designing the code to implement a ZigZag space, the
+place most people would start at would be the cell object, which would
+have a set of pointers to other cells, named with dimension names.
+However, this is not the only way to structure the internals - indeed,
+it is not necessarily a good way at all.
+
+2  Dimension-based view
+=======================
+
+With cells, you have to always take steps to enforce the two-directional
+connection consistency rule.
+The dimension-based view starts from the realization that if we consider
+each dimension an entity by itself, this gets much simpler:
+simply put, each dimension is a one-to-one mapping from some cells of the
+space to some other cells.
+
+3  Advantages
+=============
+
+The dimension-based view has several advantages:
+
+  - Specialization
+    It is much easier to define a single dimension object to
+    do something different than the others, e.g. a dimension where
+    getting the nth cell is fast but inserting and deleting cells
+    is allowed to be slow.
+  - Simplicity
+    Since one object is in charge of the both ends of a connection,
+    it is easier to avoid mistakes. Coding transient cell connections
+    is easy as well, as that object can keep tabs on the transient
+    connections separate from the stable ones.

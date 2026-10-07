@@ -1,0 +1,63 @@
+[Plain-text extraction of synt.wml (Website META Language source). WML
+directives and HTML tags were removed; headings, lists, tables and figures
+were re-laid out as text. Figures appear as [Figure (file): caption]. The
+<toc> and <warn> tag(s), which the WML build expands into generated text, are
+omitted.]
+
+The case for syntaxless languages
+=================================
+
+    $Id: synt.wml,v 1.1 2000/09/17 23:50:51 tjl Exp $
+
+A manuscript-in-progress about syntaxless languages such as Clang. Intended
+for eventual publication in an academic journal.
+
+Introduction
+------------
+
+Computational structures
+------------------------
+
+The most pervasive computing paradigm of today is that of directories and
+files, and of programs written as text. All the dominant platforms,
+Linux/Unix, Mac and Windows are based on the same fundamental structure.
+Indeed, the structure is so pervasive that it is difficult for many people to
+even imagine a different world.
+
+However, a different world is actually not even difficult to define and
+implement: choosing a different data model for implementing an operating
+system, for example, is completely feasible, as shown e.g. by XXX.
+
+In our work, we focus on the ZigZag structure, which is one alternative to the
+directories-files-text model. In ZigZag, data is contained in cells which are
+bidirectionally interconnected in a flexible, multidimensional structure.
+
+Parsing, symbol tables and integrated development environments
+--------------------------------------------------------------
+
+We will probably need to use that term in every paper we write ;) ;)
+
+Today's computer languages are, with few exceptions, expressed as text. Even
+the use of the word computer language itself conveys the expectation that
+computer languages, like human languages, is expressible in a linear form.
+
+In this context, a parser and symbol tables are an essential ingredient of a
+compiler; and that a language definition requires defining a Backus-Naur form
+syntax and namespaces for various identifiers.
+
+Likewise, it is often found that using an editor which understands the
+language syntax and is able to suggest completions to e.g. method names is
+almost irreplaceable. Especially important is the ability to jump from a use
+of a symbol to the point in the code where the symbol was defined.
+
+However, human language is expressible as one-dimensional because of a simple
+constraint in speech: time. When a language is spoken, a sequential form is a
+requirement.
+
+Computer languages try to mimic human languages in several ways.
+
+Syntaxless languages
+--------------------
+
+A syntaxless language is based on there being a richer underlying structure
+than a simple text stream.

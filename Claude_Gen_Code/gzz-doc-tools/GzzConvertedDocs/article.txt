@@ -1,0 +1,51 @@
+[Plain-text extraction of article.wml (Website META Language source). WML
+directives and HTML tags were removed; headings, lists, tables and figures
+were re-laid out as text. Figures appear as [Figure (file): caption].
+Included content expanded in place: common.wml, art.css. Unrecognized tags
+(text kept, markup ignored): define-tag, div, group, if, img, preserve,
+restore, set-var, style]
+
+%body %body /> %body />
+
+%body
+
+Abstract
+--------
+
+%body
+
+You are reading an ugly version of this document that doesn't use CSS to place
+floats nicely. Figures are shown in a very crude way. Get Mozilla and see the
+other version - it's MUCH better. />/>
+
+%body
+
+Abstract
+--------
+
+%body
+
+Note that this document contains some formatting that is best rendered using a
+true CSS1 standard-compliant browser such as Mozilla; however, it should work
+reasonably well with any browser that can at least ignore CSS that it doesn't
+understand. Unfortunately, Netscape Navigator 4.7, for example, doesn't. Well,
+that's life...
+
+A non-CSS version exists: you can try by compiling this document from its WML
+version with some switches.. (if you came here through the WWW, there should
+be an alternate link on the referring page. However, I like the pretty
+rendering by Mozilla so much that that's still the default. /> /> body {
+color: black; background: white; margin-left: 15%; margin-right: 10%; text-
+align: left; font-size: medium; } h1 { margin-left: -15%;} h2 { margin-left:
+-15%; margin-top: 2.0em; margin-bottom: 0.5em; } h3 { margin-left: -7%;
+margin-top: 0.75em; margin-bottom: 0.5em; } h4,h5 { margin-left: -0%; margin-
+top: 0.5em; margin-bottom: 0.25em; } h1, h2, h3, h4, h5, p, ul { font-family:
+sans-serif; } h1, h2, h3, h4, h5 { font-weight: bold; } h1 { font-size: xx-
+large; } h2 { font-size: xx-large; } h3 { font-size: x-large; } h4 { font-
+size: large; } h5 { font-size: medium; } dt { font-weight: bold; } dfn { font-
+weight: bold; } code { font-family: monospace; } .figure { float: right;
+padding: 1em; padding-bottom: 0em; border: 1pt solid black; margin-left:
+1.5em; } .figureimg { text-align: center; } .abstract { width: 60%; text-
+align: center; } .algorithm { font-family: serif; background: #00E0E0; margin-
+left: 1cm;} span.red { color: red; background: white;} span.green { color:
+green; background: white; }

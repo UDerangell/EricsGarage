@@ -1,0 +1,161 @@
+ZigZag Transport Protocol
+=========================
+
+Objective: to transfer ZZ subspaces over a network.
+
+This is a datagram-oriented protocol that can operate over both TCP
+and UDP.  The protocol can also operate over a TLS stream.  The
+underlying protocol is assumed to provide for transport-level
+security.
+
+
+Authentication
+--------------
+
+Scenarios
+
+   1. Preauthentication
+      Used with TLS streams.
+
+   2. Plaintext passwords
+
+   3. Cryptographic authentication
+
+What needs to be proven?
+  - identity
+
+For now, we provide only preauthenticated and password-protected
+services.
+
+Authority of the client to order the server to do certain things
+depends on the authenticated client identity.
+
+Privileges:
+   * operator privilege
+   * write privilege
+   * read privilege
+
+
+Naming subspaces
+----------------
+
+Temporary naming:
+
+   -> Client provides server with a definition of a subspace
+   <- Server responds with a name for that subspace
+
+   Client may not assume that the name is valid after this session.
+
+   This exchange may not fail for any reason.
+
+Permanent naming
+
+   -> Client provides a server with a name and a definition of
+      a subspace
+
+   If successful, the name will be valid until deleted, even across
+   sessions.
+
+   Names are arranged into a hierarchy.  Operators of the subspace the
+   name refers to are operators of that name.
+
+   NOTE: This operation requires operator privilege on the parent name.
+
+
+Reading a subspace
+------------------
+
+   -> Client requests a reading of a named subspace
+   <- Server sends a description of the subspace
+
+   NOTE: This operation requires read privileges on that subspace
+
+
+Writing a subspace
+------------------
+
+   -> Client requests a writing of a named subspace
+   <- Server gives client goahead
+   -> Client sends a description of the subspace
+
+   NOTE: This operation requires read privileges on that subspace
+
+
+User administration
+-------------------
+
+Admin stuff:
+* Create a user
+* Grant privileges to user
+* Suspend a user
+* Delete a user
+
+User stuff:
+* Password change
+
+
+PROTOCOL SPECIFICATION
+======================
+
+Messages:
+
+from client:
+   PASSAUTH <username> <password>
+
+   TMPNAME <seqno>
+
+   PERMNAME <name> <seqno>
+      SUBSPACE (see TMPNAME)
+
+   READ <name> <seqno>
+
+   WRITE <name> <seqno>
+
+   NEWUSER <name>
+   DELUSER <name>
+
+   GRANTPRIV <user> <priv> 
+   REVOKEPRIV <user> <priv>
+
+   FREEZEUSER <user>
+   THAWUSER <user>
+
+   CHPASS <user> <pass>
+
+   QUIT
+
+sequences:
+      SEQ <seqno> <num> CELL <cellid>
+      SEQ <seqno> <num> HARDDIM <dimid>
+      SEQ <seqno> <num> SOFTDIM <dimid>
+      SEQ <seqno> <num> CONTENT <cellid> <content>
+      SEQ <seqno> <num> CONNECT <dimid> <cellid> <cellid>
+      SEQ <seqno> <num> END
+
+UDP SEQ responses:
+      REQ SEQ <seqno> <num>
+      ACK SEQ END
+      SEQ FINISH
+      ACK SEQ FINISH
+
+non-SEQ responses:
+   OK
+   ERR <err code>
+
+Operation over TCP or TLS:
+   - all messages are sent ONCE
+   - SEQ messages lack seqno and num, SEQ requests lack seqno
+   - no acknowledgement
+   - each non-SEQ message is responded with OK or ERR
+   - OK and ERR are not responded to
+
+Operation over UDP:
+   - all non-SEQ messages are resent periodically until acknowledged
+     with OK or ERR
+   - OK and ERR are not acknowledged
+   - SEQ END is resent periodically until acknowledged with ACK SEQ END
+   - after SEQ END, SEQ receiver may send REQ SEQ requests periodically
+     until it receives a corresponding SEQ message, sent once.
+   - after ACK SEQ END and any REQ SEQ, the SEQ session is ended by SEQ FINISH
+     sent by receiving side until it receives ACK SEQ FINISH message
+

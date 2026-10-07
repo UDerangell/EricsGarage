@@ -1,0 +1,46 @@
+How to use the cursel feature (as of 00-08-04)
+
+"Cursel" means "cursor selection." There is now a mode where you can choose
+between different cursors for a view. Here are the instructions as to how.
+
+In normal mode:
+Alt-C -- switches to cursel mode. I like to reconfigure this to spacebar --
+         much faster. Note that the view's background now shows the color of
+         its current cursor -- useful when there are multiple cursors on the
+         same cell.
+Esc   -- now re-attaches the standard cursors to the views before it moves
+         them to the home cell. When you're lost, hit Esc.
+
+In cursel mode:
+Left/Right arrow (or sf or jl): choose between cursors on the system list.
+Up/Down arrow (or ec or i,): choose between cursors on the same cell as the
+                             current cursor.
+Tab or Spacebar or Esc: Select this cursor, quit cursel mode.
+
+To get four additional cursors:
+With the left view, go to "CreateCursors" on the Action list. Hit Enter.
+Note that you can apply this multiple times, but it'll give you multiple
+cursors of the same color.
+
+To bind the two views together:
+Go into cursel mode. Hit Left, Right, s, f, j, or l until both views have the
+same background (and thus, cursor) color. Quit cursel mode.
+
+To bind a view to a "magic cursor:"
+Go to the first entry on the FlobRaster list. Make sure at least one of your
+views is shows this raster. Go into cursel mode. Hit Up/Down (or e/c if you
+use the left view) until the background of your view gets white: this means you
+have attached the view to a cursor without an associated color. Raster cursors
+don't have associated colors (at the time I'm writing this). Now quit cursel
+mode. Move the cursor up and down and watch what happens. (Easiest way to get
+back to normal from here is to hit Esc.)
+
+To show very clearly how the cursing system in ZZ works:
+Create the four additional cursors (see above). Edit the dimension list so that
+d.cursor is on it. Cursel the golden cursor, go to the FlobRaster cell on the 
+system list, and go to the rightmost cell. Now cursel the violet cursor and go
+to the FlobRaster cell. Make sure at least one of your views is set to the
+standard vanishing raster (whose cell is between your two cursors now). Rotate
+the view so that d.1 is on the X- and d.cursor on the Y-axis. Now play around
+with the violet and the golden cursor, and show how the connections on d.cursor
+change.

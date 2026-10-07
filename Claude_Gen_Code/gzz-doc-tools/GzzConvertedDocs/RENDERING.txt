@@ -1,0 +1,37 @@
+	    Requirements for rendering of ZZ spaces.
+$Id: RENDERING,v 1.1 2000/05/16 14:57:58 tjl Exp $
+
+This document is intended to start the design of the final ZZCanvas-style
+thing. 
+
+Basics:
+
+    - placing arbitrary (extensible) graphics objects on the canvas
+    - either depth or reverse order to simplify rastering code: cells
+      rastered first should be on top, not bottom and breadth-first bottom-up
+      is annoyingly difficult
+    - getting some identifier of an object at given coordinates for e.g.
+      mouse clicks. IMPORTANT: could this be done by rerendering to avoid
+      memorizing too much? OpenGL / FreeWRL-style instead of widget-style?
+      TRADEOFF: 
+	normal render = const1 * N,    click = const2 * N
+      widget-style: const1 larger, const2 maybe smaller.
+      opengl-style: const1 smaller, const2 maybe larger
+      - for java.awt.Graphics, widget-style is somewhat necessary anyway
+        to get depth. However, memory consumption might go down.
+    - the BIG advantage of widget-style comes when there's lots of stuff
+      and everything does not move or change: then we can use the widget
+      objects as caches of stuff of interest from the structure, and set
+      the necessary tripwires (ZZObs) to change those objects if the structure
+      changes. For the textcloud stuff where most items stay still much 
+      of the time, this would be advantageous.
+
+
+More interesting:
+    
+    - access by other components to the raster: getting various mouse click
+      places
+    - rendering XOR-cursors for text when moving the cursor, to show where
+      an insert would occur
+    - same when dragging another piece of text.
+
