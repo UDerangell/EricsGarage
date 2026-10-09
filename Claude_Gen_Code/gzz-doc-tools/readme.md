@@ -20,3 +20,11 @@ coverage: 3534 words out / 3514 words in (101%)
 gi.wml -> gi.txt: 88 blocks
 ```
 The 2 output txt files are included in this repository as samples.
+
+To convert Diagram (DIA) files to PNG:
+```
+python3 -m venv venv
+  source venv/bin/activate        # Windows: venv\Scripts\activate
+  pip install pillow
+  python dia2png.py yourfile.dia
+```
