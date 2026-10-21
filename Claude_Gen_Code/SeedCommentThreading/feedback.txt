@@ -1,0 +1,676 @@
+{
+  "comments": [
+    {
+      "id": "z6MkisJLECGtiUbRuzLkttyY1qQVkStbs8KCNA14EhcvvzRP/z6K8DgbSFcW8gt",
+      "version": "bafy2bzacedewprqrzcuzcfbogrdscjfxl7azwjtg4xkopuj6f7oljwy452hmq",
+      "author": "z6MkisJLECGtiUbRuzLkttyY1qQVkStbs8KCNA14EhcvvzRP",
+      "targetAccount": "z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA",
+      "targetPath": "/feedback-for-seed-team/2026-10-20-initial-comments",
+      "targetVersion": "bafyreie3rvg4f3gqvozcbsy4kv2h5cnytsjgctoj2n6o3hjyyvaf25mo6q",
+      "replyParent": "",
+      "replyParentVersion": "",
+      "threadRoot": "",
+      "threadRootVersion": "",
+      "capability": "",
+      "content": [
+        {
+          "children": [],
+          "block": {
+            "type": "Paragraph",
+            "id": "xEdqFBaF",
+            "revision": "b",
+            "attributes": {},
+            "annotations": [],
+            "text": "Eric, thank you so much for the feedback. This is gold for us. Some are known issues, and we are already working on them. Some are new, and we will address them asap! We are very focused on UX!",
+            "link": ""
+          }
+        },
+        {
+          "children": [],
+          "block": {
+            "type": "Paragraph",
+            "id": "sU3cXIsU",
+            "revision": "b",
+            "attributes": {},
+            "annotations": [
+              {
+                "type": "Embed",
+                "starts": [
+                  3
+                ],
+                "ends": [
+                  4
+                ],
+                "attributes": {
+                  "mentionKind": "account"
+                },
+                "link": "hm://z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk/:profile"
+              },
+              {
+                "type": "Embed",
+                "starts": [
+                  5
+                ],
+                "ends": [
+                  6
+                ],
+                "attributes": {
+                  "mentionKind": "account"
+                },
+                "link": "hm://z6MkkGNjfnikRkxK9EaxMPYy3HYxNGkRyXTWxxRtynB2kyeb/:profile"
+              }
+            ],
+            "text": "Cc ￼ ￼ ",
+            "link": ""
+          }
+        },
+        {
+          "children": [],
+          "block": {
+            "type": "Paragraph",
+            "id": "FvWUHG0j",
+            "revision": "b",
+            "attributes": {},
+            "annotations": [],
+            "text": "Yeah the distributed nature of the system and IPFS has taken most of our energy. Now we are working on distributed permissions which is also crazy engineering involve.",
+            "link": ""
+          }
+        }
+      ],
+      "createTime": "2026-10-21T05:57:16.985Z",
+      "updateTime": "2026-10-21T05:57:16.985Z",
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "z6MkisJLECGtiUbRuzLkttyY1qQVkStbs8KCNA14EhcvvzRP/z6K8Dkdb9BJjWK",
+      "version": "bafy2bzaceaijxqktdwe2xpkl5p4fwjk4qmgtb5bnrqpxt3tgwbi4r3fottwns",
+      "author": "z6MkisJLECGtiUbRuzLkttyY1qQVkStbs8KCNA14EhcvvzRP",
+      "targetAccount": "z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA",
+      "targetPath": "/feedback-for-seed-team/2026-10-20-initial-comments",
+      "targetVersion": "bafyreie3rvg4f3gqvozcbsy4kv2h5cnytsjgctoj2n6o3hjyyvaf25mo6q",
+      "replyParent": "",
+      "replyParentVersion": "",
+      "threadRoot": "",
+      "threadRootVersion": "",
+      "capability": "",
+      "content": [
+        {
+          "children": [
+            {
+              "children": [],
+              "block": {
+                "type": "Paragraph",
+                "id": "DaSdoM-v",
+                "revision": "b",
+                "attributes": {},
+                "annotations": [],
+                "text": "We need to fix this!",
+                "link": ""
+              }
+            },
+            {
+              "children": [],
+              "block": {
+                "type": "Paragraph",
+                "id": "tnhD02XW",
+                "revision": "b",
+                "attributes": {},
+                "annotations": [
+                  {
+                    "type": "Embed",
+                    "starts": [
+                      0
+                    ],
+                    "ends": [
+                      1
+                    ],
+                    "attributes": {
+                      "mentionKind": "account"
+                    },
+                    "link": "hm://z6MkkGNjfnikRkxK9EaxMPYy3HYxNGkRyXTWxxRtynB2kyeb/:profile"
+                  },
+                  {
+                    "type": "Embed",
+                    "starts": [
+                      2
+                    ],
+                    "ends": [
+                      3
+                    ],
+                    "attributes": {
+                      "mentionKind": "account"
+                    },
+                    "link": "hm://z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk/:profile"
+                  }
+                ],
+                "text": "￼ ￼ ",
+                "link": ""
+              }
+            },
+            {
+              "children": [],
+              "block": {
+                "type": "Paragraph",
+                "id": "EhgMhSfc",
+                "revision": "b",
+                "attributes": {},
+                "annotations": [],
+                "text": "Expand our notifications? That will link to the profile web of trust?",
+                "link": ""
+              }
+            }
+          ],
+          "block": {
+            "type": "Embed",
+            "id": "3lpbmLtS",
+            "revision": "b",
+            "attributes": {
+              "childrenType": "Group",
+              "view": "Content"
+            },
+            "annotations": [],
+            "text": "",
+            "link": "hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/feedback-for-seed-team/2026-10-20-initial-comments?v=bafyreie3rvg4f3gqvozcbsy4kv2h5cnytsjgctoj2n6o3hjyyvaf25mo6q#jJ0sCAP6[77:133]"
+          }
+        }
+      ],
+      "createTime": "2026-10-21T05:59:17.360Z",
+      "updateTime": "2026-10-21T05:59:17.360Z",
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk/z6K8FQj7jm4H6p",
+      "version": "bafy2bzacecxjjyneaukk3iyvufjppmddjbk7xcittd5noa5jlqvr7vn7yp2pc",
+      "author": "z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk",
+      "targetAccount": "z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA",
+      "targetPath": "/feedback-for-seed-team/2026-10-20-initial-comments",
+      "targetVersion": "bafyreie3rvg4f3gqvozcbsy4kv2h5cnytsjgctoj2n6o3hjyyvaf25mo6q",
+      "replyParent": "",
+      "replyParentVersion": "",
+      "threadRoot": "",
+      "threadRootVersion": "",
+      "capability": "",
+      "content": [
+        {
+          "children": [
+            {
+              "children": [],
+              "block": {
+                "type": "Paragraph",
+                "id": "qftvbS1p",
+                "revision": "b",
+                "attributes": {},
+                "annotations": [],
+                "text": "Is this a good thing or a bad thing?",
+                "link": ""
+              }
+            }
+          ],
+          "block": {
+            "type": "Embed",
+            "id": "3rVxzenT",
+            "revision": "b",
+            "attributes": {
+              "childrenType": "Group",
+              "view": "Content"
+            },
+            "annotations": [],
+            "text": "",
+            "link": "hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/feedback-for-seed-team/2026-10-20-initial-comments?v=bafyreie3rvg4f3gqvozcbsy4kv2h5cnytsjgctoj2n6o3hjyyvaf25mo6q#lfF6fWxK"
+          }
+        }
+      ],
+      "createTime": "2026-10-21T06:47:02.635Z",
+      "updateTime": "2026-10-21T06:47:02.635Z",
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk/z6K8FZZ9CjiaTX",
+      "version": "bafy2bzaced5zpb2auwmsjr5rpsdln77nks6rrcpjrzkdnqxnj5boox6t6booi",
+      "author": "z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk",
+      "targetAccount": "z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA",
+      "targetPath": "/feedback-for-seed-team/2026-10-20-initial-comments",
+      "targetVersion": "bafyreie3rvg4f3gqvozcbsy4kv2h5cnytsjgctoj2n6o3hjyyvaf25mo6q",
+      "replyParent": "",
+      "replyParentVersion": "",
+      "threadRoot": "",
+      "threadRootVersion": "",
+      "capability": "",
+      "content": [
+        {
+          "children": [
+            {
+              "children": [],
+              "block": {
+                "type": "Paragraph",
+                "id": "MDgw_I-8",
+                "revision": "b",
+                "attributes": {},
+                "annotations": [],
+                "text": "We are currently working on improving this. if you can share some visual examples of this traditional threaded indented blog comments you are used to that would be awesome!",
+                "link": ""
+              }
+            },
+            {
+              "children": [],
+              "block": {
+                "type": "Paragraph",
+                "id": "DJKvJmAf",
+                "revision": "b",
+                "attributes": {},
+                "annotations": [],
+                "text": "If you can of course!",
+                "link": ""
+              }
+            }
+          ],
+          "block": {
+            "type": "Embed",
+            "id": "Q8dXt5Hi",
+            "revision": "b",
+            "attributes": {
+              "childrenType": "Group",
+              "view": "Content"
+            },
+            "annotations": [],
+            "text": "",
+            "link": "hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/feedback-for-seed-team/2026-10-20-initial-comments?v=bafyreie3rvg4f3gqvozcbsy4kv2h5cnytsjgctoj2n6o3hjyyvaf25mo6q#tmjhmm-u"
+          }
+        }
+      ],
+      "createTime": "2026-10-21T06:51:25.860Z",
+      "updateTime": "2026-10-21T06:51:25.860Z",
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk/z6K8Fao3C9MSUe",
+      "version": "bafy2bzaceaa5b2s3pjb65ojuyatxj2in5tyup5hh23fjz4gn6urmat5352h26",
+      "author": "z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk",
+      "targetAccount": "z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA",
+      "targetPath": "/feedback-for-seed-team/2026-10-20-initial-comments",
+      "targetVersion": "bafyreie3rvg4f3gqvozcbsy4kv2h5cnytsjgctoj2n6o3hjyyvaf25mo6q",
+      "replyParent": "",
+      "replyParentVersion": "",
+      "threadRoot": "",
+      "threadRootVersion": "",
+      "capability": "",
+      "content": [
+        {
+          "children": [
+            {
+              "children": [],
+              "block": {
+                "type": "Paragraph",
+                "id": "4rrtzuZI",
+                "revision": "b",
+                "attributes": {},
+                "annotations": [],
+                "text": "this is a must we need to address asap. we will have a proposal for the next release I promise!",
+                "link": ""
+              }
+            }
+          ],
+          "block": {
+            "type": "Embed",
+            "id": "A0MOQj57",
+            "revision": "b",
+            "attributes": {
+              "childrenType": "Group",
+              "view": "Content"
+            },
+            "annotations": [],
+            "text": "",
+            "link": "hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/feedback-for-seed-team/2026-10-20-initial-comments?v=bafyreie3rvg4f3gqvozcbsy4kv2h5cnytsjgctoj2n6o3hjyyvaf25mo6q#vRPd9WNG"
+          }
+        }
+      ],
+      "createTime": "2026-10-21T06:52:02.821Z",
+      "updateTime": "2026-10-21T06:52:02.821Z",
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk/z6K8Fznws9q7zy",
+      "version": "bafy2bzacebvshxh6fm3w45t5m2noplzpzkln2sh5trnc5xrvff74ieicymfc2",
+      "author": "z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk",
+      "targetAccount": "z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA",
+      "targetPath": "/feedback-for-seed-team/2026-10-20-initial-comments",
+      "targetVersion": "bafyreie3rvg4f3gqvozcbsy4kv2h5cnytsjgctoj2n6o3hjyyvaf25mo6q",
+      "replyParent": "",
+      "replyParentVersion": "",
+      "threadRoot": "",
+      "threadRootVersion": "",
+      "capability": "",
+      "content": [
+        {
+          "children": [
+            {
+              "children": [],
+              "block": {
+                "type": "Paragraph",
+                "id": "0GIRvWSK",
+                "revision": "b",
+                "attributes": {},
+                "annotations": [],
+                "text": "Is there something you believe we can do in the apps to reduce this learning time and help you and other users?",
+                "link": ""
+              }
+            }
+          ],
+          "block": {
+            "type": "Embed",
+            "id": "X3CMevuv",
+            "revision": "b",
+            "attributes": {
+              "childrenType": "Group",
+              "view": "Content"
+            },
+            "annotations": [],
+            "text": "",
+            "link": "hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA/feedback-for-seed-team/2026-10-20-initial-comments?v=bafyreie3rvg4f3gqvozcbsy4kv2h5cnytsjgctoj2n6o3hjyyvaf25mo6q#h1KIsTaC"
+          }
+        }
+      ],
+      "createTime": "2026-10-21T07:03:58.382Z",
+      "updateTime": "2026-10-21T07:03:58.382Z",
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk/z6K8G3XH5zhakV",
+      "version": "bafy2bzacebd6foyykxbjyzs7fvbrzbq3tsn5e4kpjlukisopfylelwsc6wpba",
+      "author": "z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk",
+      "targetAccount": "z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA",
+      "targetPath": "/feedback-for-seed-team/2026-10-20-initial-comments",
+      "targetVersion": "bafyreie3rvg4f3gqvozcbsy4kv2h5cnytsjgctoj2n6o3hjyyvaf25mo6q",
+      "replyParent": "z6MkisJLECGtiUbRuzLkttyY1qQVkStbs8KCNA14EhcvvzRP/z6K8DgbSFcW8gt",
+      "replyParentVersion": "bafy2bzacedewprqrzcuzcfbogrdscjfxl7azwjtg4xkopuj6f7oljwy452hmq",
+      "threadRoot": "z6MkisJLECGtiUbRuzLkttyY1qQVkStbs8KCNA14EhcvvzRP/z6K8DgbSFcW8gt",
+      "threadRootVersion": "bafy2bzacedewprqrzcuzcfbogrdscjfxl7azwjtg4xkopuj6f7oljwy452hmq",
+      "capability": "",
+      "content": [
+        {
+          "children": [],
+          "block": {
+            "type": "Paragraph",
+            "id": "2BwL5n_o",
+            "revision": "b",
+            "attributes": {},
+            "annotations": [],
+            "text": "I seconded the Appreciation. This feedback is gold for us.",
+            "link": ""
+          }
+        },
+        {
+          "children": [],
+          "block": {
+            "type": "Paragraph",
+            "id": "ilQEIZQp",
+            "revision": "b",
+            "attributes": {},
+            "annotations": [],
+            "text": "Happy to chat about anyof this topics in detail if you want to!",
+            "link": ""
+          }
+        }
+      ],
+      "createTime": "2026-10-21T07:05:19.778Z",
+      "updateTime": "2026-10-21T07:05:19.778Z",
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "z6MkkGNjfnikRkxK9EaxMPYy3HYxNGkRyXTWxxRtynB2kyeb/z6K8J5mQUuDRQM",
+      "version": "bafy2bzaceakgllxlwfoitlx2izqyjq3ekm72t2k6uwgkmc3kvtqngvi5fi7jo",
+      "author": "z6MkkGNjfnikRkxK9EaxMPYy3HYxNGkRyXTWxxRtynB2kyeb",
+      "targetAccount": "z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA",
+      "targetPath": "/feedback-for-seed-team/2026-10-20-initial-comments",
+      "targetVersion": "bafyreie3rvg4f3gqvozcbsy4kv2h5cnytsjgctoj2n6o3hjyyvaf25mo6q",
+      "replyParent": "z6MkisJLECGtiUbRuzLkttyY1qQVkStbs8KCNA14EhcvvzRP/z6K8Dkdb9BJjWK",
+      "replyParentVersion": "bafy2bzaceaijxqktdwe2xpkl5p4fwjk4qmgtb5bnrqpxt3tgwbi4r3fottwns",
+      "threadRoot": "z6MkisJLECGtiUbRuzLkttyY1qQVkStbs8KCNA14EhcvvzRP/z6K8Dkdb9BJjWK",
+      "threadRootVersion": "bafy2bzaceaijxqktdwe2xpkl5p4fwjk4qmgtb5bnrqpxt3tgwbi4r3fottwns",
+      "capability": "",
+      "content": [
+        {
+          "children": [],
+          "block": {
+            "type": "Paragraph",
+            "id": "QQ-V2it1",
+            "revision": "b",
+            "attributes": {},
+            "annotations": [],
+            "text": "We need to work on a better on boarding and discoverability as I have been saying since long 🥸.",
+            "link": ""
+          }
+        },
+        {
+          "children": [],
+          "block": {
+            "type": "Paragraph",
+            "id": "2w7PKpmz",
+            "revision": "b",
+            "attributes": {},
+            "annotations": [],
+            "text": "We show today in notifications when someone new joined? we do right? Maybe we need to be more prominent with notifications. ",
+            "link": ""
+          }
+        }
+      ],
+      "createTime": "2026-10-21T08:04:05.448Z",
+      "updateTime": "2026-10-21T08:05:33.969Z",
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "z6MkrbYsRzKb1VABdvhsDSAk6JK8fAszKsyHhcaZigYeWCou/z6K8JMKUZsw3dE",
+      "version": "bafy2bzacedkkp7jqo6a5obhriq4haxutnym4fb3sotmaqlrsxrkgwx5ovflsu",
+      "author": "z6MkrbYsRzKb1VABdvhsDSAk6JK8fAszKsyHhcaZigYeWCou",
+      "targetAccount": "z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA",
+      "targetPath": "/feedback-for-seed-team/2026-10-20-initial-comments",
+      "targetVersion": "bafyreie3rvg4f3gqvozcbsy4kv2h5cnytsjgctoj2n6o3hjyyvaf25mo6q",
+      "replyParent": "z6MkkGNjfnikRkxK9EaxMPYy3HYxNGkRyXTWxxRtynB2kyeb/z6K8J5mQUuDRQM",
+      "replyParentVersion": "bafy2bzaceakgllxlwfoitlx2izqyjq3ekm72t2k6uwgkmc3kvtqngvi5fi7jo",
+      "threadRoot": "z6MkisJLECGtiUbRuzLkttyY1qQVkStbs8KCNA14EhcvvzRP/z6K8Dkdb9BJjWK",
+      "threadRootVersion": "bafy2bzaceaijxqktdwe2xpkl5p4fwjk4qmgtb5bnrqpxt3tgwbi4r3fottwns",
+      "capability": "",
+      "content": [
+        {
+          "children": [],
+          "block": {
+            "type": "Paragraph",
+            "id": "4QkbtlS8",
+            "revision": "b",
+            "attributes": {},
+            "annotations": [],
+            "text": "nope. We dont! ",
+            "link": ""
+          }
+        }
+      ],
+      "createTime": "2026-10-21T08:11:49.190Z",
+      "updateTime": "2026-10-21T08:11:49.190Z",
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "z6MkrbYsRzKb1VABdvhsDSAk6JK8fAszKsyHhcaZigYeWCou/z6K8JMxVbVY4MY",
+      "version": "bafy2bzacebkj7lrkdfzacjvn4tyorh6c3ndozsenryews4yncnhq7iwnspsdk",
+      "author": "z6MkrbYsRzKb1VABdvhsDSAk6JK8fAszKsyHhcaZigYeWCou",
+      "targetAccount": "z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA",
+      "targetPath": "/feedback-for-seed-team/2026-10-20-initial-comments",
+      "targetVersion": "bafyreie3rvg4f3gqvozcbsy4kv2h5cnytsjgctoj2n6o3hjyyvaf25mo6q",
+      "replyParent": "z6MkrbYsRzKb1VABdvhsDSAk6JK8fAszKsyHhcaZigYeWCou/z6K8JMKUZsw3dE",
+      "replyParentVersion": "bafy2bzacedkkp7jqo6a5obhriq4haxutnym4fb3sotmaqlrsxrkgwx5ovflsu",
+      "threadRoot": "z6MkisJLECGtiUbRuzLkttyY1qQVkStbs8KCNA14EhcvvzRP/z6K8Dkdb9BJjWK",
+      "threadRootVersion": "bafy2bzaceaijxqktdwe2xpkl5p4fwjk4qmgtb5bnrqpxt3tgwbi4r3fottwns",
+      "capability": "",
+      "content": [
+        {
+          "children": [],
+          "block": {
+            "type": "Paragraph",
+            "id": "mCaYE9_0",
+            "revision": "b",
+            "attributes": {},
+            "annotations": [],
+            "text": "Can you define discoverability, please?",
+            "link": ""
+          }
+        }
+      ],
+      "createTime": "2026-10-21T08:12:08.220Z",
+      "updateTime": "2026-10-21T08:12:08.220Z",
+      "visibility": "PUBLIC"
+    },
+    {
+      "id": "z6MkpawvDNdV9dhdf2QnD59wM6RYseXzCjwo7LvnLM3y5cn7/z6K8UFfsXzRn5E",
+      "version": "bafy2bzacec6vmr4xqxvzbsbpvucnlflfjddofuf4afbu7itpctb6spw2lqo7o",
+      "author": "z6MkpawvDNdV9dhdf2QnD59wM6RYseXzCjwo7LvnLM3y5cn7",
+      "targetAccount": "z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA",
+      "targetPath": "/feedback-for-seed-team/2026-10-20-initial-comments",
+      "targetVersion": "bafyreie3rvg4f3gqvozcbsy4kv2h5cnytsjgctoj2n6o3hjyyvaf25mo6q",
+      "replyParent": "z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk/z6K8FQj7jm4H6p",
+      "replyParentVersion": "bafy2bzacecxjjyneaukk3iyvufjppmddjbk7xcittd5noa5jlqvr7vn7yp2pc",
+      "threadRoot": "z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk/z6K8FQj7jm4H6p",
+      "threadRootVersion": "bafy2bzacecxjjyneaukk3iyvufjppmddjbk7xcittd5noa5jlqvr7vn7yp2pc",
+      "capability": "",
+      "content": [
+        {
+          "children": [],
+          "block": {
+            "type": "Paragraph",
+            "id": "domDJVOc",
+            "revision": "b",
+            "attributes": {},
+            "annotations": [],
+            "text": "For me it is OK but it may frustrate new users if they are trying to type in the app and the autosave is too frequent, of if there is latency in the browser or app that causes repositioning of the cursor as they type.",
+            "link": ""
+          }
+        }
+      ],
+      "createTime": "2026-10-21T12:57:14.639Z",
+      "updateTime": "2026-10-21T12:57:14.639Z",
+      "visibility": "PUBLIC"
+    }
+  ],
+  "authors": {
+    "z6MkisJLECGtiUbRuzLkttyY1qQVkStbs8KCNA14EhcvvzRP": {
+      "id": {
+        "id": "hm://z6MkrbYsRzKb1VABdvhsDSAk6JK8fAszKsyHhcaZigYeWCou",
+        "uid": "z6MkrbYsRzKb1VABdvhsDSAk6JK8fAszKsyHhcaZigYeWCou",
+        "path": [],
+        "version": "bafyreigssauvmgwkt2bx6rxjtdjkdhh5khup4ljfam5i46slc4r26om7py",
+        "blockRef": null,
+        "blockRange": null,
+        "hostname": null,
+        "scheme": null
+      },
+      "metadata": {
+        "name": "Gabo Beaumont",
+        "icon": "ipfs://bafkreifg4zwc2bidz3zuddxbld6dzeq5xfmbfhrzgx4hpj5bkxqtw6mgku",
+        "thumbnail": "ipfs://bafkreifg4zwc2bidz3zuddxbld6dzeq5xfmbfhrzgx4hpj5bkxqtw6mgku",
+        "cover": "ipfs://bafybeiguwj7jll23xgh37usasgzapg7n5x2xfbzyat3jyrdthmwv2mufe4",
+        "siteUrl": "https://gabo.es",
+        "agentServerUrl": "https://agentic.seed.hyper.media",
+        "layout": "",
+        "displayPublishTime": "2025-01-21",
+        "seedExperimentalLogo": "",
+        "showActivity": false,
+        "contentWidth": "L",
+        "theme": {
+          "headerLayout": "Center"
+        }
+      }
+    },
+    "z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk": {
+      "id": {
+        "id": "hm://z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk",
+        "uid": "z6Mkvz9TgGtv9zsGsdrksfNk1ajbFancgHREJEz3Y2HsAVdk",
+        "path": [],
+        "version": "bafyreibq24tj2yzy2gcxhpbwagpxxkr5gdsojegoqw4lb7ahdd2tfls7hm",
+        "blockRef": null,
+        "blockRange": null,
+        "hostname": null,
+        "scheme": null
+      },
+      "metadata": {
+        "name": "horacio",
+        "summary": "Horacio Herrera's personal homepage on Seed Hypermedia, introducing himself as a product-minded frontend engineer and designer from Panama building decentralized knowledge collaboration tools, with links to his latest short posts and writings.",
+        "icon": "ipfs://bafkreiap77kovtnvd2lyppqiiqtl3v64szzx4falnlni6nnow4foe4vnh4",
+        "thumbnail": "ipfs://bafkreiap77kovtnvd2lyppqiiqtl3v64szzx4falnlni6nnow4foe4vnh4",
+        "cover": "",
+        "siteUrl": "https://seed.horacioh.com",
+        "layout": ""
+      }
+    },
+    "z6MkkGNjfnikRkxK9EaxMPYy3HYxNGkRyXTWxxRtynB2kyeb": {
+      "id": {
+        "id": "hm://z6MkkGNjfnikRkxK9EaxMPYy3HYxNGkRyXTWxxRtynB2kyeb",
+        "uid": "z6MkkGNjfnikRkxK9EaxMPYy3HYxNGkRyXTWxxRtynB2kyeb",
+        "path": [],
+        "version": "bafyreibuviix4c7jxznjgz3o3kc4d4pkmz3qrre4x6auk7wpk4lrygffza",
+        "blockRef": null,
+        "blockRange": null,
+        "hostname": null,
+        "scheme": null
+      },
+      "metadata": {
+        "name": "Bea",
+        "icon": "ipfs://bafkreigdkzrugto5d5uwrj3vjmmwdkd72wed2hmiseheawcol32oxdqirm",
+        "cover": "ipfs://bafybeietv53wcrvj6hv6jed4x6yjqpshs2girqwd2uz7kxz2lcezzt5rqa",
+        "siteUrl": "",
+        "seedExperimentalLogo": "ipfs://bafkreigdkzrugto5d5uwrj3vjmmwdkd72wed2hmiseheawcol32oxdqirm",
+        "showActivity": true,
+        "contentWidth": "L",
+        "theme": {
+          "headerLayout": ""
+        }
+      }
+    },
+    "z6MkrbYsRzKb1VABdvhsDSAk6JK8fAszKsyHhcaZigYeWCou": {
+      "id": {
+        "id": "hm://z6MkrbYsRzKb1VABdvhsDSAk6JK8fAszKsyHhcaZigYeWCou",
+        "uid": "z6MkrbYsRzKb1VABdvhsDSAk6JK8fAszKsyHhcaZigYeWCou",
+        "path": [],
+        "version": "bafyreigssauvmgwkt2bx6rxjtdjkdhh5khup4ljfam5i46slc4r26om7py",
+        "blockRef": null,
+        "blockRange": null,
+        "hostname": null,
+        "scheme": null
+      },
+      "metadata": {
+        "name": "Gabo Beaumont",
+        "icon": "ipfs://bafkreifg4zwc2bidz3zuddxbld6dzeq5xfmbfhrzgx4hpj5bkxqtw6mgku",
+        "thumbnail": "ipfs://bafkreifg4zwc2bidz3zuddxbld6dzeq5xfmbfhrzgx4hpj5bkxqtw6mgku",
+        "cover": "ipfs://bafybeiguwj7jll23xgh37usasgzapg7n5x2xfbzyat3jyrdthmwv2mufe4",
+        "siteUrl": "https://gabo.es",
+        "agentServerUrl": "https://agentic.seed.hyper.media",
+        "layout": "",
+        "displayPublishTime": "2025-01-21",
+        "seedExperimentalLogo": "",
+        "showActivity": false,
+        "contentWidth": "L",
+        "theme": {
+          "headerLayout": "Center"
+        }
+      }
+    },
+    "z6MkpawvDNdV9dhdf2QnD59wM6RYseXzCjwo7LvnLM3y5cn7": {
+      "id": {
+        "id": "hm://z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA",
+        "uid": "z6MksUtEc1kUMN3nazJWpRuVDZ7mYoy4Qi3JHLDB5B7x2oLA",
+        "path": [],
+        "version": "bafyreiebh3vrsuo2vtofme76yd3hch6okewmp6ooew354yxaqrydtebzie",
+        "blockRef": null,
+        "blockRange": null,
+        "hostname": null,
+        "scheme": null
+      },
+      "metadata": {
+        "name": "Eric Rangell",
+        "icon": "ipfs://bafkreicsro5mfybugrukyoplatspecbvbk7zwzghxhdgulcjxdsjnjbmtu",
+        "showActivity": true,
+        "contentWidth": "L",
+        "theme": {
+          "headerLayout": ""
+        }
+      }
+    }
+  }
+}
